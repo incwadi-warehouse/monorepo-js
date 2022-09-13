@@ -6,7 +6,7 @@
     "packages/@baldeweg/*"
   ],
   "devDependencies": {
-    "lerna": "^5.5.1"
+    "lerna": "5.5.1"
   },
   "author": "André Baldeweg <a@baldeweg.org>",
   "repository": {
