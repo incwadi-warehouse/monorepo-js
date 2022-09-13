@@ -1,0 +1,16 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "packages/@baldeweg/*"
+  ],
+  "devDependencies": {
+    "lerna": "^5.5.1"
+  },
+  "author": "André Baldeweg <a@baldeweg.org>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/incwadi-warehouse/monorepo-js"
+  }
+}
