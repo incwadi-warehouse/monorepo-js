@@ -6,6 +6,16 @@ import router from './router'
 import i18n from './i18n.js'
 import '@baldeweg/ui/styles'
 
+const theme = () => {
+  if (import.meta.env.VUE_APP_THEME !== 'false') {
+    return '<style>@import "' + import.meta.env.VUE_APP_THEME + '";</style>'
+  }
+
+  return ''
+}
+
+document.documentElement.innerHTML += theme()
+
 const ui = createUi()
 const app = createApp(App)
 
