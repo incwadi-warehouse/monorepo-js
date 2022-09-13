@@ -39,6 +39,9 @@ const about = import.meta.env.VUE_APP_ABOUT
 </template>
 
 <style scoped>
+main {
+  --masthead-top-height: 0;
+}
 .logo {
   fill: var(--color-primary-10);
 }
