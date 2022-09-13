@@ -12,3 +12,9 @@ useColorScheme()
     <RouterView />
   </BApp>
 </template>
+
+<style scoped>
+.logo {
+  fill: var(--color-primary-10);
+}
+</style>
