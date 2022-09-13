@@ -1,0 +1,6 @@
+{
+  "login": "Login",
+  "username": "Nutzername",
+  "password": "Passwort",
+  "login_error": "Login fehlgeschlagen. Bitte Zugangsdaten prüfen."
+}
