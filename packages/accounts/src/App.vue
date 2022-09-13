@@ -6,6 +6,8 @@ useLocale()
 useColorScheme()
 
 const hasLogo = import.meta.env.VUE_APP_LOGO === 'false' ? false : true
+
+const about = import.meta.env.VUE_APP_ABOUT
 </script>
 
 <template>
@@ -27,6 +29,10 @@ const hasLogo = import.meta.env.VUE_APP_LOGO === 'false' ? false : true
     </router-link>
 
     <RouterView />
+
+    <b-container size="m">
+      <div v-html="about" />
+    </b-container>
   </BApp>
 </template>
 
