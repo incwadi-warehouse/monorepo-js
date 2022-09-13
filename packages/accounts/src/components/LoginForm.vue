@@ -1,11 +1,15 @@
 <script setup>
-import { ref } from 'vue'
+import { useRequest } from '@baldeweg/ui'
+import { useAuth } from '@/composables/useAuth.js'
 
-const username = ref(null)
-const password = ref(null)
+const { config, setAuthHeader } = useRequest()
+config.value.baseURL = import.meta.env.VUE_APP_API
 
-const isLoggingIn = ref(false)
-const hasError = ref(false)
+const { token, watchToken, username, password, hasError, login } = useAuth()
+
+setAuthHeader(token.value)
+
+watchToken()
 </script>
 
 <template>
@@ -13,7 +17,7 @@ const hasError = ref(false)
     <p>{{ $t('login_error') }}</p>
   </b-alert>
 
-  <b-form @submit.prevent>
+  <b-form @submit.prevent="login">
     <!-- username -->
     <b-form-group>
       <b-form-item>
