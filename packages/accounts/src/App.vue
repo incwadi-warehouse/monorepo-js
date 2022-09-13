@@ -16,7 +16,7 @@ const about = import.meta.env.VUE_APP_ABOUT
 
     <RouterView />
 
-    <b-container size="s" highlight>
+    <b-container size="s">
       <div v-html="about" />
     </b-container>
   </BApp>
