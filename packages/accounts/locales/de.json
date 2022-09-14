@@ -9,5 +9,8 @@
   "save": "Speichern",
   "catalog": "Katalog",
   "orders": "Bestellungen",
-  "settings": "Einstellungen"
+  "settings": "Einstellungen",
+  "password_update_success": "Password geändert",
+  "password_update_error": "Passwort konnte nicht geändert werden.",
+  "new_password": "Neues Passwort"
 }

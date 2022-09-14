@@ -20,7 +20,6 @@ describe('JWTAuth', () => {
     logout,
     refresh,
     getUser,
-    updatePassword,
     checkForRefresh,
     watchToken,
   } = useAuth()
@@ -74,14 +73,6 @@ describe('JWTAuth', () => {
   it('get user', () => {
     getUser().then(() => {
       expect(user.value).not.toBeNull()
-    })
-  })
-
-  it('update password', () => {
-    password.value = 'pass'
-
-    updatePassword().then(() => {
-      expect(password.value).toBeNull()
     })
   })
 

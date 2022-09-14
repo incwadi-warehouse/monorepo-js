@@ -9,5 +9,8 @@
   "save": "Save",
   "catalog": "Catalog",
   "orders": "Orders",
-  "settings": "Settings"
+  "settings": "Settings",
+  "password_update_success": "Password updated",
+  "password_update_error": "Could not update password",
+  "new_password": "New Password"
 }

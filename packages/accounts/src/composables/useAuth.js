@@ -13,7 +13,6 @@ export function useAuth() {
   const username = ref(null)
   const password = ref(null)
   const isLoggingIn = ref(false)
-  const isChangingPassword = ref(false)
   const interval = ref(undefined)
   const hasError = ref(false)
 
@@ -87,17 +86,6 @@ export function useAuth() {
       })
   }
 
-  const updatePassword = () => {
-    isChangingPassword.value = true
-
-    return request('put', '/api/password', {
-      password: password.value,
-    }).then(() => {
-      isChangingPassword.value = false
-      password.value = null
-    })
-  }
-
   const setCheckInterval = () => {
     if (!Cookies.get('refresh_token')) return
 
@@ -133,14 +121,12 @@ export function useAuth() {
     username,
     password,
     isLoggingIn,
-    isChangingPassword,
     interval,
     hasError,
     login,
     logout,
     refresh,
     getUser,
-    updatePassword,
     checkForRefresh,
     watchToken,
   }

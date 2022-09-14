@@ -1,22 +1,26 @@
 <script setup>
-import { ref } from 'vue'
-import { useAuth } from '@/composables/useAuth.js'
+import { usePassword } from '@/composables/usePassword.js'
 
-const passwordSuccessful = ref(null)
-const passwordError = ref(null)
-
-const { updatePassword, password } = useAuth()
+const { update, password, hasSuccess, hasError, isUpdating } = usePassword()
 </script>
 
 <template>
   <details>
     <summary>{{ $t('changePassword') }}</summary>
 
-    <b-form @submit.prevent="updatePassword">
+    <b-alert type="success" v-if="hasSuccess">
+      <p>{{ $t('password_update_success') }}</p>
+    </b-alert>
+
+    <b-alert type="error" v-if="hasError">
+      <p>{{ $t('password_update_error') }}</p>
+    </b-alert>
+
+    <b-form @submit.prevent="update">
       <b-form-group>
         <b-form-item>
           <b-form-label for="password">
-            {{ $t('password') }}
+            {{ $t('new_password') }}
           </b-form-label>
         </b-form-item>
         <b-form-item>
@@ -26,17 +30,14 @@ const { updatePassword, password } = useAuth()
 
       <b-form-group buttons>
         <b-form-item>
-          <b-button design="primary">{{ $t('save') }}</b-button>
+          <b-button design="primary" v-if="!isUpdating">
+            {{ $t('save') }}
+          </b-button>
+          <b-button design="outline" v-if="isUpdating">
+            <b-spinner size="s" :style="{ margin: 'auto' }" />
+          </b-button>
         </b-form-item>
       </b-form-group>
     </b-form>
-
-    <b-toast type="success" ref="passwordSuccessful">
-      <p>{{ $t('passwordSuccessful') }}</p>
-    </b-toast>
-
-    <b-toast type="error" ref="passwordError">
-      <p>{{ $t('passwordError') }}</p>
-    </b-toast>
   </details>
 </template>
