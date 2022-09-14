@@ -966,12 +966,10 @@
     node-html-parser "5.3.3"
     pathe "0.2.0"
 
-"@cypress/vue@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@cypress/vue/-/vue-4.0.0.tgz#e0689d34c16ffd0874911de92d674fa30d3a559e"
-  integrity sha512-IFskspGdC8O/Ukeog+TrnhfN+rL8kg4ue0dbLNXdGBWMHVMvZin1Y47KbZf++0kjogDmPmSqKIbrNUK3bs+RuQ==
-  dependencies:
-    "@vue/test-utils" "2.0.0-rc.19"
+"@cypress/vue@4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@cypress/vue/-/vue-4.2.0.tgz#fc8c0161f004e9706a31658cb76fcd3a572ec46b"
+  integrity sha512-a+5TCBMwng+UUcFSWxzdJ+Wsvtu+XltUKBQCvidysVvPkPF/c/Z+Geyl+sX7tasKT8KIOW9pI90PIwxzQvQh7A==
 
 "@cypress/xvfb@^1.2.4":
   version "1.2.4"
@@ -2828,11 +2826,6 @@
   version "3.2.39"
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.39.tgz#302df167559a1a5156da162d8cc6760cef67f8e3"
   integrity sha512-D3dl2ZB9qE6mTuWPk9RlhDeP1dgNRUKC3NJxji74A4yL8M2MwlhLKUC/49WHjrNzSPug58fWx/yFbaTzGAQSBw==
-
-"@vue/test-utils@2.0.0-rc.19":
-  version "2.0.0-rc.19"
-  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-2.0.0-rc.19.tgz#cd10480b695027481981085c3f705081495a7ca0"
-  integrity sha512-vQ/34z9NH/pqJzl9YTWtTq/vrx5JzLbMojcBB0qydeb7FtGqxp11nLYCgVso+pa8ZOSn2j+OQfjc5aBnb32uzw==
 
 JSONStream@^1.0.4:
   version "1.3.5"
@@ -5779,7 +5772,7 @@ jsbn@~0.1.0:
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
   integrity sha512-UVU9dibq2JcFWxQPA6KCqj5O42VOmAY3zQUfEKxU0KpTGXwNoCjkX1e13eHNvw/xPynt6pU0rZ1htjWTNTSXsg==
 
-jsdom@^20.0.0:
+jsdom@20.0.0:
   version "20.0.0"
   resolved "https://registry.yarnpkg.com/jsdom/-/jsdom-20.0.0.tgz#882825ac9cc5e5bbee704ba16143e1fa78361ebf"
   integrity sha512-x4a6CKCgx00uCmP+QakBDFXwjAJ69IkkIWHmtmjd3wvXPcdOS44hfX2vqkOQrVrq8l9DhNNADZRXaCEWvgXtVA==
@@ -5938,7 +5931,7 @@ lazy-ass@1.6.0, lazy-ass@^1.6.0:
   resolved "https://registry.yarnpkg.com/lazy-ass/-/lazy-ass-1.6.0.tgz#7999655e8646c17f089fdd187d150d3324d54513"
   integrity sha512-cc8oEVoctTvsFZ/Oje/kGnHbpWHYBe8IAJe4C0QNc3t8uM/0Y8+erSz/7Y1ALuXTEZTMvxXwO6YbX1ey3ujiZw==
 
-lerna@^5.5.1:
+lerna@5.5.1:
   version "5.5.1"
   resolved "https://registry.yarnpkg.com/lerna/-/lerna-5.5.1.tgz#e3bd9bdcfcbe42585ab6168f0efe1c7043afc61e"
   integrity sha512-Ofvlm5FRRxF8IQXnx47YbIXmRDHnDaegDwJ4Kq+cVnafbB0VZvRVy/S4ppmnftnqvd4MBXU022lhW9uGN66iZw==
@@ -8499,7 +8492,7 @@ vite@3.1.0, "vite@^2.9.12 || ^3.0.0-0":
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitest@^0.23.2:
+vitest@0.23.2:
   version "0.23.2"
   resolved "https://registry.yarnpkg.com/vitest/-/vitest-0.23.2.tgz#f978de0f2ada1b7c5ff8dc479ce75b976957ff19"
   integrity sha512-kTBKp3ROPDkYC+x2zWt4znkDtnT08W1FQ6ngRFuqxpBGNuNVS+eWZKfffr8y2JGvEzZ9EzMAOcNaiqMj/FZqMw==
