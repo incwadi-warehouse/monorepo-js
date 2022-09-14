@@ -27,6 +27,7 @@ export function useAuth() {
       .then((res) => {
         isAuthenticated.value = true
         isLoggingIn.value = false
+        hasError.value = false
 
         username.value = null
         password.value = null
@@ -40,6 +41,7 @@ export function useAuth() {
       })
       .catch(() => {
         hasError.value = true
+        isLoggingIn.value = false
       })
   }
 
@@ -66,6 +68,7 @@ export function useAuth() {
         Cookies.set('refresh_token', res.data.refresh_token, {
           expires: 30,
         })
+        getUser()
       })
       .catch(() => {
         logout()

@@ -1,15 +1,7 @@
 <script setup>
-import { useRequest } from '@baldeweg/ui'
 import { useAuth } from '@/composables/useAuth.js'
 
-const { config, setAuthHeader } = useRequest()
-config.value.baseURL = import.meta.env.VUE_APP_API
-
-const { token, watchToken, username, password, hasError, login } = useAuth()
-
-setAuthHeader(token.value)
-
-watchToken()
+const { username, password, hasError, login, isLoggingIn } = useAuth()
 </script>
 
 <template>
@@ -24,13 +16,7 @@ watchToken()
         <b-form-label for="username">{{ $t('username') }}</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-input
-          type="text"
-          id="username"
-          :placeholder="$t('username')"
-          autofocus
-          v-model="username"
-        />
+        <b-form-input type="text" id="username" autofocus v-model="username" />
       </b-form-item>
     </b-form-group>
 
@@ -40,12 +26,7 @@ watchToken()
         <b-form-label for="password">{{ $t('password') }}</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-input
-          type="password"
-          id="password"
-          :placeholder="$t('password')"
-          v-model="password"
-        />
+        <b-form-input type="password" id="password" v-model="password" />
       </b-form-item>
     </b-form-group>
 

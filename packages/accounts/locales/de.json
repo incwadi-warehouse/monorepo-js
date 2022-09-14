@@ -2,5 +2,12 @@
   "login": "Login",
   "username": "Nutzername",
   "password": "Passwort",
-  "login_error": "Login fehlgeschlagen. Bitte Zugangsdaten prüfen."
+  "login_error": "Login fehlgeschlagen. Bitte Zugangsdaten prüfen.",
+  "hello_name": "Hallo, {name}!",
+  "logout": "Logout",
+  "changePassword": "Passwort ändern",
+  "save": "Speichern",
+  "catalog": "Katalog",
+  "orders": "Bestellungen",
+  "settings": "Einstellungen"
 }

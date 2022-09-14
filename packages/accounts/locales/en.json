@@ -2,5 +2,12 @@
   "login": "Login",
   "username": "Username",
   "password": "Password",
-  "login_error": "Login failed. Please check the credentials."
+  "login_error": "Login failed. Please check the credentials.",
+  "hello_name": "Hello, {name}!",
+  "logout": "Logout",
+  "changePassword": "Change Password",
+  "save": "Save",
+  "catalog": "Catalog",
+  "orders": "Orders",
+  "settings": "Settings"
 }
