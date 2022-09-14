@@ -12,5 +12,7 @@
   "settings": "Settings",
   "password_update_success": "Password updated",
   "password_update_error": "Could not update password",
-  "new_password": "New Password"
+  "new_password": "New Password",
+  "apps": "Apps",
+  "account": "Account"
 }

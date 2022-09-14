@@ -5,15 +5,30 @@ const orders = import.meta.env.VUE_APP_ORDERS
 </script>
 
 <template>
-  <ul>
-    <li>
+  <b-flex-row class="wrapper">
+    <div class="apps">
       <a :href="catalog">{{ $t('catalog') }}</a>
-    </li>
-    <li>
+    </div>
+    <div class="apps">
       <a :href="settings">{{ $t('settings') }}</a>
-    </li>
-    <li>
+    </div>
+    <div class="apps">
       <a :href="orders">{{ $t('orders') }}</a>
-    </li>
-  </ul>
+    </div>
+  </b-flex-row>
 </template>
+
+<style scoped>
+.wrapper {
+  justify-content: space-between;
+  gap: 10px;
+}
+.apps {
+  border: 1px solid var(--color-neutral-02);
+  border-radius: 20px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+</style>

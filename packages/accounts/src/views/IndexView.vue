@@ -8,33 +8,42 @@ import ChangePassword from '@/components/ChangePassword.vue'
 
 const { t } = useI18n()
 
-useTitle({ title: t('login') })
+useTitle({ title: t('account') })
 
 const { isAuthenticated, user, logout } = useAuth()
 </script>
 
 <template>
   <b-container size="s" v-if="isAuthenticated && user">
-    <p>{{ $t('hello_name', { name: user.username }) }}</p>
+    <h1>{{ t('account') }} (Experiment)</h1>
   </b-container>
 
   <b-container size="s" v-if="isAuthenticated && user">
-    <b-button design="outline" @click.prevent="logout">
-      {{ $t('logout') }}
-    </b-button>
+    <b-flex-row :style="{ alignItems: 'center' }">
+      <div :style="{ alignItems: 'center', width: '100%' }">
+        <p>
+          {{ $t('hello_name', { name: user.username }) }}
+        </p>
+      </div>
+      <div :style="{ textAlign: 'right', width: '100%' }">
+        <b-button design="outline" @click.prevent="logout">
+          {{ $t('logout') }}
+        </b-button>
+      </div>
+    </b-flex-row>
   </b-container>
 
   <b-container size="s" v-if="isAuthenticated && user">
+    <h2>{{ t('password') }}</h2>
+    <ChangePassword />
+  </b-container>
+
+  <b-container size="s" v-if="isAuthenticated && user">
+    <h2>{{ t('apps') }}</h2>
     <ListApps />
   </b-container>
 
   <b-container size="s" v-if="!isAuthenticated">
-    <h1>{{ $t('login') }}</h1>
-
     <LoginForm />
-  </b-container>
-
-  <b-container size="s" v-if="isAuthenticated && user">
-    <ChangePassword />
   </b-container>
 </template>
