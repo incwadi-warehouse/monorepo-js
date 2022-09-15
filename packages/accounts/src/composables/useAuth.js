@@ -16,16 +16,6 @@ export function useAuth() {
   const interval = ref(undefined)
   const hasError = ref(false)
 
-  const logout = () => {
-    isAuthenticated.value = false
-    user.value = null
-
-    token.value = null
-    refreshToken.value = null
-    Cookies.remove('token')
-    Cookies.remove('refresh_token')
-  }
-
   const refresh = () => {
     return request('post', '/api/token/refresh', {
       refresh_token: Cookies.get('refresh_token'),
@@ -42,7 +32,7 @@ export function useAuth() {
         getUser()
       })
       .catch(() => {
-        logout()
+        // logout()
       })
   }
 
@@ -53,7 +43,7 @@ export function useAuth() {
       })
       .catch((err) => {
         if (err.response.status === 401) {
-          logout()
+          // logout()
         }
       })
   }
@@ -95,7 +85,6 @@ export function useAuth() {
     isLoggingIn,
     interval,
     hasError,
-    logout,
     refresh,
     getUser,
     checkForRefresh,
