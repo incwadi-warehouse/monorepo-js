@@ -12,11 +12,7 @@ describe('JWTAuth', () => {
     refreshToken,
     user,
     isAuthenticated,
-    username,
-    password,
-    isLoggingIn,
     interval,
-    login,
     logout,
     refresh,
     getUser,
@@ -27,25 +23,6 @@ describe('JWTAuth', () => {
   setAuthHeader(token.value)
 
   watchToken()
-
-  it('login', () => {
-    username.value = 'user'
-    password.value = 'pass'
-    isLoggingIn.value = true
-
-    login().then(() => {
-      expect(isAuthenticated.value).toBeTruthy()
-      expect(isLoggingIn.value).toBeFalsy()
-
-      expect(username.value).toBeNull()
-      expect(password.value).toBeNull()
-
-      expect(token.value).toBe('token')
-      expect(refreshToken.value).toBe('refresh_token')
-      expect(Cookies.get('token')).toBe('token')
-      expect(Cookies.get('refresh_token')).toBe('refresh_token')
-    })
-  })
 
   it('logout', () => {
     logout()

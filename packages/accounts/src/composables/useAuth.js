@@ -16,34 +16,6 @@ export function useAuth() {
   const interval = ref(undefined)
   const hasError = ref(false)
 
-  const login = () => {
-    isLoggingIn.value = true
-
-    return request('post', '/api/login_check', {
-      username: username.value,
-      password: password.value,
-    })
-      .then((res) => {
-        isAuthenticated.value = true
-        isLoggingIn.value = false
-        hasError.value = false
-
-        username.value = null
-        password.value = null
-
-        token.value = res.data.token
-        refreshToken.value = res.data.refresh_token
-        Cookies.set('token', res.data.token, { expires: 7 })
-        Cookies.set('refresh_token', res.data.refresh_token, {
-          expires: 30,
-        })
-      })
-      .catch(() => {
-        hasError.value = true
-        isLoggingIn.value = false
-      })
-  }
-
   const logout = () => {
     isAuthenticated.value = false
     user.value = null
@@ -123,7 +95,6 @@ export function useAuth() {
     isLoggingIn,
     interval,
     hasError,
-    login,
     logout,
     refresh,
     getUser,
