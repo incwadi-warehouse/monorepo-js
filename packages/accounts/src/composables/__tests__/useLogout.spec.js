@@ -1,5 +1,4 @@
 import { describe, it, expect, vi, afterEach } from 'vitest'
-import Cookies from 'js-cookie'
 import { useLogout } from '@/composables/useLogout.js'
 
 vi.mock('@/composables/useToken.js', () => {
@@ -22,7 +21,6 @@ describe('Logout', () => {
 
     logout()
 
-    expect(Cookies.get('token')).toBeUndefined()
-    expect(Cookies.get('refresh_token')).toBeUndefined()
+    expect(sessionStorage.getItem('auth')).toBeNull()
   })
 })
