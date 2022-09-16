@@ -4,7 +4,7 @@ export function useLogout() {
   const logout = () => {
     const { persist } = useToken()
 
-    persist(null, null)
+    persist(null)
   }
 
   return {

@@ -31,7 +31,12 @@ export function useLogin() {
 
         const { persist } = useToken()
 
-        persist(res.data.token, res.data.refresh_token)
+        const date = new Date()
+        persist({
+          token: res.data.token,
+          refreshToken: res.data.refresh_token,
+          tokenExpire: Math.floor(date.getTime() / 1000) + 60 * 60 * 24 * 7,
+        })
       })
       .catch(() => {
         isLoggingIn.value = false
