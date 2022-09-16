@@ -35,7 +35,9 @@ vi.mock('@baldeweg/ui', () => {
       })
     }
 
-    return { request }
+    const setAuthHeader = vi.fn()
+
+    return { request, setAuthHeader }
   }
 
   return { useRequest }

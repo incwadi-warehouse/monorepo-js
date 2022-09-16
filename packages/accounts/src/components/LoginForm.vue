@@ -1,7 +1,7 @@
 <script setup>
-import { useAuth } from '@/composables/useAuth.js'
+import { useLogin } from '@/composables/useLogin.js'
 
-const { username, password, hasError, login, isLoggingIn } = useAuth()
+const { username, password, hasError, login, isLoggingIn } = useLogin()
 </script>
 
 <template>

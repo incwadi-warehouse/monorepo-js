@@ -2,23 +2,20 @@
 import { useLocale, useColorScheme } from '@baldeweg/ui'
 import { useRequest } from '@baldeweg/ui'
 import AppLogo from './components/AppLogo.vue'
-import { useAuth } from '@/composables/useAuth.js'
+import { useToken } from '@/composables/useToken.js'
 
 useLocale()
 useColorScheme()
 
 const about = import.meta.env.VUE_APP_ABOUT
 
-const { config, setAuthHeader } = useRequest()
+const { config } = useRequest()
 config.value.baseURL = import.meta.env.VUE_APP_API
 
-const { token, watchToken, refresh } = useAuth()
+const { init, watcher } = useToken()
 
-setAuthHeader(token.value)
-
-watchToken()
-
-refresh()
+init()
+watcher()
 </script>
 
 <template>

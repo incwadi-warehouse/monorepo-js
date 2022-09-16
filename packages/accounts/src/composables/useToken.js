@@ -1,15 +1,21 @@
-import { ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRequest } from '@baldeweg/ui'
 
 const auth = ref(JSON.parse(sessionStorage.getItem('auth')))
 const user = ref(null)
 
 export function useToken() {
-  const { request } = useRequest()
+  const { request, setAuthHeader } = useRequest()
+
+  const isAuthenticated = computed(() => {
+    return auth.value && user
+  })
 
   const init = async () => {
     if (!auth.value) return (user.value = null)
     if (!auth.value.token) return refresh()
+
+    setAuthHeader(auth.value.token)
 
     const date = new Date()
     if (auth.value.tokenExpire < date / 1000) return refresh()
@@ -27,9 +33,11 @@ export function useToken() {
     if (data && data.token && data.refreshToken && data.tokenExpire) {
       auth.value = data
       sessionStorage.setItem('auth', JSON.stringify(data))
+      setAuthHeader(data.token)
     } else {
       auth.value = null
       sessionStorage.removeItem('auth')
+      setAuthHeader(null)
     }
   }
 
@@ -64,5 +72,5 @@ export function useToken() {
     })
   }
 
-  return { auth, user, init, watcher, persist }
+  return { auth, user, isAuthenticated, init, watcher, persist }
 }
