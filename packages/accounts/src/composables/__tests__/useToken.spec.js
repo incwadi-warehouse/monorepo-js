@@ -72,4 +72,24 @@ describe('Token', () => {
     expect(auth.value).toStrictEqual(authToken)
     expect(JSON.parse(sessionStorage.getItem('auth'))).toStrictEqual(authToken)
   })
+
+  it('isAuthenticated', async () => {
+    const { auth, user, isAuthenticated, init, persist } = useToken()
+
+    await persist(null)
+    await init()
+
+    expect(auth.value).toBeNull()
+    expect(user.value).toBeNull()
+
+    expect(isAuthenticated.value).toBeFalsy()
+
+    await persist(authToken)
+    await init()
+
+    expect(auth.value).not.toBeNull()
+    expect(user.value).not.toBeNull()
+
+    expect(isAuthenticated.value).toBeTruthy()
+  })
 })
