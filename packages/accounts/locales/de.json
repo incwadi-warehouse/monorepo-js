@@ -14,5 +14,6 @@
   "new_password": "Neues Passwort",
   "apps": "Apps",
   "account": "Konto",
-  "change_password": "Passwort ändern"
+  "change_password": "Passwort ändern",
+  "branch": "Filiale"
 }

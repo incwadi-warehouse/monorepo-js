@@ -19,21 +19,25 @@ const { logout } = useLogout()
   </b-container>
 
   <b-container size="s" v-if="user">
-    <b-flex-row :style="{ alignItems: 'center' }">
-      <div :style="{ alignItems: 'center', width: '100%' }">
-        <p>
-          {{ $t('hello_name', { name: user.username }) }}
-        </p>
+    <div class="card">
+      <div class="media" />
+
+      <h2>
+        {{ $t('hello_name', { name: user.username }) }}
+      </h2>
+      <div class="branch">
+        {{ t('branch') }} <strong>{{ user.branch.name }}</strong>
       </div>
-      <div :style="{ textAlign: 'right', width: '100%' }">
-        <RouterLink :to="{ name: 'password' }">{{
-          t('change_password')
-        }}</RouterLink>
-        <b-button design="outline" @click.prevent="logout">
+
+      <div class="actions">
+        <RouterLink :to="{ name: 'password' }">
+          {{ t('change_password') }}
+        </RouterLink>
+        <b-button design="text" @click.prevent="logout">
           {{ $t('logout') }}
         </b-button>
       </div>
-    </b-flex-row>
+    </div>
   </b-container>
 
   <b-container size="s" v-if="user">
@@ -41,3 +45,32 @@ const { logout } = useLogout()
     <ListApps />
   </b-container>
 </template>
+
+<style scoped>
+.card {
+  border: 1px solid var(--color-neutral-02);
+  border-radius: 20px;
+  padding: 20px;
+}
+.media {
+  border-radius: 5px;
+  background: var(--color-neutral-02);
+  background: linear-gradient(
+    90deg,
+    var(--color-primary-10) 0%,
+    var(--color-primary-05) 100%
+  );
+  height: 10px;
+  margin-bottom: 20px;
+}
+.branch {
+  color: var(--color-neutral-06);
+}
+.actions {
+  margin-top: 20px;
+  text-align: right;
+}
+.actions button {
+  margin-left: 20px;
+}
+</style>
