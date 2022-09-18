@@ -4,7 +4,7 @@ import { useRequest } from '@baldeweg/ui'
 const auth = ref(JSON.parse(sessionStorage.getItem('auth')))
 const user = ref(null)
 
-export function useToken() {
+export function useToken(config) {
   const { request, setAuthHeader } = useRequest()
 
   const isAuthenticated = computed(() => {
@@ -71,6 +71,9 @@ export function useToken() {
       user.value = res.data
     })
   }
+
+  if (config && config.init) init()
+  if (config && config.watch) watcher()
 
   return { auth, user, isAuthenticated, init, watcher, persist }
 }

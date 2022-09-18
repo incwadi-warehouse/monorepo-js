@@ -12,10 +12,7 @@ const about = import.meta.env.VUE_APP_ABOUT
 const { config } = useRequest()
 config.value.baseURL = import.meta.env.VUE_APP_API
 
-const { init, watcher } = useToken()
-
-init()
-watcher()
+useToken({ init: true, watch: true })
 </script>
 
 <template>

@@ -1,4 +1,5 @@
 import { describe, it, expect, vi, afterEach } from 'vitest'
+import { nextTick } from 'vue'
 import { useToken } from '@/composables/useToken.js'
 
 const date = new Date()
@@ -91,5 +92,23 @@ describe('Token', () => {
     expect(user.value).not.toBeNull()
 
     expect(isAuthenticated.value).toBeTruthy()
+  })
+
+  it('Config', async () => {
+    const token = authToken
+    token.tokenExpire = 1
+    sessionStorage.setItem('auth', authToken)
+
+    const { auth } = useToken({ init: true, watch: true })
+
+    await nextTick()
+
+    expect(auth.value.tokenExpire).toBeGreaterThan(1)
+
+    auth.value.tokenExpire = 1
+
+    await nextTick()
+
+    expect(auth.value.tokenExpire).toBeGreaterThan(1)
   })
 })
