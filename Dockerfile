@@ -34,7 +34,7 @@ ENV VUE_APP_SETTINGS=$VUE_APP_SETTINGS
 ARG VUE_APP_ORDERS
 ENV VUE_APP_ORDERS=$VUE_APP_ORDERS
 
-RUN yarn build
+RUN cd ./packages/accounts yarn build
 
 # production stage
 FROM httpd:2.4 as production-stage
@@ -42,8 +42,8 @@ FROM httpd:2.4 as production-stage
 ARG VUE_APP_BASE_URL
 ENV VUE_APP_BASE_URL=$VUE_APP_BASE_URL
 
-COPY ./docker/httpd.conf /usr/local/apache2/conf/httpd.conf
+COPY ./packages/accounts/docker/httpd.conf /usr/local/apache2/conf/httpd.conf
 
-COPY --from=build-stage /usr/app/dist /usr/local/apache2/htdocs${VUE_APP_BASE_URL}
+COPY --from=build-stage /usr/app/packages/accounts/dist /usr/local/apache2/htdocs${VUE_APP_BASE_URL}
 
 EXPOSE 80
