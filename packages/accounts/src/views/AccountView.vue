@@ -4,7 +4,6 @@ import { useI18n } from 'vue-i18n'
 import ListApps from '@/components/ListApps.vue'
 import { useToken } from '@/composables/useToken.js'
 import { useLogout } from '@/composables/useLogout.js'
-import ChangePassword from '@/components/ChangePassword.vue'
 
 const { t } = useI18n()
 
@@ -27,16 +26,14 @@ const { logout } = useLogout()
         </p>
       </div>
       <div :style="{ textAlign: 'right', width: '100%' }">
+        <RouterLink :to="{ name: 'password' }">{{
+          t('change_password')
+        }}</RouterLink>
         <b-button design="outline" @click.prevent="logout">
           {{ $t('logout') }}
         </b-button>
       </div>
     </b-flex-row>
-  </b-container>
-
-  <b-container size="s" v-if="user">
-    <h2>{{ t('password') }}</h2>
-    <ChangePassword />
   </b-container>
 
   <b-container size="s" v-if="user">

@@ -5,7 +5,6 @@
   "login_error": "Login fehlgeschlagen. Bitte Zugangsdaten prüfen.",
   "hello_name": "Hallo, {name}!",
   "logout": "Logout",
-  "changePassword": "Passwort ändern",
   "save": "Speichern",
   "catalog": "Katalog",
   "orders": "Bestellungen",
@@ -14,5 +13,6 @@
   "password_update_error": "Passwort konnte nicht geändert werden.",
   "new_password": "Neues Passwort",
   "apps": "Apps",
-  "account": "Konto"
+  "account": "Konto",
+  "change_password": "Passwort ändern"
 }
