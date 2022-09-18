@@ -1,5 +1,6 @@
 import { ref } from 'vue'
 import { useRequest } from '@baldeweg/ui'
+import { useRouter } from 'vue-router'
 import { useToken } from '@/composables/useToken.js'
 
 export function useLogin() {
@@ -11,6 +12,8 @@ export function useLogin() {
   const hasError = ref(false)
 
   const { request } = useRequest()
+
+  const router = useRouter()
 
   const login = () => {
     isLoggingIn.value = true
@@ -37,6 +40,8 @@ export function useLogin() {
           refreshToken: res.data.refresh_token,
           tokenExpire: Math.floor(date.getTime() / 1000) + 60 * 60 * 24 * 7,
         })
+
+        router.push({ name: 'account' })
       })
       .catch(() => {
         isLoggingIn.value = false
