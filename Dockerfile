@@ -34,7 +34,7 @@ ENV VUE_APP_SETTINGS=$VUE_APP_SETTINGS
 ARG VUE_APP_ORDERS
 ENV VUE_APP_ORDERS=$VUE_APP_ORDERS
 
-RUN cd ./packages/accounts yarn build
+RUN cd ./packages/accounts && yarn build
 
 # production stage
 FROM httpd:2.4 as production-stage
