@@ -8,8 +8,8 @@ WORKDIR /usr/app
 COPY ./package.json ./
 COPY ./yarn.lock ./
 RUN yarn install
-RUN ./node_modules/.bin/lerna link
 COPY . .
+RUN ./node_modules/.bin/lerna link
 
 ARG VUE_APP_API
 ENV VUE_APP_API=$VUE_APP_API
