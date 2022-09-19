@@ -4,9 +4,13 @@ export function useRedirect(config) {
   }
 
   const isAllowedHost = (target) => {
-    const targetUrl = new URL(target)
+    try {
+      const targetUrl = new URL(target)
 
-    return config.allowedHosts.includes(targetUrl.hostname)
+      return config.allowedHosts.includes(targetUrl.hostname)
+    } catch {
+      return false
+    }
   }
 
   const redirect = (target) => {

@@ -19,5 +19,6 @@ describe('Redirect', () => {
 
     expect(redirect('http://a.localhost')).toBeTruthy()
     expect(redirect('http://b.localhost')).toBeFalsy()
+    expect(redirect('c.localhost')).toBeFalsy()
   })
 })

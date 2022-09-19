@@ -1,7 +1,8 @@
 import { ref } from 'vue'
 import { useRequest } from '@baldeweg/ui'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { useToken } from '@/composables/useToken.js'
+import { useRedirect } from '@/composables/useRedirect.js'
 
 export function useLogin() {
   const username = ref(null)
@@ -14,6 +15,9 @@ export function useLogin() {
   const { request } = useRequest()
 
   const router = useRouter()
+  const route = useRoute()
+
+  const redirectTo = route.query.redirect || null
 
   const login = () => {
     isLoggingIn.value = true
@@ -41,7 +45,7 @@ export function useLogin() {
           tokenExpire: Math.floor(date.getTime() / 1000) + 60 * 60 * 24 * 7,
         })
 
-        router.push({ name: 'account' })
+        changeLocation()
       })
       .catch(() => {
         isLoggingIn.value = false
@@ -51,6 +55,19 @@ export function useLogin() {
         username.value = null
         password.value = null
       })
+  }
+
+  const changeLocation = () => {
+    if (redirectTo) {
+      const { redirect } = useRedirect({ allowedHosts: ['catalog'] })
+      const res = redirect(redirectTo)
+
+      if (!res) router.push({ name: 'account' })
+
+      return
+    }
+
+    router.push({ name: 'account' })
   }
 
   return {
