@@ -11,6 +11,16 @@ vi.mock('@/composables/useToken.js', () => {
   return { useToken }
 })
 
+vi.mock('vue-router', () => {
+  const useRouter = () => {
+    const push = vi.fn()
+
+    return { push }
+  }
+
+  return { useRouter }
+})
+
 describe('Logout', () => {
   afterEach(() => {
     vi.clearAllMocks()
