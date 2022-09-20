@@ -50,5 +50,8 @@ export default defineConfig(({ mode }) => {
       dedupe: ['vue'],
     },
     envPrefix: ['VITE_', 'VUE_APP_'],
+    test: {
+      setupFiles: ['unit.setup.js'],
+    },
   }
 })
