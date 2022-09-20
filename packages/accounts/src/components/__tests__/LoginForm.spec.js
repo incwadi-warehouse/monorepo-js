@@ -22,8 +22,6 @@ describe('LoginForm', () => {
       plugins: [ui],
     })
 
-    console.log('element', wrapper.html())
-
     expect(wrapper.html()).toContain('<b-form')
   })
 })
