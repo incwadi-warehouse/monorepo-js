@@ -1,24 +1,29 @@
 import { mount } from '@vue/test-utils'
-import { expect, test, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
+import { createUi } from '@baldeweg/ui'
 import LoginForm from '@/components/LoginForm.vue'
 
-vi.mock('vue-router', () => {
-  const useRouter = vi.fn()
+const ui = createUi()
 
-  const useRoute = () => {
-    const query = { redirect: null }
+vi.mock('@/composables/useLogin.js', () => {
+  const useLogin = () => {
+    const username = null
+    const password = null
 
-    return { query }
+    return { username, password }
   }
 
-  return { useRouter, useRoute }
+  return { useLogin }
 })
 
-test('displays login form', () => {
-  const wrapper = mount(LoginForm, {})
+describe('LoginForm', () => {
+  it('displays login form', () => {
+    const wrapper = mount(LoginForm, {
+      plugins: [ui],
+    })
 
-  expect(wrapper.find('form'))
-  expect(wrapper.find('#username'))
-  expect(wrapper.find('#password'))
-  expect(wrapper.find('button'))
+    console.log('element', wrapper.html())
+
+    expect(wrapper.html()).toContain('<b-form')
+  })
 })
