@@ -1,6 +1,6 @@
 {
   "name": "accounts",
-  "version": "0.2.4",
+  "version": "43.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
