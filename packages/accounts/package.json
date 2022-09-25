@@ -13,7 +13,7 @@
     "i18n:report": "vue-i18n-extract report --vueFiles './src/**/*.?(js|vue)' --languageFiles './locales/*.?(json|yml|yaml|js)'"
   },
   "dependencies": {
-    "@baldeweg/eslint-config": "0.5.0",
+    "@baldeweg/eslint-config": "0.5.1",
     "@baldeweg/ui": "0.5.1",
     "axios": "0.27.2",
     "vue": "3.2.39",
