@@ -1,10 +1,10 @@
-ARG SERVICE_NAME=accounts
-ENV SERVICE_NAME=$SERVICE_NAME
-
 ARG VUE_APP_BASE_URL
 
 # build stage
 FROM node:lts-alpine as build-stage
+
+ARG SERVICE_NAME=accounts
+ENV SERVICE_NAME=$SERVICE_NAME
 
 WORKDIR /usr/app
 
@@ -39,6 +39,9 @@ RUN yarn workspace ${SERVICE_NAME} build
 
 # production stage
 FROM httpd:2.4 as production-stage
+
+ARG SERVICE_NAME=accounts
+ENV SERVICE_NAME=$SERVICE_NAME
 
 ARG VUE_APP_BASE_URL
 ENV VUE_APP_BASE_URL=$VUE_APP_BASE_URL
