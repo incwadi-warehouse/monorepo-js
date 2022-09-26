@@ -7,11 +7,6 @@ FROM node:lts-alpine as build-stage
 ARG SERVICE_NAME
 ENV SERVICE_NAME=$SERVICE_NAME
 
-WORKDIR /usr/app
-
-COPY . .
-RUN yarn install
-
 ARG VUE_APP_API
 ENV VUE_APP_API=$VUE_APP_API
 
@@ -35,6 +30,12 @@ ENV VUE_APP_SETTINGS=$VUE_APP_SETTINGS
 
 ARG VUE_APP_ORDERS
 ENV VUE_APP_ORDERS=$VUE_APP_ORDERS
+
+WORKDIR /usr/app
+
+COPY . .
+
+RUN yarn install
 
 RUN yarn workspace ${SERVICE_NAME} build
 
