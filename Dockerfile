@@ -5,8 +5,6 @@ FROM node:lts-alpine as build-stage
 
 WORKDIR /usr/app
 
-COPY ./package.json ./
-COPY ./yarn.lock ./
 COPY . .
 RUN yarn install
 
