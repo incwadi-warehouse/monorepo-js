@@ -912,15 +912,15 @@
     "@babel/helper-validator-identifier" "^7.18.6"
     to-fast-properties "^2.0.0"
 
-"@baldeweg/eslint-config@0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@baldeweg/eslint-config/-/eslint-config-0.3.3.tgz#0507b2e6755180ecc9412b34f0da15601414e489"
-  integrity sha512-IAV2mizW2bWDBI4BK2R0mR/7TaFiNybwwHGBZtTy8jKsih/3eZYqhrau5oYe9CPdTE3MXSTYRCOnfzCwn33wqA==
+"@baldeweg/eslint-config@0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@baldeweg/eslint-config/-/eslint-config-0.5.1.tgz#bc88a3a5b57115d4f8eb835cac30a65e538aa03e"
+  integrity sha512-ZqYlTYcAZAjkgUsewhF6r36c9ulF2YcXzC58PyEc3Onb/W3xEAG8O6ZTCHBr5DocZm/36CuW7XR7kFTnnDSgiA==
 
-"@baldeweg/ui@0.4.2":
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/@baldeweg/ui/-/ui-0.4.2.tgz#ab911b0d1ce2f38ae81c8406a5fb003fa6bdd695"
-  integrity sha512-FuWn2lkSnIHTKE9Dnf11W1+Hq2RKRR6tYkvSaWItJj0DFc+u9CyaVIULWraxf4dEikv3EuOgWMv0MulLemSfcA==
+"@baldeweg/ui@0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@baldeweg/ui/-/ui-0.5.1.tgz#2ab481a29af6f62d126f88f9c73b7c4fc32ea733"
+  integrity sha512-3Rds+RQZJDRXlNM+SUxFYTyf3j9aWurrUdTLb2d63anCUTecxx9whxuLUDkX3IQ5LCbUmnh+4C7p/O2P7B1G+Q==
   dependencies:
     axios "^0.27.2"
     firebase "^9.9.0"
