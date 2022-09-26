@@ -1,4 +1,5 @@
 ARG SERVICE_NAME=accounts
+ENV SERVICE_NAME=$SERVICE_NAME
 
 ARG VUE_APP_BASE_URL
 
@@ -34,7 +35,7 @@ ENV VUE_APP_SETTINGS=$VUE_APP_SETTINGS
 ARG VUE_APP_ORDERS
 ENV VUE_APP_ORDERS=$VUE_APP_ORDERS
 
-RUN yarn workspace accounts build
+RUN yarn workspace ${SERVICE_NAME} build
 
 # production stage
 FROM httpd:2.4 as production-stage
