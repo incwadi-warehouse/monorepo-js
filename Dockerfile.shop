@@ -1,14 +1,11 @@
+ARG SERVICE_NAME=shop
 ARG VUE_APP_BASE_URL
 
 # build stage
 FROM node:lts-alpine as build-stage
 
-WORKDIR /usr/app
-
-COPY ./package.json ./
-COPY ./yarn.lock ./
-RUN yarn install
-COPY . .
+ARG SERVICE_NAME
+ENV SERVICE_NAME=$SERVICE_NAME
 
 ARG VUE_APP_API
 ENV VUE_APP_API=$VUE_APP_API
@@ -31,16 +28,25 @@ ENV VUE_APP_BASE_URL=$VUE_APP_BASE_URL
 ARG VUE_APP_BRANCH
 ENV VUE_APP_BRANCH=$VUE_APP_BRANCH
 
-RUN yarn build
+WORKDIR /usr/app
+
+COPY . .
+
+RUN yarn install
+
+RUN yarn workspace ${SERVICE_NAME} build
 
 # production stage
 FROM httpd:2.4 as production-stage
 
+ARG SERVICE_NAME
+ENV SERVICE_NAME=$SERVICE_NAME
+
 ARG VUE_APP_BASE_URL
 ENV VUE_APP_BASE_URL=$VUE_APP_BASE_URL
 
-COPY ./docker/httpd.conf /usr/local/apache2/conf/httpd.conf
+COPY ./packages/${SERVICE_NAME}/docker/httpd.conf /usr/local/apache2/conf/httpd.conf
 
-COPY --from=build-stage /usr/app/dist /usr/local/apache2/htdocs${VUE_APP_BASE_URL}
+COPY --from=build-stage /usr/app/packages/${SERVICE_NAME}/dist /usr/local/apache2/htdocs${VUE_APP_BASE_URL}
 
 EXPOSE 80
