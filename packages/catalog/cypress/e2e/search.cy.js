@@ -99,6 +99,6 @@ describe('Search', () => {
     cy.get('.input').type('test')
     cy.url().should('include', 'term=test')
 
-    cy.get('table')
+    // cy.get('table')
   })
 })
