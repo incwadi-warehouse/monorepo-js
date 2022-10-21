@@ -1,0 +1,39 @@
+<script setup>
+import { useTitle } from '@baldeweg/ui'
+import InventoryTable from '@/components/inventory/InventoryTable.vue'
+import { useInventory } from '@/composables/useInventory.js'
+
+useTitle({ title: 'Inventory' })
+
+defineProps({
+  auth: Object,
+})
+
+const inventory = useInventory()
+</script>
+
+<template>
+  <article>
+    <b-container size="m">
+      <b-button
+        :style="{ float: 'right' }"
+        design="outline"
+        @click.prevent="inventory.create"
+        v-if="!inventory.state.hasActiveInventory && auth.state.me.isAdmin"
+      >
+        {{ $t('createInventory') }}
+      </b-button>
+
+      <h1>{{ $t('inventory') }}</h1>
+      <p>{{ $t('inventoryDesc') }}</p>
+    </b-container>
+
+    <b-container size="m">
+      <InventoryTable
+        :inventories="inventory.state.inventories"
+        :isAdmin="auth.state.me.isAdmin"
+        @end="inventory.end"
+      />
+    </b-container>
+  </article>
+</template>
