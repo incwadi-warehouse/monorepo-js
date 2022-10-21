@@ -94,7 +94,7 @@ describe('Search', () => {
       ],
       counter: 2,
     })
-    cy.route('GET', '**/api/author/find?options=**', {})
+    cy.route('GET', '**/api/author/find?term=**', {})
 
     cy.get('.input').type('test')
     cy.url().should('include', 'term=test')
