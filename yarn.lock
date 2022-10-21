@@ -917,6 +917,15 @@
   resolved "https://registry.yarnpkg.com/@baldeweg/eslint-config/-/eslint-config-0.6.0.tgz#83eb8df33030e6b31873bec761cee1ea26868042"
   integrity sha512-L++oh+TLTCkxDQ0VaIUTpwdCvrwq9NtGiMWnkwmw2saLq+yMmv5UBbL0uHI2kh9fl2V2iLCyck3PGK4gpRleXw==
 
+"@baldeweg/ui@0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@baldeweg/ui/-/ui-0.5.1.tgz#2ab481a29af6f62d126f88f9c73b7c4fc32ea733"
+  integrity sha512-3Rds+RQZJDRXlNM+SUxFYTyf3j9aWurrUdTLb2d63anCUTecxx9whxuLUDkX3IQ5LCbUmnh+4C7p/O2P7B1G+Q==
+  dependencies:
+    axios "^0.27.2"
+    firebase "^9.9.0"
+    vue "^3.2.33"
+
 "@baldeweg/ui@0.6.5":
   version "0.6.5"
   resolved "https://registry.yarnpkg.com/@baldeweg/ui/-/ui-0.6.5.tgz#46e074f7ac1f47d5fcc97631272ce22b9514224e"
@@ -3218,7 +3227,7 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.11.0.tgz#d61f46d83b2519250e2784daf5b09479a8b41c59"
   integrity sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==
 
-axios@0.27.2:
+axios@0.27.2, axios@^0.27.2:
   version "0.27.2"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.27.2.tgz#207658cc8621606e586c85db4b41a750e756d972"
   integrity sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==
@@ -4007,6 +4016,11 @@ dateformat@^3.0.0:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
   integrity sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==
+
+dayjs@1.11.6:
+  version "1.11.6"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.6.tgz#2e79a226314ec3ec904e3ee1dd5a4f5e5b1c7afb"
+  integrity sha512-zZbY5giJAinCG+7AGaw0wIhNZ6J8AhWuSXKvuc1KAyMiRsvGQWqh4L+MomvhdAYjN+lqvVCMq1I41e3YHvXkyQ==
 
 dayjs@^1.10.4:
   version "1.11.5"
