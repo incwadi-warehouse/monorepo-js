@@ -67,7 +67,7 @@ const create = () => {
     price: state.price,
     sold: false,
     removed: false,
-    releaseYear: state.releaseYear,
+    releaseYear: typeof state.releaseYear === 'number' ? state.releaseYear : 0,
     cond: state.cond_id,
     tags: tags,
     format: state.format,
@@ -267,7 +267,6 @@ const createTag = () => {
               id="author"
               min="1000"
               max="9999"
-              required
               v-model="state.releaseYear"
             />
           </b-form-item>

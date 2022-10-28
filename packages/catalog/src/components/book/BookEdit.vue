@@ -66,7 +66,8 @@ const loadBook = () => {
     state.sold = book.value.sold
     state.removed = book.value.removed
     state.reserved = book.value.reserved
-    state.releaseYear = book.value.releaseYear
+    state.releaseYear =
+      book.value.releaseYear !== 0 ? book.value.releaseYear : null
     state.cond_id = book.value.condition ? book.value.condition.id : null
     state.tag = null
     state.tags = book.value.tags
@@ -104,7 +105,8 @@ const update = () => {
       sold: state.sold,
       removed: state.removed,
       reserved: state.reserved,
-      releaseYear: state.releaseYear,
+      releaseYear:
+        typeof state.releaseYear === 'number' ? state.releaseYear : 0,
       cond: state.cond_id,
       tags: tags,
       recommendation: state.recommendation,
@@ -327,7 +329,6 @@ const removeTag = (id) => {
               id="releaseYear"
               min="1000"
               max="9999"
-              required
               v-model="state.releaseYear"
             />
           </b-form-item>

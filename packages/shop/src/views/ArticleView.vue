@@ -76,7 +76,12 @@ const isInCart = computed(() => {
               {{ article.currency }}
             </p>
             <p>{{ $t('genre') }}: {{ article.genre }}</p>
-            <p>{{ $t('releaseYear') }}: {{ article.releaseYear }}</p>
+            <p>
+              {{ $t('releaseYear') }}:
+              {{
+                article.releaseYear ? article.releaseYear : $t('without_year')
+              }}
+            </p>
             <p>
               {{ $t('format') }}:
               {{ article.format_name }}

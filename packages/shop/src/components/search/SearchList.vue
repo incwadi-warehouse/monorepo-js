@@ -42,7 +42,7 @@ const { articles, formatPrice, formatAuthor, image } = useArticle()
         &bull;
         {{ article.format_name }}
         &bull;
-        {{ article.releaseYear }}
+        {{ article.releaseYear ? article.releaseYear : $t('without_year') }}
       </template>
     </b-list>
   </div>
