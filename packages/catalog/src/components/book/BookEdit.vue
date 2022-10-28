@@ -105,8 +105,7 @@ const update = () => {
       sold: state.sold,
       removed: state.removed,
       reserved: state.reserved,
-      releaseYear:
-        typeof state.releaseYear === 'number' ? state.releaseYear : 0,
+      releaseYear: state.releaseYear !== '' ? state.releaseYear : 0,
       cond: state.cond_id,
       tags: tags,
       recommendation: state.recommendation,
@@ -327,7 +326,6 @@ const removeTag = (id) => {
             <b-form-input
               type="number"
               id="releaseYear"
-              min="1000"
               max="9999"
               v-model="state.releaseYear"
             />

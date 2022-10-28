@@ -67,7 +67,7 @@ const create = () => {
     price: state.price,
     sold: false,
     removed: false,
-    releaseYear: typeof state.releaseYear === 'number' ? state.releaseYear : 0,
+    releaseYear: state.releaseYear !== '' ? state.releaseYear : 0,
     cond: state.cond_id,
     tags: tags,
     format: state.format,
@@ -265,7 +265,6 @@ const createTag = () => {
             <b-form-input
               type="number"
               id="author"
-              min="1000"
               max="9999"
               v-model="state.releaseYear"
             />
