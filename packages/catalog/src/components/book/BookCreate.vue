@@ -1,5 +1,7 @@
 <script setup>
 import { computed, reactive, toRefs } from 'vue'
+import { useToast } from '@baldeweg/ui'
+import { useI18n } from 'vue-i18n'
 import BookPriceCalculator from '@/components/book/BookPriceCalculator.vue'
 import { useGenre } from '@/composables/useGenre.js'
 import { useCondition } from '@/composables/useCondition.js'
@@ -47,6 +49,10 @@ const pricelist = computed(() => {
 
 const { create: createBook } = useBook()
 
+const { add } = useToast()
+
+const { t } = useI18n()
+
 const create = () => {
   let tags = []
   state.tags.forEach((element) => {
@@ -66,11 +72,25 @@ const create = () => {
     tags: tags,
     format: state.format,
     subtitle: state.subtitle,
-  }).then(() => {
-    emit('close')
-
-    reset()
   })
+    .then(() => {
+      emit('close')
+
+      reset()
+    })
+    .catch((err) => {
+      if (err.response.status === 409) {
+        add({
+          type: 'error',
+          body: t('create_book_error_duplicate'),
+        })
+      } else {
+        add({
+          type: 'error',
+          body: t('create_book_error'),
+        })
+      }
+    })
 }
 
 const reset = () => {

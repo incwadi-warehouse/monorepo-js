@@ -116,5 +116,7 @@
   "subtitle": "Untertitel",
   "search_for_authors": "Suche nach Autor*innen",
   "found_results": "Nichts gefunden | Ein/e Autor/in gefunden | {counter} Autor*innen gefunden",
-  "current_open_reservations": "Aktuell offene Reservierungen"
+  "current_open_reservations": "Aktuell offene Reservierungen",
+  "create_book_error_duplicate": "Buch nicht gespeichert (Duplikat)",
+  "create_book_error": "Buch nicht gespeichert"
 }
