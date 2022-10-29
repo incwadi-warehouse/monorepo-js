@@ -118,5 +118,6 @@
   "found_results": "Nothing found | One author found | {counter} authors found",
   "current_open_reservations": "Current open reservations",
   "create_book_error_duplicate": "Book not saved (Duplicate)",
-  "create_book_error": "Book not saved"
+  "create_book_error": "Book not saved",
+  "try_out_accounts": "Try out the new accounts service!"
 }

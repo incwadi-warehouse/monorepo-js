@@ -48,6 +48,8 @@ const navigateToOrders = () => {
 }
 
 const version = pkg.version
+
+const accounts = import.meta.env.VUE_APP_ACCOUNTS
 </script>
 
 <template>
@@ -97,7 +99,7 @@ const version = pkg.version
             {{ $t('logout') }}
           </b-dropdown-item>
         </b-dropdown>
-        
+
         <span class="action" @click.prevent="navigateToOrders">
           <b-badge :content="reservations && reservations.length" hide-empty>
             <b-icon type="euro" />
@@ -106,6 +108,10 @@ const version = pkg.version
       </b-masthead-item>
     </b-masthead>
     <router-view :auth="auth" v-if="auth.state.isAuthenticated" />
+
+    <BContainer size="m" :align="'right'">
+      <a :href="accounts">{{ $t('try_out_accounts') }}</a>
+    </BContainer>
 
     <b-container size="s" v-if="!auth.state.isAuthenticated">
       <h1>{{ $t('login') }}</h1>
