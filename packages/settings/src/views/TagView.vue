@@ -15,7 +15,6 @@ const { tags } = useTag()
 
 <template>
   <b-container size="m">
-    <b-chip>Experiment</b-chip>
     <h1>{{ $t('tags') }}</h1>
     <p>{{ $t('tags_desc') }}</p>
   </b-container>
