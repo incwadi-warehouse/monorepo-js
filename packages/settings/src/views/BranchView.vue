@@ -1,11 +1,11 @@
 <script setup>
 import { useTitle } from '@baldeweg/ui'
+import { useToast } from '@baldeweg/ui'
+import { watch } from 'vue'
 import BranchEdit from '../components/branch/BranchEdit.vue'
 import BranchCleanBooks from '../components/branch/BranchCleanBooks.vue'
 import BranchPriceCalculator from '@/components/branch/BranchPriceCalculator.vue'
 import { useBranch } from '@/composables/useBranch.js'
-import { useToast } from '@baldeweg/ui'
-import { watch } from 'vue'
 
 useTitle({ title: 'Branch' })
 
@@ -49,7 +49,7 @@ watch(
       />
     </b-container>
 
-    <b-container size="m" v-if="auth.state.me.isAdmin">
+    <b-container size="m" v-if="auth.state.me && auth.state.me.isAdmin">
       <h2>{{ $t('clean_up') }}</h2>
       <p>{{ $t('clean_up_desc') }}</p>
       <BranchCleanBooks @clean="branch.clean" />

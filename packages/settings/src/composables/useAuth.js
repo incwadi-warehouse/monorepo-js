@@ -29,6 +29,9 @@ export default function useAuth() {
       password: state.password,
     })
       .then((response) => {
+        setAuthHeader(response.data.token)
+        me()
+
         Cookies.set('token', response.data.token, { expires: 7 })
         Cookies.set('refresh_token', response.data.refresh_token, {
           expires: 30,
@@ -124,7 +127,11 @@ export default function useAuth() {
       })
   }
 
-  onMounted(me)
+  onMounted(() => {
+    if (Cookies.get('token')) {
+      me()
+    }
+  })
 
   const check = () => {
     session()
