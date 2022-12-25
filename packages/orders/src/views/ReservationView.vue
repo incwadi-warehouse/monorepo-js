@@ -24,9 +24,5 @@ const { reservations, isLoading } = useReservation()
         />
       </div>
     </b-container>
-
-    <b-container size="m">
-      <div v-html="$tc('reservationDesc')" />
-    </b-container>
   </article>
 </template>
