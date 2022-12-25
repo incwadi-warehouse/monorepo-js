@@ -36,8 +36,4 @@ workflows:
       - cypress/run:
           executor: image
           yarn: true
-          command: yarn workspace orders build && yarn workspace orders test:e2e:ci
-      - cypress/run:
-          executor: image
-          yarn: true
           command: yarn workspace settings build && yarn workspace settings test:e2e:ci
