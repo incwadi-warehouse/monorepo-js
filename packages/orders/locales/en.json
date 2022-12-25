@@ -30,7 +30,7 @@
   "notes": "Notes",
   "delete": "Delete",
   "profile": "Profile",
-  "reservationDesc": "<p>You are searching for books and can add them to the shopping cart. At the reservation page you can add all books from the shopping cart to a reservation. You can also save a collection date and notes, although all details are optional. If you just want to set a collection date, go directly to the reservation page and set a date.</p><p>The records are tied to a branch and can only be viewed by that branch. Only admins are allowed to delete a reservation - all books must be marked as sold or removed.</p><p>A book can be removed from the reservation by opening the book for editing and removing the tick in front of \"Reserved\".</p>",
+  "reservationDesc": "<p>You are searching for books and can add them to the shopping cart. At the reservation page you can add all books from the shopping cart to a reservation. All details are optional.</p><p>The records are tied to a branch and can only be viewed by that branch. Everybody is allowed to delete a reservation - all books must be marked as sold or removed.</p><p>A book can be removed from the reservation by opening the book for editing and removing the tick in front of \"Reserved\".</p>",
   "shop": "Shop",
   "updated": "Updated",
   "error": "Error",

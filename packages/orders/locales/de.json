@@ -30,7 +30,7 @@
   "notes": "Bemerkungen",
   "delete": "Löschen",
   "profile": "Profil",
-  "reservationDesc": "<p>Du suchst nach Büchern und kannst diese in den Warenkorb legen. Auf der Reservierungsseite kannst du alle Bücher aus dem Warenkorb zu einer Reservierung hinzufügen. Es lassen sich auch ein Abholdatum und Notizen speichern, alle Details sind optional. Wenn du nur ein Abholdatum festlegen möchtest, geh direkt zur Reservierungsseite und lege ein Datum fest.</p><p>Die Datensätze sind an eine Filiale gebunden und können nur von dieser Filiale eingesehen werden. Nur Administratoren dürfen eine Reservierung löschen - alle Bücher müssen als verkauft oder entfernt markiert sein.</p><p>Ein Buch kann aus der Reservierung entfernt werden, indem du das Buch zum Bearbeiten öffnest und das Häkchen vor \"Reserviert\" entfernst.</p>",
+  "reservationDesc": "<p>Du suchst nach Büchern und kannst diese in den Warenkorb legen. Auf der Reservierungsseite kannst du alle Bücher aus dem Warenkorb zu einer Reservierung hinzufügen. Alle Details sind optional.</p><p>Die Datensätze sind an eine Filiale gebunden und können nur von dieser Filiale eingesehen werden. Jeder darf eine Reservierung löschen - alle Bücher müssen als verkauft oder entfernt markiert sein.</p><p>Ein Buch kann aus der Reservierung entfernt werden, indem du das Buch zum Bearbeiten öffnest und das Häkchen vor \"Reserviert\" entfernst.</p>",
   "shop": "Shop",
   "updated": "Aktualisiert",
   "error": "Fehler",
