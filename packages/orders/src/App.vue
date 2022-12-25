@@ -3,6 +3,7 @@ import { useLocale, useColorScheme } from '@baldeweg/ui'
 import { useToast } from '@baldeweg/ui'
 import { onMounted, onUnmounted, ref } from 'vue'
 import pkg from './../package.json'
+import { useConfetti } from '@/composables/useConfetti.js'
 import { useReservation } from '@/composables/useReservation.js'
 import Logo from '@/components/AppLogo.vue'
 import AuthLogin from '@/components/auth/Login.vue'
@@ -44,6 +45,8 @@ onUnmounted(() => {
 })
 
 const version = pkg.version
+
+const { hasSnow, hasParty } = useConfetti()
 </script>
 
 <template>
@@ -93,7 +96,7 @@ const version = pkg.version
             {{ $t('logout') }}
           </b-dropdown-item>
         </b-dropdown>
-        
+
         <span
           class="action"
           @click.prevent="$router.push({ name: 'reservation' })"
@@ -114,6 +117,11 @@ const version = pkg.version
 
     <b-container size="m">
       <div v-html="about" />
+    </b-container>
+
+    <b-container size="m">
+      <BSwitch v-model="hasSnow" label="Snow (Experiment)" />
+      <BSwitch v-model="hasParty" label="Party (Experiment)" />
     </b-container>
 
     <b-panel :visible="isDrawerActive" @close="isDrawerActive = false">

@@ -11,6 +11,7 @@
   "dependencies": {
     "@baldeweg/ui": "0.5.1",
     "axios": "1.2.1",
+    "canvas-confetti": "1.6.0",
     "dayjs": "1.11.7",
     "js-cookie": "3.0.1",
     "lodash": "4.17.21",
