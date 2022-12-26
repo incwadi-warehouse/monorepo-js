@@ -1,8 +1,11 @@
 <script setup>
 import { useTitle } from '@baldeweg/ui'
+import { useI18n } from 'vue-i18n'
 import { useReservation } from '@/composables/useReservation.js'
 
-useTitle({ title: 'Order' })
+const { t } = useI18n()
+
+useTitle({ title: t('orders') })
 
 const { reservations, isLoading } = useReservation()
 

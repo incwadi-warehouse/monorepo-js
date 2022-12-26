@@ -1,11 +1,13 @@
 <script setup>
 import { useTitle } from '@baldeweg/ui'
-
 import { computed } from 'vue'
 import dayjs from 'dayjs'
+import { useI18n } from 'vue-i18n'
 import { useReservation } from '@/composables/useReservation.js'
 
-useTitle({ title: 'Order' })
+const { t } = useI18n()
+
+useTitle({ title: t('order') })
 
 const props = defineProps({
   id: String,
