@@ -7,14 +7,13 @@ import i18n from './i18n.js'
 import '@baldeweg/ui/styles'
 
 const theme = () => {
-  if (import.meta.env.VUE_APP_THEME !== 'false') {
-    return '<style>@import "' + import.meta.env.VUE_APP_THEME + '";</style>'
-  }
+  if (import.meta.env.VUE_APP_THEME === 'false') return
 
-  return ''
+  document.documentElement.innerHTML +=
+    '<style>@import "' + import.meta.env.VUE_APP_THEME + '";</style>'
 }
 
-document.documentElement.innerHTML += theme()
+theme()
 
 const ui = createUi()
 const app = createApp(App)
