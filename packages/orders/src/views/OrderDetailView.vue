@@ -1,7 +1,7 @@
 <script setup>
 import { useTitle } from '@baldeweg/ui'
 
-import { computed, ref, watchEffect } from 'vue'
+import { computed } from 'vue'
 import dayjs from 'dayjs'
 import { useReservation } from '@/composables/useReservation.js'
 
@@ -17,30 +17,6 @@ const { reservation, show, update, remove } = useReservation()
 
 show(props.id)
 
-const collectionDate = ref(null)
-const collectionTime = ref('00:00')
-
-watchEffect(() => {
-  if (reservation.value === null || reservation.value.collection === null)
-    return
-
-  let date = new Date(reservation.value.collection * 1000)
-
-  let month = formatNumber(date.getMonth() + 1)
-  let day = formatNumber(date.getDate())
-  collectionDate.value = date.getFullYear() + '-' + month + '-' + day
-
-  let hours = formatNumber(date.getHours())
-  let minutes = formatNumber(date.getMinutes())
-  collectionTime.value = hours + ':' + minutes
-})
-
-const collectionTimestamp = computed(() => {
-  let date = new Date(collectionDate.value + ' ' + collectionTime.value + 'Z')
-
-  return date.getTime() / 1000 || 0
-})
-
 const diff = computed(() => {
   const duration = dayjs().diff(dayjs.unix(reservation.value.createdAt))
 
@@ -51,13 +27,6 @@ const toLocaleDateString = (data) => {
   let date = new Date(data * 1000)
 
   return date.toLocaleString()
-}
-
-const formatNumber = (number) => {
-  if (number <= 9) {
-    return '0' + number
-  }
-  return number
 }
 </script>
 
@@ -89,7 +58,7 @@ const formatNumber = (number) => {
         </li>
       </ul>
 
-      <b-form @submit.prevent="update(collectionTimestamp)">
+      <b-form @submit.prevent="update">
         <b-form-group>
           <b-form-item>
             <input type="checkbox" id="open" v-model="reservation.open" />
@@ -103,39 +72,6 @@ const formatNumber = (number) => {
           <summary class="selector">
             {{ $t('customer_details') }}
           </summary>
-
-          <b-alert type="warning" :style="{ display: 'none' }"
-            >Deprecated: Date and Time will be removed soon. Datum und Uhrzeit
-            werden bald entfernt.</b-alert
-          >
-
-          <b-form-group :style="{ display: 'none' }">
-            <b-form-item>
-              <b-form-label for="date">
-                {{ $t('date') }}
-              </b-form-label>
-            </b-form-item>
-            <b-form-item>
-              <b-form-input type="date" id="date" v-model="collectionDate" />
-            </b-form-item>
-          </b-form-group>
-
-          <b-form-group :style="{ display: 'none' }">
-            <b-form-item>
-              <b-form-label for="time">
-                {{ $t('time') }}
-              </b-form-label>
-            </b-form-item>
-            <b-form-item>
-              <b-form-input type="time" id="time" v-model="collectionTime" />
-            </b-form-item>
-          </b-form-group>
-
-          <b-form-input
-            type="hidden"
-            id="collection"
-            v-model="collectionTimestamp"
-          />
 
           <b-form-group>
             <b-form-item>
