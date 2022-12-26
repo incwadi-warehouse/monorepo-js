@@ -61,10 +61,7 @@ const toLocaleDateString = (data) => {
       <b-form @submit.prevent="update">
         <b-form-group>
           <b-form-item>
-            <input type="checkbox" id="open" v-model="reservation.open" />
-            <b-form-label for="open">
-              {{ $t('new') }}
-            </b-form-label>
+            <BSwitch v-model="reservation.open" :label="$t('new')" />
           </b-form-item>
         </b-form-group>
 
