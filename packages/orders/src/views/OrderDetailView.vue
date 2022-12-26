@@ -68,7 +68,7 @@ const formatNumber = (number) => {
   </b-container>
 
   <b-container size="m">
-    <div class="reservation" v-if="reservation">
+    <div v-if="reservation">
       <p>
         {{ $t('reserved_on') }}: {{ toLocaleDateString(reservation.createdAt) }}
       </p>
@@ -237,12 +237,6 @@ const formatNumber = (number) => {
 </template>
 
 <style scoped>
-.reservation {
-  border: 2px solid var(--color-neutral-02);
-  border-radius: 20px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
 .selector {
   cursor: pointer;
   user-select: none;
