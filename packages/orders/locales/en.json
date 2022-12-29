@@ -37,5 +37,10 @@
   "reserved_on": "Reserved on",
   "customer_details": "Customer Details",
   "reservations": "Reservations",
-  "new": "new"
+  "new": "new",
+  "list_view": "List View",
+  "orders": "Orders",
+  "order_from": "Order from",
+  "details": "Details",
+  "order": "Order"
 }

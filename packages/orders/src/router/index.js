@@ -11,6 +11,17 @@ const router = createRouter({
       component: () => import('../views/ReservationView.vue'),
     },
     {
+      path: '/order',
+      name: 'order.list',
+      component: () => import('../views/OrderListView.vue'),
+    },
+    {
+      path: '/order/:id',
+      name: 'order.detail',
+      component: () => import('../views/OrderDetailView.vue'),
+      props: true,
+    },
+    {
       path: '/profile',
       name: 'profile',
       component: () => import('../views/ProfileView.vue'),

@@ -37,5 +37,10 @@
   "reserved_on": "Reserviert am",
   "customer_details": "Kundeninformation",
   "reservations": "Reservierungen",
-  "new": "Neu"
+  "new": "Neu",
+  "list_view": "Listenansicht",
+  "orders": "Bestellungen",
+  "order_from": "Bestellung vom",
+  "details": "Details",
+  "order": "Bestellung"
 }
