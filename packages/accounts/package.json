@@ -15,7 +15,7 @@
   "dependencies": {
     "@baldeweg/eslint-config": "0.6.0",
     "@baldeweg/ui": "0.6.5",
-    "axios": "1.2.1",
+    "axios": "1.2.2",
     "vue": "3.2.45",
     "vue-i18n": "9.2.2",
     "vue-router": "4.1.6"
