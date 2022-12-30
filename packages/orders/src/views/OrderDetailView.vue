@@ -30,6 +30,19 @@ const toLocaleDateString = (data) => {
 
   return date.toLocaleString()
 }
+
+const currency = (number) => {
+  return new Intl.NumberFormat('de-DE', {
+    style: 'currency',
+    currency: 'EUR',
+  }).format(number)
+}
+
+const sum = computed(() => {
+  return reservation.value.books.reduce((prev, cur) => {
+    return prev + cur.price
+  }, 0)
+})
 </script>
 
 <template>
@@ -46,18 +59,51 @@ const toLocaleDateString = (data) => {
     <b-alert type="error" v-if="diff > 14">
       {{ $t('old_reservation', { days: diff }) }}
     </b-alert>
+  </b-container>
 
-    <ul>
-      <li v-for="book in reservation.books" :key="book.id">
-        <a :href="catalog + '/search/book/' + book.id">
-          {{ book.title }} - {{ book.genre.name }} - {{ book.author.surname }},
-          {{ book.author.firstname }}
-          <span v-if="book.sold"> - {{ $t('sold') }}</span>
-          <span v-if="book.removed"> - {{ $t('removed') }}</span>
-        </a>
-      </li>
-    </ul>
+  <b-container size="m" v-if="reservation">
+    <h2>{{ $t('products') }}</h2>
+    <BTable>
+      <table>
+        <thead>
+          <tr>
+            <th>{{ $t('title') }}</th>
+            <th>{{ $t('author') }}</th>
+            <th>{{ $t('genre') }}</th>
+            <th class="alignRight">{{ $t('price') }}</th>
+          </tr>
+        </thead>
 
+        <tbody>
+          <tr v-for="(product, index) in reservation.books" :key="index">
+            <td>
+              <a :href="catalog + '/search/book/' + product.id">
+                {{ product.title }}
+              </a>
+              <span v-if="product.sold"> - {{ $t('sold') }}</span>
+              <span v-if="product.removed"> - {{ $t('removed') }}</span>
+            </td>
+            <td>
+              {{ product.author.surname }}, {{ product.author.firstname }}
+            </td>
+            <td>{{ product.genre.name }}</td>
+            <td class="alignRight">{{ currency(product.price) }}</td>
+          </tr>
+        </tbody>
+
+        <tfoot :style="{ fontWeight: 'bold' }">
+          <tr>
+            <td colspan="3">
+              {{ $t('grand_total') }}
+            </td>
+            <td class="alignRight">{{ currency(sum) }}</td>
+          </tr>
+        </tfoot>
+      </table>
+    </BTable>
+  </b-container>
+
+  <b-container size="m" v-if="reservation">
     <b-form @submit.prevent="update">
       <b-form-group>
         <b-form-item>
@@ -172,5 +218,8 @@ const toLocaleDateString = (data) => {
 .selector {
   cursor: pointer;
   user-select: none;
+}
+.alignRight {
+  text-align: right;
 }
 </style>
