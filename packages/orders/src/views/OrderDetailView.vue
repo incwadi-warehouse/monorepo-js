@@ -102,6 +102,7 @@ const sum = computed(() => {
   </b-container>
 
   <b-container size="m" v-if="reservation">
+    <h2>{{ $t('customer') }}</h2>
     <b-form @submit.prevent="update">
       <b-form-group>
         <b-form-item>
@@ -197,19 +198,27 @@ const sum = computed(() => {
 
       <b-form-group buttons>
         <b-form-item>
-          <b-button
-            type="button"
-            design="outline_danger"
-            @click="remove(reservation.id)"
-            :style="{ marginRight: '10px' }"
-          >
-            {{ $t('delete') }}
-          </b-button>
           <b-button design="outline">{{ $t('save') }}</b-button>
         </b-form-item>
       </b-form-group>
     </b-form>
   </b-container>
+
+  <BContainer size="m">
+    <h2>{{ $t('delete') }}</h2>
+    <b-form-group>
+      <b-form-item>
+        <b-button
+          type="button"
+          design="outline_danger"
+          @click="remove(reservation.id)"
+          :style="{ marginRight: '10px' }"
+        >
+          {{ $t('delete') }}
+        </b-button>
+      </b-form-item>
+    </b-form-group>
+  </BContainer>
 </template>
 
 <style scoped>

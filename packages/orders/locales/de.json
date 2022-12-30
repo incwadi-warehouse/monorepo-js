@@ -48,5 +48,6 @@
   "price": "Preis",
   "genre": "Rubrik",
   "grand_total": "Gesamtsumme",
-  "products": "Produkte"
+  "products": "Produkte",
+  "customer": "Kunde/Kundin"
 }

@@ -48,5 +48,6 @@
   "price": "Price",
   "genre": "Genre",
   "grand_total": "Grand Total",
-  "products": "Products"
+  "products": "Products",
+  "customer": "Customer"
 }
