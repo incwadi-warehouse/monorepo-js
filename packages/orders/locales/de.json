@@ -49,5 +49,6 @@
   "genre": "Rubrik",
   "grand_total": "Gesamtsumme",
   "products": "Produkte",
-  "customer": "Kunde/Kundin"
+  "customer": "Kunde/Kundin",
+  "status": "Status"
 }

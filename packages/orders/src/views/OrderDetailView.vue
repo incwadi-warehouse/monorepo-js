@@ -101,15 +101,20 @@ const sum = computed(() => {
     </BTable>
   </b-container>
 
-  <b-container size="m" v-if="reservation">
-    <h2>{{ $t('customer') }}</h2>
+  <BContainer size="m">
+    <h2>{{ $t('status') }}</h2>
     <b-form @submit.prevent="update">
       <b-form-group>
         <b-form-item>
           <BSwitch v-model="reservation.open" :label="$t('new')" />
         </b-form-item>
       </b-form-group>
+    </b-form>
+  </BContainer>
 
+  <b-container size="m" v-if="reservation">
+    <h2>{{ $t('customer') }}</h2>
+    <b-form @submit.prevent="update">
       <details>
         <summary class="selector">
           {{ $t('customer_details') }}

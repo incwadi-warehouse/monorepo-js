@@ -49,5 +49,6 @@
   "genre": "Genre",
   "grand_total": "Grand Total",
   "products": "Products",
-  "customer": "Customer"
+  "customer": "Customer",
+  "status": "Status"
 }
