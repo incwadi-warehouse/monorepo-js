@@ -46,17 +46,15 @@ const sum = computed(() => {
 </script>
 
 <template>
-  <b-container size="m">
+  <b-container size="m" v-if="reservation">
     <BChip>Experiment</BChip>
-    <h1>{{ $t('order') }}</h1>
+    <h1>
+      {{ $t('order_from') }} {{ toLocaleDateString(reservation.createdAt) }}
+    </h1>
   </b-container>
 
-  <b-container size="m" v-if="reservation">
-    <p>
-      {{ $t('reserved_on') }} {{ toLocaleDateString(reservation.createdAt) }}
-    </p>
-
-    <b-alert type="error" v-if="diff > 14">
+  <b-container size="m" v-if="reservation && diff > 14">
+    <b-alert type="error">
       {{ $t('old_reservation', { days: diff }) }}
     </b-alert>
   </b-container>
