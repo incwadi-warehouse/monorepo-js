@@ -42,5 +42,13 @@
   "orders": "Orders",
   "order_from": "Order from",
   "details": "Details",
-  "order": "Order"
+  "order": "Order",
+  "title": "Title",
+  "author": "Author",
+  "price": "Price",
+  "genre": "Genre",
+  "grand_total": "Grand Total",
+  "products": "Products",
+  "customer": "Customer",
+  "status": "Status"
 }

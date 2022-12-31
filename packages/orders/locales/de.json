@@ -42,5 +42,13 @@
   "orders": "Bestellungen",
   "order_from": "Bestellung vom",
   "details": "Details",
-  "order": "Bestellung"
+  "order": "Bestellung",
+  "title": "Titel",
+  "author": "Autor*in",
+  "price": "Preis",
+  "genre": "Rubrik",
+  "grand_total": "Gesamtsumme",
+  "products": "Produkte",
+  "customer": "Kunde/Kundin",
+  "status": "Status"
 }
