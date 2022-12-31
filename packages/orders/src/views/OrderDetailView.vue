@@ -114,12 +114,11 @@ const sum = computed(() => {
 
   <b-container size="m" v-if="reservation">
     <h2>{{ $t('customer') }}</h2>
-    <b-form @submit.prevent="update">
-      <details>
-        <summary class="selector">
-          {{ $t('customer_details') }}
-        </summary>
-
+    <details>
+      <summary class="selector">
+        {{ $t('customer_details') }}
+      </summary>
+      <b-form @submit.prevent="update">
         <b-form-group>
           <b-form-item>
             <b-form-label for="salutation">
@@ -199,14 +198,14 @@ const sum = computed(() => {
             <b-form-textarea id="notes" v-model="reservation.notes" />
           </b-form-item>
         </b-form-group>
-      </details>
 
-      <b-form-group buttons>
-        <b-form-item>
-          <b-button design="outline">{{ $t('save') }}</b-button>
-        </b-form-item>
-      </b-form-group>
-    </b-form>
+        <b-form-group buttons>
+          <b-form-item>
+            <b-button design="outline">{{ $t('save') }}</b-button>
+          </b-form-item>
+        </b-form-group>
+      </b-form>
+    </details>
   </b-container>
 
   <BContainer size="m">
