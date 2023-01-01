@@ -3,7 +3,6 @@ import { useLocale, useColorScheme } from '@baldeweg/ui'
 import { useToast } from '@baldeweg/ui'
 import { onMounted, onUnmounted, ref } from 'vue'
 import Logo from './components/AppLogo.vue'
-import pkg from './../package.json'
 import AuthLogin from '@/components/auth/Login.vue'
 import useAuth from '@/composables/useAuth.js'
 import { useReservation } from '@/composables/useReservation.js'
@@ -54,8 +53,6 @@ const reservationInterval = setInterval(() => {
 onUnmounted(() => {
   window.clearInterval(reservationInterval)
 })
-
-const version = pkg.version
 </script>
 
 <template>
@@ -169,12 +166,6 @@ const version = pkg.version
       </div>
     </b-panel>
 
-    <div class="project">
-      <a href="https://github.com/abaldeweg">baldeweg Open Source</a>
-      &bull;
-      <a href="https://github.com/incwadi-warehouse">{{ version }}</a>
-    </div>
-
     <b-toast v-if="current" :type="current.type" :visible="true">
       {{ current.body }}
     </b-toast>
@@ -188,16 +179,5 @@ const version = pkg.version
 .action {
   float: right;
   margin-left: 20px;
-}
-.project {
-  text-align: right;
-  font-size: 0.6rem;
-  margin: 0 20px;
-  color: var(--color-neutral-04);
-}
-
-.project a,
-.project a:hover {
-  color: var(--color-neutral-04);
 }
 </style>
