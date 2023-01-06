@@ -36,6 +36,8 @@ export default defineConfig(({ mode }) => {
               type: 'image/png',
             },
           ],
+          start_url: env.VUE_APP_BASE_URL,
+          scope: env.VUE_APP_BASE_URL,
         },
       }),
       ViteWebfontDownload([
