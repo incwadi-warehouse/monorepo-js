@@ -30,46 +30,95 @@ const toLocaleDateString = (data) => {
 
   return date.toLocaleString()
 }
+
+const currency = (number) => {
+  return new Intl.NumberFormat('de-DE', {
+    style: 'currency',
+    currency: 'EUR',
+  }).format(number)
+}
+
+const sum = computed(() => {
+  return reservation.value.books.reduce((prev, cur) => {
+    return prev + cur.price
+  }, 0)
+})
 </script>
 
 <template>
-  <b-container size="m">
+  <b-container size="m" v-if="reservation">
     <BChip>Experiment</BChip>
-    <h1>{{ $t('order') }}</h1>
+    <h1>
+      {{ $t('order_from') }} {{ toLocaleDateString(reservation.createdAt) }}
+    </h1>
+  </b-container>
+
+  <b-container size="m" v-if="reservation && diff > 14">
+    <b-alert type="error">
+      {{ $t('old_reservation', { days: diff }) }}
+    </b-alert>
   </b-container>
 
   <b-container size="m" v-if="reservation">
-    <p>
-      {{ $t('reserved_on') }} {{ toLocaleDateString(reservation.createdAt) }}
-    </p>
+    <h2>{{ $t('products') }}</h2>
+    <BTable>
+      <table>
+        <thead>
+          <tr>
+            <th>{{ $t('title') }}</th>
+            <th>{{ $t('author') }}</th>
+            <th>{{ $t('genre') }}</th>
+            <th class="alignRight">{{ $t('price') }}</th>
+          </tr>
+        </thead>
 
-    <b-alert type="error" v-if="diff > 14">
-      {{ $t('old_reservation', { days: diff }) }}
-    </b-alert>
+        <tbody>
+          <tr v-for="(product, index) in reservation.books" :key="index">
+            <td>
+              <a :href="catalog + '/search/book/' + product.id">
+                {{ product.title }}
+              </a>
+              <span v-if="product.sold"> - {{ $t('sold') }}</span>
+              <span v-if="product.removed"> - {{ $t('removed') }}</span>
+            </td>
+            <td>
+              {{ product.author.surname }}, {{ product.author.firstname }}
+            </td>
+            <td>{{ product.genre.name }}</td>
+            <td class="alignRight">{{ currency(product.price) }}</td>
+          </tr>
+        </tbody>
 
-    <ul>
-      <li v-for="book in reservation.books" :key="book.id">
-        <a :href="catalog + '/search/book/' + book.id">
-          {{ book.title }} - {{ book.genre.name }} - {{ book.author.surname }},
-          {{ book.author.firstname }}
-          <span v-if="book.sold"> - {{ $t('sold') }}</span>
-          <span v-if="book.removed"> - {{ $t('removed') }}</span>
-        </a>
-      </li>
-    </ul>
+        <tfoot :style="{ fontWeight: 'bold' }">
+          <tr>
+            <td colspan="3">
+              {{ $t('grand_total') }}
+            </td>
+            <td class="alignRight">{{ currency(sum) }}</td>
+          </tr>
+        </tfoot>
+      </table>
+    </BTable>
+  </b-container>
 
+  <BContainer size="m">
+    <h2>{{ $t('status') }}</h2>
     <b-form @submit.prevent="update">
       <b-form-group>
         <b-form-item>
           <BSwitch v-model="reservation.open" :label="$t('new')" />
         </b-form-item>
       </b-form-group>
+    </b-form>
+  </BContainer>
 
-      <details>
-        <summary class="selector">
-          {{ $t('customer_details') }}
-        </summary>
-
+  <b-container size="m" v-if="reservation">
+    <h2>{{ $t('customer') }}</h2>
+    <details>
+      <summary class="selector">
+        {{ $t('customer_details') }}
+      </summary>
+      <b-form @submit.prevent="update">
         <b-form-group>
           <b-form-item>
             <b-form-label for="salutation">
@@ -149,28 +198,39 @@ const toLocaleDateString = (data) => {
             <b-form-textarea id="notes" v-model="reservation.notes" />
           </b-form-item>
         </b-form-group>
-      </details>
 
-      <b-form-group buttons>
-        <b-form-item>
-          <b-button
-            type="button"
-            design="outline_danger"
-            @click="remove(reservation.id)"
-            :style="{ marginRight: '10px' }"
-          >
-            {{ $t('delete') }}
-          </b-button>
-          <b-button design="outline">{{ $t('save') }}</b-button>
-        </b-form-item>
-      </b-form-group>
-    </b-form>
+        <b-form-group buttons>
+          <b-form-item>
+            <b-button design="outline">{{ $t('save') }}</b-button>
+          </b-form-item>
+        </b-form-group>
+      </b-form>
+    </details>
   </b-container>
+
+  <BContainer size="m">
+    <h2>{{ $t('delete') }}</h2>
+    <b-form-group>
+      <b-form-item>
+        <b-button
+          type="button"
+          design="outline_danger"
+          @click="remove(reservation.id)"
+          :style="{ marginRight: '10px' }"
+        >
+          {{ $t('delete') }}
+        </b-button>
+      </b-form-item>
+    </b-form-group>
+  </BContainer>
 </template>
 
 <style scoped>
 .selector {
   cursor: pointer;
   user-select: none;
+}
+.alignRight {
+  text-align: right;
 }
 </style>
