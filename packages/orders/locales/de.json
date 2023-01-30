@@ -50,5 +50,7 @@
   "grand_total": "Gesamtsumme",
   "products": "Produkte",
   "customer": "Kunde/Kundin",
-  "status": "Status"
+  "status": "Status",
+  "old_view": "Alte Ansicht",
+  "new_view": "Neue Ansicht"
 }

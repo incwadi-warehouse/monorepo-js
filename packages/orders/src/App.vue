@@ -46,21 +46,6 @@ const { hasSnow, hasParty } = useConfetti()
       @open-drawer="isPanelActive = true"
     />
 
-    <BContainer size="m">
-      <BTabs justify="flex-end">
-        <BTabsLink>
-          <RouterLink :to="{ name: 'reservation' }">
-            {{ $t('reservations') }}
-          </RouterLink>
-        </BTabsLink>
-        <BTabsLink>
-          <RouterLink :to="{ name: 'order.list' }">
-            {{ $t('list_view') }}
-          </RouterLink>
-        </BTabsLink>
-      </BTabs>
-    </BContainer>
-
     <router-view :auth="auth" v-if="auth.state.isAuthenticated" />
 
     <b-container size="s" v-if="!auth.state.isAuthenticated">

@@ -50,5 +50,7 @@
   "grand_total": "Grand Total",
   "products": "Products",
   "customer": "Customer",
-  "status": "Status"
+  "status": "Status",
+  "old_view": "Old View",
+  "new_view": "New View"
 }

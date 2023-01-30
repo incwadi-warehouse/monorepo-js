@@ -12,6 +12,9 @@ const { reservations, isLoading } = useReservation()
   <article>
     <b-container size="m">
       <h1>{{ $t('reservations') }}</h1>
+      <RouterLink :to="{ name: 'order.list' }">
+        {{ $t('new_view') }}
+      </RouterLink>
     </b-container>
 
     <b-container size="m">

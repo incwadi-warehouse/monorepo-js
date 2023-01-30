@@ -7,6 +7,11 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      name: 'index',
+      redirect: { name: 'order.list' },
+    },
+    {
+      path: '/reservation',
       name: 'reservation',
       component: () => import('../views/ReservationView.vue'),
     },

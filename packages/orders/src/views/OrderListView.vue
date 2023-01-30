@@ -20,6 +20,10 @@ const toLocaleDateString = (data) => {
   <BContainer size="m">
     <BChip>Experiment</BChip>
     <h1>{{ $t('orders') }}</h1>
+
+    <RouterLink :to="{ name: 'reservation' }">
+      {{ $t('old_view') }}
+    </RouterLink>
   </BContainer>
 
   <BContainer size="m" v-if="isLoading">
