@@ -529,7 +529,7 @@ const removeTag = (id) => {
               <ul>
                 <li @click="tab = 'upload'">{{ $t('upload') }}</li>
                 <li @click="tab = 'file-manager'">
-                  {{ $t('directory') }} (Experiment)
+                  {{ $t('directory') }}
                 </li>
               </ul>
             </div>
