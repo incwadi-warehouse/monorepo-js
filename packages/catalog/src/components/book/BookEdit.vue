@@ -42,7 +42,7 @@ let state = reactive({
   sold: null,
   removed: null,
   reserved: null,
-  releaseYear: null,
+  releaseYear: 0,
   cond_id: null,
   tag: null,
   tags: [],
@@ -67,7 +67,7 @@ const loadBook = () => {
     state.removed = book.value.removed
     state.reserved = book.value.reserved
     state.releaseYear =
-      book.value.releaseYear !== 0 ? book.value.releaseYear : null
+      book.value.releaseYear !== 0 ? book.value.releaseYear : 0
     state.cond_id = book.value.condition ? book.value.condition.id : null
     state.tag = null
     state.tags = book.value.tags
