@@ -57,7 +57,7 @@ const { hasSnow, hasParty } = useConfetti()
       <div v-html="about" />
     </b-container>
 
-    <b-container size="m">
+    <b-container size="m" v-if="auth.state.isAuthenticated">
       <BSwitch v-model="hasSnow" label="Snow (Experiment)" />
       <BSwitch v-model="hasParty" label="Party (Experiment)" />
     </b-container>
