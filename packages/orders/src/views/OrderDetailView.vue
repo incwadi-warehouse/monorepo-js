@@ -51,6 +51,7 @@ const sum = computed(() => {
     <h1>
       {{ $t('order_from') }} {{ toLocaleDateString(reservation.createdAt) }}
     </h1>
+    <RouterLink :to="{ name: 'index' }">{{ $t('back') }}</RouterLink>
   </b-container>
 
   <b-container size="m" v-if="reservation && diff > 14">

@@ -52,5 +52,6 @@
   "customer": "Kunde/Kundin",
   "status": "Status",
   "old_view": "Alte Ansicht",
-  "new_view": "Neue Ansicht"
+  "new_view": "Neue Ansicht",
+  "back": "Zurück"
 }
