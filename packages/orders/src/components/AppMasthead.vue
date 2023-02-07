@@ -57,14 +57,14 @@ const hasLogo = import.meta.env.VUE_APP_LOGO === 'false' ? false : true
         </BDropdownItem>
       </BDropdown>
 
-      <span
+      <!-- <span
         class="action"
         @click.prevent="$router.push({ name: 'reservation' })"
       >
         <BBadge :content="reservations && reservations.length" hide-empty>
           <BIcon type="euro" />
         </BBadge>
-      </span>
+      </span> -->
     </BMastheadItem>
   </BMasthead>
 </template>
