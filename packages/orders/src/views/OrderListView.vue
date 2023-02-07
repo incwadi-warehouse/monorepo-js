@@ -18,12 +18,12 @@ const toLocaleDateString = (data) => {
 
 <template>
   <BContainer size="m">
-    <BChip>Experiment</BChip>
-    <h1>{{ $t('orders') }}</h1>
-
+    <BChip>Experiment</BChip><br />
     <RouterLink :to="{ name: 'reservation' }">
       {{ $t('old_view') }}
     </RouterLink>
+
+    <h1>{{ $t('orders') }}</h1>
   </BContainer>
 
   <BContainer size="m" v-if="isLoading">
