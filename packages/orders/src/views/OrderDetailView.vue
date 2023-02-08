@@ -3,7 +3,7 @@ import { useTitle } from '@baldeweg/ui'
 import { computed } from 'vue'
 import dayjs from 'dayjs'
 import { useI18n } from 'vue-i18n'
-import { useReservation } from '@/composables/useReservation.js'
+import { useOrder } from '@/composables/useOrder.js'
 
 const props = defineProps({
   id: String,
@@ -15,7 +15,7 @@ useTitle({ title: t('order') })
 
 const catalog = import.meta.env.VUE_APP_CATALOG
 
-const { reservation, show, update, remove } = useReservation()
+const { reservation, show, update, remove } = useOrder()
 
 show(props.id)
 
