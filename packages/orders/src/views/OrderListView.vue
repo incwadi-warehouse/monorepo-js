@@ -1,19 +1,16 @@
 <script setup>
 import { useTitle } from '@baldeweg/ui'
 import { useI18n } from 'vue-i18n'
-import { useReservation } from '@/composables/useReservation.js'
+import { onMounted } from 'vue'
+import { useOrder } from '@/composables/useOrder.js'
 
 const { t } = useI18n()
 
 useTitle({ title: t('orders') })
 
-const { reservations, isLoading } = useReservation()
+const { reservations, isLoading, list, toLocaleDateString } = useOrder()
 
-const toLocaleDateString = (data) => {
-  let date = new Date(data * 1000)
-
-  return date.toLocaleString()
-}
+onMounted(list)
 </script>
 
 <template>
