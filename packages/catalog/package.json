@@ -20,7 +20,7 @@
     "vue-router": "4.1.6"
   },
   "devDependencies": {
-    "@baldeweg/eslint-config": "0.6.0",
+    "@baldeweg/eslint-config": "0.7.0",
     "@cypress/vite-dev-server": "5.0.3",
     "@cypress/vue": "5.0.4",
     "@rushstack/eslint-patch": "1.2.0",
