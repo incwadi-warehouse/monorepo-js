@@ -36,7 +36,6 @@ export function useOrder() {
 
   const update = () => {
     return request('put', '/api/reservation/' + reservation.value.id, {
-      collection: null,
       notes: reservation.value.notes,
       books: flatten(reservation.value.books),
       salutation: reservation.value.salutation,
