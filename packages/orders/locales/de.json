@@ -17,8 +17,6 @@
   "theme": "Design",
   "sold": "Verkauft",
   "removed": "Entfernt",
-  "date": "Datum",
-  "time": "Uhrzeit",
   "salutation": "Anrede",
   "mr": "Herr",
   "mrs": "Frau",
@@ -34,11 +32,8 @@
   "updated": "Aktualisiert",
   "error": "Fehler",
   "old_reservation": "Die Reservierung ist {days} Tage alt!",
-  "reserved_on": "Reserviert am",
   "customer_details": "Kundeninformation",
-  "reservations": "Reservierungen",
   "new": "Neu",
-  "list_view": "Listenansicht",
   "orders": "Bestellungen",
   "order_from": "Bestellung vom",
   "details": "Details",
@@ -51,7 +46,5 @@
   "products": "Produkte",
   "customer": "Kunde/Kundin",
   "status": "Status",
-  "old_view": "Alte Ansicht",
-  "new_view": "Neue Ansicht",
   "back": "Zurück"
 }

@@ -11,11 +11,6 @@ const router = createRouter({
       redirect: { name: 'order.list' },
     },
     {
-      path: '/reservation',
-      name: 'reservation',
-      component: () => import('../views/ReservationView.vue'),
-    },
-    {
       path: '/order',
       name: 'order.list',
       component: () => import('../views/OrderListView.vue'),

@@ -5,7 +5,7 @@ import { onMounted, onUnmounted, ref } from 'vue'
 import AppPanel from '@/components/AppPanel.vue'
 import AppMasthead from '@/components/AppMasthead.vue'
 import { useConfetti } from '@/composables/useConfetti.js'
-import { useReservation } from '@/composables/useReservation.js'
+import { useOrder } from '@/composables/useOrder.js'
 import AuthLogin from '@/components/auth/Login.vue'
 import useAuth from '@/composables/useAuth.js'
 import router from '@/router'
@@ -28,7 +28,7 @@ onMounted(() => {
 
 const { current } = useToast()
 
-const { reservations, list } = useReservation()
+const { reservations, list } = useOrder()
 const reservationInterval = setInterval(list, 5000)
 
 onUnmounted(() => {

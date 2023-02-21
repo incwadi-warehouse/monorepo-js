@@ -24,7 +24,6 @@ show(props.id)
 <template>
   <div v-if="reservation">
     <BContainer size="m">
-      <BChip>Experiment</BChip>
       <h1>
         {{ $t('order_from') }} {{ toLocaleDateString(reservation.createdAt) }}
       </h1>

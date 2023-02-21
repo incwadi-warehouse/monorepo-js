@@ -17,8 +17,6 @@
   "theme": "Theme",
   "sold": "Sold",
   "removed": "Removed",
-  "date": "Date",
-  "time": "Time",
   "salutation": "Salutation",
   "mr": "Mr.",
   "mrs": "Mrs.",
@@ -34,11 +32,8 @@
   "updated": "Updated",
   "error": "Error",
   "old_reservation": "The reservation is {days} days old!",
-  "reserved_on": "Reserved on",
   "customer_details": "Customer Details",
-  "reservations": "Reservations",
   "new": "new",
-  "list_view": "List View",
   "orders": "Orders",
   "order_from": "Order from",
   "details": "Details",
@@ -51,7 +46,5 @@
   "products": "Products",
   "customer": "Customer",
   "status": "Status",
-  "old_view": "Old View",
-  "new_view": "New View",
   "back": "Back"
 }
