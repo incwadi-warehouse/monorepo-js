@@ -28,7 +28,7 @@ const router = createRouter({
     },
     {
       path: '/:pathMatch(.*)',
-      redirect: { name: 'reservation' },
+      redirect: { name: 'order.list' },
     },
   ],
   scrollBehavior() {

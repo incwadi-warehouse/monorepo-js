@@ -1,6 +1,6 @@
 <script setup>
 defineProps({
-  reservation: Object,
+  order: Object,
 })
 </script>
 
@@ -28,7 +28,7 @@ defineProps({
                 { key: 'd', value: $t('none_divers') },
               ]"
               id="salutation"
-              :modelValue="reservation.salutation"
+              :modelValue="order.salutation"
               @update:modelValue="$emit('update:salutation', $event)"
             />
           </BFormItem>
@@ -44,7 +44,7 @@ defineProps({
             <BFormInput
               type="text"
               id="firstname"
-              :modelValue="reservation.firstname"
+              :modelValue="order.firstname"
               @update:modelValue="$emit('update:firstname', $event)"
             />
           </BFormItem>
@@ -60,7 +60,7 @@ defineProps({
             <BFormInput
               type="text"
               id="surname"
-              :modelValue="reservation.surname"
+              :modelValue="order.surname"
               @update:modelValue="$emit('update:surname', $event)"
             />
           </BFormItem>
@@ -76,7 +76,7 @@ defineProps({
             <BFormInput
               type="email"
               id="mail"
-              :modelValue="reservation.mail"
+              :modelValue="order.mail"
               @update:modelValue="$emit('update:mail', $event)"
             />
           </BFormItem>
@@ -92,7 +92,7 @@ defineProps({
             <BFormInput
               type="tel"
               id="phone"
-              :modelValue="reservation.phone"
+              :modelValue="order.phone"
               @update:modelValue="$emit('update:phone', $event)"
             />
           </BFormItem>
@@ -105,7 +105,7 @@ defineProps({
           <BFormItem>
             <BForm-textarea
               id="notes"
-              :modelValue="reservation.notes"
+              :modelValue="order.notes"
               @update:modelValue="$emit('update:notes', $event)"
             />
           </BFormItem>

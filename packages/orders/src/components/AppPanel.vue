@@ -25,9 +25,9 @@ const settings = import.meta.env.VUE_APP_SETTINGS
           </a>
         </template>
       </BList>
-      <BList :route="{ name: 'reservation' }" divider active>
+      <BList :route="{ name: 'order.list' }" divider active>
         <template #title>
-          {{ $t('reservation') }}
+          {{ $t('order') }}
         </template>
       </BList>
       <BList divider>

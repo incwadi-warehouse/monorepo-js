@@ -3,7 +3,7 @@ import { useRequest, useToast } from '@baldeweg/ui'
 import Cookies from 'js-cookie'
 import { useI18n } from 'vue-i18n'
 
-const reservations = ref(null)
+const orders = ref(null)
 
 export function useOrder() {
   const { config, setAuthHeader, request } = useRequest()
@@ -15,7 +15,7 @@ export function useOrder() {
 
   const { t } = useI18n()
 
-  const reservation = ref(null)
+  const order = ref(null)
 
   const isLoading = ref(false)
 
@@ -23,27 +23,27 @@ export function useOrder() {
     isLoading.value = true
 
     return request('get', '/api/reservation/list').then((res) => {
-      reservations.value = res.data
+      orders.value = res.data
       isLoading.value = false
     })
   }
 
   const show = (id) => {
     return request('get', '/api/reservation/' + id).then((res) => {
-      reservation.value = res.data
+      order.value = res.data
     })
   }
 
   const update = () => {
-    return request('put', '/api/reservation/' + reservation.value.id, {
-      notes: reservation.value.notes,
-      books: flatten(reservation.value.books),
-      salutation: reservation.value.salutation,
-      firstname: reservation.value.firstname,
-      surname: reservation.value.surname,
-      mail: reservation.value.mail,
-      phone: reservation.value.phone,
-      open: reservation.value.open,
+    return request('put', '/api/reservation/' + order.value.id, {
+      notes: order.value.notes,
+      books: flatten(order.value.books),
+      salutation: order.value.salutation,
+      firstname: order.value.firstname,
+      surname: order.value.surname,
+      mail: order.value.mail,
+      phone: order.value.phone,
+      open: order.value.open,
     })
       .then(() => {
         add({
@@ -72,18 +72,18 @@ export function useOrder() {
   }
 
   const flatten = (data) => {
-    let books = []
+    let products = []
 
     data.forEach((element) => {
-      books.push(element.id)
+      products.push(element.id)
     })
 
-    return books.join(',')
+    return products.join(',')
   }
 
   return {
-    reservations,
-    reservation,
+    orders,
+    order,
     isLoading,
     list,
     show,

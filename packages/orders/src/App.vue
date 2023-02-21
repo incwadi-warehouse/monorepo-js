@@ -28,11 +28,11 @@ onMounted(() => {
 
 const { current } = useToast()
 
-const { reservations, list } = useOrder()
-const reservationInterval = setInterval(list, 5000)
+const { orders, list } = useOrder()
+const orderInterval = setInterval(list, 5000)
 
 onUnmounted(() => {
-  window.clearInterval(reservationInterval)
+  window.clearInterval(orderInterval)
 })
 
 const { hasSnow, hasParty } = useConfetti()
@@ -44,7 +44,7 @@ const showPride = ref(false)
   <b-app>
     <AppMasthead
       :auth="auth"
-      :reservations="reservations"
+      :orders="orders"
       @open-drawer="isPanelActive = true"
     />
 

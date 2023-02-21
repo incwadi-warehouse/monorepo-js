@@ -8,7 +8,7 @@ const { t } = useI18n()
 
 useTitle({ title: t('orders') })
 
-const { reservations, isLoading, list, toLocaleDateString } = useOrder()
+const { orders, isLoading, list, toLocaleDateString } = useOrder()
 
 onMounted(list)
 </script>
@@ -22,9 +22,9 @@ onMounted(list)
     <BSpinner size="l" />
   </BContainer>
 
-  <BContainer size="m" v-if="reservations">
+  <BContainer size="m" v-if="orders">
     <BList
-      v-for="item in reservations"
+      v-for="item in orders"
       :key="item.id"
       :route="{ name: 'order.detail', params: { id: item.id } }"
       divider

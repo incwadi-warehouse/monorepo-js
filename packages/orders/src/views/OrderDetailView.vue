@@ -16,41 +16,39 @@ const { t } = useI18n()
 
 useTitle({ title: t('order') })
 
-const { reservation, show, update, remove, toLocaleDateString } = useOrder()
+const { order, show, update, remove, toLocaleDateString } = useOrder()
 
 show(props.id)
 </script>
 
 <template>
-  <div v-if="reservation">
+  <div v-if="order">
     <BContainer size="m">
-      <h1>
-        {{ $t('order_from') }} {{ toLocaleDateString(reservation.createdAt) }}
-      </h1>
+      <h1>{{ $t('order_from') }} {{ toLocaleDateString(order.createdAt) }}</h1>
       <RouterLink :to="{ name: 'index' }">{{ $t('back') }}</RouterLink>
     </BContainer>
 
-    <OrderAge :created="reservation.createdAt" />
+    <OrderAge :created="order.createdAt" />
 
-    <OrderTable :products="reservation.books" />
+    <OrderTable :products="order.books" />
 
     <OrderStatus
-      :open="reservation.open"
-      @update:open="reservation.open = $event"
+      :open="order.open"
+      @update:open="order.open = $event"
       @update="update"
     />
 
     <OrderCustomer
-      :reservation="reservation"
+      :order="order"
       @update="update"
-      @update:salutation="reservation.salutation = $event"
-      @update:firstname="reservation.firstname = $event"
-      @update:surname="reservation.surname = $event"
-      @update:mail="reservation.mail = $event"
-      @update:phone="reservation.phone = $event"
-      @update:notes="reservation.notes = $event"
+      @update:salutation="order.salutation = $event"
+      @update:firstname="order.firstname = $event"
+      @update:surname="order.surname = $event"
+      @update:mail="order.mail = $event"
+      @update:phone="order.phone = $event"
+      @update:notes="order.notes = $event"
     />
 
-    <OrderDelete :id="reservation.id" @remove="remove" />
+    <OrderDelete :id="order.id" @remove="remove" />
   </div>
 </template>

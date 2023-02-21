@@ -16,7 +16,7 @@ const diff = computed(() => {
 <template>
   <BContainer size="m" v-if="diff > 14">
     <BAlert type="error">
-      {{ $t('old_reservation', { days: diff }) }}
+      {{ $t('old_order', { days: diff }) }}
     </BAlert>
   </BContainer>
 </template>

@@ -3,7 +3,7 @@ import AppLogo from '@/components/AppLogo.vue'
 
 defineProps({
   auth: Object,
-  reservations: Object,
+  orders: Object,
 })
 
 const catalog = import.meta.env.VUE_APP_CATALOG
@@ -59,9 +59,9 @@ const hasLogo = import.meta.env.VUE_APP_LOGO === 'false' ? false : true
 
       <!-- <span
         class="action"
-        @click.prevent="$router.push({ name: 'reservation' })"
+        @click.prevent="$router.push({ name: 'order.list' })"
       >
-        <BBadge :content="reservations && reservations.length" hide-empty>
+        <BBadge :content="orders && orders.length" hide-empty>
           <BIcon type="euro" />
         </BBadge>
       </span> -->
