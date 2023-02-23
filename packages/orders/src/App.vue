@@ -40,7 +40,7 @@ const showPride = ref(false)
 </script>
 
 <template>
-  <b-app>
+  <BApp>
     <AppMasthead
       :auth="auth"
       :orders="orders"
@@ -49,32 +49,40 @@ const showPride = ref(false)
 
     <div class="pride" v-if="showPride" />
 
-    <router-view :auth="auth" v-if="auth.state.isAuthenticated" />
+    <RouterView :auth="auth" v-if="auth.state.isAuthenticated" />
 
-    <b-container size="s" v-if="!auth.state.isAuthenticated">
+    <BContainer size="s" v-if="!auth.state.isAuthenticated">
       <h1>{{ $t('login') }}</h1>
-      <auth-login />
-    </b-container>
+      <AuthLogin />
+    </BContainer>
 
-    <b-container size="m">
+    <BContainer size="m">
       <div v-html="about" />
-    </b-container>
+    </BContainer>
 
-    <b-container size="m" v-if="auth.state.isAuthenticated">
-      <BSwitch v-model="hasSnow" label="Snow (Experiment)" />
-      <BSwitch v-model="hasParty" label="Party (Experiment)" />
-      <BSwitch v-model="showPride" label="Pride (Experiment)" />
-    </b-container>
+    <div v-if="auth.state.isAuthenticated">
+      <BContainer size="m">
+        <BSwitch v-model="hasSnow" label="Snow (Experiment)" />
+      </BContainer>
+
+      <BContainer size="m">
+        <BSwitch v-model="hasParty" label="Party (Experiment)" />
+      </BContainer>
+
+      <BContainer size="m">
+        <BSwitch v-model="showPride" label="Pride (Experiment)" />
+      </BContainer>
+    </div>
 
     <AppPanel
       :isPanelActive="isPanelActive"
       @close-panel="isPanelActive = false"
     />
 
-    <b-toast v-if="current" :type="current.type" :visible="true">
+    <BToast v-if="current" :type="current.type" :visible="true">
       {{ current.body }}
-    </b-toast>
-  </b-app>
+    </BToast>
+  </BApp>
 </template>
 
 <style scoped>
