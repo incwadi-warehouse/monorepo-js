@@ -43,6 +43,7 @@ const hasLogo = import.meta.env.VUE_APP_LOGO === 'false' ? false : true
             <b-icon type="profile" />
           </span>
         </template>
+
         <BDropdownItem no-hover v-if="auth.state.me">
           {{ $t('hello') }}, {{ auth.state.me.username }}!
         </BDropdownItem>
