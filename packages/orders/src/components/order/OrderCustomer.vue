@@ -103,7 +103,7 @@ defineProps({
             <BFormLabel for="notes">{{ $t('notes') }}</BFormLabel>
           </BFormItem>
           <BFormItem>
-            <BForm-textarea
+            <BFormTextarea
               id="notes"
               :modelValue="order.notes"
               @update:modelValue="$emit('update:notes', $event)"
@@ -113,7 +113,7 @@ defineProps({
 
         <BFormGroup buttons>
           <BFormItem>
-            <b-button design="outline">{{ $t('save') }}</b-button>
+            <BButton design="outline">{{ $t('save') }}</BButton>
           </BFormItem>
         </BFormGroup>
       </BForm>
