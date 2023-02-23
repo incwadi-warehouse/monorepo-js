@@ -9,7 +9,10 @@ import OrderCustomer from '@/components/order/OrderCustomer.vue'
 import OrderDelete from '@/components/order/OrderDelete.vue'
 
 const props = defineProps({
-  id: String,
+  id: {
+    type: String,
+    required: true,
+  },
 })
 
 const { t } = useI18n()
@@ -24,8 +27,11 @@ show(props.id)
 <template>
   <div v-if="order">
     <BContainer size="m">
+      <RouterLink :to="{ name: 'index' }">&lang; {{ $t('back') }}</RouterLink>
+    </BContainer>
+
+    <BContainer size="m">
       <h1>{{ $t('order_from') }} {{ toLocaleDateString(order.createdAt) }}</h1>
-      <RouterLink :to="{ name: 'index' }">{{ $t('back') }}</RouterLink>
     </BContainer>
 
     <OrderAge :created="order.createdAt" />
