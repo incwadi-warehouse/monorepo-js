@@ -22,7 +22,7 @@ export function useBook() {
 
   const find = (data) => {
     return request('get', '/api/book' + '/find', null, {
-      options: encodeURI(filters(data)),
+      options: JSON.stringify(filters(data)),
     }).then((res) => {
       books.value = res.data
     })

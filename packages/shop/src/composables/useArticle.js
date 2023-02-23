@@ -41,7 +41,7 @@ export function useArticle() {
     }
 
     return request('get', '/api/public/book/find', null, {
-      options: encodeURI(params),
+      options: JSON.stringify(params),
     }).then((res) => {
       articles.value = res.data.books
       counter.value = res.data.counter
