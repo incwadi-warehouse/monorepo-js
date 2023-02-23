@@ -24,6 +24,7 @@ const sum = computed(() => {
 <template>
   <BContainer size="m">
     <h2>{{ $t('products') }}</h2>
+
     <BTable>
       <table>
         <thead>
