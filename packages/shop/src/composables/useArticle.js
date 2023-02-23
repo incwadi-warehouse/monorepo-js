@@ -16,33 +16,33 @@ export function useArticle() {
     isLoading.value = true
 
     const params = {
-      options: {
-        term: term,
-        filter: [
+      term: term,
+      filter: [
+        {
+          field: 'branch',
+          operator: 'eq',
+          value: import.meta.env.VUE_APP_BRANCH,
+        },
+        {
+          field: 'genre',
+          operator: 'eq',
+          value: genre,
+        },
+      ],
+      orderBy: {
+        article: [
           {
-            field: 'branch',
-            operator: 'eq',
-            value: import.meta.env.VUE_APP_BRANCH,
-          },
-          {
-            field: 'genre',
-            operator: 'eq',
-            value: genre,
+            field: 'added',
+            direction: 'desc',
           },
         ],
-        orderBy: {
-          article: [
-            {
-              field: 'added',
-              direction: 'desc',
-            },
-          ],
-        },
-        offset: page * 20 - 20,
       },
+      offset: page * 20 - 20,
     }
 
-    return request('get', '/api/public/book/find', null, params).then((res) => {
+    return request('get', '/api/public/book/find', null, {
+      options: encodeURI(params),
+    }).then((res) => {
       articles.value = res.data.books
       counter.value = res.data.counter
       isLoading.value = false

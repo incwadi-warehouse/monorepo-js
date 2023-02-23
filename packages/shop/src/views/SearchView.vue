@@ -15,7 +15,10 @@ useTitle({ title: 'Search' })
 
 const props = defineProps({
   term: String,
-  page: Number,
+  page: {
+    type: Number,
+    default: 0,
+  },
 })
 
 const router = useRouter()
