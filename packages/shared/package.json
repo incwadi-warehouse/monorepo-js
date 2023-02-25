@@ -1,0 +1,9 @@
+{
+  "name": "shared",
+  "version": "0.0.0",
+  "description": "Internal files",
+  "main": "index.js",
+  "author": "André Baldeweg",
+  "license": "MIT",
+  "private": true
+}
