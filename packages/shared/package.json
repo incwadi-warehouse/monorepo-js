@@ -1,13 +1,18 @@
 {
   "name": "shared",
   "version": "0.0.0",
+  "scripts": {
+    "test:unit": "vitest --environment jsdom",
+    "test:unit:ci": "vitest run --environment jsdom"
+  },
   "description": "Internal files",
   "main": "index.js",
   "author": "André Baldeweg",
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@baldeweg/eslint-config": "^0.7.0",
-    "@rushstack/eslint-patch": "^1.2.0"
+    "@baldeweg/eslint-config": "0.7.0",
+    "@rushstack/eslint-patch": "1.2.0",
+    "jsdom": "21.1.0"
   }
 }
