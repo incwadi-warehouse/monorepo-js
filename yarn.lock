@@ -912,7 +912,7 @@
     "@babel/helper-validator-identifier" "^7.18.6"
     to-fast-properties "^2.0.0"
 
-"@baldeweg/eslint-config@0.7.0":
+"@baldeweg/eslint-config@0.7.0", "@baldeweg/eslint-config@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@baldeweg/eslint-config/-/eslint-config-0.7.0.tgz#df77cbf277522363e9b9e16c8db6d66e50b62b7f"
   integrity sha512-EnPAnVkmLJ3v3l6l+lJkAycskN0cm0EDPK7bxwGMAe2caUBQZYM4Q3hcmuiW0SVxbPzJe/yOOyzLWqzjIFohow==
@@ -1793,7 +1793,7 @@
     estree-walker "^2.0.2"
     picomatch "^2.3.1"
 
-"@rushstack/eslint-patch@1.2.0":
+"@rushstack/eslint-patch@1.2.0", "@rushstack/eslint-patch@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz#8be36a1f66f3265389e90b5f9c9962146758f728"
   integrity sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==
