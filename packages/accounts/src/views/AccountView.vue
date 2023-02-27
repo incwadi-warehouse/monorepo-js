@@ -25,7 +25,7 @@ const { logout } = useLogout()
         {{ $t('hello_name', { name: user.username }) }}
       </h2>
       <div class="branch">
-        {{ t('branch') }} <strong>{{ user.branch.name }}</strong>
+        {{ user.branch.name }}
       </div>
 
       <div class="actions">
