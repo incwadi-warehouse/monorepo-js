@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, afterEach } from 'vitest'
 import { nextTick } from 'vue'
+import Cookies from 'js-cookie'
 import { useToken } from '@/composables/useToken.js'
 
 const date = new Date()
@@ -71,7 +72,7 @@ describe('Token', () => {
     persist(authToken)
 
     expect(auth.value).toStrictEqual(authToken)
-    expect(JSON.parse(sessionStorage.getItem('auth'))).toStrictEqual(authToken)
+    expect(JSON.parse(Cookies.get('auth'))).toStrictEqual(authToken)
   })
 
   it('isAuthenticated', async () => {
@@ -97,7 +98,7 @@ describe('Token', () => {
   it('Config', async () => {
     const token = authToken
     token.tokenExpire = 1
-    sessionStorage.setItem('auth', authToken)
+    Cookies.set('auth', authToken)
 
     const { auth } = useToken({ init: true, watch: true })
 

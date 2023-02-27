@@ -1,7 +1,8 @@
 import { computed, ref, watch } from 'vue'
 import { useRequest } from '@baldeweg/ui'
+import Cookies from 'js-cookie'
 
-const auth = ref(JSON.parse(sessionStorage.getItem('auth')))
+const auth = ref(JSON.parse(Cookies.get('auth') || null))
 const user = ref(null)
 
 export function useToken(config) {
@@ -32,11 +33,11 @@ export function useToken(config) {
   const persist = (data) => {
     if (data && data.token && data.refreshToken && data.tokenExpire) {
       auth.value = data
-      sessionStorage.setItem('auth', JSON.stringify(data))
+      Cookies.set('auth', JSON.stringify(data))
       setAuthHeader(data.token)
     } else {
       auth.value = null
-      sessionStorage.removeItem('auth')
+      Cookies.remove('auth')
       setAuthHeader(null)
     }
   }
