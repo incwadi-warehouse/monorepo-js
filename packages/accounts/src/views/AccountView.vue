@@ -28,6 +28,8 @@ const { logout } = useLogout()
         {{ user.branch.name }}
       </div>
 
+      <BDivider />
+
       <div class="actions">
         <RouterLink :to="{ name: 'password' }">
           {{ t('change_password') }}
