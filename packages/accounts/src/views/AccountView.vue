@@ -1,7 +1,6 @@
 <script setup>
 import { useTitle } from '@baldeweg/ui'
 import { useI18n } from 'vue-i18n'
-import ListApps from '@/components/ListApps.vue'
 import { useToken } from '@/composables/useToken.js'
 import { useLogout } from '@/composables/useLogout.js'
 
@@ -38,11 +37,6 @@ const { logout } = useLogout()
         </b-button>
       </div>
     </div>
-  </b-container>
-
-  <b-container size="s" v-if="user">
-    <h2>{{ t('apps') }}</h2>
-    <ListApps />
   </b-container>
 </template>
 
