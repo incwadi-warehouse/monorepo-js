@@ -29,12 +29,8 @@ export function useLogin() {
       password: password.value,
     })
       .then((res) => {
-        isLoggingIn.value = false
         hasSuccess.value = true
         hasError.value = false
-
-        username.value = null
-        password.value = null
 
         const { persist } = useToken()
 
@@ -48,9 +44,11 @@ export function useLogin() {
         changeLocation()
       })
       .catch(() => {
-        isLoggingIn.value = false
         hasSuccess.value = false
         hasError.value = true
+      })
+      .finally(() => {
+        isLoggingIn.value = false
 
         username.value = null
         password.value = null
