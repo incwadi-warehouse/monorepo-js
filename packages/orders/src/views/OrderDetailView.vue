@@ -1,12 +1,14 @@
 <script setup>
 import { useTitle } from '@baldeweg/ui'
 import { useI18n } from 'vue-i18n'
+import { remove as _remove } from 'lodash'
 import { useOrder } from '@/composables/useOrder.js'
 import OrderAge from '@/components/order/OrderAge.vue'
 import OrderTable from '@/components/order/OrderTable.vue'
 import OrderStatus from '@/components/order/OrderStatus.vue'
 import OrderCustomer from '@/components/order/OrderCustomer.vue'
 import OrderDelete from '@/components/order/OrderDelete.vue'
+import { useProduct } from '@/composables/useProduct.js'
 
 const props = defineProps({
   id: {
@@ -22,6 +24,16 @@ useTitle({ title: t('order') })
 const { order, show, update, remove, toLocaleDateString } = useOrder()
 
 show(props.id)
+
+const { removeFromOrder } = useProduct()
+
+const removeProduct = (id) => {
+  removeFromOrder(id)
+
+  order.value.books = _remove(order.books, (book) => {
+    return book.id === id
+  })
+}
 </script>
 
 <template>
@@ -36,7 +48,7 @@ show(props.id)
 
     <OrderAge :created="order.createdAt" />
 
-    <OrderTable :products="order.books" />
+    <OrderTable :products="order.books" @removeFromOrder="removeProduct" />
 
     <OrderStatus
       :open="order.open"
