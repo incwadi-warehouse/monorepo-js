@@ -1,10 +1,9 @@
 <script setup>
 import { useLocale, useColorScheme } from '@baldeweg/ui'
 import { useToast } from '@baldeweg/ui'
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import Logo from './components/AppLogo.vue'
-import { useReservation } from '@/composables/useReservation.js'
 import useAuth from '@/composables/useAuth.js'
 import AuthLogin from '@/components/auth/Login.vue'
 
@@ -33,18 +32,6 @@ const settings = import.meta.env.VUE_APP_SETTINGS
 const orders = import.meta.env.VUE_APP_ORDERS
 
 const { current } = useToast()
-
-const { reservations, list: listReservations } = useReservation()
-
-const reservationInterval = setInterval(listReservations, 5000)
-
-onUnmounted(() => {
-  window.clearInterval(reservationInterval)
-})
-
-const navigateToOrders = () => {
-  window.location = import.meta.env.VUE_APP_ORDERS
-}
 
 const accounts = import.meta.env.VUE_APP_ACCOUNTS
 </script>
@@ -96,12 +83,6 @@ const accounts = import.meta.env.VUE_APP_ACCOUNTS
             {{ $t('logout') }}
           </b-dropdown-item>
         </b-dropdown>
-
-        <!-- <span class="action" @click.prevent="navigateToOrders">
-          <b-badge :content="reservations && reservations.length" hide-empty>
-            <b-icon type="euro" />
-          </b-badge>
-        </span> -->
       </b-masthead-item>
     </b-masthead>
     <router-view :auth="auth" v-if="auth.state.isAuthenticated" />
