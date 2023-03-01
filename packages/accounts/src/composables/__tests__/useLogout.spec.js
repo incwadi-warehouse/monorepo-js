@@ -32,6 +32,6 @@ describe('Logout', () => {
 
     logout()
 
-    expect(Cookies.get('auth')).toBeNull()
+    expect(Cookies.get('auth')).toBeUndefined()
   })
 })
