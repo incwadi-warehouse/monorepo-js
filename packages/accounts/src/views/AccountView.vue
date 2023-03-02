@@ -1,6 +1,7 @@
 <script setup>
 import { useTitle } from '@baldeweg/ui'
 import { useI18n } from 'vue-i18n'
+import { useSnow, useParty } from 'shared'
 import { useToken } from '@/composables/useToken.js'
 import { useLogout } from '@/composables/useLogout.js'
 
@@ -10,6 +11,9 @@ useTitle({ title: t('account') })
 
 const { user } = useToken()
 const { logout } = useLogout()
+
+const { hasSnow } = useSnow()
+const { hasParty } = useParty()
 </script>
 
 <template>
@@ -40,6 +44,18 @@ const { logout } = useLogout()
       </div>
     </div>
   </b-container>
+
+  <BContainer size="s">
+    <div class="card">
+      <h2>{{ $t('settings') }}</h2>
+
+      <BSwitch v-model="hasSnow" label="Snow (Experiment)" />
+
+      <BDivider />
+
+      <BSwitch v-model="hasParty" label="Party (Experiment)" />
+    </div>
+  </BContainer>
 </template>
 
 <style scoped>
