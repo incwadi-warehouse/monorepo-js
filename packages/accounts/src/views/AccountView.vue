@@ -2,6 +2,8 @@
 import { useTitle } from '@baldeweg/ui'
 import { useI18n } from 'vue-i18n'
 import { useSnow, useParty } from 'shared'
+import { useConf } from 'shared'
+import { watch } from 'vue'
 import { useToken } from '@/composables/useToken.js'
 import { useLogout } from '@/composables/useLogout.js'
 
@@ -9,11 +11,29 @@ const { t } = useI18n()
 
 useTitle({ title: t('account') })
 
-const { user } = useToken()
+const { auth, user } = useToken()
 const { logout } = useLogout()
 
 const { hasSnow } = useSnow()
 const { hasParty } = useParty()
+
+const { getConf, setConf } = useConf(
+  auth.value.token,
+  import.meta.env.VUE_APP_CONF_API,
+  'user',
+  user.value.id
+)
+
+getConf('snow').then((res) => {
+  hasSnow.value = res
+})
+
+watch(
+  () => hasSnow.value,
+  () => {
+    setConf('snow', hasSnow.value)
+  }
+)
 </script>
 
 <template>
