@@ -10,7 +10,9 @@ const globalConfig = ref({
 })
 
 export function useRequest() {
-  const localConfig = ref({})
+  const localConfig = ref({
+    headers: {},
+  })
 
   const setAuthHeader = (token) => {
     localConfig.value.headers['Authorization'] = 'Bearer ' + token
