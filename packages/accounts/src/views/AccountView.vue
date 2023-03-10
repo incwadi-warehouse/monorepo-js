@@ -37,45 +37,47 @@ watch(
 </script>
 
 <template>
-  <b-container size="s" v-if="user">
-    <h1>{{ t('account') }} (Experiment)</h1>
-  </b-container>
+  <div v-if="user">
+    <b-container size="s">
+      <h1>{{ t('account') }} (Experiment)</h1>
+    </b-container>
 
-  <b-container size="s" v-if="user">
-    <div class="card">
-      <div class="media" />
+    <b-container size="s">
+      <div class="card">
+        <div class="media" />
 
-      <h2>
-        {{ $t('hello_name', { name: user.username }) }}
-      </h2>
-      <div class="branch">
-        {{ user.branch.name }}
+        <h2>
+          {{ $t('hello_name', { name: user.username }) }}
+        </h2>
+        <div class="branch">
+          {{ user.branch.name }}
+        </div>
+
+        <BDivider />
+
+        <div class="actions">
+          <RouterLink :to="{ name: 'password' }">
+            {{ t('change_password') }}
+          </RouterLink>
+          <b-button design="text" @click.prevent="logout">
+            {{ $t('logout') }}
+          </b-button>
+        </div>
       </div>
+    </b-container>
 
-      <BDivider />
+    <BContainer size="s">
+      <div class="card">
+        <h2>{{ $t('settings') }}</h2>
 
-      <div class="actions">
-        <RouterLink :to="{ name: 'password' }">
-          {{ t('change_password') }}
-        </RouterLink>
-        <b-button design="text" @click.prevent="logout">
-          {{ $t('logout') }}
-        </b-button>
+        <BSwitch v-model="hasSnow" label="Snow (Experiment)" />
+
+        <BDivider />
+
+        <BSwitch v-model="hasParty" label="Party (Experiment)" />
       </div>
-    </div>
-  </b-container>
-
-  <BContainer size="s">
-    <div class="card">
-      <h2>{{ $t('settings') }}</h2>
-
-      <BSwitch v-model="hasSnow" label="Snow (Experiment)" />
-
-      <BDivider />
-
-      <BSwitch v-model="hasParty" label="Party (Experiment)" />
-    </div>
-  </BContainer>
+    </BContainer>
+  </div>
 </template>
 
 <style scoped>

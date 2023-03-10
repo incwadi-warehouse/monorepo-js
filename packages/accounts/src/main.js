@@ -17,7 +17,9 @@ const theme = () => {
 theme()
 
 if (import.meta.env.MODE === 'development') {
-  worker.start()
+  worker.start({
+    onUnhandledRequest: 'bypass',
+  })
 }
 
 const ui = createUi()
