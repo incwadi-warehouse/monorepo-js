@@ -2,11 +2,13 @@
 import { useTitle } from '@baldeweg/ui'
 import { useI18n } from 'vue-i18n'
 import { useOrder } from '@/composables/useOrder.js'
+import { useProduct } from '@/composables/useProduct.js'
 import OrderAge from '@/components/order/OrderAge.vue'
 import OrderTable from '@/components/order/OrderTable.vue'
 import OrderStatus from '@/components/order/OrderStatus.vue'
 import OrderCustomer from '@/components/order/OrderCustomer.vue'
 import OrderDelete from '@/components/order/OrderDelete.vue'
+import OrderSellAll from '@/components/order/OrderSellAll.vue'
 
 const props = defineProps({
   id: {
@@ -22,6 +24,8 @@ useTitle({ title: t('order') })
 const { order, show, update, remove, toLocaleDateString } = useOrder()
 
 show(props.id)
+
+const { sellAll } = useProduct()
 </script>
 
 <template>
@@ -53,6 +57,11 @@ show(props.id)
       @update:mail="order.mail = $event"
       @update:phone="order.phone = $event"
       @update:notes="order.notes = $event"
+    />
+
+    <OrderSellAll
+      :id="order.id"
+      @sell-all="sellAll(order.books), (order.books = [])"
     />
 
     <OrderDelete :id="order.id" @remove="remove" />

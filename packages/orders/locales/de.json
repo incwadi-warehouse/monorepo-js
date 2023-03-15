@@ -46,5 +46,7 @@
   "products": "Produkte",
   "customer": "Kunde/Kundin",
   "status": "Status",
-  "back": "Zurück"
+  "back": "Zurück",
+  "sell": "Verkaufen",
+  "sell_all": "Alles verkaufen"
 }
