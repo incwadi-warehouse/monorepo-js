@@ -33,6 +33,7 @@ const sum = computed(() => {
             <th>{{ $t('author') }}</th>
             <th>{{ $t('genre') }}</th>
             <th class="alignRight">{{ $t('price') }}</th>
+            <th></th>
           </tr>
         </thead>
 
@@ -50,6 +51,15 @@ const sum = computed(() => {
             </td>
             <td>{{ product.genre.name }}</td>
             <td class="alignRight">{{ currency(product.price) }}</td>
+            <td class="alignRight">
+              <BButton
+                type="button"
+                design="text"
+                @click="$emit('removeFromOrder', product.id)"
+              >
+                <BIcon type="minus" />
+              </BButton>
+            </td>
           </tr>
         </tbody>
 
@@ -59,6 +69,7 @@ const sum = computed(() => {
               {{ $t('grand_total') }}
             </td>
             <td class="alignRight">{{ currency(sum) }}</td>
+            <td></td>
           </tr>
         </tfoot>
       </table>
