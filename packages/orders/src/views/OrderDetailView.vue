@@ -3,12 +3,14 @@ import { useTitle } from '@baldeweg/ui'
 import { useI18n } from 'vue-i18n'
 import { remove as _remove } from 'lodash'
 import { useOrder } from '@/composables/useOrder.js'
+import { useProduct } from '@/composables/useProduct.js'
 import OrderAge from '@/components/order/OrderAge.vue'
 import OrderTable from '@/components/order/OrderTable.vue'
 import OrderStatus from '@/components/order/OrderStatus.vue'
 import OrderCustomer from '@/components/order/OrderCustomer.vue'
 import OrderDelete from '@/components/order/OrderDelete.vue'
 import { useProduct } from '@/composables/useProduct.js'
+import OrderSellAll from '@/components/order/OrderSellAll.vue'
 
 const props = defineProps({
   id: {
@@ -25,7 +27,7 @@ const { order, show, update, remove, toLocaleDateString } = useOrder()
 
 show(props.id)
 
-const { removeFromOrder } = useProduct()
+const { removeFromOrder , sellAll } = useProduct()
 
 const removeProduct = (id) => {
   removeFromOrder(id)
@@ -65,6 +67,11 @@ const removeProduct = (id) => {
       @update:mail="order.mail = $event"
       @update:phone="order.phone = $event"
       @update:notes="order.notes = $event"
+    />
+
+    <OrderSellAll
+      :id="order.id"
+      @sell-all="sellAll(order.books), (order.books = [])"
     />
 
     <OrderDelete :id="order.id" @remove="remove" />

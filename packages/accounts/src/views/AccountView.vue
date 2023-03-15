@@ -1,6 +1,9 @@
 <script setup>
 import { useTitle } from '@baldeweg/ui'
 import { useI18n } from 'vue-i18n'
+import { useSnow, useParty } from 'shared'
+import { useConf } from 'shared'
+import { watch } from 'vue'
 import { useToken } from '@/composables/useToken.js'
 import { useLogout } from '@/composables/useLogout.js'
 
@@ -8,38 +11,73 @@ const { t } = useI18n()
 
 useTitle({ title: t('account') })
 
-const { user } = useToken()
+const { auth, user } = useToken()
 const { logout } = useLogout()
+
+const { hasSnow } = useSnow()
+const { hasParty } = useParty()
+
+const { getConf, setConf } = useConf(
+  auth.value.token,
+  import.meta.env.VUE_APP_CONF_API,
+  'user',
+  user.value.id
+)
+
+getConf('snow').then((res) => {
+  hasSnow.value = res
+})
+
+watch(
+  () => hasSnow.value,
+  () => {
+    setConf('snow', hasSnow.value)
+  }
+)
 </script>
 
 <template>
-  <b-container size="s" v-if="user">
-    <h1>{{ t('account') }} (Experiment)</h1>
-  </b-container>
+  <div v-if="user">
+    <b-container size="s">
+      <h1>{{ t('account') }} (Experiment)</h1>
+    </b-container>
 
-  <b-container size="s" v-if="user">
-    <div class="card">
-      <div class="media" />
+    <b-container size="s">
+      <div class="card">
+        <div class="media" />
 
-      <h2>
-        {{ $t('hello_name', { name: user.username }) }}
-      </h2>
-      <div class="branch">
-        {{ user.branch.name }}
+        <h2>
+          {{ $t('hello_name', { name: user.username }) }}
+        </h2>
+        <div class="branch">
+          {{ user.branch.name }}
+        </div>
+
+        <BDivider />
+
+        <div class="actions">
+          <RouterLink :to="{ name: 'password' }">
+            {{ t('change_password') }}
+          </RouterLink>
+          <b-button design="text" @click.prevent="logout">
+            {{ $t('logout') }}
+          </b-button>
+        </div>
       </div>
+    </b-container>
 
-      <BDivider />
+    <BContainer size="s">
+      <div class="card">
+        <h2>{{ $t('settings') }}</h2>
 
-      <div class="actions">
-        <RouterLink :to="{ name: 'password' }">
-          {{ t('change_password') }}
-        </RouterLink>
-        <b-button design="text" @click.prevent="logout">
-          {{ $t('logout') }}
-        </b-button>
+        <BSwitch v-model="hasSnow" label="Snow (Experiment)" />
+
+        <BDivider />
+
+        <BSwitch v-model="hasParty" label="Party (Experiment)" />
       </div>
-    </div>
-  </b-container>
+    </BContainer>
+  </div>
 </template>
 
 <style scoped>

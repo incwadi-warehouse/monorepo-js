@@ -103,7 +103,7 @@ onUnmounted(() => {
           </b-dropdown-item>
         </b-dropdown>
 
-        <!-- <span class="action" @click.prevent="navigateToOrders">
+        <span class="action" @click.prevent="navigateToOrders">
           <b-badge
             :content="
               stateReservation.reservations &&
@@ -113,7 +113,7 @@ onUnmounted(() => {
           >
             <b-icon type="euro" />
           </b-badge>
-        </span> -->
+        </span>
       </b-masthead-item>
     </b-masthead>
 

@@ -45,5 +45,18 @@ export function useProduct() {
     return request('put', '/api/book/' + id, data)
   }
 
-  return { removeFromOrder }
+  const sellAll = (products) => {
+    products.forEach((element) => {
+      sell(element.id)
+    })
+  }
+
+  const sell = (id) => {
+    return request('put', '/api/book/sell/' + id)
+  }
+
+  return {
+    removeFromOrder,
+    sellAll,
+  }
 }
