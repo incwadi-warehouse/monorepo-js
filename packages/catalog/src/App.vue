@@ -97,11 +97,11 @@ const accounts = import.meta.env.VUE_APP_ACCOUNTS
           </b-dropdown-item>
         </b-dropdown>
 
-        <!-- <span class="action" @click.prevent="navigateToOrders">
+        <span class="action" @click.prevent="navigateToOrders">
           <b-badge :content="reservations && reservations.length" hide-empty>
             <b-icon type="euro" />
           </b-badge>
-        </span> -->
+        </span>
       </b-masthead-item>
     </b-masthead>
     <router-view :auth="auth" v-if="auth.state.isAuthenticated" />
