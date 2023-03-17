@@ -2,15 +2,15 @@ import { useToast } from '@baldeweg/ui'
 import { ref } from 'vue'
 import { without } from 'lodash'
 import { useI18n } from 'vue-i18n'
-import { useRequest } from '@baldeweg/ui'
+import { useRequest } from 'shared'
 import Cookies from 'js-cookie'
 
 const books = ref(null)
 
 export function useBook() {
-  const { config, setAuthHeader, request } = useRequest()
+  const { localConfig, setAuthHeader, request } = useRequest()
 
-  config.value.baseURL = import.meta.env.VUE_APP_API
+  localConfig.value.baseURL = import.meta.env.VUE_APP_API
   setAuthHeader(Cookies.get('token'))
 
   const { t } = useI18n()
@@ -146,7 +146,13 @@ export function useBook() {
   }
 
   const upload = (data) => {
-    return request('post', '/api/book/cover/' + data.id, data.form)
+    localConfig.value.headers['Content-Type'] = 'multipart/form-data'
+
+    return request('post', '/api/book/cover/' + data.id, data.form).finally(
+      () => {
+        localConfig.value.headers['Content-Type'] = 'application/json'
+      }
+    )
   }
 
   const removeCover = (id) => {
