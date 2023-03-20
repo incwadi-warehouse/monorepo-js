@@ -9,7 +9,6 @@ import OrderTable from '@/components/order/OrderTable.vue'
 import OrderStatus from '@/components/order/OrderStatus.vue'
 import OrderCustomer from '@/components/order/OrderCustomer.vue'
 import OrderDelete from '@/components/order/OrderDelete.vue'
-import { useProduct } from '@/composables/useProduct.js'
 import OrderSellAll from '@/components/order/OrderSellAll.vue'
 
 const props = defineProps({
@@ -27,7 +26,7 @@ const { order, show, update, remove, toLocaleDateString } = useOrder()
 
 show(props.id)
 
-const { removeFromOrder , sellAll } = useProduct()
+const { removeFromOrder, sellAll } = useProduct()
 
 const removeProduct = (id) => {
   removeFromOrder(id)
