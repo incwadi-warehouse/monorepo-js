@@ -12,7 +12,7 @@ const about = import.meta.env.VUE_APP_ABOUT
 const { config } = useRequest()
 config.value.baseURL = import.meta.env.VUE_APP_API
 
-useToken({ init: true, watch: true })
+const { user } = useToken({ init: true, watch: true })
 </script>
 
 <template>
@@ -21,7 +21,7 @@ useToken({ init: true, watch: true })
       <AppLogo />
     </b-container>
 
-    <RouterView />
+    <RouterView v-if="user" />
 
     <b-container size="s">
       <div v-html="about" />
