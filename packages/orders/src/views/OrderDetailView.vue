@@ -26,15 +26,7 @@ const { order, show, update, remove, toLocaleDateString } = useOrder()
 
 show(props.id)
 
-const { removeFromOrder, sellAll } = useProduct()
-
-const removeProduct = (id) => {
-  removeFromOrder(id)
-
-  order.value.books = _remove(order.books, (book) => {
-    return book.id === id
-  })
-}
+const { sellAll } = useProduct()
 </script>
 
 <template>
@@ -49,7 +41,7 @@ const removeProduct = (id) => {
 
     <OrderAge :created="order.createdAt" />
 
-    <OrderTable :products="order.books" @removeFromOrder="removeProduct" />
+    <OrderTable :products="order.books" />
 
     <OrderStatus
       :open="order.open"
