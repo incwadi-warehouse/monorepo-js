@@ -1,11 +1,10 @@
 <script setup>
-import { useLocale, useColorScheme } from '@baldeweg/ui'
+import { useColorScheme } from '@baldeweg/ui'
 import { useRequest } from '@baldeweg/ui'
 import { useRoute } from 'vue-router'
 import AppLogo from './components/AppLogo.vue'
 import { useToken } from '@/composables/useToken.js'
 
-useLocale()
 useColorScheme()
 
 const about = import.meta.env.VUE_APP_ABOUT
