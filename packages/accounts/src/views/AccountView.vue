@@ -57,6 +57,18 @@ watch(
     setConf('pride', showPride.value)
   }
 )
+
+const showBeach = ref(false)
+getConf('beach').then((res) => {
+  showBeach.value = res
+})
+
+watch(
+  () => showBeach.value,
+  () => {
+    setConf('beach', showBeach.value)
+  }
+)
 </script>
 
 <template>
@@ -102,6 +114,10 @@ watch(
         <BDivider />
 
         <BSwitch v-model="showPride" label="Pride (Experiment)" />
+
+        <BDivider />
+
+        <BSwitch v-model="showBeach" label="Beach (Experiment)" />
       </div>
     </BContainer>
   </div>
