@@ -50,6 +50,7 @@ let state = reactive({
   hasErrorUploading: false,
   isDragging: false,
   format: null,
+  duplicate: false,
 })
 
 const loadBook = () => {
@@ -74,6 +75,7 @@ const loadBook = () => {
     state.recommendation = book.value.recommendation
     state.format = book.value.format ? book.value.format.id : null
     state.subtitle = book.value.subtitle
+    state.duplicate = book.value.duplicate
   })
 }
 
@@ -111,6 +113,7 @@ const update = () => {
       recommendation: state.recommendation,
       format: state.format,
       subtitle: state.subtitle,
+      duplicate: state.duplicate,
     },
   })
 
@@ -497,6 +500,16 @@ const removeTag = (id) => {
             <b-button design="outline">{{ $t('add_tag') }}</b-button>
           </b-form-group>
         </b-form>
+
+        <!-- duplicate -->
+        <b-form-group>
+          <b-form-item>
+            <input type="checkbox" id="duplicate" v-model="state.duplicate" />
+            <b-form-label for="duplicate">
+              {{ $t('duplicate') }}
+            </b-form-label>
+          </b-form-item>
+        </b-form-group>
 
         <!-- cover -->
         <div v-if="cover">

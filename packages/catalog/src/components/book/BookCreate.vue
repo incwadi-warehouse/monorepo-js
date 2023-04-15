@@ -33,6 +33,7 @@ const state = reactive({
   tag: null,
   format: null,
   subtitle: null,
+  duplicate: false,
 })
 
 let date = new Date()
@@ -72,6 +73,7 @@ const create = () => {
     tags: tags,
     format: state.format,
     subtitle: state.subtitle,
+    duplicate: state.duplicate,
   })
     .then(() => {
       emit('close')
@@ -109,6 +111,7 @@ const reset = () => {
   state.tag = null
   state.format = null
   state.subtitle = null
+  state.duplicate = false
 
   let date = new Date()
   state.added = date.toISOString().split('T')[0]
@@ -383,6 +386,16 @@ const createTag = () => {
             <b-button design="outline">{{ $t('add_tag') }}</b-button>
           </b-form-group>
         </b-form>
+
+        <!-- duplicate -->
+        <b-form-group>
+          <b-form-item>
+            <input type="checkbox" id="duplicate" v-model="state.duplicate" />
+            <b-form-label for="duplicate">
+              {{ $t('duplicate') }}
+            </b-form-label>
+          </b-form-item>
+        </b-form-group>
       </b-container>
     </b-modal>
   </b-form>
