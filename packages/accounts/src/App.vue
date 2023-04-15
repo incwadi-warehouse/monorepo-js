@@ -4,6 +4,7 @@ import { useRequest } from '@baldeweg/ui'
 import { useRoute } from 'vue-router'
 import { ref, watch } from 'vue'
 import { useConf } from 'shared'
+import { useSnow, useParty } from 'shared'
 import AppLogo from './components/AppLogo.vue'
 import { useToken } from '@/composables/useToken.js'
 
@@ -17,6 +18,48 @@ config.value.baseURL = import.meta.env.VUE_APP_API
 const { auth, user } = useToken({ init: true, watch: true })
 
 const route = useRoute()
+
+// Snow
+const { hasSnow } = useSnow()
+
+watch(
+  () => user.value,
+  (to, from) => {
+    if (from === null && typeof to === 'object') {
+      const { getConf } = useConf(
+        auth.value.token,
+        import.meta.env.VUE_APP_CONF_API,
+        'user',
+        user.value.id
+      )
+
+      getConf('snow').then((res) => {
+        hasSnow.value = res
+      })
+    }
+  }
+)
+
+// Party
+const { hasParty } = useParty()
+
+watch(
+  () => user.value,
+  (to, from) => {
+    if (from === null && typeof to === 'object') {
+      const { getConf } = useConf(
+        auth.value.token,
+        import.meta.env.VUE_APP_CONF_API,
+        'user',
+        user.value.id
+      )
+
+      getConf('party').then((res) => {
+        hasParty.value = res
+      })
+    }
+  }
+)
 
 // Pride
 const showPride = ref(false)

@@ -1,7 +1,6 @@
 <script setup>
 import { useTitle } from '@baldeweg/ui'
 import { useI18n } from 'vue-i18n'
-import { useSnow, useParty } from 'shared'
 import { useConf } from 'shared'
 import { ref, watch } from 'vue'
 import { useToken } from '@/composables/useToken.js'
@@ -14,8 +13,8 @@ useTitle({ title: t('account') })
 const { auth, user } = useToken()
 const { logout } = useLogout()
 
-const { hasSnow } = useSnow()
-const { hasParty } = useParty()
+const hasSnow = ref(false)
+const hasParty = ref(false)
 
 const { getConf, setConf } = useConf(
   auth.value.token,
