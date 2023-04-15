@@ -28,10 +28,21 @@ getConf('snow').then((res) => {
   hasSnow.value = res
 })
 
+getConf('party').then((res) => {
+  hasParty.value = res
+})
+
 watch(
   () => hasSnow.value,
   () => {
     setConf('snow', hasSnow.value)
+  }
+)
+
+watch(
+  () => hasParty.value,
+  () => {
+    setConf('party', hasParty.value)
   }
 )
 </script>

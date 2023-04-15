@@ -2,7 +2,7 @@
 import { useLocale, useColorScheme } from '@baldeweg/ui'
 import { useToast } from '@baldeweg/ui'
 import { onMounted, onUnmounted, ref, watch } from 'vue'
-import { useConf, useSnow } from 'shared'
+import { useConf, useSnow, useParty } from 'shared'
 import Cookies from 'js-cookie'
 import Logo from './components/AppLogo.vue'
 import AuthLogin from '@/components/auth/Login.vue'
@@ -72,6 +72,27 @@ watch(
 
       getConf('snow').then((res) => {
         hasSnow.value = res
+      })
+    }
+  }
+)
+
+// Party
+watch(
+  () => auth.state.me,
+  (to, from) => {
+    if (from === null && typeof to === 'object') {
+      const { hasParty } = useParty()
+
+      const { getConf } = useConf(
+        Cookies.get('token'),
+        import.meta.env.VUE_APP_CONF_API,
+        'user',
+        auth.state.me.id
+      )
+
+      getConf('party').then((res) => {
+        hasParty.value = res
       })
     }
   }
