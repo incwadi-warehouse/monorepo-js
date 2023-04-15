@@ -22,13 +22,17 @@ export function useRequest() {
     return { ...globalConfig.value, ...localConfig.value }
   })
 
-  const request = (method, url, data, params) => {
-    return axios.create(config.value).request({
+  const request = (method, url, data, params, wrap = false) => {
+    const res = axios.create(config.value).request({
       method,
       url,
       data,
       params,
     })
+
+    if (!wrap) return res.data
+
+    return res
   }
 
   return { globalConfig, localConfig, config, setAuthHeader, request }

@@ -21,9 +21,15 @@ export function useBook() {
   const cover = ref(null)
 
   const find = (data) => {
-    return request('get', '/api/book' + '/find', null, {
-      options: JSON.stringify(filters(data)),
-    }).then((res) => {
+    return request(
+      'get',
+      '/api/book' + '/find',
+      null,
+      {
+        options: JSON.stringify(filters(data)),
+      },
+      true
+    ).then((res) => {
       books.value = res.data
     })
   }
@@ -99,19 +105,19 @@ export function useBook() {
   }
 
   const show = (id) => {
-    return request('get', '/api/book/' + id).then((res) => {
+    return request('get', '/api/book/' + id, null, null, true).then((res) => {
       book.value = res.data
     })
   }
 
   const create = (data) => {
-    return request('post', '/api/book/new', data).then((res) => {
+    return request('post', '/api/book/new', data, null, true).then((res) => {
       book.value = res.data
     })
   }
 
   const update = (data) => {
-    return request('put', '/api/book/' + data.id, data.params)
+    return request('put', '/api/book/' + data.id, data.params, null, true)
       .then((res) => {
         book.value = res.data
         add({
@@ -128,19 +134,23 @@ export function useBook() {
   }
 
   const sell = (id) => {
-    return request('put', '/api/book/sell/' + id).then((res) => {
-      book.value = res.data
-    })
+    return request('put', '/api/book/sell/' + id, null, null, true).then(
+      (res) => {
+        book.value = res.data
+      }
+    )
   }
 
   const remove = (id) => {
-    return request('put', '/api/book/remove/' + id).then((res) => {
-      book.value = res.data
-    })
+    return request('put', '/api/book/remove/' + id, null, null, true).then(
+      (res) => {
+        book.value = res.data
+      }
+    )
   }
 
   const getCover = (id) => {
-    request('get', '/api/book/cover/' + id).then((res) => {
+    request('get', '/api/book/cover/' + id, null, null, true).then((res) => {
       cover.value = res.data
     })
   }
@@ -148,27 +158,43 @@ export function useBook() {
   const upload = (data) => {
     localConfig.value.headers['Content-Type'] = 'multipart/form-data'
 
-    return request('post', '/api/book/cover/' + data.id, data.form).finally(
-      () => {
-        localConfig.value.headers['Content-Type'] = 'application/json'
-      }
-    )
+    return request(
+      'post',
+      '/api/book/cover/' + data.id,
+      data.form,
+      null,
+      true
+    ).finally(() => {
+      localConfig.value.headers['Content-Type'] = 'application/json'
+    })
   }
 
   const removeCover = (id) => {
-    request('delete', '/api/book/cover/' + id).then(() => {
+    request('delete', '/api/book/cover/' + id, null, null, true).then(() => {
       getCover(id)
     })
   }
 
   const found = (id) => {
-    return request('put', '/api/book/inventory/found/' + id).then((res) => {
+    return request(
+      'put',
+      '/api/book/inventory/found/' + id,
+      null,
+      null,
+      true
+    ).then((res) => {
       book.value = res.data
     })
   }
 
   const notfound = (id) => {
-    return request('put', '/api/book/inventory/notfound/' + id).then((res) => {
+    return request(
+      'put',
+      '/api/book/inventory/notfound/' + id,
+      null,
+      null,
+      true
+    ).then((res) => {
       book.value = res.data
     })
   }
