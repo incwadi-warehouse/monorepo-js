@@ -120,5 +120,7 @@
   "create_book_error_duplicate": "Book not saved (Duplicate)",
   "create_book_error": "Book not saved",
   "try_out_accounts": "Try out the new accounts service!",
-  "duplicate": "Duplicate"
+  "duplicate": "Duplicate",
+  "yes": "Yes",
+  "no": "No"
 }

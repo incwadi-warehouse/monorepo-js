@@ -1,4 +1,5 @@
 <script setup>
+import { useRouter } from 'vue-router'
 import SearchRadioFilter from '@/components/search/SearchRadioFilter.vue'
 import SearchCheckboxFilter from '@/components/search/SearchCheckboxFilter.vue'
 import SearchNumberRangeFilter from '@/components/search/SearchNumberRangeFilter.vue'
@@ -9,7 +10,6 @@ import { useGenre } from '@/composables/useGenre.js'
 import { useFormat } from '@/composables/useFormat.js'
 import { useAuthor } from '@/composables/useAuthor.js'
 import { useBook } from '@/composables/useBook.js'
-import { useRouter } from 'vue-router'
 
 defineProps({
   auth: Object,
@@ -125,6 +125,17 @@ const resetAndClose = () => {
 
       <!-- added -->
       <SearchDateRangeFilter :title="$t('added')" v-model="filter.added" />
+
+      <!-- duplicate -->
+      <SearchRadioFilter
+        :title="$t('duplicate')"
+        :items="[
+          { key: 'all', value: $t('all') },
+          { key: 'yes', value: $t('yes') },
+          { key: 'no', value: $t('no') },
+        ]"
+        v-model="filter.duplicate"
+      />
 
       <!-- order by -->
       <SearchRadioFilter

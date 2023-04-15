@@ -86,6 +86,13 @@ export function useBook() {
                 value: data.options.added.split('..')[1],
               }
             : undefined,
+          ['yes', 'no'].includes(data.options.duplicate)
+            ? {
+                field: 'duplicate',
+                operator: 'eq',
+                value: data.options.duplicate === 'yes',
+              }
+            : undefined,
         ],
         undefined
       ),
