@@ -15,5 +15,9 @@
   "apps": "Apps",
   "account": "Account",
   "change_password": "Change Password",
-  "branch": "Branch"
+  "branch": "Branch",
+  "snow": "Snow",
+  "party": "Party",
+  "pride": "Pride",
+  "beach": "Beach"
 }

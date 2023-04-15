@@ -104,19 +104,19 @@ watch(
       <div class="card">
         <h2>{{ $t('settings') }}</h2>
 
-        <BSwitch v-model="hasSnow" label="Snow (Experiment)" />
+        <BSwitch v-model="hasSnow" :label="t('snow')" />
 
         <BDivider />
 
-        <BSwitch v-model="hasParty" label="Party (Experiment)" />
+        <BSwitch v-model="hasParty" :label="t('party')" />
 
         <BDivider />
 
-        <BSwitch v-model="showPride" label="Pride (Experiment)" />
+        <BSwitch v-model="showPride" :label="t('pride')" />
 
         <BDivider />
 
-        <BSwitch v-model="showBeach" label="Beach (Experiment)" />
+        <BSwitch v-model="showBeach" :label="t('beach')" />
       </div>
     </BContainer>
   </div>
