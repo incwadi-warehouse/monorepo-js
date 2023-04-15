@@ -6,7 +6,13 @@ export function useConf(token, baseUrl, schema, database) {
   setAuthHeader(token)
 
   const getConf = async (key) => {
-    const res = await request('get', '/' + schema + '/' + database + '/' + key)
+    const res = await request(
+      'get',
+      '/' + schema + '/' + database + '/' + key,
+      null,
+      null,
+      true
+    )
 
     return res.data.value
   }
@@ -15,7 +21,9 @@ export function useConf(token, baseUrl, schema, database) {
     const res = await request(
       'post',
       '/' + schema + '/' + database + '/' + key,
-      { value: val }
+      { value: val },
+      null,
+      true
     )
 
     return res.data.value

@@ -1,9 +1,6 @@
 <script setup>
 import { useTitle } from '@baldeweg/ui'
-import { useSearch } from './../composables/useSearch.js'
 import { useRouter } from 'vue-router'
-import BookEdit from '@/components/book/BookEdit.vue'
-import BookCreate from '@/components/book/BookCreate.vue'
 import SearchScrollToTop from '../components/search/SearchScrollToTop.vue'
 import SearchReservations from '../components/search/SearchReservations.vue'
 import SearchBookResultHeading from '../components/search/SearchBookResultHeading.vue'
@@ -12,6 +9,9 @@ import SearchBookResult from '../components/search/SearchBookResult.vue'
 import SearchAuthorResult from '../components/search/SearchAuthorResult.vue'
 import SearchFilter from '../components/search/SearchFilter.vue'
 import SearchSearchbar from './../components/search/SearchSearchbar.vue'
+import { useSearch } from './../composables/useSearch.js'
+import BookCreate from '@/components/book/BookCreate.vue'
+import BookEdit from '@/components/book/BookEdit.vue'
 
 useTitle({ title: 'Search' })
 

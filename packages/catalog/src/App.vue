@@ -1,8 +1,10 @@
 <script setup>
 import { useLocale, useColorScheme } from '@baldeweg/ui'
 import { useToast } from '@baldeweg/ui'
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
+import { useConf, useSnow } from 'shared'
+import Cookies from 'js-cookie'
 import Logo from './components/AppLogo.vue'
 import { useReservation } from '@/composables/useReservation.js'
 import useAuth from '@/composables/useAuth.js'
@@ -47,6 +49,27 @@ const navigateToOrders = () => {
 }
 
 const accounts = import.meta.env.VUE_APP_ACCOUNTS
+
+// Snow
+watch(
+  () => auth.state.me,
+  (to, from) => {
+    if (from === null && typeof to === 'object') {
+      const { hasSnow } = useSnow()
+
+      const { getConf } = useConf(
+        Cookies.get('token'),
+        import.meta.env.VUE_APP_CONF_API,
+        'user',
+        auth.state.me.id
+      )
+
+      getConf('snow').then((res) => {
+        hasSnow.value = res
+      })
+    }
+  }
+)
 </script>
 
 <template>
@@ -104,7 +127,10 @@ const accounts = import.meta.env.VUE_APP_ACCOUNTS
         </span>
       </b-masthead-item>
     </b-masthead>
-    <router-view :auth="auth" v-if="auth.state.isAuthenticated" />
+    <router-view
+      :auth="auth"
+      v-if="auth.state.isAuthenticated && auth.state.me"
+    />
 
     <BContainer size="m" :align="'right'">
       <a :href="accounts">{{ $t('try_out_accounts') }}</a>

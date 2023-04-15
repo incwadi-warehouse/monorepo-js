@@ -1,7 +1,9 @@
 <script setup>
 import { useColorScheme } from '@baldeweg/ui'
 import { useToast } from '@baldeweg/ui'
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
+import { useConf, useSnow } from 'shared'
+import Cookies from 'js-cookie'
 import AppPanel from '@/components/AppPanel.vue'
 import AppMasthead from '@/components/AppMasthead.vue'
 import { useConfetti } from '@/composables/useConfetti.js'
@@ -34,9 +36,30 @@ onUnmounted(() => {
   window.clearInterval(orderInterval)
 })
 
-const { hasSnow, hasParty } = useConfetti()
+const { hasParty } = useConfetti()
 
 const showPride = ref(false)
+
+// Snow
+watch(
+  () => auth.state.me,
+  (to, from) => {
+    if (from === null && typeof to === 'object') {
+      const { hasSnow } = useSnow()
+
+      const { getConf } = useConf(
+        Cookies.get('token'),
+        import.meta.env.VUE_APP_CONF_API,
+        'user',
+        auth.state.me.id
+      )
+
+      getConf('snow').then((res) => {
+        hasSnow.value = res
+      })
+    }
+  }
+)
 </script>
 
 <template>
@@ -61,10 +84,6 @@ const showPride = ref(false)
     </BContainer>
 
     <div v-if="auth.state.isAuthenticated">
-      <BContainer size="m">
-        <BSwitch v-model="hasSnow" label="Snow (Experiment)" />
-      </BContainer>
-
       <BContainer size="m">
         <BSwitch v-model="hasParty" label="Party (Experiment)" />
       </BContainer>
