@@ -19,7 +19,11 @@ const inventory = useInventory()
         :style="{ float: 'right' }"
         design="outline"
         @click.prevent="inventory.create"
-        v-if="!inventory.state.hasActiveInventory && auth.state.me.isAdmin"
+        v-if="
+          !inventory.state.hasActiveInventory &&
+          auth.state.me &&
+          auth.state.me.isAdmin
+        "
       >
         {{ $t('createInventory') }}
       </b-button>
@@ -30,6 +34,7 @@ const inventory = useInventory()
 
     <b-container size="m">
       <InventoryTable
+        v-if="auth.state.me"
         :inventories="inventory.state.inventories"
         :isAdmin="auth.state.me.isAdmin"
         @end="inventory.end"
