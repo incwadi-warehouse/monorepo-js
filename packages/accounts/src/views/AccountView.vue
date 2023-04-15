@@ -3,7 +3,7 @@ import { useTitle } from '@baldeweg/ui'
 import { useI18n } from 'vue-i18n'
 import { useSnow, useParty } from 'shared'
 import { useConf } from 'shared'
-import { watch } from 'vue'
+import { ref, watch } from 'vue'
 import { useToken } from '@/composables/useToken.js'
 import { useLogout } from '@/composables/useLogout.js'
 
@@ -32,6 +32,11 @@ getConf('party').then((res) => {
   hasParty.value = res
 })
 
+const showPride = ref(false)
+getConf('pride').then((res) => {
+  showPride.value = res
+})
+
 watch(
   () => hasSnow.value,
   () => {
@@ -43,6 +48,13 @@ watch(
   () => hasParty.value,
   () => {
     setConf('party', hasParty.value)
+  }
+)
+
+watch(
+  () => showPride.value,
+  () => {
+    setConf('pride', showPride.value)
   }
 )
 </script>
@@ -86,6 +98,10 @@ watch(
         <BDivider />
 
         <BSwitch v-model="hasParty" label="Party (Experiment)" />
+
+        <BDivider />
+
+        <BSwitch v-model="showPride" label="Pride (Experiment)" />
       </div>
     </BContainer>
   </div>

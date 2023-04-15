@@ -6,7 +6,6 @@ import { useConf, useSnow, useParty } from 'shared'
 import Cookies from 'js-cookie'
 import AppPanel from '@/components/AppPanel.vue'
 import AppMasthead from '@/components/AppMasthead.vue'
-import { useConfetti } from '@/composables/useConfetti.js'
 import { useOrder } from '@/composables/useOrder.js'
 import AuthLogin from '@/components/auth/Login.vue'
 import useAuth from '@/composables/useAuth.js'
@@ -35,10 +34,6 @@ const orderInterval = setInterval(list, 5000)
 onUnmounted(() => {
   window.clearInterval(orderInterval)
 })
-
-const { hasParty } = useConfetti()
-
-const showPride = ref(false)
 
 // Snow
 watch(
@@ -81,6 +76,27 @@ watch(
     }
   }
 )
+
+// Pride
+const showPride = ref(false)
+
+watch(
+  () => auth.state.me,
+  (to, from) => {
+    if (from === null && typeof to === 'object') {
+      const { getConf } = useConf(
+        Cookies.get('token'),
+        import.meta.env.VUE_APP_CONF_API,
+        'user',
+        auth.state.me.id
+      )
+
+      getConf('pride').then((res) => {
+        showPride.value = res
+      })
+    }
+  }
+)
 </script>
 
 <template>
@@ -90,9 +106,6 @@ watch(
       :orders="orders"
       @open-drawer="isPanelActive = true"
     />
-
-    <div class="pride" v-if="showPride" />
-
     <RouterView :auth="auth" v-if="auth.state.isAuthenticated" />
 
     <BContainer size="s" v-if="!auth.state.isAuthenticated">
@@ -104,20 +117,12 @@ watch(
       <div v-html="about" />
     </BContainer>
 
-    <div v-if="auth.state.isAuthenticated">
-      <BContainer size="m">
-        <BSwitch v-model="hasParty" label="Party (Experiment)" />
-      </BContainer>
-
-      <BContainer size="m">
-        <BSwitch v-model="showPride" label="Pride (Experiment)" />
-      </BContainer>
-    </div>
-
     <AppPanel
       :isPanelActive="isPanelActive"
       @close-panel="isPanelActive = false"
     />
+
+    <div class="pride" v-if="showPride" />
 
     <BToast v-if="current" :type="current.type" :visible="true">
       {{ current.body }}
@@ -127,7 +132,7 @@ watch(
 
 <style scoped>
 .pride {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: linear-gradient(
@@ -141,6 +146,6 @@ watch(
   );
   width: 100%;
   height: 2px;
-  z-index: 6;
+  z-index: 3;
 }
 </style>

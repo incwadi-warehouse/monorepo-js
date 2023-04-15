@@ -97,6 +97,27 @@ watch(
     }
   }
 )
+
+// Pride
+const showPride = ref(false)
+
+watch(
+  () => auth.state.me,
+  (to, from) => {
+    if (from === null && typeof to === 'object') {
+      const { getConf } = useConf(
+        Cookies.get('token'),
+        import.meta.env.VUE_APP_CONF_API,
+        'user',
+        auth.state.me.id
+      )
+
+      getConf('pride').then((res) => {
+        showPride.value = res
+      })
+    }
+  }
+)
 </script>
 
 <template>
@@ -210,6 +231,8 @@ watch(
       </div>
     </b-panel>
 
+    <div class="pride" v-if="showPride" />
+
     <b-toast v-if="current" :type="current.type" :visible="true">
       {{ current.body }}
     </b-toast>
@@ -223,5 +246,22 @@ watch(
 .action {
   float: right;
   margin-left: 20px;
+}
+.pride {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(240, 0, 0, 1) 0%,
+    rgba(255, 128, 0, 1) 20%,
+    rgba(255, 255, 0, 1) 40%,
+    rgba(0, 121, 64, 1) 60%,
+    rgba(64, 64, 255, 1) 80%,
+    rgba(160, 0, 192, 1) 100%
+  );
+  width: 100%;
+  height: 2px;
+  z-index: 3;
 }
 </style>
