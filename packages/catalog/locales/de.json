@@ -119,5 +119,8 @@
   "current_open_reservations": "Aktuell offene Reservierungen",
   "create_book_error_duplicate": "Buch nicht gespeichert (Duplikat)",
   "create_book_error": "Buch nicht gespeichert",
-  "try_out_accounts": "Teste jetzt den neuen Accounts-Service!"
+  "try_out_accounts": "Teste jetzt den neuen Accounts-Service!",
+  "duplicate": "Duplikat",
+  "yes": "Ja",
+  "no": "Nein"
 }

@@ -9,6 +9,7 @@ const filter = reactive({
   availability: [],
   format: null,
   added: '',
+  duplicate: 'all',
   orderBy: null,
   orderByDirection: 'asc',
   limit: 50,
@@ -23,7 +24,8 @@ export function useFilter() {
     filter.releaseYear = query.value.releaseYear || ''
     filter.availability = filter.availability = query.value.availability || []
     filter.format = query.value.format || null
-    filter.added = query.value.added || ''
+    filter.added = query.value.added || undefined
+    filter.duplicate = query.value.duplicate || 'all'
     filter.orderBy = query.value.orderBy || null
     filter.orderByDirection = query.value.orderByDirection || 'asc'
     filter.limit = query.value.limit || 50
@@ -37,6 +39,7 @@ export function useFilter() {
     filter.availability = []
     filter.format = null
     filter.added = ''
+    filter.duplicate = 'all'
     filter.orderBy = null
     filter.orderByDirection = null
     filter.limit = 50
