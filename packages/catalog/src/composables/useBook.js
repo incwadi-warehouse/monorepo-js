@@ -21,6 +21,11 @@ export function useBook() {
   const cover = ref(null)
 
   const find = (data) => {
+    if (typeof data.options.branch !== 'number') {
+      console.error('Missing branch id!')
+      return
+    }
+
     return request(
       'get',
       '/api/book' + '/find',

@@ -16,6 +16,8 @@ const filter = reactive({
 })
 
 export function useFilter() {
+  const auth = useAuth()
+
   const init = (query, props) => {
     filter.term = query.value.term || null
     filter.branch =
@@ -33,7 +35,7 @@ export function useFilter() {
 
   const reset = () => {
     filter.term = null
-    filter.branch = null
+    filter.branch = auth.state.me.branch.id
     filter.genre = []
     filter.releaseYear = ''
     filter.availability = []
@@ -46,7 +48,6 @@ export function useFilter() {
   }
 
   onMounted(() => {
-    const auth = useAuth()
     auth.me().then(() => {
       filter.branch = auth.state.me.branch.id
     })
