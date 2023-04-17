@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const { defineConfig, devices } = require('@playwright/test')
 
 module.exports = defineConfig({
@@ -10,6 +11,7 @@ module.exports = defineConfig({
   use: {
     baseURL: 'http://localhost:5173',
     trace: 'on-first-retry',
+    video: 'off',
   },
   projects: [
     {
@@ -22,7 +24,7 @@ module.exports = defineConfig({
     },
   ],
   webServer: {
-    command: 'cd ../../ && yarn workspace accounts dev',
+    command: 'cd ../../ && yarn workspace accounts dev -m test',
     url: 'http://localhost:5173',
     reuseExistingServer: !process.env.CI,
   },
