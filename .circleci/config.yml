@@ -10,7 +10,7 @@ executors:
       - image: 'cypress/base:16.18.1'
   playwright:
     docker:
-       - image: mcr.microsoft.com/playwright:v1.32.0-focal
+       - image: mcr.microsoft.com/playwright:v1.32.3-focal
   node:
     docker:
       - image: cimg/node:19.9
