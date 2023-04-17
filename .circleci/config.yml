@@ -51,3 +51,4 @@ workflows:
           executor: cypress
           yarn: true
           command: yarn workspace settings build && yarn workspace settings test:e2e:ci
+          
