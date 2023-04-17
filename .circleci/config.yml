@@ -9,13 +9,15 @@ executors:
     docker:
       - image: 'cypress/base:16.18.1'
   playwright:
-     docker:
+    docker:
        - image: mcr.microsoft.com/playwright:v1.32.0-focal
-
-jobs:
-  accounts:
+  node:
     docker:
       - image: cimg/node:19.9
+
+jobs:
+  accounts-unit:
+    executor: node
     steps:
       - checkout
       - node/install-packages:
@@ -35,7 +37,7 @@ jobs:
 workflows:
   test:
     jobs:
-      - accounts
+      - accounts-unit
       - accounts-e2e
       - cypress/run:
           executor: cypress
