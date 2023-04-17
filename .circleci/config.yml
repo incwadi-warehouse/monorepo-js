@@ -8,6 +8,9 @@ executors:
   image:
     docker:
       - image: 'cypress/base:16.18.1'
+  pw-focal-development:
+     docker:
+       - image: mcr.microsoft.com/playwright:v1.32.0-focal
 
 jobs:
   accounts:
@@ -20,11 +23,20 @@ jobs:
       - run:
           name: Run tests
           command: yarn workspace accounts build && yarn workspace accounts test:unit:ci
+  accounts-e2e:
+    executor: pw-focal-development
+    steps:
+      - checkout
+      - run: yarn install
+      - run:
+          name: Run test
+          command: yarn workspace accounts build && yarn workspace accounts test:e2e
 
 workflows:
   test:
     jobs:
       - accounts
+      - accounts-e2e
       - cypress/run:
           executor: image
           yarn: true
