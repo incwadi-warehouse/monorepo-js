@@ -5,10 +5,10 @@ orbs:
   cypress: cypress-io/cypress@2.2.0
 
 executors:
-  image:
+  cypress:
     docker:
       - image: 'cypress/base:16.18.1'
-  pw-focal-development:
+  playwright:
      docker:
        - image: mcr.microsoft.com/playwright:v1.32.0-focal
 
@@ -24,7 +24,7 @@ jobs:
           name: Run tests
           command: yarn workspace accounts build && yarn workspace accounts test:unit:ci
   accounts-e2e:
-    executor: pw-focal-development
+    executor: playwright
     steps:
       - checkout
       - run: yarn install
@@ -38,14 +38,14 @@ workflows:
       - accounts
       - accounts-e2e
       - cypress/run:
-          executor: image
+          executor: cypress
           yarn: true
           command: yarn workspace shop build && yarn workspace shop test:e2e:ci
       - cypress/run:
-          executor: image
+          executor: cypress
           yarn: true
           command: yarn workspace catalog build && yarn workspace catalog test:e2e:ci
       - cypress/run:
-          executor: image
+          executor: cypress
           yarn: true
           command: yarn workspace settings build && yarn workspace settings test:e2e:ci
