@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 const { test, expect } = require('@playwright/test')
 
 test('login', async ({ page }) => {

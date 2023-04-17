@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 const { test, expect } = require('@playwright/test')
 
 test('account', async ({ page }) => {
@@ -5,7 +6,20 @@ test('account', async ({ page }) => {
 
   await expect(page).toHaveURL(/.*account/)
 
-  await expect(page.getByText('Account (Experiment)')).toBeTruthy()
+  await expect(page.getByText('Account (Experiment)')).toBeVisible()
+
+  await expect(page.getByText('Hello, admin!')).toBeVisible()
+
+  await expect(page.getByText('test branch')).toBeVisible()
+
+  await expect(
+    page.getByRole('link', { name: 'Change Password' })
+  ).toBeVisible()
+  await expect(page.getByRole('button', { name: 'Logout' })).toBeVisible()
+
+  await page.getByRole('button', { name: 'Logout' }).click()
+
+  await expect(page).toHaveURL(/.*login/)
 })
 
 test.beforeEach(async ({ page, context }) => {
@@ -18,7 +32,7 @@ test.beforeEach(async ({ page, context }) => {
       value: JSON.stringify({
         token: 'token',
         refreshToken: 'refresh_token',
-        tokenExpire: timestamp + 60,
+        tokenExpire: Math.round(timestamp + 60),
       }),
       path: '/',
       domain: 'localhost',
@@ -34,7 +48,7 @@ test.beforeEach(async ({ page, context }) => {
       roles: ['ROLE_ADMIN', 'ROLE_USER'],
       branch: {
         id: 1,
-        name: 'test',
+        name: 'test branch',
         steps: '0',
         currency: 'EUR',
         ordering: null,
@@ -46,6 +60,13 @@ test.beforeEach(async ({ page, context }) => {
       isUser: true,
       isAdmin: true,
     }
-    await route.fulfill({ json })
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
+      json,
+    })
   })
 })
