@@ -3,6 +3,7 @@ import { defineConfig, loadEnv } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import { ViteWebfontDownload } from 'vite-plugin-webfont-dl'
 import vue from '@vitejs/plugin-vue'
+import { configDefaults } from 'vitest/config'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -54,6 +55,7 @@ export default defineConfig(({ mode }) => {
     envPrefix: ['VITE_', 'VUE_APP_'],
     test: {
       setupFiles: ['unit.setup.js'],
+      exclude: [...configDefaults.exclude, 'tests/*'],
     },
   }
 })
