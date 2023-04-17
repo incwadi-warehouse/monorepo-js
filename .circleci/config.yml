@@ -23,7 +23,6 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
       - run:
-          name: Run tests
           command: yarn workspace accounts build && yarn workspace accounts test:unit:ci
   accounts-e2e:
     executor: playwright
@@ -31,7 +30,6 @@ jobs:
       - checkout
       - run: yarn install
       - run:
-          name: Run test
           command: yarn workspace accounts build && yarn workspace accounts test:e2e
 
 workflows:
