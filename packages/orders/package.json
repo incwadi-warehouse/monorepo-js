@@ -5,6 +5,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 5050",
+    "test:e2e": "playwright test",
+    "test:e2e:report": "playwright show-report",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "i18n:report": "vue-i18n-extract report --vueFiles './src/**/*.?(js|vue)' --languageFiles './locales/*.?(json|yml|yaml|js)'"
   },
@@ -21,6 +23,7 @@
   },
   "devDependencies": {
     "@baldeweg/eslint-config": "0.7.0",
+    "@playwright/test": "1.32.3",
     "@rushstack/eslint-patch": "1.2.0",
     "@vitejs/plugin-vue": "4.1.0",
     "@vue/eslint-config-prettier": "7.1.0",
