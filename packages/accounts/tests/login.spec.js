@@ -2,6 +2,17 @@
 const { test, expect } = require('@playwright/test')
 
 test('login', async ({ page }) => {
+  await page.goto('/login')
+
+  await expect(page).toHaveURL(/.*login/)
+
+  await page.getByLabel('Username').fill('admin')
+  await page.getByLabel('Password').fill('password')
+
+  await page.getByRole('button', { name: 'Login' }).click()
+})
+
+test.beforeEach(async ({ page }) => {
   await page.route('http://localhost:8000/api/login_check', async (route) => {
     const json = {
       token: 'token',
@@ -14,13 +25,4 @@ test('login', async ({ page }) => {
     const json = {}
     await route.fulfill({ json })
   })
-
-  await page.goto('/login')
-
-  await expect(page).toHaveURL(/.*login/)
-
-  await page.getByLabel('Username').fill('admin')
-  await page.getByLabel('Password').fill('password')
-
-  await page.getByRole('button', { name: 'Login' }).click()
 })

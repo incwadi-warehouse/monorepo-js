@@ -1,20 +1,32 @@
 // eslint-disable-next-line no-undef
 const { test, expect } = require('@playwright/test')
 
-test('account', async ({ page }) => {
+test('user', async ({ page }) => {
   await page.goto('/account')
 
   await expect(page).toHaveURL(/.*account/)
-
   await expect(page.getByText('Account (Experiment)')).toBeVisible()
-
   await expect(page.getByText('Hello, admin!')).toBeVisible()
-
   await expect(page.getByText('test branch')).toBeVisible()
+})
+
+test('settings', async ({ page }) => {
+  await page.goto('/account')
+
+  await expect(page.getByText('Settings')).toBeVisible()
+})
+
+test('password', async ({ page }) => {
+  await page.goto('/account')
 
   await expect(
     page.getByRole('link', { name: 'Change Password' })
   ).toBeVisible()
+})
+
+test('logout', async ({ page }) => {
+  await page.goto('/account')
+
   await expect(page.getByRole('button', { name: 'Logout' })).toBeVisible()
 
   await page.getByRole('button', { name: 'Logout' }).click()
