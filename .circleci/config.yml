@@ -38,8 +38,6 @@ jobs:
       - run: yarn install
       - run:
           command: yarn workspace orders build && yarn workspace orders test:e2e
-      - store_artifacts:
-          path: /root/project/packages/orders/test-results/orderList-orders-list-firefox-retry1/
 
 workflows:
   test:
@@ -47,6 +45,8 @@ workflows:
       - accounts-unit
       - accounts-e2e
       - orders-e2e
+      - store_artifacts:
+          path: /root/project/packages/orders/test-results/orderList-orders-list-firefox-retry1/
       - cypress/run:
           executor: cypress
           yarn: true
