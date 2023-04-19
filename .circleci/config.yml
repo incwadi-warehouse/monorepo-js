@@ -39,7 +39,7 @@ jobs:
       - run:
           command: yarn workspace orders build && yarn workspace orders test:e2e
       - store_artifacts:
-          path: /root/project/packages/orders/packages/orders/test-results
+          path: /root/project/packages/orders/test-results/orderList-orders-list-firefox-retry1/
 
 workflows:
   test:
