@@ -33,13 +33,17 @@ jobs:
           command: yarn workspace accounts build && yarn workspace accounts test:e2e
   orders-e2e:
     executor: playwright
+    working_directory: /tmp
     steps:
       - checkout
       - run: yarn install
       - run:
           command: yarn workspace orders build && yarn workspace orders test:e2e
       - store_artifacts:
-          path: test-results/
+          path: /tmp/art-1
+          destination: artifact-file
+      - store_artifacts:
+          path: /tmp/artifacts
 
 workflows:
   test:
