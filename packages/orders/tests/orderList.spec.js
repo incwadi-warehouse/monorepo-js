@@ -6,11 +6,11 @@ test('orders list', async ({ page }) => {
 
   await expect(page).toHaveURL(/.*order/)
   await expect(page.getByText('Orders')).toBeVisible()
-  // await expect(
-  //   page.getByRole('link', { name: 'Order from 4/18/2023' })
-  // ).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: 'Order from 4/18/2023' })
+  ).toBeVisible()
   await expect(page.getByText('new')).toBeVisible()
-  // await expect(page.getByRole('link', { name: 'Details' })).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Details' })).toBeVisible()
 })
 
 test.beforeEach(async ({ page, context }) => {
