@@ -10,12 +10,12 @@ import { useToken } from '@/composables/useToken.js'
 
 useColorScheme()
 
-const about = import.meta.env.VUE_APP_ABOUT
-
 const { config } = useRequest()
 config.value.baseURL = import.meta.env.VUE_APP_API
 
 const { auth, user } = useToken({ init: true, watch: true })
+
+const about = import.meta.env.VUE_APP_ABOUT
 
 const route = useRoute()
 
