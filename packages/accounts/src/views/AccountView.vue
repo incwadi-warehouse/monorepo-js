@@ -1,125 +1,52 @@
 <script setup>
 import { useTitle } from '@baldeweg/ui'
 import { useI18n } from 'vue-i18n'
-import { useConf } from 'shared'
-import { ref, watch } from 'vue'
 import { useToken } from '@/composables/useToken.js'
 import { useLogout } from '@/composables/useLogout.js'
+import AccountSettings from '@/components/AccountSettings.vue'
 
 const { t } = useI18n()
 
 useTitle({ title: t('account') })
 
-const { auth, user } = useToken()
+const { user } = useToken()
 const { logout } = useLogout()
-
-const hasSnow = ref(false)
-const hasParty = ref(false)
-
-const { getConf, setConf } = useConf(
-  auth.value.token,
-  import.meta.env.VUE_APP_CONF_API,
-  'user',
-  user.value.id
-)
-
-getConf('snow').then((res) => {
-  hasSnow.value = res
-})
-
-getConf('party').then((res) => {
-  hasParty.value = res
-})
-
-const showPride = ref(false)
-getConf('pride').then((res) => {
-  showPride.value = res
-})
-
-watch(
-  () => hasSnow.value,
-  () => {
-    setConf('snow', hasSnow.value)
-  }
-)
-
-watch(
-  () => hasParty.value,
-  () => {
-    setConf('party', hasParty.value)
-  }
-)
-
-watch(
-  () => showPride.value,
-  () => {
-    setConf('pride', showPride.value)
-  }
-)
-
-const showBeach = ref(false)
-getConf('beach').then((res) => {
-  showBeach.value = res
-})
-
-watch(
-  () => showBeach.value,
-  () => {
-    setConf('beach', showBeach.value)
-  }
-)
 </script>
 
 <template>
-  <div v-if="user">
-    <b-container size="s">
-      <h1>{{ t('account') }} (Experiment)</h1>
-    </b-container>
+  <b-container size="s">
+    <h1>{{ t('account') }} (Experiment)</h1>
+  </b-container>
 
-    <b-container size="s">
-      <div class="card">
-        <div class="media" />
+  <b-container size="s">
+    <div class="card">
+      <div class="media" />
 
-        <h2>
-          {{ $t('hello_name', { name: user.username }) }}
-        </h2>
-        <div class="branch">
-          {{ user.branch.name }}
-        </div>
-
-        <BDivider />
-
-        <div class="actions">
-          <RouterLink :to="{ name: 'password' }">
-            {{ t('change_password') }}
-          </RouterLink>
-          <b-button design="text" @click.prevent="logout">
-            {{ $t('logout') }}
-          </b-button>
-        </div>
+      <h2>
+        {{ $t('hello_name', { name: user.username }) }}
+      </h2>
+      <div class="branch">
+        {{ user.branch.name }}
       </div>
-    </b-container>
 
-    <BContainer size="s">
-      <div class="card">
-        <h2>{{ $t('settings') }}</h2>
+      <BDivider />
 
-        <BSwitch v-model="hasSnow" :label="t('snow')" />
-
-        <BDivider />
-
-        <BSwitch v-model="hasParty" :label="t('party')" />
-
-        <BDivider />
-
-        <BSwitch v-model="showPride" :label="t('pride')" />
-
-        <BDivider />
-
-        <BSwitch v-model="showBeach" :label="t('beach')" />
+      <div class="actions">
+        <RouterLink :to="{ name: 'password' }">
+          {{ t('change_password') }}
+        </RouterLink>
+        <b-button design="text" @click.prevent="logout">
+          {{ $t('logout') }}
+        </b-button>
       </div>
-    </BContainer>
-  </div>
+    </div>
+  </b-container>
+
+  <BContainer size="s">
+    <div class="card">
+      <AccountSettings />
+    </div>
+  </BContainer>
 </template>
 
 <style scoped>
