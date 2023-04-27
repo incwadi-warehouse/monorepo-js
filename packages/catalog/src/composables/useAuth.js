@@ -34,11 +34,13 @@ export default function useAuth() {
           expires: 30,
         })
 
+        setAuthHeader(Cookies.get('token'))
+
         state.isAuthenticated = true
         state.username = null
         state.password = null
 
-        // check()
+        check()
       })
       .catch(() => {
         state.wrongCredentials = true
