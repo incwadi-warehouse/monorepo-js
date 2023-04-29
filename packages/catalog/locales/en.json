@@ -122,5 +122,8 @@
   "try_out_accounts": "Try out the new accounts service!",
   "duplicate": "Duplicate",
   "yes": "Yes",
-  "no": "No"
+  "no": "No",
+  "search_index": "Search Index",
+  "search_for_products": "Search for products",
+  "hits": "Hits"
 }

@@ -22,8 +22,8 @@ export function useRequest() {
     return { ...globalConfig.value, ...localConfig.value }
   })
 
-  const request = (method, url, data, params, wrap = false) => {
-    const res = axios.create(config.value).request({
+  const request = async (method, url, data, params, wrap = false) => {
+    const res = await axios.create(config.value).request({
       method,
       url,
       data,

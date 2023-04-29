@@ -56,6 +56,18 @@ const router = createRouter({
       props: true,
     },
     {
+      path: '/search-index',
+      name: 'search-index',
+      component: () => import('../views/SearchIndexView.vue'),
+      props: true,
+    },
+    {
+      path: '/search-index/settings',
+      name: 'search-index.settings',
+      component: () => import('../views/SearchIndexSettingsView.vue'),
+      props: true,
+    },
+    {
       path: '/:pathMatch(.*)',
       redirect: { name: 'index' },
     },
