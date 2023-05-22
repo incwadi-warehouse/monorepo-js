@@ -10,6 +10,7 @@ import OrderStatus from '@/components/order/OrderStatus.vue'
 import OrderCustomer from '@/components/order/OrderCustomer.vue'
 import OrderDelete from '@/components/order/OrderDelete.vue'
 import OrderSellAll from '@/components/order/OrderSellAll.vue'
+import OrderPrint from '@/components/order/OrderPrint.vue'
 
 const props = defineProps({
   id: {
@@ -59,6 +60,8 @@ const { sellAll } = useProduct()
       @update:phone="order.phone = $event"
       @update:notes="order.notes = $event"
     />
+
+    <OrderPrint :order="order" />
 
     <OrderSellAll
       :id="order.id"

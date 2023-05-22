@@ -48,5 +48,6 @@
   "status": "Status",
   "back": "Back",
   "sell": "Sell",
-  "sell_all": "Sell All"
+  "sell_all": "Sell All",
+  "print": "Print"
 }

@@ -48,5 +48,6 @@
   "status": "Status",
   "back": "Zurück",
   "sell": "Verkaufen",
-  "sell_all": "Alles verkaufen"
+  "sell_all": "Alles verkaufen",
+  "print": "Drucken"
 }
