@@ -1,7 +1,6 @@
 <script setup>
 import { useTitle } from '@baldeweg/ui'
 import { useI18n } from 'vue-i18n'
-import { remove as _remove } from 'lodash'
 import { useOrder } from '@/composables/useOrder.js'
 import { useProduct } from '@/composables/useProduct.js'
 import OrderAge from '@/components/order/OrderAge.vue'
