@@ -5,7 +5,9 @@ test('orders detail', async ({ page }) => {
   await page.goto('/order/fe41e987-ddcd-11ed-928e-0242ac150002')
 
   await expect(page).toHaveURL(/.*order\/fe41e987-ddcd-11ed-928e-0242ac150002/)
-  await expect(page.getByText('Order from 4/18/2023')).toBeVisible()
+  await expect(
+    page.getByRole('heading', { name: 'Order from 4/18/2023, 9:47:11 AM' })
+  ).toBeVisible()
   await expect(page.getByText('Demo Book 1')).toBeVisible()
 
   await expect(page.getByRole('button', { name: 'Sell All' })).toBeVisible()
