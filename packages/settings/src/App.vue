@@ -118,6 +118,12 @@ watch(
     }
   }
 )
+
+const accounts = import.meta.env.VUE_APP_ACCOUNTS
+
+const openProfile = () => {
+  window.location = accounts
+}
 </script>
 
 <template>
@@ -160,7 +166,7 @@ watch(
 
           <b-dropdown-divider />
 
-          <b-dropdown-item @click.prevent="$router.push({ name: 'profile' })">
+          <b-dropdown-item @click.prevent="openProfile()">
             {{ $t('settings') }}
           </b-dropdown-item>
           <b-dropdown-item @click.prevent="auth.logout()">

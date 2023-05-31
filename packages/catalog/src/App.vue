@@ -112,6 +112,10 @@ watch(
     }
   }
 )
+
+const openProfile = () => {
+  window.location = accounts
+}
 </script>
 
 <template>
@@ -154,7 +158,7 @@ watch(
 
           <b-dropdown-divider />
 
-          <b-dropdown-item @click.prevent="$router.push({ name: 'profile' })">
+          <b-dropdown-item @click.prevent="openProfile()">
             {{ $t('settings') }}
           </b-dropdown-item>
           <b-dropdown-item @click.prevent="auth.logout()">
@@ -173,10 +177,6 @@ watch(
       :auth="auth"
       v-if="auth.state.isAuthenticated && auth.state.me"
     />
-
-    <BContainer size="m" :align="'right'">
-      <a :href="accounts">{{ $t('try_out_accounts') }}</a>
-    </BContainer>
 
     <b-container size="s" v-if="!auth.state.isAuthenticated">
       <h1>{{ $t('login') }}</h1>

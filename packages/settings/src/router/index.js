@@ -48,12 +48,6 @@ const router = createRouter({
       props: true,
     },
     {
-      path: '/profile',
-      name: 'profile',
-      component: () => import('../views/ProfileView.vue'),
-      props: true,
-    },
-    {
       path: '/:pathMatch(.*)',
       redirect: { name: 'settings' },
     },

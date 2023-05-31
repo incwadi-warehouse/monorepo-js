@@ -22,11 +22,6 @@ const router = createRouter({
       props: true,
     },
     {
-      path: '/profile',
-      name: 'profile',
-      component: () => import('../views/ProfileView.vue'),
-    },
-    {
       path: '/:pathMatch(.*)',
       redirect: { name: 'order.list' },
     },

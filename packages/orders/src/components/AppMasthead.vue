@@ -8,6 +8,12 @@ defineProps({
 
 const catalog = import.meta.env.VUE_APP_CATALOG
 const hasLogo = import.meta.env.VUE_APP_LOGO === 'false' ? false : true
+
+const accounts = import.meta.env.VUE_APP_ACCOUNTS
+
+const openProfile = () => {
+  window.location = accounts
+}
 </script>
 
 <template>
@@ -50,7 +56,7 @@ const hasLogo = import.meta.env.VUE_APP_LOGO === 'false' ? false : true
 
         <BDropdownDivider />
 
-        <BDropdownItem @click.prevent="$router.push({ name: 'profile' })">
+        <BDropdownItem @click.prevent="openProfile()">
           {{ $t('settings') }}
         </BDropdownItem>
         <BDropdownItem @click.prevent="auth.logout()">
