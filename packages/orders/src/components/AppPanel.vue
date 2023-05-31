@@ -10,40 +10,16 @@ const settings = import.meta.env.VUE_APP_SETTINGS
 
 <template>
   <BPanel :visible="isPanelActive" @close="$emit('close-panel')">
-    <div :style="{ padding: '20px' }">
-      <BList divider>
-        <template #title>
-          <a :href="catalog + '/search'">
-            {{ $t('search') }}
-          </a>
-        </template>
-      </BList>
-      <BList divider>
-        <template #title>
-          <a :href="catalog + '/directory'">
-            {{ $t('directory') }}
-          </a>
-        </template>
-      </BList>
-      <BList :route="{ name: 'order.list' }" divider active>
-        <template #title>
-          {{ $t('order') }}
-        </template>
-      </BList>
-      <BList divider>
-        <template #title>
-          <a :href="settings + '/'">
-            {{ $t('settings') }}
-          </a>
-        </template>
-      </BList>
-      <BList divider>
-        <template #title>
-          <a :href="find">
-            {{ $t('shop') }}
-          </a>
-        </template>
-      </BList>
-    </div>
+    <BContainer size="m">
+      <BNav
+        :nav="[
+          { route: catalog, title: $t('search') },
+          { route: catalog + '/directory', title: $t('directory') },
+          { route: { name: 'order.list' }, title: $t('order') },
+          { route: settings + '/', title: $t('settings') },
+          { route: find, title: $t('shop') },
+        ]"
+      />
+    </BContainer>
   </BPanel>
 </template>

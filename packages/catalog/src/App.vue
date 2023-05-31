@@ -187,39 +187,17 @@ const openProfile = () => {
     </b-container>
 
     <b-panel :visible="isDrawerActive" @close="isDrawerActive = false">
-      <div :style="{ padding: '20px' }">
-        <b-list :route="{ name: 'search' }" divider active>
-          <template #title>
-            {{ $t('search') }}
-          </template>
-        </b-list>
-        <b-list :route="{ name: 'directory' }" divider active>
-          <template #title>
-            {{ $t('directory') }}
-          </template>
-        </b-list>
-        <b-list divider>
-          <template #title>
-            <a :href="orders">
-              {{ $t('reservation') }}
-            </a>
-          </template>
-        </b-list>
-        <b-list divider>
-          <template #title>
-            <a :href="settings">
-              {{ $t('settings') }}
-            </a>
-          </template>
-        </b-list>
-        <b-list divider>
-          <template #title>
-            <a :href="find">
-              {{ $t('shop') }}
-            </a>
-          </template>
-        </b-list>
-      </div>
+      <BContainer size="m">
+        <BNav
+          :nav="[
+            { route: { name: 'search' }, title: $t('search') },
+            { route: { name: 'directory' }, title: $t('directory') },
+            { route: orders, title: $t('order') },
+            { route: settings, title: $t('settings') },
+            { route: find, title: $t('shop') },
+          ]"
+        />
+      </BContainer>
     </b-panel>
 
     <div class="pride" v-if="showPride" />
