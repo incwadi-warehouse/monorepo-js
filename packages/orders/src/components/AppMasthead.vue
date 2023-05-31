@@ -64,14 +64,14 @@ const openProfile = () => {
         </BDropdownItem>
       </BDropdown>
 
-      <!-- <span
+      <span
         class="action"
         @click.prevent="$router.push({ name: 'order.list' })"
       >
         <BBadge :content="orders && orders.length" hide-empty>
           <BIcon type="euro" />
         </BBadge>
-      </span> -->
+      </span>
     </BMastheadItem>
   </BMasthead>
 </template>
