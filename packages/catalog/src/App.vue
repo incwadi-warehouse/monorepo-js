@@ -192,7 +192,7 @@ const openProfile = () => {
           :nav="[
             { route: { name: 'search' }, title: $t('search') },
             { route: { name: 'directory' }, title: $t('directory') },
-            { route: orders, title: $t('order') },
+            { route: orders, title: $t('reservation') },
             { route: settings, title: $t('settings') },
             { route: find, title: $t('shop') },
           ]"
