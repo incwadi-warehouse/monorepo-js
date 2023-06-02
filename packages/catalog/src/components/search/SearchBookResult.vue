@@ -1,12 +1,12 @@
 <script setup>
+import { computed, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import SearchBookResults from '@/components/search/SearchBookResults.vue'
 import { useBook } from '@/composables/useBook.js'
 import { useInventory } from '@/composables/useInventory.js'
 import { useCart } from '@/composables/useCart.js'
 import { useFilter } from '@/composables/useFilter.js'
 import { useAuthor } from '@/composables/useAuthor.js'
-import { computed, ref } from 'vue'
-import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
@@ -64,7 +64,7 @@ const showAll = () => {
     <h2>{{ $t('books') }}</h2>
     <p>
       {{
-        $tc('results_counter', books ? books.counter : 0, {
+        $t('results_counter', books ? books.counter : 0, {
           show: books ? books.books.length : 0,
           counter: books ? books.counter : 0,
         })

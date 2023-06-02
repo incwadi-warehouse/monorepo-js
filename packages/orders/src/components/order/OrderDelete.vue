@@ -6,7 +6,7 @@ defineProps({
 
 <template>
   <BContainer size="m">
-    <h2>{{ $t('delete') }}</h2>
+    <h2>{{ $t('delete_order') }}</h2>
 
     <BFormGroup>
       <BFormItem>
@@ -16,7 +16,7 @@ defineProps({
           @click="$emit('remove', id)"
           :style="{ marginRight: '10px' }"
         >
-          {{ $t('delete') }}
+          {{ $t('delete_order') }}
         </BButton>
       </BFormItem>
     </BFormGroup>

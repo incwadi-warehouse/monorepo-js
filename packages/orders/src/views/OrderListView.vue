@@ -31,7 +31,7 @@ onMounted(list)
     >
       <template #title>
         {{ $t('order_from') }} {{ toLocaleDateString(item.createdAt) }}
-        <BChip v-if="item.open">{{ $t('new') }}</BChip>
+        <BChip v-if="item.open">{{ $t('is_new') }}</BChip>
       </template>
 
       <template #options>

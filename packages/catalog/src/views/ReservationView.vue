@@ -43,6 +43,6 @@ const { reservations, isLoading, create, update, remove } = useReservation()
   </b-container>
 
   <b-container size="m">
-    <div v-html="$tc('reservationDesc')" />
+    <div v-html="$t('reservationDesc')" />
   </b-container>
 </template>

@@ -13,7 +13,7 @@ const calcWidth = (value) => {
     <div class="barchart">
       <b-tooltip
         position="top"
-        :text="stats.available + ' ' + $tc('available_books', stats.available)"
+        :text="stats.available + ' ' + $t('available_books', stats.available)"
       >
         <div
           class="item"
@@ -25,7 +25,7 @@ const calcWidth = (value) => {
       </b-tooltip>
       <b-tooltip
         position="top"
-        :text="stats.reserved + ' ' + $tc('reserved_books', stats.reserved)"
+        :text="stats.reserved + ' ' + $t('reserved_books', stats.reserved)"
       >
         <div
           class="item"
@@ -37,7 +37,7 @@ const calcWidth = (value) => {
       </b-tooltip>
       <b-tooltip
         position="top"
-        :text="stats.sold + ' ' + $tc('sold_books', stats.sold)"
+        :text="stats.sold + ' ' + $t('sold_books', stats.sold)"
       >
         <div
           class="item"
@@ -49,7 +49,7 @@ const calcWidth = (value) => {
       </b-tooltip>
       <b-tooltip
         position="top"
-        :text="stats.removed + ' ' + $tc('removed_books', stats.removed)"
+        :text="stats.removed + ' ' + $t('removed_books', stats.removed)"
       >
         <div
           class="item"
@@ -64,21 +64,21 @@ const calcWidth = (value) => {
     <ul class="legend">
       <li class="legend_item">
         <strong>{{ stats.available }}</strong>
-        {{ $tc('available_books', stats.available) }}
+        {{ $t('available_books', stats.available) }}
       </li>
       <li class="legend_item">
         <strong>{{ stats.reserved }}</strong>
-        {{ $tc('reserved_books', stats.reserved) }}
+        {{ $t('reserved_books', stats.reserved) }}
       </li>
       <li class="legend_item">
-        <strong>{{ stats.sold }}</strong> {{ $tc('sold_books', stats.sold) }}
+        <strong>{{ stats.sold }}</strong> {{ $t('sold_books', stats.sold) }}
       </li>
       <li class="legend_item">
         <strong>{{ stats.removed }}</strong>
-        {{ $tc('removed_books', stats.removed) }}
+        {{ $t('removed_books', stats.removed) }}
       </li>
       <li class="legend_item" :style="{ float: 'right' }">
-        <strong>{{ stats.all }}</strong> {{ $tc('all_books', stats.all) }}
+        <strong>{{ stats.all }}</strong> {{ $t('all_books', stats.all) }}
       </li>
     </ul>
   </div>

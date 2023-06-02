@@ -14,7 +14,7 @@ defineProps({
           <BSwitch
             :modelValue="open"
             @update:modelValue="$emit('update:open', $event)"
-            :label="$t('new')"
+            :label="$t('is_new')"
           />
         </BFormItem>
       </BFormGroup>

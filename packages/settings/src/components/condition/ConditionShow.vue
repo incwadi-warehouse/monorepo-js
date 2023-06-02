@@ -44,7 +44,7 @@ set(props.item)
           <b-icon type="meatballs" />
         </template>
         <b-dropdown-item icon="bin" @click="$emit('remove', condition)">
-          {{ $t('delete') }}
+          {{ $t('delete_item') }}
         </b-dropdown-item>
       </b-dropdown>
     </template>

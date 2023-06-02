@@ -138,7 +138,7 @@ const update = () => {
       </b-form-item>
       <b-form-item>
         <input type="checkbox" id="public" v-model="state.isPublic" />
-        <b-form-label for="public">{{ $t('public') }}</b-form-label>
+        <b-form-label for="public">{{ $t('is_public') }}</b-form-label>
       </b-form-item>
     </b-form-group>
 

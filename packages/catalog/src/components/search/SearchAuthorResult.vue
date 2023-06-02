@@ -19,7 +19,7 @@ const removeAuthor = (authorId) => {
     <h2>{{ $t('authors') }}</h2>
     <p>
       {{
-        $tc('results_counter_author', authors ? authors.length : 0, {
+        $t('results_counter_author', authors ? authors.length : 0, {
           counter: authors ? authors.length : 0,
         })
       }}
