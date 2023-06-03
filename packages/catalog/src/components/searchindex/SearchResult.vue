@@ -22,8 +22,10 @@ const { formatPrice, formatAuthor } = useSearchIndex()
       {{ result.genre }}
     </template>
 
-    <template #options
-      >{{ formatPrice(result.price) }} {{ result.currency }}</template
-    >
+    <template #options>
+      <RouterLink :to="{ name: 'book.update', params: { id: result.id } }"
+        >{{ formatPrice(result.price) }} {{ result.currency }}</RouterLink
+      >
+    </template>
   </BList>
 </template>

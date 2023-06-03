@@ -11,7 +11,9 @@ const { query, results, find, removeGenreFilter, setGenreFilter } =
 
 <template>
   <BContainer size="m" :align="'right'">
-    <RouterLink :to="{ name: 'search-index.settings' }">Settings</RouterLink>
+    <RouterLink :to="{ name: 'search-index.settings' }">{{
+      $t('settings')
+    }}</RouterLink>
   </BContainer>
 
   <BContainer size="m">
