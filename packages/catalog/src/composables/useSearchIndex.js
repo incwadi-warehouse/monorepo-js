@@ -1,7 +1,6 @@
 import { useRequest } from 'shared'
 import { reactive, ref, watch } from 'vue'
-
-const token = ref(localStorage.getItem('search_api_token') || '')
+import Cookies from 'js-cookie'
 
 const defaultQuery = {
   q: '',
@@ -18,8 +17,7 @@ export function useSearchIndex() {
   const { localConfig, request, setAuthHeader } = useRequest()
 
   localConfig.value.baseURL = import.meta.env.VUE_APP_SEARCH_API
-  localConfig.value.headers['Content-Type'] = 'application/json'
-  setAuthHeader(token.value)
+  setAuthHeader(Cookies.get('token'))
 
   // @fix delay search, respond to q
   const find = async () => {

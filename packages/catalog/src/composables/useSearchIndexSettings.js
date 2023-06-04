@@ -1,15 +1,13 @@
 import { useRequest } from 'shared'
 import { onMounted, ref } from 'vue'
+import Cookies from 'js-cookie'
 import { useBook } from '@/composables/useBook.js'
-
-const token = ref(localStorage.getItem('search_api_token') || '')
 
 export function useSearchIndexSettings() {
   const { localConfig, request, setAuthHeader } = useRequest()
 
   localConfig.value.baseURL = import.meta.env.VUE_APP_SEARCH_API
-  localConfig.value.headers['Content-Type'] = 'application/json'
-  setAuthHeader(token.value)
+  setAuthHeader(Cookies.get('token'))
 
   const indexes = ref([])
   const fetchIndexes = async () => {
