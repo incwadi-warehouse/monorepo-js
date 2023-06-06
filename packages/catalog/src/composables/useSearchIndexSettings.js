@@ -54,27 +54,27 @@ export function useSearchIndexSettings() {
       })
     })
 
-    await request('post', '/indexes/books/documents', flattened)
+    await request('post', '/indexes/products/documents', flattened)
   }
 
   const settings = ref({})
 
   const fetchSettings = async () => {
     settings.value = JSON.stringify(
-      await request('get', '/indexes/books/settings')
+      await request('get', '/indexes/products/settings')
     )
   }
 
   onMounted(fetchSettings)
 
   const saveSettings = () => {
-    request('patch', '/indexes/books/settings', JSON.parse(settings.value))
+    request('patch', '/indexes/products/settings', JSON.parse(settings.value))
   }
 
   const rebuildIndex = async (branch) => {
     await request(
       'delete',
-      '/indexes/books/documents',
+      '/indexes/products/documents',
       JSON.parse(settings.value)
     )
     addDocument(branch)

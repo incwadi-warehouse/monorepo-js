@@ -21,7 +21,7 @@ export function useSearchIndex() {
 
   // @fix delay search, respond to q
   const find = async () => {
-    results.value = await request('post', '/indexes/books/search', query)
+    results.value = await request('post', '/indexes/products/search', query)
   }
 
   watch(() => query.filter, find)
