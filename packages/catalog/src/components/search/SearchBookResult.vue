@@ -62,14 +62,12 @@ const showAll = () => {
 <template>
   <b-container size="l" v-if="books != null">
     <h2>{{ $t('books') }}</h2>
-    <p>
-      {{
-        $t('results_counter', books ? books.counter : 0, {
-          show: books ? books.books.length : 0,
-          counter: books ? books.counter : 0,
-        })
-      }}
-    </p>
+    <i18n-t keypath="results_counter" tag="p" :plural="books.counter">
+      <template #show>
+        {{ books ? books.books.length : 0 }}
+      </template>
+      <template #counter>{{ books ? books.counter : 0 }}</template>
+    </i18n-t>
     <b-button
       design="text"
       :style="{ float: 'right' }"

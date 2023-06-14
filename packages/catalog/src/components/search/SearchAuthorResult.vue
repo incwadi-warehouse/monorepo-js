@@ -17,13 +17,13 @@ const removeAuthor = (authorId) => {
 <template>
   <b-container size="l" v-if="authors != null">
     <h2>{{ $t('authors') }}</h2>
-    <p>
-      {{
-        $t('results_counter_author', authors ? authors.length : 0, {
-          counter: authors ? authors.length : 0,
-        })
-      }}
-    </p>
+    <i18n-t
+      keypath="results_counter_author"
+      tag="p"
+      :plural="authors ? authors.length : 0"
+    >
+      <template #counter>{{ authors ? authors.length : 0 }}</template>
+    </i18n-t>
     <SearchAuthorResults :authors="authors" @remove="removeAuthor" />
   </b-container>
 </template>
