@@ -38,7 +38,7 @@
     "vite": "4.3.9",
     "vite-plugin-pwa": "0.16.4",
     "vite-plugin-webfont-dl": "3.7.4",
-    "vitest": "0.32.0",
+    "vitest": "0.32.2",
     "vue-i18n-extract": "2.0.7"
   },
   "author": "André Baldeweg <a@baldeweg.org>",
