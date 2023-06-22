@@ -8,7 +8,7 @@ const props = defineProps({
 
 useTitle({ title: 'Search Index' })
 
-const { settings, saveSettings, rebuildIndex } = useSearchIndexSettings()
+const { rebuildIndex } = useSearchIndexSettings()
 </script>
 
 <template>
@@ -29,17 +29,5 @@ const { settings, saveSettings, rebuildIndex } = useSearchIndexSettings()
     >
       Rebuild Index
     </BButton>
-  </BContainer>
-
-  <BDivider />
-
-  <BContainer size="m">
-    <h2>Settings</h2>
-
-    <form @submit.prevent="saveSettings">
-      <textarea v-model="settings" cols="100" rows="10" />
-      <br />
-      <button>Save</button>
-    </form>
   </BContainer>
 </template>

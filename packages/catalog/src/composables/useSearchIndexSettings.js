@@ -1,5 +1,4 @@
 import { useRequest } from 'shared'
-import { onMounted, ref } from 'vue'
 import Cookies from 'js-cookie'
 import { useBook } from '@/composables/useBook.js'
 
@@ -32,28 +31,11 @@ export function useSearchIndexSettings() {
     await request('post', '/indexes/products_1/rebuild', flattened)
   }
 
-  const settings = ref({})
-
-  const fetchSettings = async () => {
-    settings.value = JSON.stringify(
-      await request('get', '/indexes/products_1/settings')
-    )
-  }
-
-  onMounted(fetchSettings)
-
-  const saveSettings = () => {
-    request('patch', '/indexes/products_1/settings', JSON.parse(settings.value))
-  }
-
   const rebuildIndex = async (branch) => {
     addDocument(branch)
   }
 
   return {
-    addDocument,
-    settings,
-    saveSettings,
     rebuildIndex,
   }
 }
