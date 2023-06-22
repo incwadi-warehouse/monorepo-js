@@ -6,6 +6,10 @@ import { useSearchIndexSettings } from '@/composables/useSearchIndexSettings.js'
 
 useTitle({ title: 'Search Index' })
 
+const props = defineProps({
+  auth: Object,
+})
+
 const { query, results, find, removeGenreFilter, setGenreFilter } =
   useSearchIndex()
 
