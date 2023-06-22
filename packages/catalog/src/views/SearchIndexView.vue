@@ -2,18 +2,24 @@
 import { useTitle } from '@baldeweg/ui'
 import SearchResult from '@/components/searchindex/SearchResult.vue'
 import { useSearchIndex } from '@/composables/useSearchIndex.js'
+import { useSearchIndexSettings } from '@/composables/useSearchIndexSettings.js'
 
 useTitle({ title: 'Search Index' })
 
 const { query, results, find, removeGenreFilter, setGenreFilter } =
   useSearchIndex()
+
+const { rebuildIndex } = useSearchIndexSettings()
 </script>
 
 <template>
   <BContainer size="m" :align="'right'">
-    <RouterLink :to="{ name: 'search-index.settings' }">{{
-      $t('settings')
-    }}</RouterLink>
+    <BButton
+      design="outline"
+      @click.prevent="rebuildIndex(props.auth.state.me.branch.id)"
+    >
+      Rebuild Index
+    </BButton>
   </BContainer>
 
   <BContainer size="m">
