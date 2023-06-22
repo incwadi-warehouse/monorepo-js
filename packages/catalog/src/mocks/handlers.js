@@ -47,4 +47,20 @@ export const handlers = [
       )
     }
   ),
+
+  rest.post(
+    'http://search.localhost/indexes/:index/rebuild',
+    (req, res, ctx) => {
+      return res(
+        ctx.status(200),
+        ctx.json({
+          enqueuedAt: '2023-06-22T19:00:01.069760993Z',
+          indexUid: 'products_1',
+          status: 'enqueued',
+          taskUid: 1,
+          type: 'documentAdditionOrUpdate',
+        })
+      )
+    }
+  ),
 ]
