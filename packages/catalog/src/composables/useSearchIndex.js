@@ -1,6 +1,7 @@
 import { useRequest } from 'shared'
 import { reactive, ref, watch } from 'vue'
 import Cookies from 'js-cookie'
+import { useBook } from '@/composables/useBook.js'
 
 const defaultQuery = {
   q: '',
@@ -35,6 +36,29 @@ export function useSearchIndex() {
     }
   )
 
+  const { find: findBooks, books } = useBook()
+
+  const rebuildIndex = async (branch) => {
+    await findBooks({
+      options: { branch: branch, genre: [], availability: [], limit: 10000 },
+    })
+
+    const flattened = []
+    books.value.books.forEach((el) => {
+      flattened.push({
+        id: el.id,
+        title: el.title,
+        authorFirstname: el.author.firstname,
+        authorSurname: el.author.surname,
+        genre: el.genre.name,
+        price: el.price,
+        currency: el.branch.currency,
+      })
+    })
+
+    await request('post', '/indexes/products_1/rebuild', flattened)
+  }
+
   // @fix this is too complex when there are more filters like that
   const setGenreFilter = (genre) => {
     query.filter = ['genre="' + genre + '"']
@@ -68,5 +92,6 @@ export function useSearchIndex() {
     removeGenreFilter,
     formatPrice,
     formatAuthor,
+    rebuildIndex,
   }
 }

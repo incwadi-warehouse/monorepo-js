@@ -2,7 +2,6 @@
 import { useTitle } from '@baldeweg/ui'
 import SearchResult from '@/components/searchindex/SearchResult.vue'
 import { useSearchIndex } from '@/composables/useSearchIndex.js'
-import { useSearchIndexSettings } from '@/composables/useSearchIndexSettings.js'
 
 useTitle({ title: 'Search Index' })
 
@@ -10,10 +9,14 @@ const props = defineProps({
   auth: Object,
 })
 
-const { query, results, find, removeGenreFilter, setGenreFilter } =
-  useSearchIndex()
-
-const { rebuildIndex } = useSearchIndexSettings()
+const {
+  query,
+  results,
+  find,
+  removeGenreFilter,
+  setGenreFilter,
+  rebuildIndex,
+} = useSearchIndex()
 </script>
 
 <template>
