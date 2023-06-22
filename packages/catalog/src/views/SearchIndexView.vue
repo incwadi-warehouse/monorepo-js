@@ -21,6 +21,10 @@ const {
 
 <template>
   <BContainer size="m" :align="'right'">
+    <p>
+      At the moment you have to trigger the build and update of the index
+      manually by hitting the "Rebuild Index" button!
+    </p>
     <BButton
       design="outline"
       @click.prevent="rebuildIndex(props.auth.state.me.branch.id)"
