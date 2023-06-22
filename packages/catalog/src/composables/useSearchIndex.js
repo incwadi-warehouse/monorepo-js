@@ -14,7 +14,7 @@ const query = reactive(defaultQuery)
 
 const results = ref([])
 
-export function useSearchIndex(branchId) {
+export function useSearchIndex() {
   const { localConfig, request, setAuthHeader } = useRequest()
 
   localConfig.value.baseURL = import.meta.env.VUE_APP_SEARCH_API
@@ -22,7 +22,7 @@ export function useSearchIndex(branchId) {
   setAuthHeader(Cookies.get('token'))
 
   // @fix delay search, respond to q
-  const find = async () => {
+  const find = async (branchId) => {
     results.value = await request(
       'post',
       '/indexes/products_' + branchId + '/search',

@@ -39,7 +39,7 @@ const {
 
   <BContainer size="m">
     <BSearch
-      @submit.prevent="find(auth.state.me.branch.id)"
+      @submit.prevent="find(props.auth.state.me.branch.id)"
       :placeholder="$t('search_for_products')"
       branded
       focus
