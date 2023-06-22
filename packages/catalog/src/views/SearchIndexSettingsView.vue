@@ -16,16 +16,19 @@ const { settings, saveSettings, rebuildIndex } = useSearchIndexSettings()
     <RouterLink :to="{ name: 'search-index' }">Search</RouterLink>
   </BContainer>
 
-  <BContainer size="m">
+  <BContainer size="m" v-if="auth.state.me.isAdmin">
     <h1>{{ $t('search_index') }} (Experiment)</h1>
   </BContainer>
 
   <BContainer size="m">
     <h2>Actions</h2>
 
-    <button @click.prevent="rebuildIndex(props.auth.state.me.branch.id)">
+    <BButton
+      design="outline"
+      @click.prevent="rebuildIndex(props.auth.state.me.branch.id)"
+    >
       Rebuild Index
-    </button>
+    </BButton>
   </BContainer>
 
   <BDivider />

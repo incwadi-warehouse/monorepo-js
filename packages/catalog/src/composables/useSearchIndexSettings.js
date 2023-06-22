@@ -29,7 +29,7 @@ export function useSearchIndexSettings() {
       })
     })
 
-    await request('post', '/indexes/products_1/documents', flattened)
+    await request('post', '/indexes/products_1/rebuild', flattened)
   }
 
   const settings = ref({})
@@ -47,11 +47,6 @@ export function useSearchIndexSettings() {
   }
 
   const rebuildIndex = async (branch) => {
-    await request(
-      'delete',
-      '/indexes/products_1/documents',
-      JSON.parse(settings.value)
-    )
     addDocument(branch)
   }
 
