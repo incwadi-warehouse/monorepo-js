@@ -8,15 +8,7 @@ const props = defineProps({
 
 useTitle({ title: 'Search Index' })
 
-const {
-  indexes,
-  indexName,
-  createIndex,
-  removeIndex,
-  settings,
-  saveSettings,
-  rebuildIndex,
-} = useSearchIndexSettings()
+const { settings, saveSettings, rebuildIndex } = useSearchIndexSettings()
 </script>
 
 <template>
@@ -34,30 +26,6 @@ const {
     <button @click.prevent="rebuildIndex(props.auth.state.me.branch.id)">
       Rebuild Index
     </button>
-  </BContainer>
-
-  <BDivider />
-
-  <BContainer size="m">
-    <h2>Indexes</h2>
-    <p>
-      This search uses index "books". If there is no index called "books",
-      create one. Other indexes will be ignored at the moment.
-    </p>
-
-    <ul v-if="indexes">
-      <li v-for="index in indexes.results" :key="index.uid">
-        {{ index.uid }} (<span @click.prevent="removeIndex(index.uid)">
-          {{ $t('remove') }} </span
-        >)
-      </li>
-    </ul>
-
-    <form @submit.prevent="createIndex">
-      <label for="indexName">Index Name</label>
-      <input type="text" id="indexName" v-model="indexName" />
-      <button>Add</button>
-    </form>
   </BContainer>
 
   <BDivider />

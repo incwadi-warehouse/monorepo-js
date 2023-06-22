@@ -9,31 +9,6 @@ export function useSearchIndexSettings() {
   localConfig.value.baseURL = import.meta.env.VUE_APP_SEARCH_API
   setAuthHeader(Cookies.get('token'))
 
-  const indexes = ref([])
-  const fetchIndexes = async () => {
-    indexes.value = await request('get', '/indexes')
-  }
-
-  onMounted(fetchIndexes)
-
-  const indexName = ref('')
-
-  const createIndex = () => {
-    request('post', '/indexes', {
-      uid: indexName.value,
-      primaryKey: 'id',
-    }).then(() => {
-      indexName.value = ''
-      setTimeout(fetchIndexes, 2000)
-    })
-  }
-
-  const removeIndex = (id) => {
-    request('delete', '/indexes/' + id).then(() => {
-      setTimeout(fetchIndexes, 2000)
-    })
-  }
-
   const { find: findBooks, books } = useBook()
 
   const addDocument = async (branch) => {
@@ -54,37 +29,33 @@ export function useSearchIndexSettings() {
       })
     })
 
-    await request('post', '/indexes/products/documents', flattened)
+    await request('post', '/indexes/products_1/documents', flattened)
   }
 
   const settings = ref({})
 
   const fetchSettings = async () => {
     settings.value = JSON.stringify(
-      await request('get', '/indexes/products/settings')
+      await request('get', '/indexes/products_1/settings')
     )
   }
 
   onMounted(fetchSettings)
 
   const saveSettings = () => {
-    request('patch', '/indexes/products/settings', JSON.parse(settings.value))
+    request('patch', '/indexes/products_1/settings', JSON.parse(settings.value))
   }
 
   const rebuildIndex = async (branch) => {
     await request(
       'delete',
-      '/indexes/products/documents',
+      '/indexes/products_1/documents',
       JSON.parse(settings.value)
     )
     addDocument(branch)
   }
 
   return {
-    indexes,
-    indexName,
-    createIndex,
-    removeIndex,
     addDocument,
     settings,
     saveSettings,
