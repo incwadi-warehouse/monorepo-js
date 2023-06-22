@@ -14,7 +14,7 @@ const query = reactive(defaultQuery)
 
 const results = ref([])
 
-export function useSearchIndex() {
+export function useSearchIndex(branchId) {
   const { localConfig, request, setAuthHeader } = useRequest()
 
   localConfig.value.baseURL = import.meta.env.VUE_APP_SEARCH_API
@@ -23,7 +23,11 @@ export function useSearchIndex() {
 
   // @fix delay search, respond to q
   const find = async () => {
-    results.value = await request('post', '/indexes/products_1/search', query)
+    results.value = await request(
+      'post',
+      '/indexes/products_' + branchId + '/search',
+      query
+    )
   }
 
   watch(() => query.filter, find)
@@ -56,7 +60,7 @@ export function useSearchIndex() {
       })
     })
 
-    await request('post', '/indexes/products_1/rebuild', flattened)
+    await request('post', '/indexes/products_' + branch + '/rebuild', flattened)
   }
 
   // @fix this is too complex when there are more filters like that
