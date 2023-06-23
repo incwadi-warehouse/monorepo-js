@@ -37,8 +37,8 @@ const {
     </BButton>
   </BContainer>
 
-  <BContainer size="m">
-    <h1>{{ $t('search_index') }} (Experiment)</h1>
+  <BContainer size="m" class="visuallyHidden">
+    <h1>{{ $t('search_index') }}</h1>
   </BContainer>
 
   <BContainer size="m">
