@@ -20,6 +20,10 @@ const {
 </script>
 
 <template>
+  <BContainer size="m">
+    <BChip>Experiment</BChip>
+  </BContainer>
+
   <BContainer size="m" :align="'right'">
     <p>
       At the moment you have to trigger the build and update of the index
