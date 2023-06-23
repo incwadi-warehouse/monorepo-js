@@ -20,11 +20,11 @@ const {
 </script>
 
 <template>
-  <BContainer size="m">
+  <BContainer size="l">
     <BChip>Experiment</BChip>
   </BContainer>
 
-  <BContainer size="m" :align="'right'">
+  <BContainer size="l" :align="'right'">
     <p>
       At the moment you have to trigger the build and update of the index
       manually by hitting the "Rebuild Index" button!
@@ -37,11 +37,11 @@ const {
     </BButton>
   </BContainer>
 
-  <BContainer size="m" class="visuallyHidden">
+  <BContainer size="l" class="visuallyHidden">
     <h1>{{ $t('search_index') }}</h1>
   </BContainer>
 
-  <BContainer size="m">
+  <BContainer size="l">
     <BSearch
       @submit.prevent="find(props.auth.state.me.branch.id)"
       :placeholder="$t('search_for_products')"
@@ -52,7 +52,7 @@ const {
   </BContainer>
 
   <BContainer
-    size="m"
+    size="l"
     :align="'right'"
     v-if="results.hits && results.hits.length >= 1"
   >
@@ -61,7 +61,7 @@ const {
     </p>
   </BContainer>
 
-  <BContainer size="m" v-if="results.hits && results.hits.length >= 1">
+  <BContainer size="l" v-if="results.hits && results.hits.length >= 1">
     <div class="wrapper">
       <div class="filter">
         <BContainer size="m" :style="{ padding: '0', paddingBottom: '40px' }">
@@ -90,7 +90,7 @@ const {
       </div>
 
       <div class="results">
-        <BContainer size="m" :style="{ padding: '0' }">
+        <BContainer size="l" :style="{ padding: '0' }">
           <div v-for="result in results.hits" :key="result.id">
             <SearchResult :result="result" />
             <BDivider />
