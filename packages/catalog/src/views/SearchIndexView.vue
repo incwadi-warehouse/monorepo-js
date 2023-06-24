@@ -33,7 +33,7 @@ const {
       design="outline"
       @click.prevent="rebuildIndex(props.auth.state.me.branch.id)"
     >
-      Rebuild Index
+      {{ $t('rebuild_index') }}
     </BButton>
   </BContainer>
 

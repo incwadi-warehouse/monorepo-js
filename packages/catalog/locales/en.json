@@ -125,5 +125,6 @@
   "no": "No",
   "search_index": "Search Index",
   "search_for_products": "Search for products",
-  "hits": "Hits"
+  "hits": "Hits",
+  "rebuild_index": "Rebuild Index"
 }

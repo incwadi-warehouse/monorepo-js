@@ -125,5 +125,6 @@
   "no": "Nein",
   "search_index": "Suchindex",
   "search_for_products": "Suche nach Produkten",
-  "hits": "Treffer"
+  "hits": "Treffer",
+  "rebuild_index": "Rebuild Index"
 }

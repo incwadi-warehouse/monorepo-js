@@ -21,6 +21,8 @@ export function useSearchIndex() {
   localConfig.value.headers['Content-Type'] = 'application/json'
   setAuthHeader(Cookies.get('token'))
 
+  const { find: findBooks, books } = useBook()
+
   // @fix delay search, respond to q
   const find = async (branchId) => {
     results.value = await request(
@@ -28,6 +30,16 @@ export function useSearchIndex() {
       '/indexes/products_' + branchId + '/search',
       query
     )
+  }
+
+  // @fix this is too complex when there are more filters like that
+  const setGenreFilter = (genre) => {
+    query.filter = ['genre="' + genre + '"']
+  }
+
+  // @fix this is too complex when there are more filters like that
+  const removeGenreFilter = () => {
+    query.filter = []
   }
 
   watch(() => query.filter, find)
@@ -39,8 +51,6 @@ export function useSearchIndex() {
       find()
     }
   )
-
-  const { find: findBooks, books } = useBook()
 
   const rebuildIndex = async (branch) => {
     await findBooks({
@@ -61,16 +71,6 @@ export function useSearchIndex() {
     })
 
     await request('post', '/indexes/products_' + branch + '/rebuild', flattened)
-  }
-
-  // @fix this is too complex when there are more filters like that
-  const setGenreFilter = (genre) => {
-    query.filter = ['genre="' + genre + '"']
-  }
-
-  // @fix this is too complex when there are more filters like that
-  const removeGenreFilter = () => {
-    query.filter = []
   }
 
   const formatPrice = (data) => {
@@ -94,8 +94,8 @@ export function useSearchIndex() {
     find,
     setGenreFilter,
     removeGenreFilter,
+    rebuildIndex,
     formatPrice,
     formatAuthor,
-    rebuildIndex,
   }
 }
