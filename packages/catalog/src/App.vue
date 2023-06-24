@@ -191,6 +191,10 @@ const openProfile = () => {
         <BNav
           :nav="[
             { route: { name: 'search' }, title: $t('search') },
+            {
+              route: { name: 'search-index' },
+              title: $t('search') + ' (Experiment)',
+            },
             { route: { name: 'directory' }, title: $t('directory') },
             { route: orders, title: $t('reservation') },
             { route: settings, title: $t('settings') },

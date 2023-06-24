@@ -14,6 +14,10 @@ const settings = import.meta.env.VUE_APP_SETTINGS
       <BNav
         :nav="[
           { route: catalog, title: $t('search') },
+          {
+            route: catalog + '/search-index',
+            title: $t('search') + ' (Experiment)',
+          },
           { route: catalog + '/directory', title: $t('directory') },
           { route: { name: 'order.list' }, title: $t('order') },
           { route: settings + '/', title: $t('settings') },
