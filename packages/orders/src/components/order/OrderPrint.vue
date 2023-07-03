@@ -1,4 +1,5 @@
 <script setup>
+import { computed } from 'vue'
 import { useOrder } from '@/composables/useOrder.js'
 
 const props = defineProps({
@@ -20,6 +21,19 @@ const printCustomer = () => {
   WinPrint.print()
   WinPrint.close()
 }
+
+const currency = (number) => {
+  return new Intl.NumberFormat('de-DE', {
+    style: 'currency',
+    currency: 'EUR',
+  }).format(number)
+}
+
+const sum = computed(() => {
+  return props.order.books.reduce((prev, cur) => {
+    return prev + cur.price
+  }, 0)
+})
 </script>
 
 <template>
@@ -40,5 +54,40 @@ const printCustomer = () => {
     <p>{{ $t('mail') }}: {{ props.order.mail }}</p>
     <p>{{ $t('phone') }}: {{ props.order.phone }}</p>
     <p>{{ $t('notes') }}: {{ props.order.notes }}</p>
+
+    <h2>
+      {{ $t('products') }}
+    </h2>
+
+    <table cellpadding="10">
+      <thead>
+        <tr>
+          <th>{{ $t('title') }}</th>
+          <th>{{ $t('author') }}</th>
+          <th>{{ $t('genre') }}</th>
+          <th>{{ $t('price') }}</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr v-for="(product, index) in props.order.books" :key="index">
+          <td>
+            {{ product.title }}
+          </td>
+          <td>{{ product.author.surname }}, {{ product.author.firstname }}</td>
+          <td>{{ product.genre.name }}</td>
+          <td>{{ currency(product.price) }}</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="3">
+            {{ $t('grand_total') }}
+          </td>
+          <td>{{ currency(sum) }}</td>
+        </tr>
+      </tfoot>
+    </table>
   </div>
 </template>
