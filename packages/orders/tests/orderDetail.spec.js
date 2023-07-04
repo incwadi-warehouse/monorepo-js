@@ -8,7 +8,7 @@ test('orders detail', async ({ page }) => {
   await expect(
     page.getByRole('heading', { name: 'Order from 4/18/2023, 9:47:11 AM' })
   ).toBeVisible()
-  await expect(page.getByText('Demo Book 1')).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Demo Book 1' })).toBeVisible()
 
   await expect(page.getByRole('button', { name: 'Sell All' })).toBeVisible()
   await expect(page.getByRole('button', { name: 'Delete' })).toBeVisible()
