@@ -30,8 +30,8 @@ const selectedItemName = computed(() => {
     position="bottom"
     v-if="items"
     :style="{
-      color: 'var(--color-primary-10)',
-      fontSize: '30px',
+      color: 'var(--color-primary-00)',
+      fontSize: '25px',
       cursor: 'pointer',
     }"
   >
