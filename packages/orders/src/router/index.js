@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import useAuth from '@/composables/useAuth.js'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.VUE_APP_BASE_URL),
@@ -29,6 +30,16 @@ const router = createRouter({
   scrollBehavior() {
     return { top: 0 }
   },
+})
+
+router.beforeEach(() => {
+  const { state, me } = useAuth()
+
+  me().then(() => {
+    if (!state.isAuthenticated) {
+      window.location.href = import.meta.env.VUE_APP_ACCOUNTS
+    }
+  })
 })
 
 export default router

@@ -17,7 +17,13 @@ export function useLogin() {
   const router = useRouter()
   const route = useRoute()
 
+  const { persist, isAuthenticated } = useToken()
+
   const redirectTo = route.query.redirect || null
+
+  if (isAuthenticated && redirectTo) {
+    window.location.href = redirectTo
+  }
 
   const login = () => {
     isLoggingIn.value = true
@@ -31,8 +37,6 @@ export function useLogin() {
       .then((res) => {
         hasSuccess.value = true
         hasError.value = false
-
-        const { persist } = useToken()
 
         const date = new Date()
         persist({

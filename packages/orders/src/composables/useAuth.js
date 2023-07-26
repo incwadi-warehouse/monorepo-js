@@ -56,6 +56,8 @@ export default function useAuth() {
 
     state.isAuthenticated = false
     state.me = null
+
+    window.location.href = import.meta.env.VUE_APP_ACCOUNTS
   }
 
   const changePassword = () => {
@@ -137,6 +139,7 @@ export default function useAuth() {
 
   return {
     state,
+    me,
     login,
     logout,
     changePassword,

@@ -34,10 +34,16 @@ export function useToken(config) {
     if (data && data.token && data.refreshToken && data.tokenExpire) {
       auth.value = data
       Cookies.set('auth', JSON.stringify(data))
+      Cookies.set('token', data.token, { expires: 7 })
+      Cookies.set('refresh_token', data.refreshToken, {
+        expires: 30,
+      })
       setAuthHeader(data.token)
     } else {
       auth.value = null
       Cookies.remove('auth')
+      Cookies.remove('token')
+      Cookies.remove('refresh_token')
       setAuthHeader(null)
     }
   }
