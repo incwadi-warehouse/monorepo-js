@@ -23,9 +23,13 @@ vi.mock('@baldeweg/ui', () => {
 
 vi.mock('@/composables/useToken.js', () => {
   const useToken = () => {
+    const isAuthenticated = {
+      value: true,
+    }
+
     const persist = () => {}
 
-    return { persist }
+    return { isAuthenticated, persist }
   }
 
   return { useToken }
