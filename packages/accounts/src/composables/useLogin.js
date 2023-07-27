@@ -19,10 +19,14 @@ export function useLogin() {
 
   const { persist, isAuthenticated } = useToken()
 
+  const { redirect } = useRedirect({
+    allowedHosts: import.meta.env.VUE_APP_REDIRECT_ALLOWED_HOSTS.split(','),
+  })
+
   const redirectTo = route.query.redirect || null
 
-  if (isAuthenticated && redirectTo) {
-    window.location.href = redirectTo
+  if (isAuthenticated.value && redirectTo) {
+    redirect(redirectTo)
   }
 
   const login = () => {
@@ -61,7 +65,6 @@ export function useLogin() {
 
   const changeLocation = () => {
     if (redirectTo) {
-      const { redirect } = useRedirect({ allowedHosts: ['catalog'] })
       const res = redirect(redirectTo)
 
       if (!res) router.push({ name: 'account' })
