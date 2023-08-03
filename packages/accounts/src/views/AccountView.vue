@@ -11,7 +11,7 @@ useTitle({ title: t('account') })
 
 <template>
   <b-container size="s">
-    <h1>{{ t('account') }} (Experiment)</h1>
+    <h1>{{ t('account') }}</h1>
   </b-container>
 
   <b-container size="s">

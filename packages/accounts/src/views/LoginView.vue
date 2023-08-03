@@ -10,7 +10,7 @@ useTitle({ title: t('login') })
 
 <template>
   <b-container size="s">
-    <h1>{{ t('login') }} (Experiment)</h1>
+    <h1>{{ t('login') }}</h1>
   </b-container>
 
   <b-container size="s">
