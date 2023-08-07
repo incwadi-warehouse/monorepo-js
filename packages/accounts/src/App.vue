@@ -7,6 +7,7 @@ import { useConf } from 'shared'
 import { useSnow, useParty } from 'shared'
 import AppLogo from './components/AppLogo.vue'
 import { useToken } from '@/composables/useToken.js'
+import AccountPride from '@/components/AccountPride.vue'
 
 useColorScheme()
 
@@ -19,8 +20,9 @@ const about = import.meta.env.VUE_APP_ABOUT
 
 const route = useRoute()
 
-// Snow
 const { hasSnow } = useSnow()
+const { hasParty } = useParty()
+const showPride = ref(false)
 
 watch(
   () => user.value,
@@ -36,44 +38,10 @@ watch(
       getConf('snow').then((res) => {
         hasSnow.value = res
       })
-    }
-  }
-)
-
-// Party
-const { hasParty } = useParty()
-
-watch(
-  () => user.value,
-  (to, from) => {
-    if (from === null && typeof to === 'object') {
-      const { getConf } = useConf(
-        auth.value.token,
-        import.meta.env.VUE_APP_CONF_API,
-        'user',
-        user.value.id
-      )
 
       getConf('party').then((res) => {
         hasParty.value = res
       })
-    }
-  }
-)
-
-// Pride
-const showPride = ref(false)
-
-watch(
-  () => user.value,
-  (to, from) => {
-    if (from === null && typeof to === 'object') {
-      const { getConf } = useConf(
-        auth.value.token,
-        import.meta.env.VUE_APP_CONF_API,
-        'user',
-        user.value.id
-      )
 
       getConf('pride').then((res) => {
         showPride.value = res
@@ -95,29 +63,12 @@ watch(
       <div v-html="about" />
     </b-container>
 
-    <div class="pride" v-if="showPride" />
+    <AccountPride :showPride="showPride" />
   </BApp>
 </template>
 
 <style scoped>
 main {
   --masthead-top-height: 0;
-}
-.pride {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(240, 0, 0, 1) 0%,
-    rgba(255, 128, 0, 1) 20%,
-    rgba(255, 255, 0, 1) 40%,
-    rgba(0, 121, 64, 1) 60%,
-    rgba(64, 64, 255, 1) 80%,
-    rgba(160, 0, 192, 1) 100%
-  );
-  width: 100%;
-  height: 2px;
-  z-index: 3;
 }
 </style>
