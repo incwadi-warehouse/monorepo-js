@@ -34,12 +34,14 @@ const pages = computed(() => {
 const filterGenres = ref(router.currentRoute.value.query.genres || null)
 
 const search = () => {
-  if (!term.value) return
-
   list(term.value, page.value, filterGenres.value)
 }
 
-onMounted(search)
+onMounted(() => {
+  if (term.value || filterGenres.value) {
+    search()
+  }
+})
 
 watch([() => term.value, () => page.value], () => {
   if (!term.value) {
