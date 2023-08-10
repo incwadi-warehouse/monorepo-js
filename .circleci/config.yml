@@ -7,7 +7,7 @@ orbs:
 executors:
   cypress:
     docker:
-      - image: 'cypress/base:18.16.0'
+      - image: 'cypress/base:18.16.1'
   playwright:
     docker:
        - image: mcr.microsoft.com/playwright:v1.36.2-jammy
