@@ -5,7 +5,7 @@ test('user', async ({ page }) => {
   await page.goto('/account')
 
   await expect(page).toHaveURL(/.*account/)
-  await expect(page.getByText('Account (Experiment)')).toBeVisible()
+  await expect(page.getByText('Account')).toBeVisible()
   await expect(page.getByText('Hello, admin!')).toBeVisible()
   await expect(page.getByText('test branch')).toBeVisible()
 })
