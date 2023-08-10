@@ -5,9 +5,9 @@ test('update password', async ({ page }) => {
   await page.goto('/password')
 
   await expect(page).toHaveURL(/.*password/)
-  await expect(page.getByText('Password')).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Password' })).toBeVisible()
   await expect(page.getByRole('link', { name: '⟨ Account' })).toBeVisible()
-  await expect(page.getByText('Password')).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Password' })).toBeVisible()
 })
 
 test('update password successful', async ({ page }) => {
