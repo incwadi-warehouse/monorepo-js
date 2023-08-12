@@ -16,7 +16,11 @@
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "yarn install",
+  "postCreateCommand": {
+    "yarn": "yarn install",
+    "playwright": "npx playwright install",
+    "playwright-deps": "npx playwright install-deps"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
