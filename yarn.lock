@@ -2744,10 +2744,10 @@ caniuse-lite@^1.0.30001370:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001399.tgz#1bf994ca375d7f33f8d01ce03b7d5139e8587873"
   integrity sha512-4vQ90tMKS+FkvuVWS5/QY1+d805ODxZiKFzsU8o/RsVJz49ZSRR8EjykLJbqhzdPgadbX6wB538wOzle3JniRA==
 
-canvas-confetti@1.6.1:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/canvas-confetti/-/canvas-confetti-1.6.1.tgz#fb13834bb7cc199c95d423a2dc65fe05a979a1d2"
-  integrity sha512-CgGR5DL9+dkne4AwcpvWQc0LIQq43yDIxlwdZcyrq3yklricNfuPHoOSoM6Ya7yCQ+sXmZ2iNV2feiKjVG8C1g==
+canvas-confetti@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/canvas-confetti/-/canvas-confetti-1.8.0.tgz#d8697b5b7e81f6662e3bbe28debcea6663990e83"
+  integrity sha512-hR2b5nGhHoqxKUufuM0CM1KRT7H7tq3ni6xIjR9mX4ilgmheX3HOgkK1yZI1DzX7yJdmXZ4KGMZUlvfxVmu7+w==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -8776,10 +8776,10 @@ vite-plugin-webfont-dl@3.7.6:
     flat-cache "^3.0"
     picocolors "^1.0"
 
-vite@4.4.10:
-  version "4.4.10"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-4.4.10.tgz#3794639cc433f7cb33ad286930bf0378c86261c8"
-  integrity sha512-TzIjiqx9BEXF8yzYdF2NTf1kFFbjMjUSV0LFZ3HyHoI3SGSPLnnFUKiIQtL3gl2AjHvMrprOvQ3amzaHgQlAxw==
+vite@4.4.11:
+  version "4.4.11"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-4.4.11.tgz#babdb055b08c69cfc4c468072a2e6c9ca62102b0"
+  integrity sha512-ksNZJlkcU9b0lBwAGZGGaZHCMqHsc8OpgtoYhsQ4/I2v5cnpmmmqe5pM4nv/4Hn6G/2GhTdj0DhZh2e+Er1q5A==
   dependencies:
     esbuild "^0.18.10"
     postcss "^8.4.27"
