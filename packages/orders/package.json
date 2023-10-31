@@ -18,7 +18,7 @@
     "js-cookie": "3.0.5",
     "lodash": "4.17.21",
     "vue": "3.3.7",
-    "vue-i18n": "9.6.1",
+    "vue-i18n": "9.6.2",
     "vue-router": "4.2.5"
   },
   "devDependencies": {
