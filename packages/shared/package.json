@@ -11,7 +11,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@baldeweg/eslint-config": "0.9.4",
+    "@baldeweg/eslint-config": "0.9.5",
     "@rushstack/eslint-patch": "1.5.1",
     "jsdom": "22.1.0"
   }
