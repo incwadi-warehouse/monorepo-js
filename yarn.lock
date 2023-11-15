@@ -1009,10 +1009,10 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
-"@baldeweg/eslint-config@0.9.4":
-  version "0.9.4"
-  resolved "https://registry.yarnpkg.com/@baldeweg/eslint-config/-/eslint-config-0.9.4.tgz#70be0529b5f88711f4f640568b343eb158a369f6"
-  integrity sha512-S+/7WMNHE95MsD3JP/fQv70f5yF20ZPO/Rpz14RiKwIoxpRkOc1UyER2IReqaiLT8a8fxVcFk8IXs179rJimOA==
+"@baldeweg/eslint-config@0.9.5":
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/@baldeweg/eslint-config/-/eslint-config-0.9.5.tgz#d25b279e396778eee0def468d41d5a738ae2485c"
+  integrity sha512-RN5FcSVUwe5Ra2dxWSfPAiOH3qqOjIDOHnkgPALGVT7TSfyZHMakdkQIDEiF9OX8oouVwUf9PhS/JKAwB07FqA==
 
 "@baldeweg/ui@0.8.2":
   version "0.8.2"
