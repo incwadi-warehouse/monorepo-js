@@ -13,7 +13,7 @@ executors:
        - image: mcr.microsoft.com/playwright:v1.39.0-jammy
   node:
     docker:
-      - image: cimg/node:21.1
+      - image: cimg/node:21.2
 
 jobs:
   accounts-unit:
