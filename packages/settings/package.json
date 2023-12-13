@@ -24,7 +24,7 @@
     "@cypress/vite-dev-server": "5.0.6",
     "@cypress/vue": "6.0.0",
     "@rushstack/eslint-patch": "1.6.0",
-    "@vitejs/plugin-vue": "4.5.1",
+    "@vitejs/plugin-vue": "4.5.2",
     "@vue/eslint-config-prettier": "8.0.0",
     "cypress": "11.2.0",
     "eslint": "8.55.0",
