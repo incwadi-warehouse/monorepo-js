@@ -12,7 +12,7 @@
   "private": true,
   "devDependencies": {
     "@baldeweg/eslint-config": "0.9.5",
-    "@rushstack/eslint-patch": "1.6.0",
+    "@rushstack/eslint-patch": "1.6.1",
     "jsdom": "23.0.1"
   }
 }
