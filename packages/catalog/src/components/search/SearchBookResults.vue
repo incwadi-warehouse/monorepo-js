@@ -1,7 +1,7 @@
 <script setup>
+import SearchDirection from './SearchDirection.vue'
 import { useBook } from '@/composables/useBook.js'
 import { useFilter } from '@/composables/useFilter.js'
-import SearchDirection from './SearchDirection.vue'
 
 defineProps({
   books: Object,
@@ -93,7 +93,7 @@ const bookNotFound = (id) => {
         </th>
         <th scope="col" v-if="filter.availability.includes('sold')">
           <SearchDirection
-            col="sold"
+            col="soldOn"
             :filter="filter"
             @search="$emit('search', true)"
             >{{ $t('sold') }}
@@ -101,7 +101,7 @@ const bookNotFound = (id) => {
         </th>
         <th scope="col" v-if="filter.availability.includes('removed')">
           <SearchDirection
-            col="removed"
+            col="removedOn"
             :filter="filter"
             @search="$emit('search', true)"
             >{{ $t('removed') }}
