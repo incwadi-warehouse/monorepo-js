@@ -1,6 +1,6 @@
 {
   "name": "settings",
-  "version": "58.0.0",
+  "version": "58.0.1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -33,7 +33,7 @@
     "eslint-plugin-vue": "9.21.1",
     "msw": "^1.2.1",
     "prettier": "3.2.5",
-    "shared": "^58.0.0",
+    "shared": "^58.0.1",
     "start-server-and-test": "2.0.3",
     "vite": "4.5.2",
     "vite-plugin-pwa": "0.17.5",
