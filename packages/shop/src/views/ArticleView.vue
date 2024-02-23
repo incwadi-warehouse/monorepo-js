@@ -34,13 +34,14 @@ const isInCart = computed(() => {
         v-if="!isInCart && article.branchCart"
         >{{ $t('reserve') }}</b-button
       >
-      <b-button
-        design="outline"
-        disabled
-        class="cta"
-        v-if="isInCart && article.branchCart"
-        >{{ $t('added_to_cart') }}</b-button
-      >
+      <div class="cta" v-if="isInCart && article.branchCart">
+        <b-button design="outline" disabled>{{ $t('added_to_cart') }}</b-button>
+        <p>
+          <RouterLink :to="{ name: 'search' }">
+            {{ $t('continue_browsing') }}</RouterLink
+          >
+        </p>
+      </div>
 
       <h2 :style="{ wordBreak: 'initial', hyphens: 'auto' }">
         {{ article.title }}
@@ -102,6 +103,7 @@ const isInCart = computed(() => {
 .cta {
   float: right;
   margin-top: 10px;
+  text-align: right;
 }
 .image {
   width: 200px;
