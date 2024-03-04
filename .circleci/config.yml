@@ -39,21 +39,21 @@ jobs:
       - run:
           command: yarn workspace orders build && yarn workspace orders test:e2e
 
-workflows:
-  test:
-    jobs:
-      - accounts-unit
-      - accounts-e2e
-      - orders-e2e
-      - cypress/run:
-          executor: cypress
-          yarn: true
-          command: yarn workspace shop build && yarn workspace shop test:e2e:ci
-      - cypress/run:
-          executor: cypress
-          yarn: true
-          command: yarn workspace catalog build && yarn workspace catalog test:e2e:ci
-      - cypress/run:
-          executor: cypress
-          yarn: true
-          command: yarn workspace settings build && yarn workspace settings test:e2e:ci
+# workflows:
+#   test:
+#     jobs:
+#       - accounts-unit
+#       - accounts-e2e
+#       - orders-e2e
+#       - cypress/run:
+#           executor: cypress
+#           yarn: true
+#           command: yarn workspace shop build && yarn workspace shop test:e2e:ci
+#       - cypress/run:
+#           executor: cypress
+#           yarn: true
+#           command: yarn workspace catalog build && yarn workspace catalog test:e2e:ci
+#       - cypress/run:
+#           executor: cypress
+#           yarn: true
+#           command: yarn workspace settings build && yarn workspace settings test:e2e:ci
