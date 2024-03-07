@@ -38,6 +38,13 @@ jobs:
       - run: yarn install
       - run:
           command: yarn workspace orders build && yarn workspace orders test:e2e
+  shop-e2e:
+    executor: playwright
+    steps:
+      - checkout
+      - run: yarn install
+      - run:
+          command: yarn workspace shop build && yarn workspace shop test:e2e
 
 workflows:
   test:
@@ -45,10 +52,7 @@ workflows:
       - accounts-unit
       - accounts-e2e
       - orders-e2e
-      - cypress/run:
-          executor: cypress
-          yarn: true
-          command: yarn workspace shop build && yarn workspace shop test:e2e:ci
+      - shop-e2e
       - cypress/run:
           executor: cypress
           yarn: true
