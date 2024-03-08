@@ -8,52 +8,48 @@ const { recommendations } = useRecommendation()
 </script>
 
 <template>
-  <b-slider v-if="recommendations">
-    <b-slider-item
-      size="xs"
-      v-for="article in recommendations"
-      :key="article.id"
-    >
-      <div class="article">
+  <BSlider v-if="recommendations">
+    <BSliderItem size="xs" v-for="product in recommendations" :key="product.id">
+      <div class="product">
         <div class="image_wrapper">
-          <router-link :to="{ name: 'article', params: { id: article.id } }">
+          <RouterLink :to="{ name: 'article', params: { id: product.id } }">
             <img
               class="image"
-              :src="article.cover_l"
-              :alt="article.title"
-              v-if="article.cover_l"
+              :src="product.cover_l"
+              :alt="product.title"
+              v-if="product.cover_l"
             />
-          </router-link>
+          </RouterLink>
         </div>
 
         <p class="author">
-          {{ formatAuthor(article.authorFirstname, article.authorSurname) }}
+          {{ formatAuthor(product.authorFirstname, product.authorSurname) }}
         </p>
 
         <div :style="{ flexGrow: '1' }">
-          <router-link
-            :to="{ name: 'article', params: { id: article.id } }"
+          <RouterLink
+            :to="{ name: 'article', params: { id: product.id } }"
             class="title"
           >
-            {{ article.title }}
-          </router-link>
+            {{ product.title }}
+          </RouterLink>
         </div>
 
-        <b-button
+        <BButton
           class="price"
           design="text"
           :style="{ alignSelf: 'flex-start' }"
-          @click="$router.push({ name: 'article', params: { id: article.id } })"
+          @click="$router.push({ name: 'article', params: { id: product.id } })"
         >
-          {{ formatPrice(article.price) }} {{ article.currency }}
-        </b-button>
+          {{ formatPrice(product.price) }} {{ product.currency }}
+        </BButton>
       </div>
-    </b-slider-item>
-  </b-slider>
+    </BSliderItem>
+  </BSlider>
 </template>
 
 <style scoped>
-.article {
+.product {
   display: flex;
   flex-direction: column;
   height: 420px;
