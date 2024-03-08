@@ -6,33 +6,33 @@ const { articles, formatPrice, formatAuthor, image } = useArticle()
 
 <template>
   <div v-if="articles">
-    <b-list v-for="article in articles" :key="article.id" divider>
+    <BList v-for="article in articles" :key="article.id" divider>
       <template #image>
-        <router-link :to="{ name: 'article', params: { id: article.id } }">
+        <RouterLink :to="{ name: 'article', params: { id: article.id } }">
           <img
             width="100"
             :src="image(article.id, '100x100')"
             :alt="article.title"
           />
-        </router-link>
+        </RouterLink>
       </template>
 
       <template #title>
-        <router-link
+        <RouterLink
           :to="{ name: 'article', params: { id: article.id } }"
           :style="{ wordBreak: 'initial', hyphens: 'auto' }"
         >
           {{ article.title }}
-        </router-link>
+        </RouterLink>
       </template>
 
       <template #options>
-        <b-button
+        <BButton
           design="text"
           @click="$router.push({ name: 'article', params: { id: article.id } })"
         >
           {{ formatPrice(article.price) }} {{ article.currency }}
-        </b-button>
+        </BButton>
       </template>
 
       <template #meta>
@@ -44,6 +44,6 @@ const { articles, formatPrice, formatAuthor, image } = useArticle()
         &bull;
         {{ article.releaseYear ? article.releaseYear : $t('without_year') }}
       </template>
-    </b-list>
+    </BList>
   </div>
 </template>
