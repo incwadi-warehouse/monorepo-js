@@ -1,58 +1,28 @@
 <script setup>
 import { useLocale, useColorScheme } from '@baldeweg/ui'
 import { useToast } from '@baldeweg/ui'
-import Logo from '@/components/AppLogo.vue'
-import Cart from '@/components/AppCart.vue'
+import AppMasthead from '@/components/AppMasthead.vue'
 
 useLocale()
 useColorScheme()
 
 const about = import.meta.env.VUE_APP_ABOUT
-const hasLogo = import.meta.env.VUE_APP_LOGO === 'false' ? false : true
 
 const { current } = useToast()
 </script>
 
 <template>
-  <b-app>
-    <b-masthead>
-      <b-masthead-item position="center">
-        <router-link :to="{ name: 'index' }">
-          <Logo v-if="hasLogo" />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="50"
-            height="50"
-            viewBox="0 0 200 200"
-            class="logo"
-            v-else
-          >
-            <path
-              d="M 27.435547 9.8710938 C 17.706307 9.8710935 9.8710935 17.706307 9.8710938 27.435547 L 9.8710938 172.56445 C 9.8710935 182.29369 17.706307 190.12891 27.435547 190.12891 L 172.56445 190.12891 C 182.29369 190.12891 190.12891 182.29369 190.12891 172.56445 L 190.12891 27.435547 C 190.12891 17.706307 182.29369 9.8710938 172.56445 9.8710938 L 27.435547 9.8710938 z M 55 40 L 145 40 L 145 160 L 100 124 L 55 160 L 55 40 z "
-            />
-          </svg>
-        </router-link>
-      </b-masthead-item>
+  <BApp>
+    <AppMasthead />
 
-      <b-masthead-item position="end">
-        <Cart />
-      </b-masthead-item>
-    </b-masthead>
+    <RouterView />
 
-    <router-view />
-
-    <b-container size="m">
+    <BContainer size="m">
       <div v-html="about" />
-    </b-container>
+    </BContainer>
 
-    <b-toast v-if="current" :type="current.type" :visible="true">
+    <BToast v-if="current" :type="current.type" :visible="true">
       {{ current.body }}
-    </b-toast>
-  </b-app>
+    </BToast>
+  </BApp>
 </template>
-
-<style scoped>
-.logo {
-  fill: var(--color-primary-10);
-}
-</style>
