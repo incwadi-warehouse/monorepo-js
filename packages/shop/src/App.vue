@@ -3,6 +3,7 @@ import { useLocale, useColorScheme } from '@baldeweg/ui'
 import { useToast } from '@baldeweg/ui'
 import Logo from '@/components/AppLogo.vue'
 import Cart from '@/components/AppCart.vue'
+import SearchContent from '@/components/search/SearchContent.vue'
 
 useLocale()
 useColorScheme()
@@ -38,6 +39,8 @@ const { current } = useToast()
         <Cart />
       </b-masthead-item>
     </b-masthead>
+
+    <SearchContent />
 
     <router-view />
 
