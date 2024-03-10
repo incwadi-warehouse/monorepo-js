@@ -1,10 +1,7 @@
 <script setup>
 import { useLocale, useColorScheme } from '@baldeweg/ui'
 import { useToast } from '@baldeweg/ui'
-import Logo from '@/components/AppLogo.vue'
-import Cart from '@/components/AppCart.vue'
 import AppMasthead from '@/components/AppMasthead.vue'
-import SearchContent from '@/components/search/SearchContent.vue'
 
 useLocale()
 useColorScheme()
