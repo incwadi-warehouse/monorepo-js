@@ -8,6 +8,7 @@ import { useGenre } from '@/composables/useGenre.js'
 import SearchList from '@/components/search/SearchList.vue'
 import RecommendationShow from '@/components/recommendation/RecommendationShow.vue'
 import SearchPagination from '@/components/search/SearchPagination.vue'
+import SearchContent from '@/components/search/SearchContent.vue'
 import SearchCheckboxFilter from '@/components/search/SearchCheckboxFilter.vue'
 
 useTitle({ title: 'Search' })
@@ -82,6 +83,8 @@ const { genres } = useGenre()
 
 <template>
   <article>
+    <SearchContent />
+
     <b-container size="m">
       <b-search
         focus
