@@ -28,5 +28,7 @@
   "firstname": "Vorname",
   "genres": "Rubriken",
   "without_year": "Ohne Jahr",
-  "continue_browsing": "Weiter stöbern"
+  "continue_browsing": "Weiter stöbern",
+  "more": "Mehr",
+  "less": "Weniger"
 }

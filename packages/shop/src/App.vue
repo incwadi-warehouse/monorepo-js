@@ -2,6 +2,7 @@
 import { useLocale, useColorScheme } from '@baldeweg/ui'
 import { useToast } from '@baldeweg/ui'
 import AppMasthead from '@/components/AppMasthead.vue'
+import AppBanner from '@/components/AppBanner.vue'
 
 useLocale()
 useColorScheme()
@@ -14,6 +15,8 @@ const { current } = useToast()
 <template>
   <BApp>
     <AppMasthead />
+
+    <AppBanner />
 
     <RouterView />
 
