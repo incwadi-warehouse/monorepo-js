@@ -27,7 +27,7 @@ const content = computed(() => {
   })
 })
 
-const messageShort = computed(() => {
+const contentShort = computed(() => {
   if (!branch.value || !branch.value.content) return
 
   return (
@@ -50,15 +50,15 @@ const toggleMessage = () => {
       <div class="banner_inner">
         <div class="banner_message">
           <div v-html="content" v-if="showMore" />
-          <p v-html="messageShort" v-if="!showMore" />
+          <p v-html="contentShort" v-if="!showMore" />
         </div>
 
         <div class="banner_more">
-          <p @click.prevent="toggleMessage" v-if="!showMore" class="more">
-            More
+          <p @click.prevent="toggleMessage" v-if="!showMore">
+            {{ $t('more') }}
           </p>
-          <p @click.prevent="toggleMessage" v-if="showMore" class="more">
-            Less
+          <p @click.prevent="toggleMessage" v-if="showMore">
+            {{ $t('less') }}
           </p>
         </div>
       </div>
@@ -80,14 +80,14 @@ const toggleMessage = () => {
 }
 .banner_message {
   padding-right: 20px;
+  flex-grow: 1;
 }
 .banner_more {
   border-left: 1px solid var(--color-primary-05);
-  width: 50px;
+  flex-shrink: 0;
+  width: 80px;
   padding-left: 20px;
-}
-.more {
-  float: right;
+  text-align: right;
   cursor: pointer;
 }
 </style>
