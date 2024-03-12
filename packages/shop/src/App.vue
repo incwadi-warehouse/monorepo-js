@@ -2,6 +2,7 @@
 import { useLocale, useColorScheme } from '@baldeweg/ui'
 import { useToast } from '@baldeweg/ui'
 import AppMasthead from '@/components/AppMasthead.vue'
+import AppCartBottom from '@/components/AppCartBottom.vue'
 
 useLocale()
 useColorScheme()
@@ -24,5 +25,7 @@ const { current } = useToast()
     <BToast v-if="current" :type="current.type" :visible="true">
       {{ current.body }}
     </BToast>
+
+    <AppCartBottom />
   </BApp>
 </template>
