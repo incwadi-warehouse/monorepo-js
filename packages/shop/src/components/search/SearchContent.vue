@@ -39,7 +39,7 @@ const contentShort = computed(() => {
 
 const showMore = ref(false)
 
-const toggleMessage = () => {
+const toggleShowMore = () => {
   showMore.value = !showMore.value
 }
 </script>
@@ -54,11 +54,8 @@ const toggleMessage = () => {
         </div>
 
         <div class="banner_more">
-          <p @click.prevent="toggleMessage" v-if="!showMore">
-            {{ $t('more') }}
-          </p>
-          <p @click.prevent="toggleMessage" v-if="showMore">
-            {{ $t('less') }}
+          <p @click.prevent="toggleShowMore">
+            {{ !showMore ? $t('more') : $t('less') }}
           </p>
         </div>
       </div>
