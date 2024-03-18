@@ -182,9 +182,12 @@ const openProfile = () => {
       <h1>{{ $t('login') }}</h1>
       <AuthLogin />
     </b-container>
-    <b-container size="m">
-      <div v-html="about" />
-    </b-container>
+
+    <div class="footer">
+      <b-container size="m">
+        <div v-html="about" />
+      </b-container>
+    </div>
 
     <b-panel :visible="isDrawerActive" @close="isDrawerActive = false">
       <BContainer size="m">
@@ -236,5 +239,8 @@ const openProfile = () => {
   width: 100%;
   height: 2px;
   z-index: 3;
+}
+.footer {
+  border-top: 1px solid var(--color-neutral-02);
 }
 </style>

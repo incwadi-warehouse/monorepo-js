@@ -113,9 +113,11 @@ watch(
       <AuthLogin />
     </BContainer>
 
-    <BContainer size="m">
-      <div v-html="about" />
-    </BContainer>
+    <div class="footer">
+      <BContainer size="m">
+        <div v-html="about" />
+      </BContainer>
+    </div>
 
     <AppPanel
       :isPanelActive="isPanelActive"
@@ -147,5 +149,8 @@ watch(
   width: 100%;
   height: 2px;
   z-index: 3;
+}
+.footer {
+  border-top: 1px solid var(--color-neutral-02);
 }
 </style>

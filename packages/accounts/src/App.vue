@@ -59,9 +59,11 @@ watch(
 
     <RouterView v-if="user || route.name === 'login'" />
 
-    <b-container size="s">
-      <div v-html="about" />
-    </b-container>
+    <div class="footer">
+      <b-container size="s">
+        <div v-html="about" />
+      </b-container>
+    </div>
 
     <AccountPride :showPride="showPride" />
   </BApp>
@@ -70,5 +72,8 @@ watch(
 <style scoped>
 main {
   --masthead-top-height: 0;
+}
+.footer {
+  border-top: 1px solid var(--color-neutral-02);
 }
 </style>

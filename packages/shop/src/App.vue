@@ -17,12 +17,20 @@ const { current } = useToast()
 
     <RouterView />
 
-    <BContainer size="m">
-      <div v-html="about" />
-    </BContainer>
+    <div class="footer">
+      <BContainer size="m">
+        <div v-html="about" />
+      </BContainer>
+    </div>
 
     <BToast v-if="current" :type="current.type" :visible="true">
       {{ current.body }}
     </BToast>
   </BApp>
 </template>
+
+<style scoped>
+.footer {
+  border-top: 1px solid var(--color-neutral-02);
+}
+</style>
