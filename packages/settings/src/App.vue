@@ -1,6 +1,5 @@
 <script setup>
-import { useLocale, useColorScheme } from '@baldeweg/ui'
-import { useToast } from '@baldeweg/ui'
+import { useLocale, useToast } from '@baldeweg/ui'
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useConf, useSnow, useParty } from 'shared'
 import Cookies from 'js-cookie'
@@ -11,7 +10,6 @@ import { useReservation } from '@/composables/useReservation.js'
 import router from '@/router'
 
 useLocale()
-useColorScheme()
 
 const auth = useAuth()
 

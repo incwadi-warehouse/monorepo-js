@@ -1,5 +1,4 @@
 <script setup>
-import { useColorScheme } from '@baldeweg/ui'
 import { useToast } from '@baldeweg/ui'
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useConf, useSnow, useParty } from 'shared'
@@ -10,8 +9,6 @@ import { useOrder } from '@/composables/useOrder.js'
 import AuthLogin from '@/components/auth/Login.vue'
 import useAuth from '@/composables/useAuth.js'
 import router from '@/router'
-
-useColorScheme()
 
 const auth = useAuth()
 

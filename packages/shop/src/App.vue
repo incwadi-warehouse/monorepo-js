@@ -1,10 +1,8 @@
 <script setup>
-import { useLocale, useColorScheme } from '@baldeweg/ui'
-import { useToast } from '@baldeweg/ui'
+import { useLocale, useToast } from '@baldeweg/ui'
 import AppMasthead from '@/components/AppMasthead.vue'
 
 useLocale()
-useColorScheme()
 
 const about = import.meta.env.VUE_APP_ABOUT
 

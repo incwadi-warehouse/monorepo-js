@@ -1,6 +1,5 @@
 <script setup>
-import { useLocale, useColorScheme } from '@baldeweg/ui'
-import { useToast } from '@baldeweg/ui'
+import { useLocale, useToast } from '@baldeweg/ui'
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useConf, useSnow, useParty } from 'shared'
@@ -11,7 +10,6 @@ import useAuth from '@/composables/useAuth.js'
 import AuthLogin from '@/components/auth/Login.vue'
 
 useLocale()
-useColorScheme()
 
 const router = useRouter()
 

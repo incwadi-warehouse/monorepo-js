@@ -1,5 +1,4 @@
 <script setup>
-import { useColorScheme } from '@baldeweg/ui'
 import { useRequest } from '@baldeweg/ui'
 import { useRoute } from 'vue-router'
 import { ref, watch } from 'vue'
@@ -8,8 +7,6 @@ import { useSnow, useParty } from 'shared'
 import AppLogo from './components/AppLogo.vue'
 import { useToken } from '@/composables/useToken.js'
 import AccountPride from '@/components/AccountPride.vue'
-
-useColorScheme()
 
 const { config } = useRequest()
 config.value.baseURL = import.meta.env.VUE_APP_API
