@@ -9,7 +9,7 @@ const { username, password, hasError, login, isLoggingIn } = useLogin()
     <p>{{ $t('login_error') }}</p>
   </b-alert>
 
-  <b-form @submit.prevent="login">
+  <b-form @submit="login">
     <!-- username -->
     <b-form-group>
       <b-form-item>
