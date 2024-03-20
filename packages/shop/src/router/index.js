@@ -20,6 +20,21 @@ const router = createRouter({
       }),
     },
     {
+      path: '/home',
+      name: 'home',
+      component: () => import('../views/HomeView.vue'),
+    },
+    {
+      path: '/find',
+      name: 'find',
+      component: () => import('../views/FindView.vue'),
+      props: (route) => ({
+        term: route.query.term,
+        page: parseInt(route.query.page) || undefined,
+        genre: route.query.genre,
+      }),
+    },
+    {
       path: '/product/:id',
       name: 'article',
       component: () => import('../views/ArticleView.vue'),
