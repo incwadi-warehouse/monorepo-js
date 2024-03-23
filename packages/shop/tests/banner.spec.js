@@ -1,10 +1,18 @@
 // eslint-disable-next-line no-undef
 const { test, expect } = require('@playwright/test')
 
-test('banner', async ({ page }) => {
+test('show banner', async ({ page }) => {
   await page.goto('/home')
 
   await expect(page.getByText('Our store will be closed')).toBeVisible()
+})
+
+test('close banner', async ({ page }) => {
+  await page.goto('/home')
+
+  await page.getByText('X', { exact: true }).click()
+
+  await expect(page.getByText('Our store will be closed')).toBeHidden()
 })
 
 test.beforeEach(async ({ page }) => {
