@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test')
 
 test('banner', async ({ page }) => {
-  await page.goto('/search')
+  await page.goto('/home')
 
   await expect(page.getByText('Our store will be closed')).toBeVisible()
 })
