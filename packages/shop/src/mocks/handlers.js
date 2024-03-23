@@ -31,7 +31,7 @@ export const handlers = [
           id: 1,
           name: 'Hamburg',
           content:
-            '**Our store will be closed tomorrow for maintenance work. We are looking forward to provide you with the worst service again next year.**\n\n**Thanks for being a loyal customer!**',
+            '**Our store will be closed tomorrow for maintenance work.**\n\nWe are looking forward to provide you with the best service again the day after tomorrow. Thanks for being a loyal customer!',
         })
       )
     }

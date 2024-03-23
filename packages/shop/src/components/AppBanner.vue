@@ -6,6 +6,8 @@ import { useBranch } from '@/composables/useBranch.js'
 
 const { branch } = useBranch()
 
+const showBanner = ref(true)
+
 const content = computed(() => {
   if (!branch.value || !branch.value.content) return
 
@@ -27,36 +29,21 @@ const content = computed(() => {
   })
 })
 
-const contentShort = computed(() => {
-  if (!branch.value || !branch.value.content) return
-
-  return (
-    DOMPurify.sanitize(marked.parse(branch.value.content), {
-      ALLOWED_TAGS: [],
-    }).substr(0, 90) + '...'
-  )
-})
-
-const showMore = ref(false)
-
-const toggleShowMore = () => {
-  showMore.value = !showMore.value
+const close = () => {
+  showBanner.value = false
 }
 </script>
 
 <template>
-  <div class="banner">
+  <div class="banner" v-if="showBanner">
     <BContainer size="m">
       <div class="banner_inner">
         <div class="banner_message">
-          <div v-html="content" v-if="showMore" />
-          <p v-html="contentShort" v-else />
+          <div v-html="content" />
         </div>
 
-        <div class="banner_more">
-          <p @click.prevent="toggleShowMore">
-            {{ !showMore ? $t('more') : $t('less') }}
-          </p>
+        <div class="banner_close">
+          <p @click.prevent="close">X</p>
         </div>
       </div>
     </BContainer>
@@ -65,8 +52,6 @@ const toggleShowMore = () => {
 
 <style scope>
 .banner {
-  border-top: 1px solid var(--color-primary-05);
-  border-bottom: 1px solid var(--color-primary-05);
   background: var(--color-primary-10);
   color: var(--color-neutral-00);
 }
@@ -79,10 +64,9 @@ const toggleShowMore = () => {
   padding-right: 20px;
   flex-grow: 1;
 }
-.banner_more {
-  border-left: 1px solid var(--color-primary-05);
+.banner_close {
   flex-shrink: 0;
-  width: 80px;
+  width: 40px;
   padding-left: 20px;
   text-align: right;
   cursor: pointer;
