@@ -10,7 +10,7 @@ test('show banner', async ({ page }) => {
 test('close banner', async ({ page }) => {
   await page.goto('/home')
 
-  await page.getByText('X', { exact: true }).click()
+  await page.locator('path').nth(1).click()
 
   await expect(page.getByText('Our store will be closed')).toBeHidden()
 })
