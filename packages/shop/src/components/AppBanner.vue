@@ -52,8 +52,8 @@ const close = () => {
 
 <style scope>
 .banner {
-  background: var(--color-primary-10);
-  color: var(--color-neutral-00);
+  border-bottom: 1px solid var(--color-primary-10);
+  color: var(--color-neutral-10);
 }
 .banner_inner {
   display: flex;
