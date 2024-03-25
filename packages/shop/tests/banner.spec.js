@@ -10,7 +10,11 @@ test('show banner', async ({ page }) => {
 test('close banner', async ({ page }) => {
   await page.goto('/home')
 
-  await page.locator('path').nth(1).click()
+  await page
+    .locator('section')
+    .filter({ hasText: 'Our store will be closed' })
+    .getByRole('img')
+    .click()
 
   await expect(page.getByText('Our store will be closed')).toBeHidden()
 })
