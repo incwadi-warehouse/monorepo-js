@@ -1,5 +1,4 @@
 <script setup>
-import { useColorScheme } from '@baldeweg/ui'
 import { useRequest } from '@baldeweg/ui'
 import { useRoute } from 'vue-router'
 import { ref, watch } from 'vue'
@@ -8,8 +7,6 @@ import { useSnow, useParty } from 'shared'
 import AppLogo from './components/AppLogo.vue'
 import { useToken } from '@/composables/useToken.js'
 import AccountPride from '@/components/AccountPride.vue'
-
-useColorScheme()
 
 const { config } = useRequest()
 config.value.baseURL = import.meta.env.VUE_APP_API
@@ -59,9 +56,11 @@ watch(
 
     <RouterView v-if="user || route.name === 'login'" />
 
-    <b-container size="s">
-      <div v-html="about" />
-    </b-container>
+    <div class="footer">
+      <b-container size="s">
+        <div v-html="about" />
+      </b-container>
+    </div>
 
     <AccountPride :showPride="showPride" />
   </BApp>
@@ -70,5 +69,8 @@ watch(
 <style scoped>
 main {
   --masthead-top-height: 0;
+}
+.footer {
+  border-top: 1px solid var(--color-neutral-02);
 }
 </style>

@@ -1,6 +1,5 @@
 <script setup>
-import { useLocale, useColorScheme } from '@baldeweg/ui'
-import { useToast } from '@baldeweg/ui'
+import { useLocale, useToast } from '@baldeweg/ui'
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useConf, useSnow, useParty } from 'shared'
 import Cookies from 'js-cookie'
@@ -11,7 +10,6 @@ import { useReservation } from '@/composables/useReservation.js'
 import router from '@/router'
 
 useLocale()
-useColorScheme()
 
 const auth = useAuth()
 
@@ -195,9 +193,11 @@ const openProfile = () => {
       <auth-login />
     </b-container>
 
-    <b-container size="m">
-      <div v-html="about" />
-    </b-container>
+    <div class="footer">
+      <b-container size="m">
+        <div v-html="about" />
+      </b-container>
+    </div>
 
     <b-panel :visible="isDrawerActive" @close="isDrawerActive = false">
       <BContainer size="m">
@@ -249,5 +249,8 @@ const openProfile = () => {
   width: 100%;
   height: 2px;
   z-index: 3;
+}
+.footer {
+  border-top: 1px solid var(--color-neutral-02);
 }
 </style>

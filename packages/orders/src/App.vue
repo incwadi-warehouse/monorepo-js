@@ -1,5 +1,4 @@
 <script setup>
-import { useColorScheme } from '@baldeweg/ui'
 import { useToast } from '@baldeweg/ui'
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useConf, useSnow, useParty } from 'shared'
@@ -10,8 +9,6 @@ import { useOrder } from '@/composables/useOrder.js'
 import AuthLogin from '@/components/auth/Login.vue'
 import useAuth from '@/composables/useAuth.js'
 import router from '@/router'
-
-useColorScheme()
 
 const auth = useAuth()
 
@@ -113,9 +110,11 @@ watch(
       <AuthLogin />
     </BContainer>
 
-    <BContainer size="m">
-      <div v-html="about" />
-    </BContainer>
+    <div class="footer">
+      <BContainer size="m">
+        <div v-html="about" />
+      </BContainer>
+    </div>
 
     <AppPanel
       :isPanelActive="isPanelActive"
@@ -147,5 +146,8 @@ watch(
   width: 100%;
   height: 2px;
   z-index: 3;
+}
+.footer {
+  border-top: 1px solid var(--color-neutral-02);
 }
 </style>
