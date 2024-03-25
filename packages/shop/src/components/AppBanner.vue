@@ -43,7 +43,7 @@ const close = () => {
         </div>
 
         <div class="banner_close">
-          <p @click.prevent="close">X</p>
+          <p @click.prevent="close"><BIcon type="close" /></p>
         </div>
       </div>
     </BContainer>
