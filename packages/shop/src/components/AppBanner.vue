@@ -6,7 +6,7 @@ import { useBranch } from '@/composables/useBranch.js'
 
 const { branch } = useBranch()
 
-const showBanner = ref(true)
+const isClosed = ref(false)
 
 const content = computed(() => {
   if (!branch.value || !branch.value.content) return
@@ -28,14 +28,10 @@ const content = computed(() => {
     ],
   })
 })
-
-const close = () => {
-  showBanner.value = false
-}
 </script>
 
 <template>
-  <div class="banner" :class="{ isClosed: !showBanner }">
+  <div class="banner" :class="{ isClosed }">
     <BContainer size="m">
       <div class="banner_inner">
         <div class="banner_message">
@@ -43,7 +39,9 @@ const close = () => {
         </div>
 
         <div class="banner_close">
-          <p @click.prevent="close"><BIcon type="close" /></p>
+          <p @click.prevent="isClosed = !isClosed">
+            <BIcon type="close" />
+          </p>
         </div>
       </div>
     </BContainer>
