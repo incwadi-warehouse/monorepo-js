@@ -83,8 +83,6 @@ const { genres } = useGenre()
 
 <template>
   <article>
-    <SearchContent />
-
     <b-container size="m">
       <b-search
         focus
