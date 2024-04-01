@@ -37,6 +37,18 @@ export const handlers = [
     }
   ),
   rest.get(
+    'http://localhost:8000/api/public/book/recommendation/1',
+    async (req, res, ctx) => {
+      return res(ctx.status(200), ctx.json([]))
+    }
+  ),
+  rest.get(
+    'http://localhost:8000/api/public/genre/1',
+    async (req, res, ctx) => {
+      return res(ctx.status(200), ctx.json([{ id: 1, name: 'jbuy' }]))
+    }
+  ),
+  rest.get(
     'http://localhost:8000/api/public/book/find',
     async (req, res, ctx) => {
       return res(

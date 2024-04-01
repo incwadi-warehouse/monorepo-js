@@ -20,7 +20,7 @@ test('close banner', async ({ page }) => {
 })
 
 test.beforeEach(async ({ page }) => {
-  await page.route('**/api/public/branch/show/**', async (route) => {
+  await page.route('**/api/public/branch/show/1', async (route) => {
     const json = {
       id: 1,
       name: 'Hamburg',
