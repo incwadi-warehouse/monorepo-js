@@ -19,7 +19,7 @@ const route = (p) => {
 
   router.push({
     name: 'find',
-    query: Object.assign({}, router.currentRoute.value.query, { pagess: p }),
+    query: Object.assign({}, router.currentRoute.value.query, { page: p }),
   })
   window.scrollTo(0, 0)
 }
