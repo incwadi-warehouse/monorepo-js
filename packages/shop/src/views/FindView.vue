@@ -25,7 +25,7 @@ const genre = ref(props.genre || null)
 
 const router = useRouter()
 const { genres } = useGenre()
-const { articles, counter, isLoading, list } = useArticle()
+const { articles, counter, isLoading, list, resetArticles } = useArticle()
 
 const pages = computed(() => {
   return Math.ceil(counter.value / 20)
@@ -43,9 +43,15 @@ const find = () => {
 }
 
 const reset = () => {
-  term.value = ''
+  term.value = undefined
   page.value = undefined
-  genre.value = null
+  genre.value = undefined
+
+  resetArticles()
+
+  router.push({
+    name: 'home',
+  })
 }
 
 onMounted(() => {
