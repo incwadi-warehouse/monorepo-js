@@ -1,6 +1,6 @@
 <script setup>
 import { useTitle } from '@baldeweg/ui'
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useArticle } from '@/composables/useArticle.js'
 import { useGenre } from '@/composables/useGenre.js'
@@ -31,9 +31,18 @@ const pages = computed(() => {
   return Math.ceil(counter.value / 20)
 })
 
-const find = () => {
+const findAndResetPage = () => {
   page.value = 1
 
+  list(term.value, page.value, genre.value)
+
+  router.push({
+    name: 'find',
+    query: { term: term.value, page: page.value, genre: genre.value },
+  })
+}
+
+const find = () => {
   list(term.value, page.value, genre.value)
 
   router.push({
@@ -54,11 +63,14 @@ const reset = () => {
   })
 }
 
-onMounted(() => {
-  if (props.term || props.genre) {
-    find()
+onMounted(() => find())
+
+watch(
+  () => props.page,
+  () => {
+    page.value = props.page
   }
-})
+)
 </script>
 
 <template>
@@ -68,7 +80,7 @@ onMounted(() => {
       branded
       :placeholder="$t('searchInTitleAuthorGenre')"
       v-model="term"
-      @submit.prevent="find"
+      @submit.prevent="findAndResetPage"
       @reset="reset"
     />
   </BContainer>
@@ -80,7 +92,7 @@ onMounted(() => {
       fieldValue="name"
       :title="$t('genres')"
       v-model="genre"
-      @update:modelValue="find"
+      @update:modelValue="findAndResetPage"
     />
   </BContainer>
 
