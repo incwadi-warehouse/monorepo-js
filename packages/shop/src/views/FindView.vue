@@ -32,6 +32,8 @@ const pages = computed(() => {
 })
 
 const find = () => {
+  page.value = 1
+
   list(term.value, page.value, genre.value)
 
   router.push({
