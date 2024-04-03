@@ -49,6 +49,11 @@ export function useArticle() {
     })
   }
 
+  const resetArticles = () => {
+    articles.value = []
+    counter.value = 0
+  }
+
   const show = (id) => {
     return request('get', '/api/public/book/' + id).then((res) => {
       article.value = res.data
@@ -87,6 +92,7 @@ export function useArticle() {
     counter,
     isLoading,
     list,
+    resetArticles,
     show,
     formatPrice,
     formatAuthor,

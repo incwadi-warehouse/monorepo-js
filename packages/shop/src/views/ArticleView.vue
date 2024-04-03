@@ -37,7 +37,7 @@ const isInCart = computed(() => {
       <div class="cta" v-if="isInCart && article.branchCart">
         <b-button design="outline" disabled>{{ $t('added_to_cart') }}</b-button>
         <p>
-          <RouterLink :to="{ name: 'search' }">
+          <RouterLink :to="{ name: 'home' }">
             {{ $t('continue_browsing') }}</RouterLink
           >
         </p>
