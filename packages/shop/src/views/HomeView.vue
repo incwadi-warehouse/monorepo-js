@@ -18,7 +18,7 @@ const genre = ref(null)
 const find = () => {
   router.push({
     name: 'find',
-    query: { term: term.value, genres: genre.value },
+    query: { term: term.value, genre: genre.value },
   })
 }
 

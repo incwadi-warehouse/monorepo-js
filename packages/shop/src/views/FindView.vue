@@ -38,7 +38,7 @@ const find = () => {
 
   router.push({
     name: 'find',
-    query: { term: term.value, page: page.value, genres: genre.value },
+    query: { term: term.value, page: page.value, genre: genre.value },
   })
 }
 
@@ -55,7 +55,7 @@ const reset = () => {
 }
 
 onMounted(() => {
-  if (term.value || genre.value) {
+  if (props.term || props.genre) {
     find()
   }
 })
