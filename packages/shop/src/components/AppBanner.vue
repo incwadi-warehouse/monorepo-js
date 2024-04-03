@@ -50,13 +50,11 @@ const content = computed(() => {
 
 <style scope>
 .banner {
-  position: relative;
-  left: 0;
   border-bottom: 1px solid var(--color-primary-10);
   color: var(--color-neutral-10);
 }
 .banner.isClosed {
-  animation: slide 1s forwards;
+  display: none;
 }
 .banner_inner {
   display: flex;
@@ -73,12 +71,5 @@ const content = computed(() => {
   padding-left: 20px;
   text-align: right;
   cursor: pointer;
-}
-
-@keyframes slide {
-  100% {
-    left: -100vw;
-    display: none;
-  }
 }
 </style>
