@@ -73,6 +73,22 @@ test('pagination', async ({ page }) => {
   await expect(page).toHaveURL(/.*home$/)
 })
 
+test('pagination and genres', async ({ page }) => {
+  await page.goto('/find')
+
+  await page.getByText('Forward >').click()
+
+  await expect(page).toHaveURL(/.*page=2.*/)
+
+  await expect(page.getByText('Genres')).toBeVisible()
+
+  await page.getByText('Genres').click()
+
+  await page.getByText('Novels').click()
+
+  await expect(page).toHaveURL(/.*genre=1.*/)
+})
+
 test.beforeEach(async ({ page }) => {
   await page.route('**/api/public/genre/1', async (route) => {
     const json = [
