@@ -8,7 +8,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'index',
-      redirect: { name: 'search' },
+      redirect: { name: 'home' },
     },
     {
       path: '/search',
@@ -17,6 +17,21 @@ const router = createRouter({
       props: (route) => ({
         term: route.query.term,
         page: parseInt(route.query.page) || undefined,
+      }),
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: () => import('../views/HomeView.vue'),
+    },
+    {
+      path: '/find',
+      name: 'find',
+      component: () => import('../views/FindView.vue'),
+      props: (route) => ({
+        term: route.query.term,
+        page: parseInt(route.query.page) || undefined,
+        genre: route.query.genre,
       }),
     },
     {
