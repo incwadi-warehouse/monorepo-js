@@ -23,6 +23,32 @@ export const handlers = [
     )
   }),
   rest.get(
+    'http://localhost:8000/api/public/branch/show/1',
+    async (req, res, ctx) => {
+      return res(
+        ctx.status(200),
+        ctx.json({
+          id: 1,
+          name: 'Hamburg',
+          content:
+            '**Our store will be closed tomorrow for maintenance work.**\n\nWe are looking forward to provide you with the best service again the day after tomorrow. Thanks for being a loyal customer!',
+        })
+      )
+    }
+  ),
+  rest.get(
+    'http://localhost:8000/api/public/book/recommendation/1',
+    async (req, res, ctx) => {
+      return res(ctx.status(200), ctx.json([]))
+    }
+  ),
+  rest.get(
+    'http://localhost:8000/api/public/genre/1',
+    async (req, res, ctx) => {
+      return res(ctx.status(200), ctx.json([{ id: 1, name: 'jbuy' }]))
+    }
+  ),
+  rest.get(
     'http://localhost:8000/api/public/book/find',
     async (req, res, ctx) => {
       return res(
