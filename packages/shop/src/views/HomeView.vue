@@ -4,8 +4,7 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useGenre } from '@/composables/useGenre.js'
 import RecommendationShow from '@/components/recommendation/RecommendationShow.vue'
-import SearchContent from '@/components/search/SearchContent.vue'
-import SearchCheckboxFilter from '@/components/search/SearchCheckboxFilter.vue'
+import FindCheckboxFilter from '@/components/find/FindCheckboxFilter.vue'
 
 useTitle({ title: 'Home' })
 
@@ -29,8 +28,6 @@ const reset = () => {
 </script>
 
 <template>
-  <SearchContent />
-
   <BContainer size="m">
     <BSearch
       focus
@@ -43,7 +40,7 @@ const reset = () => {
   </BContainer>
 
   <BContainer size="m">
-    <SearchCheckboxFilter
+    <FindCheckboxFilter
       :items="genres"
       fieldKey="id"
       fieldValue="name"
