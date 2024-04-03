@@ -2,12 +2,8 @@ version: 2.1
 
 orbs:
   node: circleci/node@5.2.0
-  cypress: cypress-io/cypress@2.2.0
 
 executors:
-  cypress:
-    docker:
-      - image: 'cypress/base:18.16.1'
   playwright:
     docker:
        - image: mcr.microsoft.com/playwright:v1.42.1-jammy
