@@ -6,6 +6,7 @@ import { useGenre } from '@/composables/useGenre.js'
 import RecommendationShow from '@/components/recommendation/RecommendationShow.vue'
 import SearchCheckboxFilter from '@/components/search/SearchCheckboxFilter.vue'
 import AppBanner from '@/components/AppBanner.vue'
+import AppToolbar from '@/components/AppToolbar.vue'
 
 useTitle({ title: 'Home' })
 
@@ -30,6 +31,8 @@ const reset = () => {
 
 <template>
   <AppBanner />
+
+  <AppToolbar />
 
   <BContainer size="m">
     <BSearch
