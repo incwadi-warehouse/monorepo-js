@@ -1,6 +1,7 @@
 <script setup>
 import { useLocale, useToast } from '@baldeweg/ui'
 import AppMasthead from '@/components/AppMasthead.vue'
+import AppToolbar from '@/components/AppToolbar.vue'
 
 useLocale()
 
@@ -12,6 +13,8 @@ const { current } = useToast()
 <template>
   <BApp>
     <AppMasthead />
+
+    <AppToolbar />
 
     <RouterView />
 
