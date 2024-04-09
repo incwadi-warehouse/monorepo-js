@@ -45,7 +45,16 @@ const router = createRouter({
       redirect: { name: 'search' },
     },
   ],
-  scrollBehavior() {
+  scrollBehavior(to, from, savedPosition) {
+    if (to.name === 'find' && from.name === 'article') {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          savedPosition.behavior = 'smooth'
+          resolve(savedPosition)
+        }, 500)
+      })
+    }
+
     return { top: 0 }
   },
 })
