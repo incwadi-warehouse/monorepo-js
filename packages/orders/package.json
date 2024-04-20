@@ -30,7 +30,7 @@
     "eslint": "9.0.0",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-vue": "9.25.0",
-    "msw": "^1.2.1",
+    "msw": "^2.0.0",
     "prettier": "3.2.5",
     "shared": "^59.0.0",
     "start-server-and-test": "2.0.3",
