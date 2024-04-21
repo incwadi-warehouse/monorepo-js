@@ -11,7 +11,7 @@
     "i18n:report": "vue-i18n-extract report --vueFiles './src/**/*.?(js|vue)' --languageFiles './locales/*.?(json|yml|yaml|js)'"
   },
   "dependencies": {
-    "@baldeweg/ui": "0.9.8",
+    "@baldeweg/ui": "0.10.2",
     "axios": "1.6.8",
     "canvas-confetti": "1.9.2",
     "dayjs": "1.11.10",
