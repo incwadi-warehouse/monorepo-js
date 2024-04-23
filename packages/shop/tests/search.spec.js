@@ -21,7 +21,7 @@ test('search results', async ({ page }) => {
   await page.goto('/search')
   await page.getByRole('button').nth(1).click()
 
-  await expect(page.getByText('Title')).toBeVisible()
+  await expect(page.getByText('book 1')).toBeVisible()
 })
 
 test.beforeEach(async ({ page }) => {
