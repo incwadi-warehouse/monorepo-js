@@ -11,15 +11,6 @@ const router = createRouter({
       redirect: { name: 'home' },
     },
     {
-      path: '/search',
-      name: 'search',
-      component: () => import('../views/SearchView.vue'),
-      props: (route) => ({
-        term: route.query.term,
-        page: parseInt(route.query.page) || undefined,
-      }),
-    },
-    {
       path: '/home',
       name: 'home',
       component: () => import('../views/HomeView.vue'),
