@@ -5,6 +5,8 @@ import { useRouter } from 'vue-router'
 import { useGenre } from '@/composables/useGenre.js'
 import RecommendationShow from '@/components/recommendation/RecommendationShow.vue'
 import FindCheckboxFilter from '@/components/find/FindCheckboxFilter.vue'
+import SearchCheckboxFilter from '@/components/search/SearchCheckboxFilter.vue'
+import AppBanner from '@/components/AppBanner.vue'
 
 useTitle({ title: 'Home' })
 
@@ -28,6 +30,8 @@ const reset = () => {
 </script>
 
 <template>
+  <AppBanner />
+
   <BContainer size="m">
     <BSearch
       focus

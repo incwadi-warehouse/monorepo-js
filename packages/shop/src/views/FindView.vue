@@ -82,6 +82,7 @@ watch(
       v-model="term"
       @submit.prevent="findAndResetPage"
       @reset="reset"
+      reset
     />
   </BContainer>
 

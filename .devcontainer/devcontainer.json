@@ -32,7 +32,8 @@
         "mrmlnc.vscode-apache",
         "dbaeumer.vscode-eslint",
         "Vue.volar",
-        "ms-playwright.playwright"
+        "ms-playwright.playwright",
+        "donjayamanne.githistory"
       ]
     }
   }
