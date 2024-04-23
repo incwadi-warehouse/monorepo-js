@@ -1,7 +1,7 @@
 import { http, HttpResponse } from 'msw'
 
 export const handlers = [
-  http.get('http://localhost:8080/api/user/1/:key', () => {
+  http.get('http://localhost:8080/api/user/1/:key', (req) => {
     return HttpResponse.json({
       value: JSON.parse(localStorage.getItem('mock_' + req.params.key)),
     })
