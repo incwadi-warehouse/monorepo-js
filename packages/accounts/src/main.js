@@ -5,7 +5,6 @@ import App from './App.vue'
 import router from './router'
 import i18n from './i18n.js'
 import '@baldeweg/ui/styles'
-import { worker } from './mocks/browser'
 
 const theme = () => {
   if (import.meta.env.VUE_APP_THEME === 'false') return
@@ -16,12 +15,6 @@ const theme = () => {
 
 theme()
 
-if (import.meta.env.MODE === 'development') {
-  worker.start({
-    onUnhandledRequest: 'bypass',
-  })
-}
-
 const ui = createUi()
 const app = createApp(App)
 
@@ -31,4 +24,16 @@ app.use(router)
 
 registerSW()
 
-app.mount('#app')
+async function enableMocking() {
+  if (process.env.NODE_ENV !== 'development') {
+    return
+  }
+
+  const { worker } = await import('./mocks/browser')
+
+  return worker.start()
+}
+
+enableMocking().then(() => {
+  app.mount('#app')
+})
