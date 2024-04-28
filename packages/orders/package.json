@@ -14,7 +14,7 @@
     "@baldeweg/ui": "0.10.2",
     "axios": "1.6.8",
     "canvas-confetti": "1.9.2",
-    "dayjs": "1.11.10",
+    "dayjs": "1.11.11",
     "js-cookie": "3.0.5",
     "lodash": "4.17.21",
     "vue": "3.4.25",
