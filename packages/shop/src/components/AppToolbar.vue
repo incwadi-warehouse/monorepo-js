@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import SearchCheckboxFilter from '@/components/search/SearchCheckboxFilter.vue'
+import SearchCheckboxFilter from '@/components/find/FindCheckboxFilter.vue'
 import { useGenre } from '@/composables/useGenre.js'
 import Cart from '@/components/AppCart.vue'
 
