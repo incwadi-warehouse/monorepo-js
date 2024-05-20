@@ -49,6 +49,7 @@ const reset = () => {
       :placeholder="$t('search_in_title_author_genre_tag')"
       filter
       branded
+      reset
       @update:modelValue="delaySearch"
       @submit.prevent="search"
       @reset="reset"

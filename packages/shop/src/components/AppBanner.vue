@@ -31,7 +31,7 @@ const content = computed(() => {
 </script>
 
 <template>
-  <div class="banner" :class="{ isClosed }">
+  <div class="banner" :class="{ isClosed }" v-if="content">
     <BContainer size="m">
       <div class="banner_inner">
         <div class="banner_message">

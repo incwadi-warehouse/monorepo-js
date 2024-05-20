@@ -1,6 +1,6 @@
 {
   "name": "shared",
-  "version": "59.0.0",
+  "version": "60.0.1",
   "scripts": {
     "test:unit": "vitest --environment jsdom",
     "test:unit:ci": "vitest run --environment jsdom"
@@ -12,7 +12,7 @@
   "private": true,
   "devDependencies": {
     "@baldeweg/eslint-config": "0.10.0",
-    "@rushstack/eslint-patch": "1.10.2",
+    "@rushstack/eslint-patch": "1.10.3",
     "jsdom": "24.0.0"
   }
 }
