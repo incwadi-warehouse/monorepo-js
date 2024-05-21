@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@baldeweg/ui": "0.10.3",
-    "axios": "1.7.1",
+    "axios": "1.7.2",
     "canvas-confetti": "1.9.3",
     "dayjs": "1.11.11",
     "js-cookie": "3.0.5",
