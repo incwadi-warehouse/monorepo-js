@@ -69,6 +69,7 @@ watch(
   () => props.page,
   () => {
     page.value = props.page
+    find()
   }
 )
 </script>
