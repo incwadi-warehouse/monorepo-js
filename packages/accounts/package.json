@@ -1,6 +1,6 @@
 {
   "name": "accounts",
-  "version": "60.0.1",
+  "version": "61.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -33,7 +33,7 @@
     "jsdom": "24.0.0",
     "msw": "2.3.0",
     "prettier": "3.2.5",
-    "shared": "^60.0.1",
+    "shared": "^61.0.0",
     "start-server-and-test": "2.0.3",
     "vite": "5.2.11",
     "vite-plugin-pwa": "0.20.0",
