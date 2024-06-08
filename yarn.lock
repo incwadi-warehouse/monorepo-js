@@ -1014,10 +1014,10 @@
   resolved "https://registry.yarnpkg.com/@baldeweg/eslint-config/-/eslint-config-0.10.3.tgz#b6f86e5725930a7f01bc44b3ed06854f2144120c"
   integrity sha512-5QNriq072uKBuBmsVj79JM+vCYVF6gbM8POqbTySOAWe1J55fLTrTM5Udcbt1fJHPyiLRTTtXlLxx/mwzbWc1Q==
 
-"@baldeweg/ui@0.10.3":
-  version "0.10.3"
-  resolved "https://registry.yarnpkg.com/@baldeweg/ui/-/ui-0.10.3.tgz#72e1fdf88efca6e393889d7d8c03f463004ad88d"
-  integrity sha512-TUAW6BO8/oSfQv1kzc7BUEiISuI1M3HGi6oQRRkdJu7CFnUdNt4TvHH/D/j0CU/RhsNkpf363SZ+Jsdm21HkTQ==
+"@baldeweg/ui@0.10.4":
+  version "0.10.4"
+  resolved "https://registry.yarnpkg.com/@baldeweg/ui/-/ui-0.10.4.tgz#9cf534c63eb4ca33d89fdca8331f586b3c42e02f"
+  integrity sha512-TcT/ic1DNtodTQAnMSFT4zEBrT5KfzdoBsLJnJDliuc5oYUHChp0Y6iOkO/PFJ3eP7fYQRjyKhhF0vp9aoJCBA==
   dependencies:
     vue "3.4.27"
 
