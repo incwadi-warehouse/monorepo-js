@@ -179,7 +179,7 @@ export const handlers = [
     })
   }),
   http.get('http://localhost:8000/api/public/genre/1', () => {
-    return HttpResponse.json([{ id: 1, name: 'genre' }])
+    return HttpResponse.json([{ id: 1, name: 'genre 1' }, { id: 2, name: 'genre 2' }])
   }),
   http.get('http://localhost:8000/api/public/book/find', () => {
     return HttpResponse.json({

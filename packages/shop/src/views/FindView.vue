@@ -72,6 +72,14 @@ watch(
     find()
   }
 )
+
+watch(
+  () => props.genre,
+  () => {
+    genre.value = props.genre
+    find()
+  }
+)
 </script>
 
 <template>
@@ -87,7 +95,7 @@ watch(
     />
   </BContainer>
 
-  <BContainer size="m">
+  <!-- <BContainer size="m">
     <FindCheckboxFilter
       :items="genres"
       fieldKey="id"
@@ -96,7 +104,7 @@ watch(
       v-model="genre"
       @update:modelValue="findAndResetPage"
     />
-  </BContainer>
+  </BContainer> -->
 
   <BContainer size="m" v-if="isLoading">
     <BSpinner size="l" />
