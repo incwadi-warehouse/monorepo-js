@@ -83,7 +83,7 @@ const reserve = () => {
           <ul>
             <li v-for="article in cart" :key="article.id">
               <router-link
-                :to="{ name: 'article', params: { id: article.id } }"
+                :to="{ name: 'product', params: { id: article.id } }"
               >
                 {{ article.title }}
               </router-link>

@@ -27,8 +27,8 @@ const router = createRouter({
     },
     {
       path: '/product/:id',
-      name: 'article',
-      component: () => import('../views/ArticleView.vue'),
+      name: 'product',
+      component: () => import('../views/ProductView.vue'),
       props: true,
     },
     {
@@ -37,7 +37,7 @@ const router = createRouter({
     },
   ],
   scrollBehavior(to, from, savedPosition) {
-    if (to.name === 'find' && from.name === 'article') {
+    if (to.name === 'find' && from.name === 'product') {
       return new Promise((resolve) => {
         setTimeout(() => {
           savedPosition.behavior = 'smooth'

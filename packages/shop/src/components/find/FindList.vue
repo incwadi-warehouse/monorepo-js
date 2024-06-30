@@ -8,7 +8,7 @@ const { articles, formatPrice, formatAuthor, image } = useArticle()
   <div v-if="articles">
     <BList v-for="article in articles" :key="article.id" divider>
       <template #image>
-        <RouterLink :to="{ name: 'article', params: { id: article.id } }">
+        <RouterLink :to="{ name: 'product', params: { id: article.id } }">
           <img
             width="100"
             :src="image(article.id, '100x100')"
@@ -19,7 +19,7 @@ const { articles, formatPrice, formatAuthor, image } = useArticle()
 
       <template #title>
         <RouterLink
-          :to="{ name: 'article', params: { id: article.id } }"
+          :to="{ name: 'product', params: { id: article.id } }"
           :style="{ wordBreak: 'initial', hyphens: 'auto' }"
         >
           {{ article.title }}
@@ -29,7 +29,7 @@ const { articles, formatPrice, formatAuthor, image } = useArticle()
       <template #options>
         <BButton
           design="text"
-          @click="$router.push({ name: 'article', params: { id: article.id } })"
+          @click="$router.push({ name: 'product', params: { id: article.id } })"
         >
           {{ formatPrice(article.price) }} {{ article.currency }}
         </BButton>

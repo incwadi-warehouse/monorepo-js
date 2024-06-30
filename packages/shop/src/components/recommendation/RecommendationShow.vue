@@ -12,7 +12,7 @@ const { recommendations } = useRecommendation()
     <BSliderItem size="xs" v-for="product in recommendations" :key="product.id">
       <div class="product">
         <div class="image_wrapper">
-          <RouterLink :to="{ name: 'article', params: { id: product.id } }">
+          <RouterLink :to="{ name: 'product', params: { id: product.id } }">
             <img
               class="image"
               :src="product.cover_l"
@@ -28,7 +28,7 @@ const { recommendations } = useRecommendation()
 
         <div :style="{ flexGrow: '1' }">
           <RouterLink
-            :to="{ name: 'article', params: { id: product.id } }"
+            :to="{ name: 'product', params: { id: product.id } }"
             class="title"
           >
             {{ product.title }}
@@ -39,7 +39,7 @@ const { recommendations } = useRecommendation()
           class="price"
           design="text"
           :style="{ alignSelf: 'flex-start' }"
-          @click="$router.push({ name: 'article', params: { id: product.id } })"
+          @click="$router.push({ name: 'product', params: { id: product.id } })"
         >
           {{ formatPrice(product.price) }} {{ product.currency }}
         </BButton>
