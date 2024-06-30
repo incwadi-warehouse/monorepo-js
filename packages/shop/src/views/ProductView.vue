@@ -26,11 +26,11 @@ const isInCart = computed(() => {
 
 <template>
   <div v-if="article">
-    <b-container size="m">
-      <b-button design="primary" class="cta" @click="add(article)" v-if="!isInCart && article.branchCart">{{
-        $t('reserve') }}</b-button>
+    <BContainer size="m">
+      <BButton design="primary" class="cta" @click="add(article)" v-if="!isInCart && article.branchCart">{{
+        $t('reserve') }}</BButton>
       <div class="cta" v-if="isInCart && article.branchCart">
-        <b-button design="outline" disabled>{{ $t('added_to_cart') }}</b-button>
+        <BButton design="outline" disabled>{{ $t('added_to_cart') }}</BButton>
         <p>
           <RouterLink :to="{ name: 'home' }">
             {{ $t('continue_browsing') }}
@@ -47,22 +47,22 @@ const isInCart = computed(() => {
         {{ $t('by') }}
         {{ formatAuthor(article.authorFirstname, article.authorSurname) }}
       </p>
-    </b-container>
+    </BContainer>
 
-    <b-container size="m">
+    <BContainer size="m">
       <div class="article">
         <div class="image">
-          <b-container size="m" v-if="article">
+          <BContainer size="m" v-if="article">
             <img :src="image(article.id, '400x400')" width="400" :alt="article.title" />
-          </b-container>
+          </BContainer>
         </div>
 
         <div class="details">
-          <b-container size="m" v-if="article.shortDescription">
+          <BContainer size="m" v-if="article.shortDescription">
             <p class="wrap">{{ article.shortDescription }}</p>
-          </b-container>
+          </BContainer>
 
-          <b-container size="m" v-if="article">
+          <BContainer size="m" v-if="article">
             <p>
               {{ $t('price') }}: {{ formatPrice(article.price) }}
               {{ article.currency }}
@@ -79,14 +79,14 @@ const isInCart = computed(() => {
               {{ article.format_name }}
             </p>
             <p v-if="article.cond">{{ $t('condition') }}: {{ article.cond }}</p>
-          </b-container>
+          </BContainer>
 
-          <b-container size="m">
+          <BContainer size="m">
             <p class="wrap">{{ article.branchOrdering }}</p>
-          </b-container>
+          </BContainer>
         </div>
       </div>
-    </b-container>
+    </BContainer>
   </div>
 </template>
 
