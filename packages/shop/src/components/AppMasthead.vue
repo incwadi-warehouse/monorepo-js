@@ -25,9 +25,9 @@ const logo =
       </RouterLink>
     </BMastheadItem>
 
-    <BMastheadItem position="end">
+    <!-- <BMastheadItem position="end">
       <Cart />
-    </BMastheadItem>
+    </BMastheadItem> -->
   </BMasthead>
 </template>
 
