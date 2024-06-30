@@ -26,7 +26,7 @@ const logo =
     </BMastheadItem>
 
     <BMastheadItem position="end">
-      <Cart />
+      <!-- <Cart /> -->
     </BMastheadItem>
   </BMasthead>
 </template>
