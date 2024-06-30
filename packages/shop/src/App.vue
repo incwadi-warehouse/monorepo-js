@@ -4,7 +4,7 @@ import AppMasthead from '@/components/AppMasthead.vue'
 
 useLocale()
 
-const about = import.meta.env.VUE_APP_ABOUT
+const about = import.meta.env.VITE_ABOUT
 
 const { current } = useToast()
 </script>

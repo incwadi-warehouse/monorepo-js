@@ -6,12 +6,12 @@ const branch = ref(null)
 export function useBranch() {
   const { config, request } = useRequest()
 
-  config.value.baseURL = import.meta.env.VUE_APP_API
+  config.value.baseURL = import.meta.env.VITE_API
 
   const show = () => {
     return request(
       'get',
-      '/api/public/branch/show/' + import.meta.env.VUE_APP_BRANCH
+      '/api/public/branch/show/' + import.meta.env.VITE_BRANCH
     ).then((res) => {
       branch.value = res.data
     })

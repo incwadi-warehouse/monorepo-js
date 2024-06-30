@@ -36,21 +36,21 @@ export default defineConfig(({ mode }) => {
               type: 'image/png',
             },
           ],
-          start_url: env.VUE_APP_BASE_URL,
-          scope: env.VUE_APP_BASE_URL,
+          start_url: env.VITE_BASE_URL,
+          scope: env.VITE_BASE_URL,
         },
       }),
       ViteWebfontDownload([
         'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap',
       ]),
     ],
-    base: env.VUE_APP_BASE_URL,
+    base: env.VITE_BASE_URL,
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
       },
       dedupe: ['vue'],
     },
-    envPrefix: ['VITE_', 'VUE_APP_'],
+    envPrefix: ['VITE_'],
   }
 })
