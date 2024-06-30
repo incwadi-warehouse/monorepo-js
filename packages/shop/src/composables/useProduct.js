@@ -3,10 +3,8 @@ import { useRequest } from '@baldeweg/ui'
 
 const articles = ref([])
 
-export function useArticle() {
-  const { config, request } = useRequest()
-
-  config.value.baseURL = import.meta.env.VUE_APP_API
+export function useProduct() {
+  const { request } = useRequest({ baseURL: import.meta.env.VITE_API })
 
   const article = ref(null)
   const counter = ref(0)
@@ -21,7 +19,7 @@ export function useArticle() {
         {
           field: 'branch',
           operator: 'eq',
-          value: import.meta.env.VUE_APP_BRANCH,
+          value: import.meta.env.VITE_BRANCH,
         },
         {
           field: 'genre',
@@ -77,7 +75,7 @@ export function useArticle() {
 
   const image = (id, size) => {
     return (
-      import.meta.env.VUE_APP_API +
+      import.meta.env.VITE_API +
       '/api/public/book/cover/' +
       id +
       '_' +

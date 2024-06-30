@@ -3,9 +3,7 @@ import { useRequest } from '@baldeweg/ui'
 import { useCart } from './useCart.js'
 
 export function useReservation() {
-  const { config, request } = useRequest()
-
-  config.value.baseURL = import.meta.env.VUE_APP_API
+  const {  request } = useRequest({ baseURL: import.meta.env.VITE_API })
 
   const { cart } = useCart()
 

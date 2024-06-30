@@ -6,10 +6,10 @@ orbs:
 executors:
   playwright:
     docker:
-       - image: mcr.microsoft.com/playwright:v1.44.0-jammy
+       - image: mcr.microsoft.com/playwright:v1.45.0-jammy
   node:
     docker:
-      - image: cimg/node:22.2
+      - image: cimg/node:22.3
 
 jobs:
   accounts-unit:

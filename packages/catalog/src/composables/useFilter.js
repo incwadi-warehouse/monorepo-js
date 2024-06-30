@@ -7,7 +7,7 @@ const filter = reactive({
   genre: [],
   releaseYear: '',
   availability: [],
-  format: null,
+  format: [],
   added: '',
   duplicate: 'all',
   orderBy: null,
@@ -25,7 +25,7 @@ export function useFilter() {
     filter.genre = query.value.genre || []
     filter.releaseYear = query.value.releaseYear || ''
     filter.availability = filter.availability = query.value.availability || []
-    filter.format = query.value.format || null
+    filter.format = query.value.format || []
     filter.added = query.value.added || undefined
     filter.duplicate = query.value.duplicate || 'all'
     filter.orderBy = query.value.orderBy || null

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.VUE_APP_BASE_URL),
+  history: createWebHistory(import.meta.env.VITE_BASE_URL),
   linkActiveClass: 'isActive',
   linkExactActiveClass: 'isActiveExact',
   routes: [
@@ -27,17 +27,17 @@ const router = createRouter({
     },
     {
       path: '/product/:id',
-      name: 'article',
-      component: () => import('../views/ArticleView.vue'),
+      name: 'product',
+      component: () => import('../views/ProductView.vue'),
       props: true,
     },
     {
       path: '/:pathMatch(.*)',
-      redirect: { name: 'search' },
+      redirect: { name: 'home' },
     },
   ],
   scrollBehavior(to, from, savedPosition) {
-    if (to.name === 'find' && from.name === 'article') {
+    if (to.name === 'find' && from.name === 'product') {
       return new Promise((resolve) => {
         setTimeout(() => {
           savedPosition.behavior = 'smooth'

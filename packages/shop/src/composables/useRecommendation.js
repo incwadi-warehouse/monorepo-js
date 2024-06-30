@@ -2,11 +2,9 @@ import { onMounted, ref } from 'vue'
 import { useRequest } from '@baldeweg/ui'
 
 export function useRecommendation() {
-  const { config, request } = useRequest()
+  const {  request } = useRequest({ baseURL: import.meta.env.VITE_API })
 
-  config.value.baseURL = import.meta.env.VUE_APP_API
-
-  const branch = import.meta.env.VUE_APP_BRANCH
+  const branch = import.meta.env.VITE_BRANCH
 
   const recommendations = ref([])
 

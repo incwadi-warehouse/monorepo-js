@@ -2,7 +2,7 @@
 import { useTitle } from '@baldeweg/ui'
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import { useArticle } from '@/composables/useArticle.js'
+import { useProduct } from '@/composables/useProduct.js'
 import { useGenre } from '@/composables/useGenre.js'
 import FindList from '@/components/find/FindList.vue'
 import FindPagination from '@/components/find/FindPagination.vue'
@@ -25,7 +25,7 @@ const genre = ref(props.genre || null)
 
 const router = useRouter()
 const { genres } = useGenre()
-const { articles, counter, isLoading, list, resetArticles } = useArticle()
+const { articles, counter, isLoading, list, resetArticles } = useProduct()
 
 const pages = computed(() => {
   return Math.ceil(counter.value / 20)
@@ -69,6 +69,7 @@ watch(
   () => props.page,
   () => {
     page.value = props.page
+    find()
   }
 )
 </script>

@@ -16,4 +16,7 @@ export const handlers = [
       value: JSON.parse(localStorage.getItem('mock_' + req.params.key)),
     })
   }),
+  http.post('http://localhost:8000/api/login_check', (req) => {
+    return HttpResponse.json({token:'token', refresh_token:'refresh_token'})
+  }),
 ]

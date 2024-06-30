@@ -23,7 +23,7 @@ export function useLogin() {
     allowedHosts: import.meta.env.VUE_APP_REDIRECT_ALLOWED_HOSTS.split(','),
   })
 
-  const redirectTo = route.query.redirect || null
+  const redirectTo = route ? route.query.redirect : null
 
   if (isAuthenticated.value && redirectTo) {
     redirect(redirectTo)

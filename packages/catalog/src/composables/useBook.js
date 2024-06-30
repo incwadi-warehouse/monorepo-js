@@ -52,12 +52,18 @@ export function useBook() {
             : undefined,
           data.options.releaseYear
             ? {
-                field: 'releaseYear',
-                operator: 'eq',
-                value: data.options.releaseYear,
-              }
+              field: 'releaseYear',
+              operator: 'gte',
+              value: data.options.releaseYear.split('..')[0],
+            }
             : undefined,
-
+          data.options.releaseYear
+            ? {
+              field: 'releaseYear',
+              operator: 'lte',
+              value: data.options.releaseYear.split('..')[1],
+            }
+            : undefined,
           {
             field: 'sold',
             operator: 'eq',

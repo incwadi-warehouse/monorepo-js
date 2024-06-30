@@ -572,7 +572,11 @@ export const handlers = [
       cond: null,
       format_name: 'Paperback',
       subtitle: 'subtitle',
+      branchCart: true
     })
+  }),
+  http.post('http://localhost:8000/api/public/reservation/new', () => {
+    return HttpResponse.json()
   }),
   http.get('http://localhost:8000/api/public/genre/1', () => {
     return HttpResponse.json([
