@@ -2,7 +2,7 @@
 import Cart from '@/components/AppCart.vue'
 
 const logo =
-  import.meta.env.VUE_APP_LOGO !== 'false' ? import.meta.env.VUE_APP_LOGO : null
+  import.meta.env.VITE_LOGO !== 'false' ? import.meta.env.VITE_LOGO : null
 </script>
 
 <template>

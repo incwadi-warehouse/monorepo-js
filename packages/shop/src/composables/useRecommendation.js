@@ -4,9 +4,9 @@ import { useRequest } from '@baldeweg/ui'
 export function useRecommendation() {
   const { config, request } = useRequest()
 
-  config.value.baseURL = import.meta.env.VUE_APP_API
+  config.value.baseURL = import.meta.env.VITE_API
 
-  const branch = import.meta.env.VUE_APP_BRANCH
+  const branch = import.meta.env.VITE_BRANCH
 
   const recommendations = ref([])
 
