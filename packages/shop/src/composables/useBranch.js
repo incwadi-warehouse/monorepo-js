@@ -4,9 +4,7 @@ import { useRequest } from '@baldeweg/ui'
 const branch = ref(null)
 
 export function useBranch() {
-  const { config, request } = useRequest()
-
-  config.value.baseURL = import.meta.env.VITE_API
+  const {  request } = useRequest({ baseURL: import.meta.env.VITE_API })
 
   const show = () => {
     return request(

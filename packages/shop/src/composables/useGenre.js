@@ -2,7 +2,7 @@ import { onMounted, ref } from 'vue'
 import { useRequest } from '@baldeweg/ui'
 
 export function useGenre() {
-  const { request } = useRequest()
+  const {  request } = useRequest({ baseURL: import.meta.env.VITE_API })
 
   const genres = ref(null)
 

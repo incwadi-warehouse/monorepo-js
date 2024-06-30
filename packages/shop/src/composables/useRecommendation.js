@@ -2,9 +2,7 @@ import { onMounted, ref } from 'vue'
 import { useRequest } from '@baldeweg/ui'
 
 export function useRecommendation() {
-  const { config, request } = useRequest()
-
-  config.value.baseURL = import.meta.env.VITE_API
+  const {  request } = useRequest({ baseURL: import.meta.env.VITE_API })
 
   const branch = import.meta.env.VITE_BRANCH
 

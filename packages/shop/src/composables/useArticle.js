@@ -4,9 +4,7 @@ import { useRequest } from '@baldeweg/ui'
 const articles = ref([])
 
 export function useArticle() {
-  const { config, request } = useRequest()
-
-  config.value.baseURL = import.meta.env.VITE_API
+  const {  request } = useRequest({ baseURL: import.meta.env.VITE_API })
 
   const article = ref(null)
   const counter = ref(0)
