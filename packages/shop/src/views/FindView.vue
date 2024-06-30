@@ -95,17 +95,6 @@ watch(
     />
   </BContainer>
 
-  <!-- <BContainer size="m">
-    <FindCheckboxFilter
-      :items="genres"
-      fieldKey="id"
-      fieldValue="name"
-      :title="$t('genres')"
-      v-model="genre"
-      @update:modelValue="findAndResetPage"
-    />
-  </BContainer> -->
-
   <BContainer size="m" v-if="isLoading">
     <BSpinner size="l" />
   </BContainer>

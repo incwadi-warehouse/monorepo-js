@@ -24,10 +24,6 @@ const logo =
         </svg>
       </RouterLink>
     </BMastheadItem>
-
-    <!-- <BMastheadItem position="end">
-      <Cart />
-    </BMastheadItem> -->
   </BMasthead>
 </template>
 
