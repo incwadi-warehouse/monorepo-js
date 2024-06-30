@@ -42,17 +42,6 @@ const reset = () => {
     />
   </BContainer>
 
-  <!-- <BContainer size="m">
-    <FindCheckboxFilter
-      :items="genres"
-      fieldKey="id"
-      fieldValue="name"
-      :title="$t('genres')"
-      v-model="genre"
-      @update:modelValue="find"
-    />
-  </BContainer> -->
-
   <BContainer size="m">
     <h2>{{ $t('recommendations') }}</h2>
     <RecommendationShow />
