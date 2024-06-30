@@ -72,6 +72,14 @@ watch(
     find()
   }
 )
+
+watch(
+  () => props.genre,
+  () => {
+    genre.value = props.genre
+    find()
+  }
+)
 </script>
 
 <template>
