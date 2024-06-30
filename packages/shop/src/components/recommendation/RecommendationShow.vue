@@ -1,8 +1,8 @@
 <script setup>
-import { useArticle } from '../../composables/useArticle.js'
+import { useProduct } from '../../composables/useProduct.js'
 import { useRecommendation } from '@/composables/useRecommendation.js'
 
-const { formatPrice, formatAuthor } = useArticle()
+const { formatPrice, formatAuthor } = useProduct()
 
 const { recommendations } = useRecommendation()
 </script>

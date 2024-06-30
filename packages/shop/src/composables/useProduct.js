@@ -3,7 +3,7 @@ import { useRequest } from '@baldeweg/ui'
 
 const articles = ref([])
 
-export function useArticle() {
+export function useProduct() {
   const {  request } = useRequest({ baseURL: import.meta.env.VITE_API })
 
   const article = ref(null)

@@ -1,7 +1,7 @@
 <script setup>
-import { useArticle } from '../../composables/useArticle.js'
+import { useProduct } from '../../composables/useProduct.js'
 
-const { articles, formatPrice, formatAuthor, image } = useArticle()
+const { articles, formatPrice, formatAuthor, image } = useProduct()
 </script>
 
 <template>

@@ -2,7 +2,7 @@
 import { useTitle } from '@baldeweg/ui'
 import { find } from 'lodash'
 import { computed } from 'vue'
-import { useArticle } from '@/composables/useArticle.js'
+import { useProduct } from '@/composables/useProduct.js'
 import { useCart } from '@/composables/useCart.js'
 
 useTitle({ title: 'Article' })
@@ -11,7 +11,7 @@ const props = defineProps({
   id: String,
 })
 
-const { article, show, formatPrice, formatAuthor, image } = useArticle()
+const { article, show, formatPrice, formatAuthor, image } = useProduct()
 
 show(props.id)
 
