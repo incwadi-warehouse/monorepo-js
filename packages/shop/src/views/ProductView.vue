@@ -15,7 +15,7 @@ const { article, show, formatPrice, formatAuthor, image } = useProduct()
 
 show(props.id)
 
-const { cart, add: add } = useCart()
+const { cart, add } = useCart()
 
 const isInCart = computed(() => {
   return find(cart.value, (item) => {
@@ -27,19 +27,14 @@ const isInCart = computed(() => {
 <template>
   <div v-if="article">
     <b-container size="m">
-      <b-button
-        design="primary"
-        class="cta"
-        @click="add(article)"
-        v-if="!isInCart && article.branchCart"
-        >{{ $t('reserve') }}</b-button
-      >
+      <b-button design="primary" class="cta" @click="add(article)" v-if="!isInCart && article.branchCart">{{
+        $t('reserve') }}</b-button>
       <div class="cta" v-if="isInCart && article.branchCart">
         <b-button design="outline" disabled>{{ $t('added_to_cart') }}</b-button>
         <p>
           <RouterLink :to="{ name: 'home' }">
-            {{ $t('continue_browsing') }}</RouterLink
-          >
+            {{ $t('continue_browsing') }}
+          </RouterLink>
         </p>
       </div>
 
@@ -58,11 +53,7 @@ const isInCart = computed(() => {
       <div class="article">
         <div class="image">
           <b-container size="m" v-if="article">
-            <img
-              :src="image(article.id, '400x400')"
-              width="400"
-              :alt="article.title"
-            />
+            <img :src="image(article.id, '400x400')" width="400" :alt="article.title" />
           </b-container>
         </div>
 
@@ -105,9 +96,11 @@ const isInCart = computed(() => {
   margin-top: 10px;
   text-align: right;
 }
+
 .image {
   width: 200px;
 }
+
 .wrap {
   white-space: pre-wrap;
 }
@@ -116,10 +109,12 @@ const isInCart = computed(() => {
   .article {
     display: flex;
   }
+
   .image {
     width: 33%;
     box-sizing: border-box;
   }
+
   .details {
     flex-grow: 1;
   }
