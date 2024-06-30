@@ -33,7 +33,7 @@ const router = createRouter({
     },
     {
       path: '/:pathMatch(.*)',
-      redirect: { name: 'search' },
+      redirect: { name: 'home' },
     },
   ],
   scrollBehavior(to, from, savedPosition) {
