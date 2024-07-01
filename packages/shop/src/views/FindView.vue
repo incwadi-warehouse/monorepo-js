@@ -84,15 +84,8 @@ watch(
 
 <template>
   <BContainer size="m">
-    <BSearch
-      focus
-      branded
-      :placeholder="$t('searchInTitleAuthorGenre')"
-      v-model="term"
-      @submit.prevent="findAndResetPage"
-      @reset="reset"
-      reset
-    />
+    <BSearch focus branded :placeholder="$t('searchInTitleAuthorGenre')" v-model="term"
+      @submit.prevent="findAndResetPage" @reset="reset" reset />
   </BContainer>
 
   <!-- <BContainer size="m">
@@ -106,14 +99,7 @@ watch(
     />
   </BContainer> -->
 
-  <BContainer size="m" v-if="isLoading">
-    <BSpinner size="l" />
-  </BContainer>
-
-  <BContainer
-    size="m"
-    v-if="term != null && articles.length == 0 && !isLoading"
-  >
+  <BContainer size="m" v-if="term != null && articles.length == 0 && !isLoading">
     <BAlert type="warning">
       <p>{{ $t('foundNothing') }}</p>
     </BAlert>
@@ -126,4 +112,21 @@ watch(
   <BContainer size="m" v-if="pages > 1">
     <FindPagination :pages="pages" :page="page" />
   </BContainer>
+
+  <div class="spinner_wrapper" v-if="isLoading">
+    <BSpinner size="l" />
+  </div>
 </template>
+
+<style scoped>
+.spinner_wrapper {
+  border-radius: 20px;
+  position: absolute;
+  left: calc(50vw - 50px);
+  bottom: 100px;
+  background: var(--color-neutral-04);
+  width:72px;
+  padding: 10px 20px;
+  margin:auto;
+}
+</style>
