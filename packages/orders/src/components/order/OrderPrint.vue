@@ -40,7 +40,7 @@ const sum = computed(() => {
 })
 
 const salutation = computed(() => {
-  if (props.order.salutation == 'w') {
+  if (props.order.salutation == 'f') {
     return t('mrs')
   }
   if (props.order.salutation == 'm') {
