@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-undef
-const { test, expect } = require('@playwright/test')
+import { test, expect } from '@playwright/test'
 
 test('orders list', async ({ page }) => {
   await page.goto('/order')
