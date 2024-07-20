@@ -80,7 +80,7 @@ export function useBook() {
             value: data.options.availability.indexOf('reserved') != -1,
           },
 
-          data.options.format
+          data.options.format != []
             ? { field: 'format', operator: 'in', value: data.options.format }
             : undefined,
           data.options.added
