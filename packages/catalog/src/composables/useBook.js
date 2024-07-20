@@ -79,8 +79,7 @@ export function useBook() {
             operator: 'eq',
             value: data.options.availability.indexOf('reserved') != -1,
           },
-
-          data.options.format != []
+          data.options.format.length > 0
             ? { field: 'format', operator: 'in', value: data.options.format }
             : undefined,
           data.options.added
