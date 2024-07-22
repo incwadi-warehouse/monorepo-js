@@ -39,7 +39,7 @@ export function useFilter() {
     filter.genre = []
     filter.releaseYear = ''
     filter.availability = []
-    filter.format = null
+    filter.format = []
     filter.added = ''
     filter.duplicate = 'all'
     filter.orderBy = null
