@@ -12,7 +12,7 @@
     "i18n:report": "vue-i18n-extract report --vueFiles './src/**/*.?(js|vue)' --languageFiles './locales/*.?(json|yml|yaml|js)'"
   },
   "dependencies": {
-    "@baldeweg/ui": "0.10.5",
+    "@baldeweg/ui": "0.10.6",
     "axios": "1.7.2",
     "dompurify": "3.1.6",
     "js-cookie": "3.0.5",
@@ -30,7 +30,7 @@
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-vue": "9.27.0",
     "msw": "2.3.2",
-    "playwright": "1.45.1",
+    "playwright": "1.45.2",
     "prettier": "3.3.3",
     "start-server-and-test": "2.0.4",
     "vite": "5.3.4",
