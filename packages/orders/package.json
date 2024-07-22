@@ -1,6 +1,6 @@
 {
   "name": "orders",
-  "version": "62.0.1",
+  "version": "62.0.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -33,7 +33,7 @@
     "eslint-plugin-vue": "9.27.0",
     "msw": "2.3.2",
     "prettier": "3.3.3",
-    "shared": "^62.0.0",
+    "shared": "^62.0.3",
     "start-server-and-test": "2.0.4",
     "vite": "5.3.4",
     "vite-plugin-pwa": "0.20.0",

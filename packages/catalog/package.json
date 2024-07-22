@@ -1,6 +1,6 @@
 {
   "name": "catalog",
-  "version": "62.0.2",
+  "version": "62.0.3",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -30,7 +30,7 @@
     "msw": "2.3.2",
     "playwright": "1.45.2",
     "prettier": "3.3.3",
-    "shared": "^62.0.0",
+    "shared": "^62.0.3",
     "start-server-and-test": "2.0.4",
     "vite": "5.3.4",
     "vite-plugin-pwa": "0.20.0",
