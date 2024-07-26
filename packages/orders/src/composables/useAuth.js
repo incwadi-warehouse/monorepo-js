@@ -57,6 +57,7 @@ export default function useAuth() {
     state.isAuthenticated = false
     state.me = null
 
+    if (import.meta.env.MODE === 'development') return
     window.location.href = import.meta.env.VUE_APP_ACCOUNTS
   }
 

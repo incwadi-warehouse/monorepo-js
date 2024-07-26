@@ -1,10 +1,14 @@
 <script setup>
 import { computed } from 'vue'
 import { useOrder } from '@/composables/useOrder.js'
+import { useI18n } from 'vue-i18n'
+
 
 const props = defineProps({
   order: Object,
 })
+
+const { t } = useI18n()
 
 const { toLocaleDateString } = useOrder()
 
@@ -34,6 +38,17 @@ const sum = computed(() => {
     return prev + cur.price
   }, 0)
 })
+
+const salutation = computed(() => {
+  if (props.order.salutation == 'f') {
+    return t('mrs')
+  }
+  if (props.order.salutation == 'm') {
+    return t('mr')
+  }
+
+  return t('none_divers')
+})
 </script>
 
 <template>
@@ -48,7 +63,7 @@ const sum = computed(() => {
       {{ $t('order_from') }} {{ toLocaleDateString(props.order.createdAt) }}
     </h2>
 
-    <p>{{ $t('salutation') }}: {{ props.order.salutation }}</p>
+    <p>{{ $t('salutation') }}: {{ salutation }}</p>
     <p>{{ $t('firstname') }}: {{ props.order.firstname }}</p>
     <p>{{ $t('surname') }}: {{ props.order.surname }}</p>
     <p>{{ $t('mail') }}: {{ props.order.mail }}</p>
