@@ -84,4 +84,51 @@ export const handlers = [
       type: 'documentAdditionOrUpdate',
     })
   }),
+  http.get('http://localhost:8000/api/book/find', () => {
+    return HttpResponse.json(
+      {
+        "books": [
+          {
+            "id": "0003ad32-b927-11ee-8bfd-0242ac14000f",
+            "branch": {},
+            "added": 1705881600,
+            "title": "Book",
+            "shortDescription": "",
+            "author": {
+              "id": 1,
+              "firstname": "Jane",
+              "surname": "Doe"
+            },
+            "genre": {
+              "id": 1,
+              "name": "Thriller",
+              "branch": {},
+              "books": 1
+            },
+            "price": 5,
+            "sold": false,
+            "soldOn": null,
+            "removed": false,
+            "removedOn": null,
+            "reserved": false,
+            "reservedAt": null,
+            "releaseYear": 2024,
+            "condition": null,
+            "tags": [],
+            "reservation_id": null,
+            "recommendation": false,
+            "inventory": null,
+            "format": {
+              "id": 1,
+              "name": "Paperback",
+              "branch": {}
+            },
+            "subtitle": null,
+            "duplicate": false
+          },
+        ],
+        "counter": 1
+      }
+    )
+  })
 ]
