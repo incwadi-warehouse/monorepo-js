@@ -48,6 +48,8 @@ const reserve = () => {
       })
     })
 }
+
+const orderInfo = import.meta.env.VITE_ORDER_INFO
 </script>
 
 <template>
@@ -171,6 +173,8 @@ const reserve = () => {
               <b-form-textarea id="notes" v-model="reservation.notes" />
             </b-form-item>
           </b-form-group>
+
+          <p v-if="orderInfo">{{ orderInfo }}</p>
         </b-container>
       </b-modal>
     </b-form>
