@@ -1,6 +1,6 @@
 {
   "name": "settings",
-  "version": "62.0.3",
+  "version": "63.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -30,7 +30,7 @@
     "msw": "2.3.5",
     "playwright": "1.46.1",
     "prettier": "3.3.3",
-    "shared": "^62.0.3",
+    "shared": "^63.0.0",
     "start-server-and-test": "2.0.5",
     "vite": "5.4.2",
     "vite-plugin-pwa": "0.20.1",
