@@ -1,19 +1,12 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
 {
   "name": "Node.js",
-  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
   "build": {
     "dockerfile": "Dockerfile"
   },
-  // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
-    "ghcr.io/abaldeweg/devcontainer_features/bash:0.2.0": {},
+    "ghcr.io/abaldeweg/devcontainer_features/bash:latest": {},
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-  // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  // "forwardPorts": [],
-  // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": {
     "yarn": "yarn install",
     "playwright": "npx playwright install",
@@ -35,8 +28,4 @@
       ]
     }
   }
-  // Configure tool-specific properties.
-  // "customizations": {},
-  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-  // "remoteUser": "root"
 }
