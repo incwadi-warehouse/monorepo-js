@@ -15,7 +15,7 @@
   "dependencies": {
     "@baldeweg/eslint-config": "0.10.6",
     "@baldeweg/ui": "0.10.7",
-    "axios": "1.7.5",
+    "axios": "1.7.7",
     "js-cookie": "^3.0.1",
     "vue": "3.4.38",
     "vue-i18n": "9.14.0",
