@@ -12,50 +12,134 @@ jobs:
   accounts-unit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 22.7
+          node-version: lts/*
           cache: yarn
-      - run: yarn install
-      - run: yarn workspace accounts build && yarn workspace accounts test:unit:ci
+      - name: Install dependencies
+        run: yarn install
+      - name: Build accounts
+        run: yarn workspace accounts build
+      - name: Run accounts unit tests
+        run: yarn workspace accounts test:unit:ci
 
   accounts-e2e:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: microsoft/playwright-github-action@v3
-      - run: yarn install
-      - run: yarn workspace accounts build && yarn workspace accounts test:e2e
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Build accounts
+        run: yarn workspace accounts build
+      - name: Run accounts e2e tests
+        run: yarn workspace accounts test:e2e
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report-accounts
+          path: playwright-report/
+          retention-days: 30
 
   orders-e2e:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: microsoft/playwright-github-action@v3
-      - run: yarn install
-      - run: yarn workspace orders build && yarn workspace orders test:e2e
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Build orders
+        run: yarn workspace orders build
+      - name: Run orders e2e tests
+        run: yarn workspace orders test:e2e
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report-orders
+          path: playwright-report/
+          retention-days: 30
 
   shop-e2e:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: microsoft/playwright-github-action@v3
-      - run: yarn install
-      - run: yarn workspace shop build && yarn workspace shop test:e2e
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Build shop
+        run: yarn workspace shop build
+      - name: Run shop e2e tests
+        run: yarn workspace shop test:e2e
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report-shop
+          path: playwright-report/
+          retention-days: 30
 
   settings-e2e:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: microsoft/playwright-github-action@v3
-      - run: yarn install
-      - run: yarn workspace settings build && yarn workspace settings test:e2e
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Build settings
+        run: yarn workspace settings build
+      - name: Run settings e2e tests
+        run: yarn workspace settings test:e2e
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report-settings
+          path: playwright-report/
+          retention-days: 30
 
   catalog-e2e:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: microsoft/playwright-github-action@v3
-      - run: yarn install
-      - run: yarn workspace catalog build && yarn workspace catalog test:e2e
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: yarn
+      - name: Install dependencies
+        run: yarn install
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Build catalog
+        run: yarn workspace catalog build
+      - name: Run catalog e2e tests
+        run: yarn workspace catalog test:e2e
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report-catalog
+          path: playwright-report/
+          retention-days: 30
