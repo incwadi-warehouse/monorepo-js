@@ -12,7 +12,7 @@ jobs:
   accounts-unit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: 22.7
@@ -23,7 +23,7 @@ jobs:
   accounts-e2e:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: microsoft/playwright-github-action@v3
       - run: yarn install
       - run: yarn workspace accounts build && yarn workspace accounts test:e2e
@@ -31,7 +31,7 @@ jobs:
   orders-e2e:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: microsoft/playwright-github-action@v3
       - run: yarn install
       - run: yarn workspace orders build && yarn workspace orders test:e2e
@@ -39,7 +39,7 @@ jobs:
   shop-e2e:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: microsoft/playwright-github-action@v3
       - run: yarn install
       - run: yarn workspace shop build && yarn workspace shop test:e2e
@@ -47,7 +47,7 @@ jobs:
   settings-e2e:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: microsoft/playwright-github-action@v3
       - run: yarn install
       - run: yarn workspace settings build && yarn workspace settings test:e2e
@@ -55,7 +55,7 @@ jobs:
   catalog-e2e:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: microsoft/playwright-github-action@v3
       - run: yarn install
       - run: yarn workspace catalog build && yarn workspace catalog test:e2e
