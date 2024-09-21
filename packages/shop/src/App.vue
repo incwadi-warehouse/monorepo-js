@@ -3,12 +3,33 @@ import { useLocale, useToast } from '@baldeweg/ui'
 import AppMasthead from '@/components/AppMasthead.vue'
 import AppToolbar from '@/components/AppToolbar.vue'
 import AppCart2 from '@/components/AppCart2.vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 useLocale()
 
 const about = import.meta.env.VITE_ABOUT
 
 const { current } = useToast()
+
+const showCart = ref(false)
+
+const handleKeyDown = (event) => {
+  if (event.altKey && event.code === 'KeyC') {
+    showCart.value = !showCart.value;
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('keydown', handleKeyDown);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleKeyDown);
+});
+
+const handleCartVisibility = (isVisible) => {
+  showCart.value = isVisible;
+}
 </script>
 
 <template>
@@ -30,7 +51,7 @@ const { current } = useToast()
     </BToast>
   </BApp>
 
-  <AppCart2/>
+  <AppCart2 :visible="showCart" @update:visible="handleCartVisibility" />
 </template>
 
 <style scoped>

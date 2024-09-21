@@ -5,6 +5,19 @@ import { useI18n } from 'vue-i18n'
 import { useReservation } from '@/composables/useReservation.js'
 import { useCart } from '@/composables/useCart.js'
 
+const props = defineProps({
+  visible: {
+    type: Boolean,
+    default: false,
+  },
+})
+
+const emit = defineEmits(['update:visible'])
+
+const handleClose = () => {
+  emit('update:visible', false)
+}
+
 const showCart = ref(false)
 const showThanks = ref(false)
 
@@ -63,7 +76,7 @@ const orderInfo = import.meta.env.VITE_ORDER_INFO
 </script>
 
 <template>
-  <BPanel visible position="right">
+  <BPanel visible v-if="visible" position="right" @close="handleClose">
     <BContainer size="m">
       <h2>{{ $t('cart') }}</h2>
     </BContainer>
