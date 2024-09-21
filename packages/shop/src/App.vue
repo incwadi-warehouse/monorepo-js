@@ -2,6 +2,7 @@
 import { useLocale, useToast } from '@baldeweg/ui'
 import AppMasthead from '@/components/AppMasthead.vue'
 import AppToolbar from '@/components/AppToolbar.vue'
+import AppCart2 from '@/components/AppCart2.vue'
 
 useLocale()
 
@@ -28,6 +29,8 @@ const { current } = useToast()
       {{ current.body }}
     </BToast>
   </BApp>
+
+  <AppCart2/>
 </template>
 
 <style scoped>

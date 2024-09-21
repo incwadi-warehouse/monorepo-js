@@ -28,5 +28,8 @@
   "firstname": "Vorname",
   "genres": "Rubriken",
   "without_year": "Ohne Jahr",
-  "continue_browsing": "Weiter stöbern"
+  "continue_browsing": "Weiter stöbern",
+  "products": "Produkte",
+  "contact": "Kontakt",
+  "sum": "Summe"
 }
