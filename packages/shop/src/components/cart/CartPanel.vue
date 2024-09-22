@@ -17,8 +17,6 @@ const handleClose = () => {
 }
 
 const { add: addCart, isCartEmpty } = useCart()
-addCart({ id: 1, title: 'book', price: 1 })
-addCart({ id: 1, title: 'book', price: 1 })
 
 const handleKeyDown = (event) => {
   if (event.altKey && event.code === 'KeyC') {
