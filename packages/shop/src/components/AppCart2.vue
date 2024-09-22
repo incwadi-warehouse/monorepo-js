@@ -14,6 +14,8 @@ const props = defineProps({
 
 const emit = defineEmits(['update:visible'])
 
+const step = ref(1)
+
 const handleClose = () => {
   emit('update:visible', false)
 }
@@ -87,7 +89,7 @@ const orderInfo = import.meta.env.VITE_ORDER_INFO
     </BContainer>
 
     <!-- Carts Content -->
-    <BContainer size="m" v-if="!isCartEmpty">
+    <BContainer size="m" v-if="!isCartEmpty && step == 1">
       <h3>{{ t('products') }}</h3>
 
       <ul class="products">
@@ -109,10 +111,13 @@ const orderInfo = import.meta.env.VITE_ORDER_INFO
         <span class="sum_amount">{{ totalSum }} €</span>
       </p>
 
+      <BFormGroup button :style="{ 'marginTop': '20px' }">
+        <BButton design="primary_wide" @click="step = 2">Weiter</BButton>
+      </BFormGroup>
     </BContainer>
 
     <!-- Checkout Form -->
-    <BContainer size="m" v-if="!isCartEmpty">
+    <BContainer size="m" v-if="!isCartEmpty && step == 2">
       <h3>{{ t('contact') }}</h3>
       <BForm @submit.prevent="reserve">
         <BFormGroup>
@@ -178,6 +183,10 @@ const orderInfo = import.meta.env.VITE_ORDER_INFO
         <p v-if="orderInfo">{{ orderInfo }}</p>
 
         <BFormGroup buttons>
+          <BButton design="outline_wide" @click.prevent="step = 1">Zurück</BButton>
+        </BFormGroup>
+
+        <BFormGroup buttons>
           <BButton type="button" design="text" v-if="isCreating">
             <BSpinner size="m" />
           </BButton>
@@ -190,7 +199,7 @@ const orderInfo = import.meta.env.VITE_ORDER_INFO
   </BPanel>
 
   <!-- Thanks -->
-  <BDialog v-if="showThanks" :style="{ textAlign: 'left' }">
+  <BDialog v-if="showThanks && step == 3" :style="{ textAlign: 'left' }">
     <template #actions>
       <BButton design="primary" @click.prevent="showThanks = false">
         {{ $t('ok') }}
