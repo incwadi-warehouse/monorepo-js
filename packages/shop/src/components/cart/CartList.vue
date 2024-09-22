@@ -97,8 +97,7 @@ const closeCart = () => emit('close')
 .sum {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid var(--color-neutral-04);
-  border-bottom: 1px solid var(--color-neutral-04);
+  border-top: 1px solid var(--color-neutral-02);
   padding-top: 10px;
   font-size: 0.8rem;
 }
