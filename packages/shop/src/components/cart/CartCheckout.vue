@@ -40,17 +40,11 @@ const goBack = () => emit('prevStep')
           </BFormLabel>
         </BFormItem>
         <BFormItem>
-          <BFormSelect
-            id="salutation"
-            required
-            :items="[
-              { key: 'f', value: $t('mrs') },
-              { key: 'm', value: $t('mr') },
-              { key: 'd', value: $t('none_diverse') },
-            ]"
-            allow-empty
-            v-model="reservation.salutation"
-          />
+          <BFormSelect id="salutation" required :items="[
+            { key: 'f', value: $t('mrs') },
+            { key: 'm', value: $t('mr') },
+            { key: 'd', value: $t('none_diverse') },
+          ]" allow-empty v-model="reservation.salutation" />
         </BFormItem>
       </BFormGroup>
 
