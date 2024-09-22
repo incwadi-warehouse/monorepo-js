@@ -30,8 +30,6 @@ const goBack = () => emit('prevStep')
 
 <template>
   <BContainer size="m">
-    <h3>{{ $t('contact') }}</h3>
-
     <BForm @submit.prevent="reserve">
       <BFormGroup>
         <BFormItem>
