@@ -96,7 +96,7 @@ const goBack = () => emit('prevStep')
       <p v-if="orderInfo">{{ orderInfo }}</p>
 
       <BFormGroup buttons>
-        <BButton type="button" design="outline_wide" @click.prevent="goBack" :style="{marginBottom:'10px'}">
+        <BButton type="button" design="outline_wide" @click.prevent="goBack" :style="{ marginBottom: '10px' }">
           {{ $t('back') }}
         </BButton>
         <BButton type="button" design="text" v-if="isCreating">
