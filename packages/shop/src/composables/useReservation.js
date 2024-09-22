@@ -7,7 +7,15 @@ export function useReservation() {
 
   const { cart } = useCart()
 
-  const reservation = ref({})
+  const reservation = ref({
+    books: null,
+    notes: null,
+    salutation: null,
+    firstname: null,
+    surname: null,
+    mail: null,
+    phone: null,
+  })
 
   const isCreating = ref(false)
 

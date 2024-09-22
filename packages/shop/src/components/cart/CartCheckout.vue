@@ -12,17 +12,9 @@ const { reservation, isCreating, create } = useReservation()
 
 const { cart } = useCart()
 
-reservation.value = {
-  books: computed(() => {
+reservation.value.books =  computed(() => {
     return cart.value?.map(element => element.id).join(',') || ''
-  }),
-  notes: null,
-  salutation: null,
-  firstname: null,
-  surname: null,
-  mail: null,
-  phone: null,
-}
+  })
 
 const { add } = useToast()
 
