@@ -5,7 +5,7 @@ const emit = defineEmits(['nextStep', 'close'])
 
 const { cart, remove, totalSum, isCartEmpty } = useCart()
 
-const goBack = () => emit('close')
+const closeCart = () => emit('close')
 </script>
 
 <template>
@@ -15,7 +15,7 @@ const goBack = () => emit('close')
     </BContainer>
 
     <BContainer size="m">
-      <BButton design="outline_wide" @click="$emit('close')">{{ $t('browse') }}</BButton>
+      <BButton design="outline_wide" @click="closeCart">{{ $t('browse') }}</BButton>
     </BContainer>
   </BContainer>
 
@@ -43,7 +43,7 @@ const goBack = () => emit('close')
 
   <BContainer size="m" v-if="!isCartEmpty">
     <BFormGroup buttons>
-      <BButton type="button" design="outline_wide" @click.prevent="goBack" :style="{ marginBottom: '10px' }">
+      <BButton type="button" design="outline_wide" @click.prevent="closeCart" :style="{ marginBottom: '10px' }">
         {{ $t('keep_browsing') }}
       </BButton>
       <BButton design="primary_wide" @click="$emit('nextStep')">{{ $t('continue_to_checkout') }}</BButton>
