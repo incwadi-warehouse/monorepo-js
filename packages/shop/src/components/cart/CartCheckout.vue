@@ -3,6 +3,7 @@ import { useToast } from '@baldeweg/ui'
 import { useReservation } from '@/composables/useReservation.js'
 import { computed } from 'vue'
 import { useCart } from '@/composables/useCart.js'
+import { useI18n } from 'vue-i18n'
 
 const emit = defineEmits(['nextStep', 'prevStep'])
 
@@ -13,6 +14,8 @@ const { cart } = useCart()
 const { add: addToast } = useToast()
 
 reservation.value.books = computed(() => cart.value?.map(element => element.id).join(',') || '')
+
+const { t } = useI18n()
 
 const reserve = () => {
   create()
