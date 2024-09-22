@@ -43,7 +43,7 @@ const closeCart = () => emit('close')
 
   <BContainer size="m" v-if="!isCartEmpty">
     <BFormGroup buttons>
-      <BButton type="button" design="outline_wide" @click.prevent="closeCart" :style="{ marginBottom: '10px' }">
+      <BButton type="button" design="outline_wide" @click.prevent="closeCart" :style="{ marginBottom: '20px' }">
         {{ $t('keep_browsing') }}
       </BButton>
       <BButton design="primary_wide" @click="$emit('nextStep')">{{ $t('continue_to_checkout') }}</BButton>
