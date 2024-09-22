@@ -1,18 +1,22 @@
 <script setup>
 import { useCart } from '@/composables/useCart.js'
 
+const emit = defineEmits(['nextStep', 'close'])
+
 const { cart, remove, totalSum, isCartEmpty } = useCart()
+
+const goBack = () => emit('close')
 </script>
 
 <template>
   <BContainer size="m" v-if="isCartEmpty">
-      <BContainer size="m">
-        <p>{{ $t('cart_is_empty') }}</p>
-      </BContainer>
+    <BContainer size="m">
+      <p>{{ $t('cart_is_empty') }}</p>
+    </BContainer>
 
-      <BContainer size="m">
-        <BButton design="outline_wide" @click="$emit('close')">{{ $t('browse') }}</BButton>
-      </BContainer>
+    <BContainer size="m">
+      <BButton design="outline_wide" @click="$emit('close')">{{ $t('browse') }}</BButton>
+    </BContainer>
   </BContainer>
 
   <BContainer size="m" v-if="!isCartEmpty">
@@ -39,6 +43,9 @@ const { cart, remove, totalSum, isCartEmpty } = useCart()
 
   <BContainer size="m" v-if="!isCartEmpty">
     <BFormGroup buttons>
+      <BButton type="button" design="outline_wide" @click.prevent="goBack" :style="{ marginBottom: '10px' }">
+        {{ $t('keep_browsing') }}
+      </BButton>
       <BButton design="primary_wide" @click="$emit('nextStep')">{{ $t('continue_to_checkout') }}</BButton>
     </BFormGroup>
   </BContainer>
