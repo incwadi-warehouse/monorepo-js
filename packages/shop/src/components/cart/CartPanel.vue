@@ -34,7 +34,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <BPanel :visible="isVisible" position="right" @close="handleClose">
+  <BPanel :visible="isVisible" position="right" @close="handleClose" width="500px">
     <BContainer size="m">
       <h2>{{ $t('cart') }}</h2>
     </BContainer>
