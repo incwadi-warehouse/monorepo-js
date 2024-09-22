@@ -22,7 +22,7 @@ const closeCart = () => emit('close')
   <BContainer size="m" v-if="!isCartEmpty">
     <ul class="products">
       <li v-for="article in cart" :key="article.id" class="products_item">
-        <RouterLink :to="{ name: 'product', params: { id: article.id } }" class="products_title">
+        <RouterLink :to="{ name: 'product', params: { id: article.id } }" class="products_title" @click="closeCart">
           {{ article.title }}
         </RouterLink>
 
