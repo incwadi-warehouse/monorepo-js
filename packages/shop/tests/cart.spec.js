@@ -27,3 +27,11 @@ test('Cart panel', async ({ page }) => {
   await page.locator('.overlay').click();
   await expect(page.locator('.container.position_right')).toBeHidden();
 })
+
+test.beforeEach(async ({ page }) => {
+  await page.goto('/')
+
+  await page.evaluate(() => {
+    localStorage.setItem('cart', JSON.stringify([{ id: 1, title: 'book', price: 1 }]))
+  })
+})
