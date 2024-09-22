@@ -16,7 +16,7 @@ const handleClose = () => {
   step.value = 1
 }
 
-const { add: addCart, isCartEmpty } = useCart()
+const { add: addCart } = useCart()
 
 const handleKeyDown = (event) => {
   if (event.altKey && event.code === 'KeyC') {
