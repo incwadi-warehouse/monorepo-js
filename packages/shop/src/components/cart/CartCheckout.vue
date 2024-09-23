@@ -36,16 +36,16 @@ const goBack = () => emit('prevStep')
     <BForm @submit.prevent="reserve">
       <BFormGroup>
         <BFormItem>
-          <BFormLabel for="salutation">
-            {{ $t('salutation') }}
+          <BFormLabel>
+            <input type="radio" name="salutation" value="f" required v-model="reservation.salutation"> {{ $t('mrs') }}
           </BFormLabel>
-        </BFormItem>
-        <BFormItem>
-          <BFormSelect id="salutation" required :items="[
-            { key: 'f', value: $t('mrs') },
-            { key: 'm', value: $t('mr') },
-            { key: 'd', value: $t('none_diverse') },
-          ]" allow-empty v-model="reservation.salutation" />
+          <BFormLabel :style="{marginLeft: '20px'}">
+            <input type="radio" name="salutation" value="m" required v-model="reservation.salutation"> {{ $t('mr') }}
+          </BFormLabel>
+          <BFormLabel :style="{marginLeft: '20px'}">
+            <input type="radio" name="salutation" value="d" required v-model="reservation.salutation"> {{
+            $t('none_diverse') }}
+          </BFormLabel>
         </BFormItem>
       </BFormGroup>
 
