@@ -36,7 +36,7 @@ const closeCart = () => emit('close')
 
   <BContainer size="m" v-if="!isCartEmpty">
     <p class="sum">
-      <span class="sum_label">{{ $t('sum') }}</span>
+      <span class="sum_label">{{ $t('total') }}</span>
       <span class="sum_amount">{{ totalSum }} €</span>
     </p>
   </BContainer>
