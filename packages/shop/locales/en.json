@@ -28,5 +28,11 @@
   "firstname": "Firstname",
   "genres": "Genres",
   "without_year": "Without Year",
-  "continue_browsing": "Continue Browsing"
+  "continue_browsing": "Continue Browsing",
+  "products": "Products",
+  "contact": "Contact",
+  "total": "Total",
+  "browse": "Browse",
+  "continue_to_checkout": "Continue",
+  "keep_browsing": "Keep browsing"
 }

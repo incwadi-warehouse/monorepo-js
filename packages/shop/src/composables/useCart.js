@@ -1,4 +1,4 @@
-import { ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { remove as _remove } from 'lodash'
 
 const cart = ref(JSON.parse(localStorage.getItem('cart')) || [])
@@ -18,6 +18,14 @@ export function useCart() {
     })
   }
 
+  const isCartEmpty = computed(() => {
+    return cart.value.length === 0
+  })
+
+  const totalSum = computed(() => {
+    return cart.value.reduce((sum, item) => sum + item.price, 0);
+  })
+
   watch(
     () => cart.value,
     () => {
@@ -29,5 +37,5 @@ export function useCart() {
     }
   )
 
-  return { cart, add, remove }
+  return { cart, add, remove, isCartEmpty, totalSum }
 }

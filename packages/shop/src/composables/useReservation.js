@@ -3,11 +3,19 @@ import { useRequest } from '@baldeweg/ui'
 import { useCart } from './useCart.js'
 
 export function useReservation() {
-  const {  request } = useRequest({ baseURL: import.meta.env.VITE_API })
+  const { request } = useRequest({ baseURL: import.meta.env.VITE_API })
 
   const { cart } = useCart()
 
-  const reservation = ref({})
+  const reservation = ref({
+    books: null,
+    notes: null,
+    salutation: null,
+    firstname: null,
+    surname: null,
+    mail: null,
+    phone: null,
+  })
 
   const isCreating = ref(false)
 
