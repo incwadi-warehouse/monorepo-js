@@ -15,7 +15,7 @@ test('Cart panel', async ({ page }) => {
   await page.locator('button:has-text("Continue")').click();
 
   // Check if the checkout form is visible
-  await expect(page.locator('label:has-text("Salutation")')).toBeVisible();
+  await expect(page.locator('label:has-text("Firstname")')).toBeVisible();
 
   // Go back to the cart list
   await page.locator('button:has-text("Back")').click();
