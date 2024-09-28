@@ -14,7 +14,7 @@
   "dependencies": {
     "@baldeweg/ui": "0.10.10",
     "axios": "1.7.7",
-    "dompurify": "3.1.6",
+    "dompurify": "3.1.7",
     "js-cookie": "3.0.5",
     "marked": "14.1.2",
     "vue": "3.5.10",
