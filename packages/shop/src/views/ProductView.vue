@@ -38,9 +38,9 @@ const isInCart = computed(() => {
         </p>
       </div>
 
-      <h2 :style="{ wordBreak: 'initial', hyphens: 'auto' }">
+      <h1 :style="{ wordBreak: 'initial', hyphens: 'auto' }">
         {{ article.title }}
-      </h2>
+      </h1>
       <p v-if="article.subtitle">{{ article.subtitle }}</p>
 
       <p v-if="article.authorSurname || article.authorFirstname">

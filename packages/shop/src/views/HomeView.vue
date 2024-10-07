@@ -31,15 +31,13 @@ const reset = () => {
 <template>
   <AppBanner />
 
+  <BContainer size="m" class="visuallyHidden">
+    <h1>Suche</h1>
+  </BContainer>
+
   <BContainer size="m">
-    <BSearch
-      focus
-      branded
-      :placeholder="$t('searchInTitleAuthorGenre')"
-      v-model="term"
-      @submit.prevent="find"
-      @reset="reset"
-    />
+    <BSearch focus branded :placeholder="$t('searchInTitleAuthorGenre')" v-model="term" @submit.prevent="find"
+      @reset="reset" />
   </BContainer>
 
   <BContainer size="m">

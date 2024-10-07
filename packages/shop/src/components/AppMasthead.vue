@@ -8,7 +8,7 @@ const logo =
 <template>
   <BMasthead>
     <BMastheadItem position="center">
-      <RouterLink :to="{ name: 'index' }">
+      <RouterLink :to="{ name: 'index' }" aria-label="Startseite">
         <img :src="logo" alt="incwadi" v-if="logo" />
         <svg
           xmlns="http://www.w3.org/2000/svg"
