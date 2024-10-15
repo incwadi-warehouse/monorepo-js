@@ -22,7 +22,7 @@ useTitle({ title: t('account') })
 
   <BContainer size="s">
     <div class="card">
-      <AccountSettings />
+      <!-- <AccountSettings /> -->
     </div>
   </BContainer>
 </template>
