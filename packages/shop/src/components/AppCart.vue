@@ -56,7 +56,7 @@ const orderInfo = import.meta.env.VITE_ORDER_INFO
   <section>
     <span @click="showCart = true">
       <b-badge :content="cart.length" class="cart">
-        <b-icon type="cart" :size="30" />
+        <BMaterialIcon hover size="32">shopping_cart</BMaterialIcon>
       </b-badge>
     </span>
 
@@ -84,13 +84,11 @@ const orderInfo = import.meta.env.VITE_ORDER_INFO
         <b-container size="m" v-if="cart.length >= 1">
           <ul>
             <li v-for="article in cart" :key="article.id">
-              <router-link
-                :to="{ name: 'product', params: { id: article.id } }"
-              >
+              <router-link :to="{ name: 'product', params: { id: article.id } }">
                 {{ article.title }}
               </router-link>
               <span @click="remove(article)">
-                <b-icon type="close" :size="15" />
+                <BMaterialIcon hover size="15" @click="remove(article)">close</BMaterialIcon>
               </span>
             </li>
           </ul>
@@ -102,17 +100,11 @@ const orderInfo = import.meta.env.VITE_ORDER_INFO
               </b-form-label>
             </b-form-item>
             <b-form-item>
-              <b-form-select
-                id="salutation"
-                required
-                :items="[
+              <b-form-select id="salutation" required :items="[
                   { key: 'f', value: $t('mrs') },
                   { key: 'm', value: $t('mr') },
                   { key: 'd', value: $t('none_diverse') },
-                ]"
-                allow-empty
-                v-model="reservation.salutation"
-              />
+                ]" allow-empty v-model="reservation.salutation" />
             </b-form-item>
           </b-form-group>
 
@@ -121,11 +113,7 @@ const orderInfo = import.meta.env.VITE_ORDER_INFO
               <b-form-label for="firstname">{{ $t('firstname') }}</b-form-label>
             </b-form-item>
             <b-form-item>
-              <b-form-input
-                id="firstname"
-                required
-                v-model="reservation.firstname"
-              />
+              <b-form-input id="firstname" required v-model="reservation.firstname" />
             </b-form-item>
           </b-form-group>
 
@@ -134,11 +122,7 @@ const orderInfo = import.meta.env.VITE_ORDER_INFO
               <b-form-label for="surname">{{ $t('surname') }}</b-form-label>
             </b-form-item>
             <b-form-item>
-              <b-form-input
-                id="surname"
-                required
-                v-model="reservation.surname"
-              />
+              <b-form-input id="surname" required v-model="reservation.surname" />
             </b-form-item>
           </b-form-group>
 
@@ -147,12 +131,7 @@ const orderInfo = import.meta.env.VITE_ORDER_INFO
               <b-form-label for="mail">{{ $t('mail') }}</b-form-label>
             </b-form-item>
             <b-form-item>
-              <b-form-input
-                type="email"
-                id="mail"
-                required
-                v-model="reservation.mail"
-              />
+              <b-form-input type="email" id="mail" required v-model="reservation.mail" />
             </b-form-item>
           </b-form-group>
 

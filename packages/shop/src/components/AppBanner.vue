@@ -40,7 +40,7 @@ const content = computed(() => {
 
         <div class="banner_close">
           <p @click.prevent="isClosed = !isClosed">
-            <BIcon type="close" />
+            <BMaterialIcon hover size="32">close</BMaterialIcon>
           </p>
         </div>
       </div>

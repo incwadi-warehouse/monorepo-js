@@ -28,7 +28,7 @@ const closeCart = () => emit('close')
 
         <div class="products_right">
           <span class="products_price">{{ article.price }} €</span>
-          <BIcon type="close" :size="15" class="products_remove" @click="remove(article)" />
+          <BMaterialIcon hover size="24" @click="remove(article)">close</BMaterialIcon>
         </div>
       </li>
     </ul>
