@@ -27,7 +27,7 @@ const closeCart = () => emit('close')
         </RouterLink>
 
         <div class="products_right">
-          <span class="products_price">{{ article.price }} €</span>
+          <span class="products_price">{{ article.price.toFixed(2) }} €</span>
           <BMaterialIcon hover size="24" @click="remove(article)">close</BMaterialIcon>
         </div>
       </li>
@@ -37,7 +37,7 @@ const closeCart = () => emit('close')
   <BContainer size="m" v-if="!isCartEmpty">
     <p class="sum">
       <span class="sum_label">{{ $t('total') }}</span>
-      <span class="sum_amount">{{ totalSum }} €</span>
+      <span class="sum_amount">{{ totalSum.toFixed(2) }} €</span>
     </p>
   </BContainer>
 
