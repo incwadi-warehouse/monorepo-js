@@ -7,12 +7,17 @@ import CartThanks from '@/components/cart/CartThanks.vue'
 
 const emit = defineEmits(['update:visible'])
 
-const isVisible = ref(false)
+const props = defineProps({
+  visible: {
+    type: Boolean,
+    default: false
+  }
+})
 
 const step = ref(1)
 
 const handleClose = () => {
-  isVisible.value = false
+  emit('update:visible', false)
   step.value = 1
 }
 
@@ -20,7 +25,7 @@ const { add: addCart } = useCart()
 
 const handleKeyDown = (event) => {
   if (event.altKey && event.code === 'KeyC') {
-    isVisible.value = !isVisible.value
+    emit('update:visible', !props.visible)
   }
 }
 
@@ -34,15 +39,17 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <BPanel :visible="isVisible" position="right" @close="handleClose" width="500px">
-    <BContainer size="m">
-      <h2>{{ $t('cart') }}</h2>
-    </BContainer>
+  <portal to="body">
+    <BPanel :visible="visible" position="right" @close="handleClose" width="500px">
+      <BContainer size="m">
+        <h2>{{ $t('cart') }}</h2>
+      </BContainer>
 
-    <CartList v-if="step === 1" @nextStep="step = 2" @close="handleClose" />
+      <CartList v-if="step === 1" @nextStep="step = 2" @close="handleClose" />
 
-    <CartCheckout v-if="step === 2" @prevStep="step = 1" @nextStep="step = 3" />
+      <CartCheckout v-if="step === 2" @prevStep="step = 1" @nextStep="step = 3" />
 
-    <CartThanks v-if="step === 3" @close="handleClose" />
-  </BPanel>
+      <CartThanks v-if="step === 3" @close="handleClose" />
+    </BPanel>
+  </portal>
 </template>
