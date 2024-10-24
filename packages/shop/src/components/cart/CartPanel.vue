@@ -39,17 +39,15 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <portal to="body">
-    <BPanel :visible="visible" position="right" @close="handleClose" width="500px">
-      <BContainer size="m">
-        <h2>{{ $t('cart') }}</h2>
-      </BContainer>
+  <BPanel :visible="visible" position="right" @close="handleClose" width="500px">
+    <BContainer size="m">
+      <h2>{{ $t('cart') }}</h2>
+    </BContainer>
 
-      <CartList v-if="step === 1" @nextStep="step = 2" @close="handleClose" />
+    <CartList v-if="step === 1" @nextStep="step = 2" @close="handleClose" />
 
-      <CartCheckout v-if="step === 2" @prevStep="step = 1" @nextStep="step = 3" />
+    <CartCheckout v-if="step === 2" @prevStep="step = 1" @nextStep="step = 3" />
 
-      <CartThanks v-if="step === 3" @close="handleClose" />
-    </BPanel>
-  </portal>
+    <CartThanks v-if="step === 3" @close="handleClose" />
+  </BPanel>
 </template>
