@@ -948,10 +948,10 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     to-fast-properties "^2.0.0"
 
-"@baldeweg/eslint-config@0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@baldeweg/eslint-config/-/eslint-config-0.12.0.tgz#447464b33c4216f19c83a5905c75ed97d761e468"
-  integrity sha512-0jzUkndHrb2TgFIqcOZFr5teVnglqFcZsfUnsNEgVuuEOYAr7Q/VuP8Vtmzx0Lujkapb7+I8q54I/iupPl368Q==
+"@baldeweg/eslint-config@0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@baldeweg/eslint-config/-/eslint-config-0.13.0.tgz#b7d351349e3efaa6a14e018470f6c5cab9c85c43"
+  integrity sha512-kZw6fVmvPu/mKa9xQN8sxL9DcnCI+EqHiZabYdnQ9go2NovlTn5V3dtOEkZqlOGKdTCGkzEJCqt9YuHTPKM7Aw==
 
 "@baldeweg/ui@0.11.0":
   version "0.11.0"
@@ -2174,11 +2174,6 @@
   resolved "https://registry.yarnpkg.com/@types/trusted-types/-/trusted-types-2.0.7.tgz#baccb07a970b91707df3a3e8ba6896c57ead2d11"
   integrity sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==
 
-"@types/wrap-ansi@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@types/wrap-ansi/-/wrap-ansi-3.0.0.tgz#18b97a972f94f60a679fd5c796d96421b9abb9fd"
-  integrity sha512-ltIpx+kM7g/MLRZfkbL7EsCEjfzCcScLpkg37eXEtx5kmrAKBkTJwd1GIAjDSL8wTpM6Hzn5YO4pSb91BEwu1g==
-
 "@unhead/dom@1.11.10":
   version "1.11.10"
   resolved "https://registry.yarnpkg.com/@unhead/dom/-/dom-1.11.10.tgz#3b43c01ff122d4bd345d16773d7fb7c5cdb3c248"
@@ -2202,7 +2197,7 @@
   dependencies:
     "@unhead/schema" "1.11.10"
 
-"@unhead/vue@^1.11.10":
+"@unhead/vue@1.11.10":
   version "1.11.10"
   resolved "https://registry.yarnpkg.com/@unhead/vue/-/vue-1.11.10.tgz#dbb889e996d120b82fe86b2cc3b1ff131d624117"
   integrity sha512-v6ddp4YEQCNILhYrx37Yt0GKRIFeTrb3VSmTbjh+URT+ua1mwgmNFTfl2ZldtTtri3tEkwSG1/5wLRq20ma70g==
@@ -7669,11 +7664,6 @@ unbox-primitive@^1.0.2:
     has-bigints "^1.0.2"
     has-symbols "^1.0.3"
     which-boxed-primitive "^1.0.2"
-
-undici-types@~6.19.2:
-  version "6.19.8"
-  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-6.19.8.tgz#35111c9d1437ab83a7cdc0abae2f26d88eda0a02"
-  integrity sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==
 
 unhead@1.11.10:
   version "1.11.10"
