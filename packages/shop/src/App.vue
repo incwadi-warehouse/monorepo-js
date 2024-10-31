@@ -2,8 +2,15 @@
 import { useLocale, useToast } from '@baldeweg/ui'
 import AppMasthead from '@/components/AppMasthead.vue'
 import AppToolbar from '@/components/AppToolbar.vue'
+import { useHead } from '@unhead/vue'
 
-useLocale()
+useHead({
+  title: "Home",
+  titleTemplate: '%s',
+  htmlAttrs: {
+    lang: navigator.language,
+  }
+})
 
 const about = import.meta.env.VITE_ABOUT
 

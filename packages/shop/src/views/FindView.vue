@@ -1,5 +1,4 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useProduct } from '@/composables/useProduct.js'
@@ -7,8 +6,11 @@ import { useGenre } from '@/composables/useGenre.js'
 import FindList from '@/components/find/FindList.vue'
 import FindPagination from '@/components/find/FindPagination.vue'
 import FindCheckboxFilter from '@/components/find/FindCheckboxFilter.vue'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'Find' })
+useHead({
+  title: "Find",
+})
 
 const props = defineProps({
   term: String,
@@ -125,8 +127,8 @@ watch(
   left: calc(50vw - 50px);
   bottom: 100px;
   background: var(--color-neutral-04);
-  width:72px;
+  width: 72px;
   padding: 10px 20px;
-  margin:auto;
+  margin: auto;
 }
 </style>

@@ -1,13 +1,15 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useGenre } from '@/composables/useGenre.js'
 import RecommendationShow from '@/components/recommendation/RecommendationShow.vue'
 import FindCheckboxFilter from '@/components/find/FindCheckboxFilter.vue'
 import AppBanner from '@/components/AppBanner.vue'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'Home' })
+useHead({
+  title: "Home",
+})
 
 const router = useRouter()
 const { genres } = useGenre()

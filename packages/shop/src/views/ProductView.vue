@@ -1,11 +1,13 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import { find } from 'lodash'
 import { computed } from 'vue'
 import { useProduct } from '@/composables/useProduct.js'
 import { useCart } from '@/composables/useCart.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'Article' })
+useHead({
+  title: "Article",
+})
 
 const props = defineProps({
   id: String,
