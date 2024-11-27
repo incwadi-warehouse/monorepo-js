@@ -49,7 +49,7 @@ const sellBook = (bookId) => {
 
 const removeBook = (bookId) => {
   remove(bookId).then(() => {
-    search()
+    // search()
   })
 }
 

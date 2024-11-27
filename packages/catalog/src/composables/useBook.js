@@ -165,7 +165,7 @@ export function useBook() {
     }
     return request('put', '/api/book/remove/' + id, null, null, true).then(
       (res) => {
-        book.value = res.data
+        // book.value = res.data
       }
     )
   }
