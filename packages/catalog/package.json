@@ -42,5 +42,6 @@
   "private": true,
   "msw": {
     "workerDirectory": "public"
-  }
+  },
+  "type": "module"
 }
