@@ -84,24 +84,24 @@ export function useBook() {
             : undefined,
           data.options.added
             ? {
-                field: 'added',
-                operator: 'gte',
-                value: data.options.added.split('..')[0],
-              }
+              field: 'added',
+              operator: 'gte',
+              value: data.options.added.split('..')[0],
+            }
             : undefined,
           data.options.added
             ? {
-                field: 'added',
-                operator: 'lte',
-                value: data.options.added.split('..')[1],
-              }
+              field: 'added',
+              operator: 'lte',
+              value: data.options.added.split('..')[1],
+            }
             : undefined,
           ['yes', 'no'].includes(data.options.duplicate)
             ? {
-                field: 'duplicate',
-                operator: 'eq',
-                value: data.options.duplicate === 'yes',
-              }
+              field: 'duplicate',
+              operator: 'eq',
+              value: data.options.duplicate === 'yes',
+            }
             : undefined,
         ],
         undefined
@@ -109,13 +109,13 @@ export function useBook() {
       orderBy:
         data.options.orderBy && data.options.orderByDirection
           ? {
-              book: [
-                {
-                  field: data.options.orderBy,
-                  direction: data.options.orderByDirection,
-                },
-              ],
-            }
+            book: [
+              {
+                field: data.options.orderBy,
+                direction: data.options.orderByDirection,
+              },
+            ],
+          }
           : undefined,
       limit: data.options.limit,
     }
@@ -159,6 +159,10 @@ export function useBook() {
   }
 
   const remove = (id) => {
+    const bookIndex = books.value.books.findIndex((book) => book.id === id)
+    if (bookIndex !== -1) {
+      books.value.books[bookIndex].title = t('removed').toLocaleUpperCase()
+    }
     return request('put', '/api/book/remove/' + id, null, null, true).then(
       (res) => {
         book.value = res.data
