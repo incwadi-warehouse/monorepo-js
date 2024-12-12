@@ -28,7 +28,7 @@ const update = () => {
     id: branch.value.id,
     params: {
       name: state.name,
-      steps: state.steps,
+      steps: parseFloat(state.steps),
       currency: state.currency,
       ordering: state.ordering,
       public: state.isPublic,
