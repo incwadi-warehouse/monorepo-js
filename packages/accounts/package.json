@@ -30,7 +30,7 @@
     "eslint": "9.17.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-vue": "9.32.0",
-    "jsdom": "25.0.1",
+    "jsdom": "26.0.0",
     "msw": "2.7.0",
     "prettier": "3.4.2",
     "shared": "^65.0.3",
