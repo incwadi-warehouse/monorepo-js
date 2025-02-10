@@ -22,7 +22,7 @@
     "vue-router": "4.5.0"
   },
   "devDependencies": {
-    "@baldeweg/eslint-config": "0.13.1",
+    "@baldeweg/eslint-config": "0.14.0",
     "@rushstack/eslint-patch": "1.10.5",
     "@unhead/vue": "1.11.18",
     "@vitejs/plugin-vue": "5.2.1",
