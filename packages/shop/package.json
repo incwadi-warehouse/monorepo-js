@@ -16,7 +16,7 @@
     "axios": "1.7.9",
     "dompurify": "3.2.4",
     "js-cookie": "3.0.5",
-    "marked": "15.0.6",
+    "marked": "15.0.7",
     "vue": "3.5.13",
     "vue-i18n": "11.1.0",
     "vue-router": "4.5.0"
