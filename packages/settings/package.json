@@ -24,7 +24,7 @@
     "@rushstack/eslint-patch": "1.11.0",
     "@vitejs/plugin-vue": "5.2.1",
     "@vue/eslint-config-prettier": "10.2.0",
-    "eslint": "9.21.0",
+    "eslint": "9.22.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-vue": "10.0.0",
     "msw": "2.7.3",
