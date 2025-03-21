@@ -1,5 +1,5 @@
 <script setup>
-import { useRequest } from '@baldeweg/ui'
+import { useRequest } from '@/composables/useRequest.js'
 import { useRoute } from 'vue-router'
 import { ref, watch } from 'vue'
 import { useConf } from 'shared'
