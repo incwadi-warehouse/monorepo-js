@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, afterEach } from 'vitest'
 import { usePassword } from '../usePassword.js'
 
-vi.mock('@baldeweg/ui', () => {
+vi.mock('@/composables/useRequest.js', () => {
   const useRequest = () => {
     const request = (method, path, data) => {
       return new Promise((resolve, reject) => {
