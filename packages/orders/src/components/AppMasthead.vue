@@ -20,7 +20,7 @@ const openProfile = () => {
   <BMasthead>
     <BMastheadItem position="start" v-if="auth.state.isAuthenticated">
       <span @click="$emit('open-drawer')">
-        <b-icon type="hamburger" />
+        <BMaterialIcon>menu</BMaterialIcon>
       </span>
     </BMastheadItem>
 
@@ -46,7 +46,7 @@ const openProfile = () => {
       <BDropdown position="bottom" class="action">
         <template #selector>
           <span @click.prevent>
-            <b-icon type="profile" />
+            <BMaterialIcon>person</BMaterialIcon>
           </span>
         </template>
 
@@ -69,7 +69,7 @@ const openProfile = () => {
         @click.prevent="$router.push({ name: 'order.list' })"
       >
         <BBadge :content="orders && orders.length" hide-empty>
-          <BIcon type="euro" />
+          <BMaterialIcon>euro_symbol</BMaterialIcon>
         </BBadge>
       </span>
     </BMastheadItem>
