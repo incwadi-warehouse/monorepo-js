@@ -1,5 +1,4 @@
 <script setup>
-import { useLocale } from '@baldeweg/ui'
 import { useToast } from '@/composables/useToast.js'
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
@@ -9,8 +8,6 @@ import Logo from './components/AppLogo.vue'
 import { useReservation } from '@/composables/useReservation.js'
 import useAuth from '@/composables/useAuth.js'
 import AuthLogin from '@/components/auth/Login.vue'
-
-useLocale()
 
 const router = useRouter()
 

@@ -1,5 +1,4 @@
 <script setup>
-import { useLocale } from '@baldeweg/ui'
 import { useToast } from '@/composables/useToast.js'
 import AppMasthead from '@/components/AppMasthead.vue'
 import AppToolbar from '@/components/AppToolbar.vue'
