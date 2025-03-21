@@ -60,7 +60,7 @@ const resetAndClose = () => {
 <template>
   <b-modal close-button :width="600" @close="$emit('close')">
     <template #title>
-      <b-icon type="filter" :size="15" no-hover /> {{ $t('filters') }}
+      <BMaterialIcon :size="15">filter_alt</BMaterialIcon> {{ $t('filters') }}
     </template>
 
     <template #footer>

@@ -13,7 +13,7 @@ const { cart, remove, clean } = useCart()
         <router-link :to="{ name: 'book.update', params: { id: book.id } }">
           {{ book.title }}
         </router-link>
-        <span @click="remove(book)"><b-icon type="close" :size="15" /></span>
+        <span @click="remove(book)"><BMaterialIcon :size="15">close</BMaterialIcon></span>
       </li>
     </ul>
 

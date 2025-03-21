@@ -177,7 +177,7 @@ const bookNotFound = (id) => {
         <td>
           <b-dropdown>
             <template #selector>
-              <b-icon type="meatballs" />
+              <BMaterialIcon>more_horiz</BMaterialIcon>
             </template>
             <b-dropdown-item
               icon="pencil"
@@ -220,7 +220,7 @@ const bookNotFound = (id) => {
               color="var(--color-primary-10)"
               v-if="item.inventory"
             />
-            <b-icon type="check" v-else />
+            <BMaterialIcon v-else>check</BMaterialIcon>
           </b-button>
         </td>
         <td v-if="hasInventory">
@@ -230,7 +230,7 @@ const bookNotFound = (id) => {
               color="var(--color-primary-10)"
               v-if="false === item.inventory"
             />
-            <b-icon type="close" v-else />
+            <BMaterialIcon v-else>close</BMaterialIcon>
           </b-button>
         </td>
       </tr>

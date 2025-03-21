@@ -25,7 +25,7 @@ watch(dir, listElements)
       <b-list v-if="elements.details.current.path != ''">
         <template #image>
           <span @click="dir = elements.details.parent.path">
-            <b-icon type="directory" />
+            <BMaterialIcon>folder</BMaterialIcon>
           </span>
         </template>
         <template #title>

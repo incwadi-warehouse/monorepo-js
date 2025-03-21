@@ -129,7 +129,7 @@ const createTag = () => {
   <b-form @submit.prevent="create">
     <b-modal @close="$emit('close', $event)" close-button>
       <template #title>
-        <b-icon type="plus" :size="15" no-hover /> {{ $t('catalog') }}
+        <BMaterialIcon :size="15">add</BMaterialIcon> {{ $t('catalog') }}
       </template>
 
       <template #footer>
@@ -367,7 +367,7 @@ const createTag = () => {
             <span v-for="(item, index) in state.tags" :key="item.id">
               {{ item.name }}
               <span @click="removeTag(item.id)">
-                <b-icon type="close" :size="12" />
+                <BMaterialIcon>close</BMaterialIcon>
               </span>
               <span v-if="index !== item.length - 1">, </span>
             </span>
