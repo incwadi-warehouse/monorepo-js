@@ -1,13 +1,15 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import { useToast } from '@/composables/useToast.js'
 import { watch } from 'vue'
 import BranchEdit from '../components/branch/BranchEdit.vue'
 import BranchCleanBooks from '../components/branch/BranchCleanBooks.vue'
 import BranchPriceCalculator from '@/components/branch/BranchPriceCalculator.vue'
 import { useBranch } from '@/composables/useBranch.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'Branch' })
+useHead({
+  title: "Branch",
+})
 
 defineProps({
   auth: Object,
