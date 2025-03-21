@@ -76,7 +76,7 @@ test.beforeEach(async ({ page, context }) => {
     })
   })
 
-  await page.route('http://localhost:8000/api/password', async (route) => {
+  await page.route('http://localhost:5173/api/password', async (route) => {
     const json = {
       msg:
         route.request().postDataJSON().password === 'password'
