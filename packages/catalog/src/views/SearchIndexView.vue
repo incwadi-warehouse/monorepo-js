@@ -23,7 +23,7 @@ const {
 
 <template>
   <BContainer size="l">
-    <BChip>Experiment</BChip>
+    <BBadge>Experiment</BBadge>
   </BContainer>
 
   <BContainer size="l" :align="'right'">

@@ -18,7 +18,7 @@ const orders = import.meta.env.VUE_APP_ORDERS
 <template>
   <b-container size="l" v-if="counter && counter.open >= 1">
     <b-alert type="error">
-      <span :style="{ float: 'right' }"><b-icon type="euro" no-hover /></span>
+      <span :style="{ float: 'right' }"><BMaterialIcon>euro_symbol</BMaterialIcon></span>
       <a :href="orders">
         {{ $t('current_open_reservations') }}:
         {{ counter.open }}

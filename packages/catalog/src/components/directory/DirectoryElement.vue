@@ -38,10 +38,10 @@ const edit = () => {
   >
     <template #image>
       <span v-if="element.isDir" @click="dir = element.path">
-        <b-icon type="directory" />
+        <BMaterialIcon>folder</BMaterialIcon>
       </span>
       <span v-if="element.isFile">
-        <b-icon type="file" no-hover />
+        <BMaterialIcon>docs</BMaterialIcon>
       </span>
     </template>
 
@@ -73,7 +73,7 @@ const edit = () => {
     <template #options>
       <b-dropdown position="selector">
         <template #selector>
-          <b-icon type="meatballs" />
+          <BMaterialIcon>more_horiz</BMaterialIcon>
         </template>
         <b-dropdown-item @click.prevent="isEditing = true">
           {{ $t('rename') }}
