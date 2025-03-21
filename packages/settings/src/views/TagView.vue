@@ -1,14 +1,16 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import TagShow from '@/components/tag/TagShow.vue'
 import TagCreate from '@/components/tag/TagCreate.vue'
 import { useTag } from '@/composables/useTag.js'
+import { useHead } from '@unhead/vue'
 
 defineProps({
   auth: Object,
 })
 
-useTitle({ title: 'Tags' })
+useHead({
+  title: "Tags",
+})
 
 const { tags } = useTag()
 </script>

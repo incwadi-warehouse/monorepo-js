@@ -1,11 +1,13 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import { useI18n } from 'vue-i18n'
 import LoginForm from '@/components/LoginForm.vue'
+import { useHead } from '@unhead/vue'
 
 const { t } = useI18n()
 
-useTitle({ title: t('login') })
+useHead({
+  title: t('login'),
+})
 </script>
 
 <template>

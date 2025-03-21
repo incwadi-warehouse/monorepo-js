@@ -1,10 +1,12 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import { onMounted } from 'vue'
 import SettingsStats from '../components/settings/SettingsStats.vue'
 import { useBook } from '@/composables/useBook.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'Settings' })
+useHead({
+  title: "Settings",
+})
 
 defineProps({
   auth: Object,

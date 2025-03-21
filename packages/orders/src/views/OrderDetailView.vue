@@ -1,5 +1,4 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import { useI18n } from 'vue-i18n'
 import { useOrder } from '@/composables/useOrder.js'
 import { useProduct } from '@/composables/useProduct.js'
@@ -10,6 +9,7 @@ import OrderCustomer from '@/components/order/OrderCustomer.vue'
 import OrderDelete from '@/components/order/OrderDelete.vue'
 import OrderSellAll from '@/components/order/OrderSellAll.vue'
 import OrderPrint from '@/components/order/OrderPrint.vue'
+import { useHead } from '@unhead/vue'
 
 const props = defineProps({
   id: {
@@ -20,7 +20,9 @@ const props = defineProps({
 
 const { t } = useI18n()
 
-useTitle({ title: t('order') })
+useHead({
+  title: t('order'),
+})
 
 const { order, show, update, remove, toLocaleDateString } = useOrder()
 

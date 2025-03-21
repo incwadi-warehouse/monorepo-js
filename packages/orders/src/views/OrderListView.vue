@@ -1,12 +1,14 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import { useI18n } from 'vue-i18n'
 import { onMounted } from 'vue'
 import { useOrder } from '@/composables/useOrder.js'
+import { useHead } from '@unhead/vue'
 
 const { t } = useI18n()
 
-useTitle({ title: t('orders') })
+useHead({
+  title: t('orders'),
+})
 
 const { orders, isLoading, list, toLocaleDateString } = useOrder()
 

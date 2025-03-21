@@ -1,10 +1,12 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import ConditionShow from '@/components/condition/ConditionShow.vue'
 import ConditionCreate from '@/components/condition/ConditionCreate.vue'
 import { useCondition } from '@/composables/useCondition.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'Condition' })
+useHead({
+  title: "Condition",
+})
 
 defineProps({
   auth: Object,

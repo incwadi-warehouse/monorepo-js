@@ -1,12 +1,14 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import { useI18n } from 'vue-i18n'
 import AccountSettings from '@/components/AccountSettings.vue'
 import AccountProfile from '@/components/AccountProfile.vue'
+import { useHead } from '@unhead/vue'
 
 const { t } = useI18n()
 
-useTitle({ title: t('account') })
+useHead({
+  title: t('account'),
+})
 </script>
 
 <template>

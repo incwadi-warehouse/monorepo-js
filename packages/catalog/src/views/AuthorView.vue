@@ -1,14 +1,16 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import AuthorResults from '@/components/author/AuthorResults.vue'
 import AuthorSearch from '@/components/author/AuthorSearch.vue'
+import { useHead } from '@unhead/vue'
 
 const props = defineProps({
   auth: Object,
   term: String,
 })
 
-useTitle({ title: 'Authors' })
+useHead({
+  title: "Authors",
+})
 </script>
 
 <template>
