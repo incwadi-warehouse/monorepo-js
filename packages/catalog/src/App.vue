@@ -1,5 +1,6 @@
 <script setup>
-import { useLocale, useToast } from '@baldeweg/ui'
+import { useLocale } from '@baldeweg/ui'
+import { useToast } from '@/composables/useToast.js'
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useConf, useSnow, useParty } from 'shared'

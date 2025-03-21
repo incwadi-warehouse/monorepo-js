@@ -1,4 +1,4 @@
-import { useToast } from '@baldeweg/ui'
+import { useToast } from '@/composables/useToast.js'
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRequest } from '@/composables/useRequest.js'

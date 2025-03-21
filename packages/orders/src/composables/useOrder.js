@@ -1,5 +1,6 @@
 import { ref } from 'vue'
-import { useRequest, useToast } from '@baldeweg/ui'
+import { useRequest } from '@baldeweg/ui'
+import { useToast } from '@/composables/useToast.js'
 import Cookies from 'js-cookie'
 import { useI18n } from 'vue-i18n'
 
