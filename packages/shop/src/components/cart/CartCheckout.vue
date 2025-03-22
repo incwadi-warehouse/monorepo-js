@@ -78,7 +78,7 @@ const goBack = () => emit('prevStep')
 
       <BFormGroup>
         <BFormItem>
-          <BFormLabel for="phone">{{ $t('phone') }}</BFormLabel>
+          <BFormLabel for="phone">{{ $t('phone') }} ({{ $t('optional') }})</BFormLabel>
         </BFormItem>
         <BFormItem>
           <BFormInput type="tel" id="phone" v-model="reservation.phone" />
@@ -87,7 +87,7 @@ const goBack = () => emit('prevStep')
 
       <BFormGroup>
         <BFormItem>
-          <BFormLabel for="notes">{{ $t('notes') }}</BFormLabel>
+          <BFormLabel for="notes">{{ $t('notes') }} ({{ $t('optional') }})</BFormLabel>
         </BFormItem>
         <BFormItem>
           <BFormTextarea id="notes" v-model="reservation.notes" />
