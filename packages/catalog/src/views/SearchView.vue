@@ -1,5 +1,4 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import { useRouter } from 'vue-router'
 import { ref } from 'vue'
 import Cookies from 'js-cookie'
@@ -15,8 +14,11 @@ import SearchSearchbar from './../components/search/SearchSearchbar.vue'
 import { useSearch } from './../composables/useSearch.js'
 import BookCreate from '@/components/book/BookCreate.vue'
 import BookEdit from '@/components/book/BookEdit.vue'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'Search' })
+useHead({
+  title: "Search",
+})
 
 const props = defineProps({
   auth: Object,

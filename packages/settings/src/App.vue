@@ -1,5 +1,5 @@
 <script setup>
-import { useLocale, useToast } from '@baldeweg/ui'
+import { useToast } from '@/composables/useToast.js'
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useConf, useSnow, useParty } from 'shared'
 import Cookies from 'js-cookie'
@@ -9,7 +9,6 @@ import useAuth from '@/composables/useAuth.js'
 import { useReservation } from '@/composables/useReservation.js'
 import router from '@/router'
 
-useLocale()
 
 const auth = useAuth()
 
@@ -129,7 +128,7 @@ const openProfile = () => {
     <b-masthead>
       <b-masthead-item position="start" v-if="auth.state.isAuthenticated">
         <span @click="isDrawerActive = true">
-          <b-icon type="hamburger" />
+          <BMaterialIcon>menu</BMaterialIcon>
         </span>
       </b-masthead-item>
 
@@ -155,7 +154,7 @@ const openProfile = () => {
         <b-dropdown position="bottom" class="action">
           <template #selector>
             <span @click.prevent>
-              <b-icon type="profile" />
+              <BMaterialIcon>person</BMaterialIcon>
             </span>
           </template>
           <b-dropdown-item no-hover v-if="auth.state.me">
@@ -180,7 +179,7 @@ const openProfile = () => {
             "
             hide-empty
           >
-            <b-icon type="euro" />
+            <BMaterialIcon>euro_symbol</BMaterialIcon>
           </b-badge>
         </span>
       </b-masthead-item>
@@ -199,7 +198,7 @@ const openProfile = () => {
       </b-container>
     </div>
 
-    <b-panel :visible="isDrawerActive" @close="isDrawerActive = false">
+    <b-panel v-model="isDrawerActive" @close="isDrawerActive = false">
       <BContainer size="m">
         <BNav
           :nav="[

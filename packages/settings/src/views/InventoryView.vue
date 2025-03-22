@@ -1,9 +1,11 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import InventoryTable from '@/components/inventory/InventoryTable.vue'
 import { useInventory } from '@/composables/useInventory.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'Inventory' })
+useHead({
+  title: "Inventory",
+})
 
 defineProps({
   auth: Object,

@@ -41,7 +41,7 @@ set(props.item)
         </span>
         <b-dropdown v-if="isAdmin">
           <template #selector>
-            <b-icon type="meatballs" />
+            <BMaterialIcon>more_horiz</BMaterialIcon>
           </template>
           <b-dropdown-item icon="bin" @click="remove">
             {{ $t('delete_item') }}

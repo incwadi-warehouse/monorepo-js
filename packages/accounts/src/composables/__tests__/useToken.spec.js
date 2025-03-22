@@ -17,7 +17,7 @@ const authTokenResponse = {
 
 var userResponse = { status: 200, data: {} }
 
-vi.mock('@baldeweg/ui', () => {
+vi.mock('@/composables/useRequest.js', () => {
   const useRequest = () => {
     const request = (method, path, data) => {
       return new Promise((resolve, reject) => {

@@ -1,5 +1,5 @@
 <script setup>
-import { useLocale, useToast } from '@baldeweg/ui'
+import { useToast } from '@/composables/useToast.js'
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useConf, useSnow, useParty } from 'shared'
@@ -8,8 +8,6 @@ import Logo from './components/AppLogo.vue'
 import { useReservation } from '@/composables/useReservation.js'
 import useAuth from '@/composables/useAuth.js'
 import AuthLogin from '@/components/auth/Login.vue'
-
-useLocale()
 
 const router = useRouter()
 
@@ -121,7 +119,7 @@ const openProfile = () => {
     <b-masthead>
       <b-masthead-item position="start" v-if="auth.state.isAuthenticated">
         <span @click="isDrawerActive = true">
-          <b-icon type="hamburger" />
+          <BMaterialIcon>menu</BMaterialIcon>
         </span>
       </b-masthead-item>
 
@@ -147,7 +145,7 @@ const openProfile = () => {
         <b-dropdown position="bottom" class="action">
           <template #selector>
             <span @click.prevent>
-              <b-icon type="profile" />
+              <BMaterialIcon>person</BMaterialIcon>
             </span>
           </template>
           <b-dropdown-item no-hover v-if="auth.state.me">
@@ -166,7 +164,7 @@ const openProfile = () => {
 
         <span class="action" @click.prevent="navigateToOrders">
           <b-badge :content="reservations && reservations.length" hide-empty>
-            <b-icon type="euro" />
+            <BMaterialIcon>euro_symbol</BMaterialIcon>
           </b-badge>
         </span>
       </b-masthead-item>
@@ -187,7 +185,7 @@ const openProfile = () => {
       </b-container>
     </div>
 
-    <b-panel :visible="isDrawerActive" @close="isDrawerActive = false">
+    <b-panel v-model="isDrawerActive" @close="isDrawerActive = false">
       <BContainer size="m">
         <BNav
           :nav="[

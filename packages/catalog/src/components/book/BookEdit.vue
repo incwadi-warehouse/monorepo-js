@@ -483,7 +483,7 @@ const removeTag = (id) => {
             <span v-for="(item, index) in state.tags" :key="item.id">
               {{ item.name }}
               <span @click="removeTag(item.id)">
-                <b-icon type="close" :size="12" />
+                <BMaterialIcon :size="12">close</BMaterialIcon>
               </span>
               <span v-if="index !== state.tags.length - 1">, </span>
             </span>

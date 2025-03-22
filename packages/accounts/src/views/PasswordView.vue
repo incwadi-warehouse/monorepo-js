@@ -1,11 +1,13 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import { useI18n } from 'vue-i18n'
 import ChangePassword from '@/components/ChangePassword.vue'
+import { useHead } from '@unhead/vue'
 
 const { t } = useI18n()
 
-useTitle({ title: t('password') })
+useHead({
+  title: t('password'),
+})
 </script>
 
 <template>

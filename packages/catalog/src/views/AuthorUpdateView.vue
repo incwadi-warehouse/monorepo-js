@@ -1,12 +1,14 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import AuthorUpdate from '@/components/author/AuthorUpdate.vue'
+import { useHead } from '@unhead/vue'
 
 defineProps({
   id: Number,
 })
 
-useTitle({ title: 'Author' })
+useHead({
+  title: "Author",
+})
 </script>
 
 <template>

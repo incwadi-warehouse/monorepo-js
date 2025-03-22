@@ -1,10 +1,12 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import FormatShow from '@/components/format/FormatShow.vue'
 import FormatCreate from '@/components/format/FormatCreate.vue'
 import { useFormat } from '@/composables/useFormat.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'Profile' })
+useHead({
+  title: "Profile",
+})
 
 defineProps({
   auth: Object,

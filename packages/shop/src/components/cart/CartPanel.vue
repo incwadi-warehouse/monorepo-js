@@ -5,7 +5,7 @@ import CartList from '@/components/cart/CartList.vue'
 import CartCheckout from '@/components/cart/CartCheckout.vue'
 import CartThanks from '@/components/cart/CartThanks.vue'
 
-const emit = defineEmits(['update:visible'])
+const emit = defineEmits(['update:visible', 'close'])
 
 const props = defineProps({
   visible: {
@@ -39,7 +39,12 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <BPanel :visible="visible" position="right" @close="handleClose" width="500px">
+  <BPanel
+    :model-value="visible"
+    position="right"
+    @close="handleClose"
+    width="500px"
+  >
     <BContainer size="m">
       <h2>{{ $t('cart') }}</h2>
     </BContainer>

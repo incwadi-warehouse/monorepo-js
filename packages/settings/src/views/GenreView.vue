@@ -1,10 +1,12 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import GenreShow from '@/components/genre/GenreShow.vue'
 import GenreCreate from '@/components/genre/GenreCreate.vue'
 import { useGenre } from '@/composables/useGenre.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'Genre' })
+useHead({
+  title: "Genre",
+})
 
 defineProps({
   auth: Object,

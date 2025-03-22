@@ -1,11 +1,13 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import { useReservation } from '../composables/useReservation.js'
 import { useCart } from '../composables/useCart.js'
 import ReservationCreate from './../components/reservation/ReservationCreate.vue'
 import ReservationShow from './../components/reservation/ReservationShow.vue'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'Reservation' })
+useHead({
+  title: "Reservation",
+})
 
 defineProps({
   auth: Object,

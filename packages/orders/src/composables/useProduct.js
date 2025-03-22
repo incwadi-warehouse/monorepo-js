@@ -1,4 +1,4 @@
-import { useRequest } from '@baldeweg/ui'
+import { useRequest } from '@/composables/useRequest.js'
 import Cookies from 'js-cookie'
 
 export function useProduct() {

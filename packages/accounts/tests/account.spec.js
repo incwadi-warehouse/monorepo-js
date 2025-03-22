@@ -53,7 +53,7 @@ test.beforeEach(async ({ page, context }) => {
   await context.addCookies(cookies)
 
   // API
-  await page.route('http://localhost:8000/api/me', async (route) => {
+  await page.route('http://localhost:5173/api/me', async (route) => {
     const json = {
       id: 1,
       username: 'admin',

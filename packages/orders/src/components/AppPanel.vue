@@ -6,10 +6,16 @@ defineProps({
 const find = import.meta.env.VUE_APP_FIND
 const catalog = import.meta.env.VUE_APP_CATALOG
 const settings = import.meta.env.VUE_APP_SETTINGS
+
+const emit = defineEmits(['close-panel'])
 </script>
 
 <template>
-  <BPanel :visible="isPanelActive" @close="$emit('close-panel')">
+  <BPanel
+    :model-value="isPanelActive"
+    @update:model-value="() => emit('close-panel')"
+    @close="emit('close-panel')"
+  >
     <BContainer size="m">
       <BNav
         :nav="[

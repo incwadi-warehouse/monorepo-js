@@ -1,10 +1,12 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import DirectoryList from '@/components/directory/DirectoryList.vue'
 import DirectoryCreate from '@/components/directory/DirectoryCreate.vue'
 import DirectoryUpload from '@/components/directory/DirectoryUpload.vue'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'Directory' })
+useHead({
+  title: "Directory",
+})
 
 defineProps({
   auth: Object,

@@ -17,7 +17,7 @@ defineProps({
       <template #options>
         <b-dropdown>
           <template #selector>
-            <b-icon type="meatballs" />
+            <BMaterialIcon>more_horiz</BMaterialIcon>
           </template>
           <b-dropdown-item
             icon="pencil"

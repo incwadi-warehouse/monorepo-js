@@ -1,9 +1,11 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
 import SearchResult from '@/components/searchindex/SearchResult.vue'
 import { useSearchIndex } from '@/composables/useSearchIndex.js'
+import { useHead } from '@unhead/vue'
 
-useTitle({ title: 'Search Index' })
+useHead({
+  title: "Search Index",
+})
 
 const props = defineProps({
   auth: Object,
@@ -21,7 +23,7 @@ const {
 
 <template>
   <BContainer size="l">
-    <BChip>Experiment</BChip>
+    <BBadge>Experiment</BBadge>
   </BContainer>
 
   <BContainer size="l" :align="'right'">
