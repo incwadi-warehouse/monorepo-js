@@ -33,7 +33,7 @@
     "jsdom": "26.0.0",
     "msw": "2.7.3",
     "prettier": "3.5.3",
-    "shared": "^66.0.0",
+    "shared": "workspace:*",
     "start-server-and-test": "2.0.11",
     "vite": "6.2.2",
     "vite-plugin-pwa": "0.21.2",
