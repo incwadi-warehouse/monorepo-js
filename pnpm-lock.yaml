@@ -239,6 +239,9 @@ importers:
       vite-plugin-webfont-dl:
         specifier: 3.10.4
         version: 3.10.4(vite@6.2.3(terser@5.39.0)(yaml@2.7.1))
+      vitest:
+        specifier: 3.0.9
+        version: 3.0.9(jsdom@26.0.0)(msw@2.7.3(typescript@5.8.2))(terser@5.39.0)(yaml@2.7.1)
       vue-i18n-extract:
         specifier: 2.0.7
         version: 2.0.7
