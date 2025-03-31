@@ -16,13 +16,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          cache: yarn
+      - name: Install pnpm
+        run: npm install -g pnpm
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
       - name: Build accounts
-        run: yarn workspace accounts build
+        run: pnpm -F accounts build
       - name: Run accounts unit tests
-        run: yarn workspace accounts test:unit:ci
+        run: pnpm -F accounts test:unit:ci
 
   accounts-e2e:
     timeout-minutes: 60
@@ -32,15 +33,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          cache: yarn
+      - name: Install pnpm
+        run: npm install -g pnpm
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Build accounts
-        run: yarn workspace accounts build
+        run: pnpm -F accounts build
       - name: Run accounts e2e tests
-        run: yarn workspace accounts test:e2e
+        run: pnpm -F accounts test:e2e
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
@@ -56,15 +58,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          cache: yarn
+      - name: Install pnpm
+        run: npm install -g pnpm
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Build orders
-        run: yarn workspace orders build
+        run: pnpm -F orders build
       - name: Run orders e2e tests
-        run: yarn workspace orders test:e2e
+        run: pnpm -F orders test:e2e
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
@@ -80,15 +83,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          cache: yarn
+      - name: Install pnpm
+        run: npm install -g pnpm
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Build shop
-        run: yarn workspace shop build
+        run: pnpm -F shop build
       - name: Run shop e2e tests
-        run: yarn workspace shop test:e2e
+        run: pnpm -F shop test:e2e
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
@@ -104,15 +108,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          cache: yarn
+      - name: Install pnpm
+        run: npm install -g pnpm
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Build settings
-        run: yarn workspace settings build
+        run: pnpm -F settings build
       - name: Run settings e2e tests
-        run: yarn workspace settings test:e2e
+        run: pnpm -F settings test:e2e
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
@@ -128,15 +133,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          cache: yarn
+      - name: Install pnpm
+        run: npm install -g pnpm
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Build catalog
-        run: yarn workspace catalog build
+        run: pnpm -F catalog build
       - name: Run catalog e2e tests
-        run: yarn workspace catalog test:e2e
+        run: pnpm -F catalog test:e2e
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
