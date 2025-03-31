@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Install Playwright Browsers
-        run: npx -ws playwright install --with-deps
+        run: pnpm -F accounts exec playwright install --with-deps
       - name: Build accounts
         run: pnpm -F accounts build
       - name: Run accounts e2e tests
@@ -63,7 +63,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Install Playwright Browsers
-        run: npx -ws playwright install --with-deps
+        run: pnpm -F orders exec playwright install --with-deps
       - name: Build orders
         run: pnpm -F orders build
       - name: Run orders e2e tests
@@ -88,7 +88,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Install Playwright Browsers
-        run: npx -ws playwright install --with-deps
+        run: pnpm -F shop exec playwright install --with-deps
       - name: Build shop
         run: pnpm -F shop build
       - name: Run shop e2e tests
@@ -113,7 +113,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Install Playwright Browsers
-        run: npx -ws playwright install --with-deps
+        run: pnpm -F settings exec playwright install --with-deps
       - name: Build settings
         run: pnpm -F settings build
       - name: Run settings e2e tests
@@ -138,7 +138,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Install Playwright Browsers
-        run: npx -ws playwright install --with-deps
+        run: pnpm -F catalog exec playwright install --with-deps
       - name: Build catalog
         run: pnpm -F catalog build
       - name: Run catalog e2e tests
