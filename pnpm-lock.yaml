@@ -388,6 +388,9 @@ importers:
       eslint-plugin-vue:
         specifier: 10.0.0
         version: 10.0.0(eslint@9.23.0)(vue-eslint-parser@10.1.1(eslint@9.23.0))
+      lodash:
+        specifier: 4.17.21
+        version: 4.17.21
       msw:
         specifier: 2.7.3
         version: 2.7.3(typescript@5.8.2)
