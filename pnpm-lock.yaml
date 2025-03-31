@@ -324,6 +324,9 @@ importers:
       '@rushstack/eslint-patch':
         specifier: 1.11.0
         version: 1.11.0
+      axios:
+        specifier: 1.8.4
+        version: 1.8.4(debug@4.4.0)
       jsdom:
         specifier: 26.0.0
         version: 26.0.0

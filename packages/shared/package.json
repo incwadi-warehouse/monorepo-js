@@ -13,6 +13,7 @@
   "devDependencies": {
     "@baldeweg/eslint-config": "0.14.0",
     "@rushstack/eslint-patch": "1.11.0",
+    "axios": "1.8.4",
     "jsdom": "26.0.0"
   }
 }
