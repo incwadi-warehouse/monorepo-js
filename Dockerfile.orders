@@ -41,6 +41,8 @@ WORKDIR /usr/app
 
 COPY . .
 
+RUN npm install -g pnpm
+
 RUN pnpm install
 
 RUN pnpm -F ${SERVICE_NAME} build
