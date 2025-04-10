@@ -4,7 +4,7 @@
     "dockerfile": "Dockerfile"
   },
   "features": {
-    "ghcr.io/abaldeweg/devcontainer_features/bash:3.0.0": {},
+    "ghcr.io/abaldeweg/devcontainer_features/bash:3.0.0": {}
   },
   "postCreateCommand": {
     "pnpm": "pnpm install",
