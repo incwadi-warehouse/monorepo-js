@@ -7,7 +7,7 @@
     "ghcr.io/abaldeweg/devcontainer_features/bash:3.0.0": {},
   },
   "postCreateCommand": {
-    "yarn": "yarn install",
+    "pnpm": "pnpm install",
     "playwright": "npx playwright install",
     "playwright-deps": "npx playwright install-deps"
   },
