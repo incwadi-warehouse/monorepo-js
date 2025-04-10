@@ -29,9 +29,9 @@ WORKDIR /usr/app
 
 COPY . .
 
-RUN yarn install
+RUN pnpm install
 
-RUN yarn workspace ${SERVICE_NAME} build
+RUN pnpm -F ${SERVICE_NAME} build
 
 # production stage
 FROM httpd:2.4 as production-stage
