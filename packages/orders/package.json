@@ -1,6 +1,6 @@
 {
   "name": "orders",
-  "version": "67.0.0",
+  "version": "67.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
