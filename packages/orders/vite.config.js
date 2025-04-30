@@ -40,6 +40,9 @@ export default defineConfig(({ mode }) => {
           start_url: env.VUE_APP_BASE_URL,
           scope: env.VUE_APP_BASE_URL,
         },
+        workbox: {
+          maximumFileSizeToCacheInBytes: 5000000,
+        }
       }),
       ViteWebfontDownload([
         'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap',

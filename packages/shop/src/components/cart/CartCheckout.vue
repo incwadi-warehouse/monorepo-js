@@ -1,5 +1,5 @@
 <script setup>
-import { useToast } from '@baldeweg/ui'
+import { useToast } from '@/composables/useToast.js'
 import { useReservation } from '@/composables/useReservation.js'
 import { computed } from 'vue'
 import { useCart } from '@/composables/useCart.js'

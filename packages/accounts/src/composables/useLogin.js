@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import { useRequest } from '@baldeweg/ui'
+import { useRequest } from '@/composables/useRequest'
 import { useRouter, useRoute } from 'vue-router'
 import { useToken } from '@/composables/useToken.js'
 import { useRedirect } from '@/composables/useRedirect.js'

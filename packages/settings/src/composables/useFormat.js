@@ -1,5 +1,5 @@
 import { onMounted, reactive, ref } from 'vue'
-import { useRequest } from '@baldeweg/ui'
+import { useRequest } from '@/composables/useRequest'
 import Cookies from 'js-cookie'
 
 export function useFormat() {

@@ -1,5 +1,5 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
+import { useHead } from '@unhead/vue'
 import TagShow from '@/components/tag/TagShow.vue'
 import TagCreate from '@/components/tag/TagCreate.vue'
 import { useTag } from '@/composables/useTag.js'

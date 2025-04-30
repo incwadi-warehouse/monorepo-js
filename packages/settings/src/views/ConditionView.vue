@@ -1,5 +1,5 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
+import { useHead } from '@unhead/vue'
 import ConditionShow from '@/components/condition/ConditionShow.vue'
 import ConditionCreate from '@/components/condition/ConditionCreate.vue'
 import { useCondition } from '@/composables/useCondition.js'

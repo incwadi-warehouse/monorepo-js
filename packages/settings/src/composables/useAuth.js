@@ -1,6 +1,6 @@
 import { onMounted, reactive } from 'vue'
 import Cookies from 'js-cookie'
-import { useRequest } from '@baldeweg/ui'
+import { useRequest } from '@/composables/useRequest'
 
 export const state = reactive({
   username: null,

@@ -1,5 +1,5 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
+import { useHead } from '@unhead/vue'
 import FormatShow from '@/components/format/FormatShow.vue'
 import FormatCreate from '@/components/format/FormatCreate.vue'
 import { useFormat } from '@/composables/useFormat.js'

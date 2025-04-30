@@ -1,5 +1,5 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
+import { useHead } from '@unhead/vue'
 import AuthorResults from '@/components/author/AuthorResults.vue'
 import AuthorSearch from '@/components/author/AuthorSearch.vue'
 

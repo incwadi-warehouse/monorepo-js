@@ -1,5 +1,5 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
+import { useHead } from '@unhead/vue'
 import InventoryTable from '@/components/inventory/InventoryTable.vue'
 import { useInventory } from '@/composables/useInventory.js'
 

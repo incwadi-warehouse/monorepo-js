@@ -1,6 +1,6 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
-import { useToast } from '@baldeweg/ui'
+import { useHead } from '@unhead/vue'
+import { useToast } from '@/composables/useToast.js'
 import { watch } from 'vue'
 import BranchEdit from '../components/branch/BranchEdit.vue'
 import BranchCleanBooks from '../components/branch/BranchCleanBooks.vue'

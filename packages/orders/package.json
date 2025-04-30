@@ -26,6 +26,7 @@
     "@baldeweg/eslint-config": "0.14.3",
     "@playwright/test": "1.51.1",
     "@rushstack/eslint-patch": "1.11.0",
+    "@unhead/vue": "1.11.20",
     "@vitejs/plugin-vue": "5.2.3",
     "@vue/eslint-config-prettier": "10.2.0",
     "eslint": "9.25.1",

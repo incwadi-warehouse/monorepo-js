@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import { useRequest } from '@baldeweg/ui'
+import { useRequest } from '@/composables/useRequest'
 
 const articles = ref([])
 

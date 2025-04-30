@@ -1,6 +1,6 @@
 <script setup>
 import { computed, reactive, toRefs } from 'vue'
-import { useToast } from '@baldeweg/ui'
+import { useToast } from '@/composables/useToast.js'
 import { useI18n } from 'vue-i18n'
 import BookPriceCalculator from '@/components/book/BookPriceCalculator.vue'
 import { useGenre } from '@/composables/useGenre.js'

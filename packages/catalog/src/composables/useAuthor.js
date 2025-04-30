@@ -1,7 +1,7 @@
-import { useToast } from '@baldeweg/ui'
+import { useToast } from '@/composables/useToast.js'
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useRequest } from '@baldeweg/ui'
+import { useRequest } from '@/composables/useRequest'
 import Cookies from 'js-cookie'
 import { remove as _remove } from 'lodash'
 

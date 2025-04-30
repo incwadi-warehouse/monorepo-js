@@ -1,5 +1,5 @@
 import { onMounted, ref } from 'vue'
-import { useRequest } from '@baldeweg/ui'
+import { useRequest } from '@/composables/useRequest'
 
 export function useGenre() {
   const {  request } = useRequest({ baseURL: import.meta.env.VITE_API })

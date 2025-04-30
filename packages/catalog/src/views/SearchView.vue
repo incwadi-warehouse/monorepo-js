@@ -1,5 +1,5 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
+import { useHead } from '@unhead/vue'
 import { useRouter } from 'vue-router'
 import { ref } from 'vue'
 import Cookies from 'js-cookie'

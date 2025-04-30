@@ -1,5 +1,5 @@
 import { computed, onMounted, reactive } from 'vue'
-import { useRequest } from '@baldeweg/ui'
+import { useRequest } from '@/composables/useRequest'
 import Cookies from 'js-cookie'
 
 export function useInventory() {
