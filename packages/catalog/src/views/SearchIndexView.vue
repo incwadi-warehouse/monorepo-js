@@ -1,5 +1,5 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
+import { useHead } from '@unhead/vue'
 import SearchResult from '@/components/searchindex/SearchResult.vue'
 import { useSearchIndex } from '@/composables/useSearchIndex.js'
 

@@ -1,5 +1,5 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
+import { useHead } from '@unhead/vue'
 import { useI18n } from 'vue-i18n'
 import ChangePassword from '@/components/ChangePassword.vue'
 

@@ -1,5 +1,5 @@
 <script setup>
-import { useRequest } from '@baldeweg/ui'
+import { useRequest } from '@/composables/useRequest'
 import { useRoute } from 'vue-router'
 import { ref, watch } from 'vue'
 import { useConf } from 'shared'
@@ -7,6 +7,15 @@ import { useSnow, useParty } from 'shared'
 import AppLogo from './components/AppLogo.vue'
 import { useToken } from '@/composables/useToken.js'
 import AccountPride from '@/components/AccountPride.vue'
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: "Home",
+  titleTemplate: '%s',
+  htmlAttrs: {
+    lang: navigator.language,
+  }
+})
 
 const { config } = useRequest()
 config.value.baseURL = import.meta.env.VUE_APP_API

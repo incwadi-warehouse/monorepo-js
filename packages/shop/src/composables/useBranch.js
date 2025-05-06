@@ -1,5 +1,5 @@
 import { onMounted, ref } from 'vue'
-import { useRequest } from '@baldeweg/ui'
+import { useRequest } from '@/composables/useRequest'
 
 const branch = ref(null)
 

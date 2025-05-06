@@ -1,5 +1,5 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
+import { useHead } from '@unhead/vue'
 import GenreShow from '@/components/genre/GenreShow.vue'
 import GenreCreate from '@/components/genre/GenreCreate.vue'
 import { useGenre } from '@/composables/useGenre.js'

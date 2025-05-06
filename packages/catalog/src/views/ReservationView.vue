@@ -1,5 +1,5 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
+import { useHead } from '@unhead/vue'
 import { useReservation } from '../composables/useReservation.js'
 import { useCart } from '../composables/useCart.js'
 import ReservationCreate from './../components/reservation/ReservationCreate.vue'

@@ -1,5 +1,5 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
+import { useHead } from '@unhead/vue'
 import DirectoryList from '@/components/directory/DirectoryList.vue'
 import DirectoryCreate from '@/components/directory/DirectoryCreate.vue'
 import DirectoryUpload from '@/components/directory/DirectoryUpload.vue'

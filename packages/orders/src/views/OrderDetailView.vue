@@ -1,5 +1,5 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
+import { useHead } from '@unhead/vue'
 import { useI18n } from 'vue-i18n'
 import { useOrder } from '@/composables/useOrder.js'
 import { useProduct } from '@/composables/useProduct.js'

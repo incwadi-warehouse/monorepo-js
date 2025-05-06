@@ -1,5 +1,5 @@
 import { computed, ref, watch } from 'vue'
-import { useRequest } from '@baldeweg/ui'
+import { useRequest } from '@/composables/useRequest'
 import Cookies from 'js-cookie'
 
 const auth = ref(JSON.parse(Cookies.get('auth') || null))

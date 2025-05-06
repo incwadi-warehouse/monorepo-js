@@ -1,5 +1,5 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
+import { useHead } from '@unhead/vue'
 import AuthorUpdate from '@/components/author/AuthorUpdate.vue'
 
 defineProps({

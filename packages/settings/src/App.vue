@@ -1,5 +1,5 @@
 <script setup>
-import { useLocale, useToast } from '@baldeweg/ui'
+import { useToast } from '@/composables/useToast.js'
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useConf, useSnow, useParty } from 'shared'
 import Cookies from 'js-cookie'
@@ -8,8 +8,15 @@ import AuthLogin from '@/components/auth/Login.vue'
 import useAuth from '@/composables/useAuth.js'
 import { useReservation } from '@/composables/useReservation.js'
 import router from '@/router'
+import { useHead } from '@unhead/vue'
 
-useLocale()
+useHead({
+  title: "Home",
+  titleTemplate: '%s',
+  htmlAttrs: {
+    lang: navigator.language,
+  }
+})
 
 const auth = useAuth()
 

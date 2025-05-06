@@ -1,5 +1,5 @@
 <script setup>
-import { useTitle } from '@baldeweg/ui'
+import { useHead } from '@unhead/vue'
 import { onMounted } from 'vue'
 import SettingsStats from '../components/settings/SettingsStats.vue'
 import { useBook } from '@/composables/useBook.js'

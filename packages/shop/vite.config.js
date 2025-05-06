@@ -39,6 +39,9 @@ export default defineConfig(({ mode }) => {
           start_url: env.VITE_BASE_URL,
           scope: env.VITE_BASE_URL,
         },
+        workbox: {
+          maximumFileSizeToCacheInBytes: 5000000,
+        }
       }),
       ViteWebfontDownload([
         'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap',
