@@ -15,8 +15,8 @@ importers:
   packages/accounts:
     dependencies:
       '@baldeweg/eslint-config':
-        specifier: 0.14.3
-        version: 0.14.3(@vue/eslint-config-prettier@10.2.0(eslint@9.25.1)(prettier@3.5.3))(eslint-plugin-import@2.31.0(eslint@9.25.1))(eslint-plugin-vue@10.0.1(eslint@9.25.1)(vue-eslint-parser@10.1.1(eslint@9.25.1)))(eslint@9.25.1)
+        specifier: 0.15.0-beta.0
+        version: 0.15.0-beta.0(@vue/eslint-config-prettier@10.2.0(eslint@9.25.1)(prettier@3.5.3))(eslint-plugin-import@2.31.0(eslint@9.25.1))(eslint-plugin-vue@10.0.1(eslint@9.25.1)(vue-eslint-parser@10.1.1(eslint@9.25.1)))(eslint@9.25.1)
       '@baldeweg/ui':
         specifier: 0.14.3
         version: 0.14.3(typescript@5.8.2)
@@ -97,8 +97,8 @@ importers:
   packages/catalog:
     dependencies:
       '@baldeweg/ui':
-        specifier: 0.14.3
-        version: 0.14.3(typescript@5.8.2)
+        specifier: 0.15.0-beta.0
+        version: 0.15.0-beta.0(typescript@5.8.2)
       axios:
         specifier: 1.9.0
         version: 1.9.0(debug@4.4.0)
@@ -176,8 +176,8 @@ importers:
   packages/orders:
     dependencies:
       '@baldeweg/ui':
-        specifier: 0.14.3
-        version: 0.14.3(typescript@5.8.2)
+        specifier: 0.15.0-beta.0
+        version: 0.15.0-beta.0(typescript@5.8.2)
       axios:
         specifier: 1.9.0
         version: 1.9.0(debug@4.4.0)
@@ -261,8 +261,8 @@ importers:
   packages/settings:
     dependencies:
       '@baldeweg/ui':
-        specifier: 0.14.3
-        version: 0.14.3(typescript@5.8.2)
+        specifier: 0.15.0-beta.0
+        version: 0.15.0-beta.0(typescript@5.8.2)
       axios:
         specifier: 1.9.0
         version: 1.9.0(debug@4.4.0)
@@ -355,8 +355,8 @@ importers:
   packages/shop:
     dependencies:
       '@baldeweg/ui':
-        specifier: 0.14.3
-        version: 0.14.3(typescript@5.8.2)
+        specifier: 0.15.0-beta.0
+        version: 0.15.0-beta.0(typescript@5.8.2)
       axios:
         specifier: 1.9.0
         version: 1.9.0(debug@4.4.0)
@@ -942,8 +942,19 @@ packages:
       eslint-plugin-import: 2.31.0
       eslint-plugin-vue: 10.0.0
 
+  '@baldeweg/eslint-config@0.15.0-beta.0':
+    resolution: {integrity: sha512-heS+D+IazIvdk8nfcxazd1W0gXp8+/1srsDzLPxkif8MKBwRtru12jZ0Ur6m5Be+kV4EPRZog6qWr/9XeuOBCA==}
+    peerDependencies:
+      '@vue/eslint-config-prettier': 10.2.0
+      eslint: 9.26.0
+      eslint-plugin-import: 2.31.0
+      eslint-plugin-vue: 10.1.0
+
   '@baldeweg/ui@0.14.3':
     resolution: {integrity: sha512-Q4+Aun5JNwKAXP9hyeTKjioO4L8HozF4Q9+Uwswxj+kN7u2e4or5hY4ZHcyHc1JxFfjQS+j/KVEhcyO0Wlp2Mw==}
+
+  '@baldeweg/ui@0.15.0-beta.0':
+    resolution: {integrity: sha512-iebIktt95eNYJEbeLqPfUn99Y4/FurFvr/P/chsh8u5x1UDF+Rb/lmTNFN2Xb4v8zd5xHJgc1KB9gxi74cJRwQ==}
 
   '@bundled-es-modules/cookie@2.0.1':
     resolution: {integrity: sha512-8o+5fRPLNbjbdGRRmJj3h6Hh1AQJf2dk3qQ/5ZFb+PXkRNiSoMGGUKlsgLfrxneb72axVJyIYji64E2+nNfYyw==}
@@ -5842,7 +5853,20 @@ snapshots:
       eslint-plugin-import: 2.31.0(eslint@9.25.1)
       eslint-plugin-vue: 10.0.1(eslint@9.25.1)(vue-eslint-parser@10.1.1(eslint@9.25.1))
 
+  '@baldeweg/eslint-config@0.15.0-beta.0(@vue/eslint-config-prettier@10.2.0(eslint@9.25.1)(prettier@3.5.3))(eslint-plugin-import@2.31.0(eslint@9.25.1))(eslint-plugin-vue@10.0.1(eslint@9.25.1)(vue-eslint-parser@10.1.1(eslint@9.25.1)))(eslint@9.25.1)':
+    dependencies:
+      '@vue/eslint-config-prettier': 10.2.0(eslint@9.25.1)(prettier@3.5.3)
+      eslint: 9.25.1
+      eslint-plugin-import: 2.31.0(eslint@9.25.1)
+      eslint-plugin-vue: 10.0.1(eslint@9.25.1)(vue-eslint-parser@10.1.1(eslint@9.25.1))
+
   '@baldeweg/ui@0.14.3(typescript@5.8.2)':
+    dependencies:
+      vue: 3.5.13(typescript@5.8.2)
+    transitivePeerDependencies:
+      - typescript
+
+  '@baldeweg/ui@0.15.0-beta.0(typescript@5.8.2)':
     dependencies:
       vue: 3.5.13(typescript@5.8.2)
     transitivePeerDependencies:
