@@ -40,8 +40,8 @@ importers:
         specifier: ^1.47.0
         version: 1.51.1
       '@rushstack/eslint-patch':
-        specifier: 1.11.0
-        version: 1.11.0
+        specifier: 1.12.0
+        version: 1.12.0
       '@vitejs/plugin-vue':
         specifier: 5.2.4
         version: 5.2.4(vite@6.3.5(terser@5.39.0)(yaml@2.7.1))(vue@3.5.17(typescript@5.8.2))
@@ -122,8 +122,8 @@ importers:
         specifier: 1.51.1
         version: 1.51.1
       '@rushstack/eslint-patch':
-        specifier: 1.11.0
-        version: 1.11.0
+        specifier: 1.12.0
+        version: 1.12.0
       '@vitejs/plugin-vue':
         specifier: 5.2.4
         version: 5.2.4(vite@6.3.5(terser@5.39.0)(yaml@2.7.1))(vue@3.5.17(typescript@5.8.2))
@@ -204,8 +204,8 @@ importers:
         specifier: 1.51.1
         version: 1.51.1
       '@rushstack/eslint-patch':
-        specifier: 1.11.0
-        version: 1.11.0
+        specifier: 1.12.0
+        version: 1.12.0
       '@vitejs/plugin-vue':
         specifier: 5.2.4
         version: 5.2.4(vite@6.3.5(terser@5.39.0)(yaml@2.7.1))(vue@3.5.17(typescript@5.8.2))
@@ -277,8 +277,8 @@ importers:
         specifier: 0.16.0
         version: 0.16.0(@vue/eslint-config-prettier@10.2.0(eslint@9.29.0)(prettier@3.5.3))(eslint-plugin-import@2.32.0(eslint@9.29.0))(eslint-plugin-vue@10.2.0(eslint@9.29.0)(vue-eslint-parser@10.1.1(eslint@9.29.0)))(eslint@9.29.0)
       '@rushstack/eslint-patch':
-        specifier: 1.11.0
-        version: 1.11.0
+        specifier: 1.12.0
+        version: 1.12.0
       '@vitejs/plugin-vue':
         specifier: 5.2.4
         version: 5.2.4(vite@6.3.5(terser@5.39.0)(yaml@2.7.1))(vue@3.5.17(typescript@5.8.2))
@@ -328,8 +328,8 @@ importers:
         specifier: 0.16.0
         version: 0.16.0(@vue/eslint-config-prettier@10.2.0(eslint@9.29.0)(prettier@3.5.3))(eslint-plugin-import@2.32.0(eslint@9.29.0))(eslint-plugin-vue@10.2.0(eslint@9.29.0)(vue-eslint-parser@10.1.1(eslint@9.29.0)))(eslint@9.29.0)
       '@rushstack/eslint-patch':
-        specifier: 1.11.0
-        version: 1.11.0
+        specifier: 1.12.0
+        version: 1.12.0
       axios:
         specifier: 1.10.0
         version: 1.10.0(debug@4.4.1)
@@ -374,8 +374,8 @@ importers:
         specifier: 1.51.1
         version: 1.51.1
       '@rushstack/eslint-patch':
-        specifier: 1.11.0
-        version: 1.11.0
+        specifier: 1.12.0
+        version: 1.12.0
       '@unhead/vue':
         specifier: 1.11.20
         version: 1.11.20(vue@3.5.17(typescript@5.8.2))
@@ -1682,8 +1682,8 @@ packages:
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
 
-  '@rushstack/eslint-patch@1.11.0':
-    resolution: {integrity: sha512-zxnHvoMQVqewTJr/W4pKjF0bMGiKJv1WX7bSrkl46Hg0QjESbzBROWK0Wg4RphzSOS5Jiy7eFimmM3UgMrMZbQ==}
+  '@rushstack/eslint-patch@1.12.0':
+    resolution: {integrity: sha512-5EwMtOqvJMMa3HbmxLlF74e+3/HhwBTMcvt3nqVJgGCozO6hzIPOBlwm8mGVNR9SN2IJpxSnlxczyDjcn7qIyw==}
 
   '@sideway/address@4.1.5':
     resolution: {integrity: sha512-IqO/DUQHUkPeixNQ8n0JA6102hT9CmaljNTPmQ1u8MEhBo/R4Q8eKLN/vGZxuebwOroDB4cbpjheD4+/sKFK4Q==}
@@ -6697,7 +6697,7 @@ snapshots:
 
   '@rtsao/scc@1.1.0': {}
 
-  '@rushstack/eslint-patch@1.11.0': {}
+  '@rushstack/eslint-patch@1.12.0': {}
 
   '@sideway/address@4.1.5':
     dependencies:
