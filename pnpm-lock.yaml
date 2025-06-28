@@ -43,8 +43,8 @@ importers:
         specifier: 1.12.0
         version: 1.12.0
       '@vitejs/plugin-vue':
-        specifier: 5.2.4
-        version: 5.2.4(vite@6.3.5(terser@5.39.0)(yaml@2.7.1))(vue@3.5.17(typescript@5.8.2))
+        specifier: 6.0.0
+        version: 6.0.0(vite@6.3.5(terser@5.39.0)(yaml@2.7.1))(vue@3.5.17(typescript@5.8.2))
       '@vue/eslint-config-prettier':
         specifier: 10.2.0
         version: 10.2.0(eslint@9.30.0)(prettier@3.5.3)
@@ -125,8 +125,8 @@ importers:
         specifier: 1.12.0
         version: 1.12.0
       '@vitejs/plugin-vue':
-        specifier: 5.2.4
-        version: 5.2.4(vite@6.3.5(terser@5.39.0)(yaml@2.7.1))(vue@3.5.17(typescript@5.8.2))
+        specifier: 6.0.0
+        version: 6.0.0(vite@6.3.5(terser@5.39.0)(yaml@2.7.1))(vue@3.5.17(typescript@5.8.2))
       '@vue/eslint-config-prettier':
         specifier: 10.2.0
         version: 10.2.0(eslint@9.30.0)(prettier@3.5.3)
@@ -207,8 +207,8 @@ importers:
         specifier: 1.12.0
         version: 1.12.0
       '@vitejs/plugin-vue':
-        specifier: 5.2.4
-        version: 5.2.4(vite@6.3.5(terser@5.39.0)(yaml@2.7.1))(vue@3.5.17(typescript@5.8.2))
+        specifier: 6.0.0
+        version: 6.0.0(vite@6.3.5(terser@5.39.0)(yaml@2.7.1))(vue@3.5.17(typescript@5.8.2))
       '@vue/eslint-config-prettier':
         specifier: 10.2.0
         version: 10.2.0(eslint@9.30.0)(prettier@3.5.3)
@@ -280,8 +280,8 @@ importers:
         specifier: 1.12.0
         version: 1.12.0
       '@vitejs/plugin-vue':
-        specifier: 5.2.4
-        version: 5.2.4(vite@6.3.5(terser@5.39.0)(yaml@2.7.1))(vue@3.5.17(typescript@5.8.2))
+        specifier: 6.0.0
+        version: 6.0.0(vite@6.3.5(terser@5.39.0)(yaml@2.7.1))(vue@3.5.17(typescript@5.8.2))
       '@vue/eslint-config-prettier':
         specifier: 10.2.0
         version: 10.2.0(eslint@9.30.0)(prettier@3.5.3)
@@ -380,8 +380,8 @@ importers:
         specifier: 1.11.20
         version: 1.11.20(vue@3.5.17(typescript@5.8.2))
       '@vitejs/plugin-vue':
-        specifier: 5.2.4
-        version: 5.2.4(vite@6.3.5(terser@5.39.0)(yaml@2.7.1))(vue@3.5.17(typescript@5.8.2))
+        specifier: 6.0.0
+        version: 6.0.0(vite@6.3.5(terser@5.39.0)(yaml@2.7.1))(vue@3.5.17(typescript@5.8.2))
       '@vue/eslint-config-prettier':
         specifier: 10.2.0
         version: 10.2.0(eslint@9.30.0)(prettier@3.5.3)
@@ -1530,6 +1530,9 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
+  '@rolldown/pluginutils@1.0.0-beta.19':
+    resolution: {integrity: sha512-3FL3mnMbPu0muGOCaKAhhFEYmqv9eTfPSJRJmANrCwtgK8VuxpsZDGK+m0LYAGoyO8+0j5uRe4PeyPDK1yA/hA==}
+
   '@rollup/plugin-babel@5.3.1':
     resolution: {integrity: sha512-WFfdLWU/xVWKeRQnKmIAQULUI7Il0gZnBIH/ZFO069wYIfPu+8zrfp/KMW0atmELoRDq8FbiP3VCss9MhCut7Q==}
     engines: {node: '>= 10.0.0'}
@@ -1791,11 +1794,11 @@ packages:
     peerDependencies:
       vue: '>=2.7 || >=3'
 
-  '@vitejs/plugin-vue@5.2.4':
-    resolution: {integrity: sha512-7Yx/SXSOcQq5HiiV3orevHUFn+pmMB4cgbEkDYgnkUWb0WfeQ/wa2yFv6D5ICiCQOVpjA7vYDXrC7AGO8yjDHA==}
-    engines: {node: ^18.0.0 || >=20.0.0}
+  '@vitejs/plugin-vue@6.0.0':
+    resolution: {integrity: sha512-iAliE72WsdhjzTOp2DtvKThq1VBC4REhwRcaA+zPAAph6I+OQhUXv+Xu2KS7ElxYtb7Zc/3R30Hwv1DxEo7NXQ==}
+    engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
-      vite: ^5.0.0 || ^6.0.0
+      vite: ^5.0.0 || ^6.0.0 || ^7.0.0
       vue: ^3.2.25
 
   '@vitest/expect@3.2.4':
@@ -6587,6 +6590,8 @@ snapshots:
     dependencies:
       playwright: 1.51.1
 
+  '@rolldown/pluginutils@1.0.0-beta.19': {}
+
   '@rollup/plugin-babel@5.3.1(@babel/core@7.26.10)(rollup@2.79.2)':
     dependencies:
       '@babel/core': 7.26.10
@@ -6812,8 +6817,9 @@ snapshots:
       unhead: 1.11.20
       vue: 3.5.17(typescript@5.8.2)
 
-  '@vitejs/plugin-vue@5.2.4(vite@6.3.5(terser@5.39.0)(yaml@2.7.1))(vue@3.5.17(typescript@5.8.2))':
+  '@vitejs/plugin-vue@6.0.0(vite@6.3.5(terser@5.39.0)(yaml@2.7.1))(vue@3.5.17(typescript@5.8.2))':
     dependencies:
+      '@rolldown/pluginutils': 1.0.0-beta.19
       vite: 6.3.5(terser@5.39.0)(yaml@2.7.1)
       vue: 3.5.17(typescript@5.8.2)
 
