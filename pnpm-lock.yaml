@@ -355,8 +355,8 @@ importers:
         specifier: 3.0.5
         version: 3.0.5
       marked:
-        specifier: 16.0.0
-        version: 16.0.0
+        specifier: 16.1.0
+        version: 16.1.0
       vue:
         specifier: 3.5.17
         version: 3.5.17(typescript@5.8.2)
@@ -3580,8 +3580,8 @@ packages:
   map-stream@0.1.0:
     resolution: {integrity: sha512-CkYQrPYZfWnu/DAmVCpTSX/xHpKZ80eKh2lAkyA6AJTef6bW+6JpbQZN5rofum7da+SyN1bi5ctTm+lTfcCW3g==}
 
-  marked@16.0.0:
-    resolution: {integrity: sha512-MUKMXDjsD/eptB7GPzxo4xcnLS6oo7/RHimUMHEDRhUooPwmN9BEpMl7AEOJv3bmso169wHI2wUF9VQgL7zfmA==}
+  marked@16.1.0:
+    resolution: {integrity: sha512-Me7BNa1aqrxVinDnFfvCgHh2yHvLbFvILBs899MhuBpbE5VPzpSqv7alaESfkqkgc9JNvUGH4gqwZeOzLnY8Jg==}
     engines: {node: '>= 20'}
     hasBin: true
 
@@ -8888,7 +8888,7 @@ snapshots:
 
   map-stream@0.1.0: {}
 
-  marked@16.0.0: {}
+  marked@16.1.0: {}
 
   math-intrinsics@1.1.0: {}
 
