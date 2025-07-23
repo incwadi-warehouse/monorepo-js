@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@baldeweg/ui": "0.12.1",
-    "axios": "1.10.0",
+    "axios": "1.11.0",
     "dompurify": "3.2.6",
     "js-cookie": "3.0.5",
     "marked": "16.1.0",
