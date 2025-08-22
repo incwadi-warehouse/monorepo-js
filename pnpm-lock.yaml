@@ -79,8 +79,8 @@ importers:
         specifier: 7.1.2
         version: 7.1.2(terser@5.43.1)(yaml@2.7.1)
       vite-plugin-pwa:
-        specifier: 1.0.2
-        version: 1.0.2(vite@7.1.2(terser@5.43.1)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0)
+        specifier: 1.0.3
+        version: 1.0.3(vite@7.1.2(terser@5.43.1)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0)
       vite-plugin-webfont-dl:
         specifier: 3.11.1
         version: 3.11.1(vite@7.1.2(terser@5.43.1)(yaml@2.7.1))
@@ -152,8 +152,8 @@ importers:
         specifier: 7.1.2
         version: 7.1.2(terser@5.43.1)(yaml@2.7.1)
       vite-plugin-pwa:
-        specifier: 1.0.2
-        version: 1.0.2(vite@7.1.2(terser@5.43.1)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0)
+        specifier: 1.0.3
+        version: 1.0.3(vite@7.1.2(terser@5.43.1)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0)
       vite-plugin-webfont-dl:
         specifier: 3.11.1
         version: 3.11.1(vite@7.1.2(terser@5.43.1)(yaml@2.7.1))
@@ -252,8 +252,8 @@ importers:
         specifier: 7.1.2
         version: 7.1.2(terser@5.43.1)(yaml@2.7.1)
       vite-plugin-pwa:
-        specifier: 1.0.2
-        version: 1.0.2(vite@7.1.2(terser@5.43.1)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0)
+        specifier: 1.0.3
+        version: 1.0.3(vite@7.1.2(terser@5.43.1)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0)
       vite-plugin-webfont-dl:
         specifier: 3.11.1
         version: 3.11.1(vite@7.1.2(terser@5.43.1)(yaml@2.7.1))
@@ -4518,8 +4518,8 @@ packages:
     resolution: {integrity: sha512-OljLrQ9SQdOUqTaQxqL5dEfZWrXExyyWsozYlAWFawPVNuD83igl7uJD2RTkNMbniIYgt8l81eCJGIdQF7avLQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
-  vite-plugin-pwa@1.0.2:
-    resolution: {integrity: sha512-O3UwjsCnoDclgJANoOgzzqW7SFgwXE/th2OmUP/ILxHKwzWxxKDBu+B/Xa9Cv4IgSVSnj2HgRVIJ7F15+vQFkA==}
+  vite-plugin-pwa@1.0.3:
+    resolution: {integrity: sha512-/OpqIpUldALGxcsEnv/ekQiQ5xHkQ53wcoN5ewX4jiIDNGs3W+eNcI1WYZeyOLmzoEjg09D7aX0O89YGjen1aw==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       '@vite-pwa/assets-generator': ^1.0.0
@@ -9763,7 +9763,7 @@ snapshots:
 
   validate-npm-package-name@5.0.1: {}
 
-  vite-plugin-pwa@1.0.2(vite@7.1.2(terser@5.43.1)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0):
+  vite-plugin-pwa@1.0.3(vite@7.1.2(terser@5.43.1)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0):
     dependencies:
       debug: 4.4.1
       pretty-bytes: 6.1.1
