@@ -27,7 +27,7 @@
     "@vue/eslint-config-prettier": "10.2.0",
     "eslint": "9.36.0",
     "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-vue": "10.4.0",
+    "eslint-plugin-vue": "10.5.0",
     "msw": "2.11.3",
     "playwright": "1.55.0",
     "prettier": "3.6.2",
