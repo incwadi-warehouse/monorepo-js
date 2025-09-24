@@ -19,6 +19,7 @@ const state = reactive({
   pricelist: branch.value.pricelist,
   cart: branch.value.cart,
   content: branch.value.content,
+  mail_reservation: branch.value.mail_reservation,
 })
 
 const update = () => {
@@ -35,6 +36,7 @@ const update = () => {
       pricelist: state.pricelist,
       cart: state.cart,
       content: state.content,
+      mail_reservation: state.mail_reservation,
     },
   })
 }
@@ -64,15 +66,8 @@ const update = () => {
         <b-form-helpline>{{ $t('branchStepsHelp') }}</b-form-helpline>
       </b-form-item>
       <b-form-item>
-        <b-form-input
-          type="number"
-          id="steps"
-          min="0.00"
-          max="100.00"
-          step="0.01"
-          pattern="^\d+(\.|,)?\d{0,2}$"
-          v-model="state.steps"
-        />
+        <b-form-input type="number" id="steps" min="0.00" max="100.00" step="0.01" pattern="^\d+(\.|,)?\d{0,2}$"
+          v-model="state.steps" />
       </b-form-item>
     </b-form-group>
 
@@ -82,14 +77,10 @@ const update = () => {
         <b-form-label for="currency">{{ $t('currency') }}</b-form-label>
       </b-form-item>
       <b-form-item>
-        <b-form-select
-          id="currency"
-          :items="[
-            { key: 'EUR', value: 'EUR' },
-            { key: 'USD', value: 'USD' },
-          ]"
-          v-model="state.currency"
-        />
+        <b-form-select id="currency" :items="[
+          { key: 'EUR', value: 'EUR' },
+          { key: 'USD', value: 'USD' },
+        ]" v-model="state.currency" />
       </b-form-item>
     </b-form-group>
 
@@ -120,14 +111,10 @@ const update = () => {
         </b-alert>
       </b-form-item>
       <b-form-item>
-        <b-form-select
-          id="orderBy"
-          :items="[
-            { key: 'name', value: $t('orderByNameAsc') },
-            { key: 'books', value: $t('orderByBookcountDesc') },
-          ]"
-          v-model="state.orderBy"
-        />
+        <b-form-select id="orderBy" :items="[
+          { key: 'name', value: $t('orderByNameAsc') },
+          { key: 'books', value: $t('orderByBookcountDesc') },
+        ]" v-model="state.orderBy" />
       </b-form-item>
     </b-form-group>
 
@@ -163,6 +150,19 @@ const update = () => {
       </b-form-item>
       <b-form-item>
         <b-form-textarea id="content" v-model="state.content" rows="5" />
+      </b-form-item>
+    </b-form-group>
+
+    <!-- mail_reservation -->
+    <b-form-group>
+      <b-form-item>
+        <b-form-label for="mail_reservation">{{ $t('mail_reservation') }}</b-form-label>
+      </b-form-item>
+      <b-form-item>
+        <b-form-helpline>{{ $t('mail_reservation_help') }}</b-form-helpline>
+      </b-form-item>
+      <b-form-item>
+        <b-form-textarea id="mail_reservation" v-model="state.mail_reservation" rows="5" />
       </b-form-item>
     </b-form-group>
 

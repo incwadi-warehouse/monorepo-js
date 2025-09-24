@@ -90,5 +90,7 @@
   "tags_desc": "Everyone can see tags and create new ones, but only admins can edit or delete existing tags.",
   "books": "Books",
   "new_tag": "New Tag",
-  "enter_tag_and_hit_enter": "Enter tag and hit enter"
+  "enter_tag_and_hit_enter": "Enter tag and hit enter",
+  "mail_reservation": "Mail-Text for Reservation",
+  "mail_reservation_help": "Text, that's send as an email to the customer."
 }

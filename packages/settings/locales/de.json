@@ -90,5 +90,7 @@
   "tags_desc": "Jeder kann Schlagworte sehen und Neue anlegen, jedoch können nur Admins Schlagworte bearbeiten und löschen.",
   "books": "Bücher",
   "new_tag": "Neues Schlagwort",
-  "enter_tag_and_hit_enter": "Tag eingeben und Enter drücken."
+  "enter_tag_and_hit_enter": "Tag eingeben und Enter drücken.",
+  "mail_reservation": "Mail-Text für Reservierung",
+  "mail_reservation_help": "Text, der als E-Mail an den Kunden gesendet wird."
 }
