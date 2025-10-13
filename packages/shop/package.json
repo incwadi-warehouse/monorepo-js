@@ -24,7 +24,7 @@
   "devDependencies": {
     "@baldeweg/eslint-config": "0.17.0",
     "@playwright/test": "1.55.1",
-    "@rushstack/eslint-patch": "1.13.0",
+    "@rushstack/eslint-patch": "1.14.0",
     "@unhead/vue": "1.11.20",
     "@vitejs/plugin-vue": "6.0.1",
     "@vue/eslint-config-prettier": "10.2.0",
