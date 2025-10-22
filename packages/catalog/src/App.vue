@@ -189,19 +189,13 @@ const openProfile = () => {
 
     <b-panel :visible="isDrawerActive" @close="isDrawerActive = false">
       <BContainer size="m">
-        <BNav
-          :nav="[
-            { route: { name: 'search' }, title: $t('search') },
-            {
-              route: { name: 'search-index' },
-              title: $t('search') + ' (Experiment)',
-            },
-            { route: { name: 'directory' }, title: $t('directory') },
-            { route: orders, title: $t('reservation') },
-            { route: settings, title: $t('settings') },
-            { route: find, title: $t('shop') },
-          ]"
-        />
+        <BNav :nav="[
+          { route: { name: 'search' }, title: $t('search') },
+          { route: orders, title: $t('reservation') },
+          { route: settings, title: $t('settings') },
+          { route: find, title: $t('shop') },
+          { route: '/help', title: $t('help') },
+        ]" />
       </BContainer>
     </b-panel>
 

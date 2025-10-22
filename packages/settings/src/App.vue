@@ -136,17 +136,9 @@ const openProfile = () => {
       <b-masthead-item position="center">
         <a :href="catalog">
           <logo v-if="hasLogo" />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="50"
-            height="50"
-            viewBox="0 0 200 200"
-            class="logo"
-            v-else
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 200 200" class="logo" v-else>
             <path
-              d="M 27.435547 9.8710938 C 17.706307 9.8710935 9.8710935 17.706307 9.8710938 27.435547 L 9.8710938 172.56445 C 9.8710935 182.29369 17.706307 190.12891 27.435547 190.12891 L 172.56445 190.12891 C 182.29369 190.12891 190.12891 182.29369 190.12891 172.56445 L 190.12891 27.435547 C 190.12891 17.706307 182.29369 9.8710938 172.56445 9.8710938 L 27.435547 9.8710938 z M 55 40 L 145 40 L 145 160 L 100 124 L 55 160 L 55 40 z "
-            />
+              d="M 27.435547 9.8710938 C 17.706307 9.8710935 9.8710935 17.706307 9.8710938 27.435547 L 9.8710938 172.56445 C 9.8710935 182.29369 17.706307 190.12891 27.435547 190.12891 L 172.56445 190.12891 C 182.29369 190.12891 190.12891 182.29369 190.12891 172.56445 L 190.12891 27.435547 C 190.12891 17.706307 182.29369 9.8710938 172.56445 9.8710938 L 27.435547 9.8710938 z M 55 40 L 145 40 L 145 160 L 100 124 L 55 160 L 55 40 z " />
           </svg>
         </a>
       </b-masthead-item>
@@ -173,13 +165,9 @@ const openProfile = () => {
         </b-dropdown>
 
         <span class="action" @click.prevent="navigateToOrders">
-          <b-badge
-            :content="
-              stateReservation.reservations &&
-              stateReservation.reservations.length
-            "
-            hide-empty
-          >
+          <b-badge :content="stateReservation.reservations &&
+            stateReservation.reservations.length
+            " hide-empty>
             <b-icon type="euro" />
           </b-badge>
         </span>
@@ -201,19 +189,13 @@ const openProfile = () => {
 
     <b-panel :visible="isDrawerActive" @close="isDrawerActive = false">
       <BContainer size="m">
-        <BNav
-          :nav="[
-            { route: catalog + '/search', title: $t('search') },
-            {
-              route: catalog + '/search-index',
-              title: $t('search') + ' (Experiment)',
-            },
-            { route: catalog + '/directory', title: $t('directory') },
-            { route: orders + '/', title: $t('reservation') },
-            { route: { name: 'settings' }, title: $t('settings') },
-            { route: find, title: $t('shop') },
-          ]"
-        />
+        <BNav :nav="[
+          { route: catalog + '/search', title: $t('search') },
+          { route: orders + '/', title: $t('reservation') },
+          { route: { name: 'settings' }, title: $t('settings') },
+          { route: find, title: $t('shop') },
+          { route: '/help', title: $t('help') },
+        ]" />
       </BContainer>
     </b-panel>
 
@@ -229,27 +211,28 @@ const openProfile = () => {
 .logo {
   fill: var(--color-primary-10);
 }
+
 .action {
   float: right;
   margin-left: 20px;
 }
+
 .pride {
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(240, 0, 0, 1) 0%,
-    rgba(255, 128, 0, 1) 20%,
-    rgba(255, 255, 0, 1) 40%,
-    rgba(0, 121, 64, 1) 60%,
-    rgba(64, 64, 255, 1) 80%,
-    rgba(160, 0, 192, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(240, 0, 0, 1) 0%,
+      rgba(255, 128, 0, 1) 20%,
+      rgba(255, 255, 0, 1) 40%,
+      rgba(0, 121, 64, 1) 60%,
+      rgba(64, 64, 255, 1) 80%,
+      rgba(160, 0, 192, 1) 100%);
   width: 100%;
   height: 2px;
   z-index: 3;
 }
+
 .footer {
   border-top: 1px solid var(--color-neutral-02);
 }

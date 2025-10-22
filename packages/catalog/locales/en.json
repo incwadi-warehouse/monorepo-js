@@ -126,5 +126,6 @@
   "search_index": "Search Index",
   "search_for_products": "Search for products",
   "hits": "Hits",
-  "rebuild_index": "Rebuild Index"
+  "rebuild_index": "Rebuild Index",
+  "help": "Help"
 }

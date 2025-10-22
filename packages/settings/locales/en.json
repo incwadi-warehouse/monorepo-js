@@ -92,5 +92,6 @@
   "new_tag": "New Tag",
   "enter_tag_and_hit_enter": "Enter tag and hit enter",
   "mail_reservation": "Mail-Text for Reservation",
-  "mail_reservation_help": "Text, that's send as an email to the customer."
+  "mail_reservation_help": "Text, that's send as an email to the customer.",
+  "help": "Help"
 }

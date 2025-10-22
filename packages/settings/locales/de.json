@@ -92,5 +92,6 @@
   "new_tag": "Neues Schlagwort",
   "enter_tag_and_hit_enter": "Tag eingeben und Enter drücken.",
   "mail_reservation": "Mail-Text für Reservierung",
-  "mail_reservation_help": "Text, der als E-Mail an den Kunden gesendet wird."
+  "mail_reservation_help": "Text, der als E-Mail an den Kunden gesendet wird.",
+  "help": "Hilfe"
 }
