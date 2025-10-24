@@ -27,7 +27,7 @@ jobs:
         run: pnpm -F shop build
       - name: Run shop e2e tests
         run: pnpm -F shop test:e2e
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         if: ${{ !cancelled() }}
         with:
           name: playwright-report-shop
@@ -52,7 +52,7 @@ jobs:
         run: pnpm -F settings build
       - name: Run settings e2e tests
         run: pnpm -F settings test:e2e
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         if: ${{ !cancelled() }}
         with:
           name: playwright-report-settings
@@ -77,7 +77,7 @@ jobs:
         run: pnpm -F catalog build
       - name: Run catalog e2e tests
         run: pnpm -F catalog test:e2e
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         if: ${{ !cancelled() }}
         with:
           name: playwright-report-catalog
