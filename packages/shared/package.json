@@ -13,7 +13,7 @@
   "devDependencies": {
     "@baldeweg/eslint-config": "0.17.0",
     "@rushstack/eslint-patch": "1.14.1",
-    "axios": "1.13.1",
+    "axios": "1.13.2",
     "canvas-confetti": "1.9.4",
     "jsdom": "27.1.0"
   }
