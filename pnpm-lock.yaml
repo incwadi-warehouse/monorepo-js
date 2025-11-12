@@ -43,8 +43,8 @@ importers:
         specifier: 1.56.1
         version: 1.56.1
       '@rushstack/eslint-patch':
-        specifier: 1.14.1
-        version: 1.14.1
+        specifier: 1.15.0
+        version: 1.15.0
       '@vitejs/plugin-vue':
         specifier: 6.0.1
         version: 6.0.1(vite@7.2.2(terser@5.43.1)(yaml@2.7.1))(vue@3.5.22(typescript@5.8.2))
@@ -116,8 +116,8 @@ importers:
         specifier: 0.17.0
         version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@9.38.0)(prettier@3.6.2))(eslint-plugin-import@2.32.0(eslint@9.38.0))(eslint-plugin-vue@10.5.1(eslint@9.38.0)(vue-eslint-parser@10.1.1(eslint@9.38.0)))(eslint@9.38.0)
       '@rushstack/eslint-patch':
-        specifier: 1.14.1
-        version: 1.14.1
+        specifier: 1.15.0
+        version: 1.15.0
       '@vitejs/plugin-vue':
         specifier: 6.0.1
         version: 6.0.1(vite@7.2.2(terser@5.43.1)(yaml@2.7.1))(vue@3.5.22(typescript@5.8.2))
@@ -167,8 +167,8 @@ importers:
         specifier: 0.17.0
         version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@9.38.0)(prettier@3.6.2))(eslint-plugin-import@2.32.0(eslint@9.38.0))(eslint-plugin-vue@10.5.1(eslint@9.38.0)(vue-eslint-parser@10.1.1(eslint@9.38.0)))(eslint@9.38.0)
       '@rushstack/eslint-patch':
-        specifier: 1.14.1
-        version: 1.14.1
+        specifier: 1.15.0
+        version: 1.15.0
       axios:
         specifier: 1.13.2
         version: 1.13.2(debug@4.4.3)
@@ -213,8 +213,8 @@ importers:
         specifier: 1.56.1
         version: 1.56.1
       '@rushstack/eslint-patch':
-        specifier: 1.14.1
-        version: 1.14.1
+        specifier: 1.15.0
+        version: 1.15.0
       '@unhead/vue':
         specifier: 1.11.20
         version: 1.11.20(vue@3.5.22(typescript@5.8.2))
@@ -1537,8 +1537,8 @@ packages:
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
 
-  '@rushstack/eslint-patch@1.14.1':
-    resolution: {integrity: sha512-jGTk8UD/RdjsNZW8qq10r0RBvxL8OWtoT+kImlzPDFilmozzM+9QmIJsmze9UiSBrFU45ZxhTYBypn9q9z/VfQ==}
+  '@rushstack/eslint-patch@1.15.0':
+    resolution: {integrity: sha512-ojSshQPKwVvSMR8yT2L/QtUkV5SXi/IfDiJ4/8d6UbTPjiHVmxZzUAzGD8Tzks1b9+qQkZa0isUOvYObedITaw==}
 
   '@sigstore/bundle@2.3.2':
     resolution: {integrity: sha512-wueKWDk70QixNLB363yHc2D2ItTgYiMTdPwK8D9dKQMR3ZQ0c35IxP5xnwQ8cNLoCgCRcHf14kE+CLIvNX1zmA==}
@@ -6304,7 +6304,7 @@ snapshots:
 
   '@rtsao/scc@1.1.0': {}
 
-  '@rushstack/eslint-patch@1.14.1': {}
+  '@rushstack/eslint-patch@1.15.0': {}
 
   '@sigstore/bundle@2.3.2':
     dependencies:
