@@ -30,7 +30,7 @@
     "@vue/eslint-config-prettier": "10.2.0",
     "eslint": "9.39.1",
     "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-vue": "10.5.1",
+    "eslint-plugin-vue": "10.6.2",
     "lodash": "4.17.21",
     "msw": "2.12.3",
     "playwright": "1.56.1",
