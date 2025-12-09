@@ -27,6 +27,9 @@ const content = computed(() => {
       'h1',
       'h2',
       'h3',
+      'h4',
+      'h5',
+      'h6',
     ],
   })
 })
@@ -55,18 +58,22 @@ const content = computed(() => {
   border-bottom: 1px solid var(--color-primary-10);
   color: var(--color-neutral-10);
 }
+
 .banner.isClosed {
   display: none;
 }
+
 .banner_inner {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .banner_message {
   padding-right: 20px;
   flex-grow: 1;
 }
+
 .banner_close {
   flex-shrink: 0;
   width: 40px;
