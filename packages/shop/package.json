@@ -28,7 +28,7 @@
     "@unhead/vue": "1.11.20",
     "@vitejs/plugin-vue": "6.0.2",
     "@vue/eslint-config-prettier": "10.2.0",
-    "eslint": "9.39.1",
+    "eslint": "9.39.2",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-vue": "10.6.2",
     "lodash": "4.17.21",
