@@ -32,7 +32,7 @@
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-vue": "10.6.2",
     "lodash": "4.17.21",
-    "msw": "2.12.4",
+    "msw": "2.12.7",
     "playwright": "1.57.0",
     "prettier": "3.7.4",
     "start-server-and-test": "2.1.3",
