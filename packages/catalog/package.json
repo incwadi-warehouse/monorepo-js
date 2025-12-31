@@ -23,7 +23,7 @@
     "@baldeweg/eslint-config": "0.17.0",
     "@playwright/test": "1.57.0",
     "@rushstack/eslint-patch": "1.15.0",
-    "@vitejs/plugin-vue": "6.0.2",
+    "@vitejs/plugin-vue": "6.0.3",
     "@vue/eslint-config-prettier": "10.2.0",
     "eslint": "9.39.2",
     "eslint-plugin-import": "2.32.0",
