@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@baldeweg/eslint-config": "0.17.0",
-    "@playwright/test": "1.58.1",
+    "@playwright/test": "1.58.2",
     "@rushstack/eslint-patch": "1.15.0",
     "@vitejs/plugin-vue": "6.0.4",
     "@vue/eslint-config-prettier": "10.2.0",
@@ -29,7 +29,7 @@
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-vue": "10.7.0",
     "msw": "2.12.7",
-    "playwright": "1.58.1",
+    "playwright": "1.58.2",
     "prettier": "3.8.1",
     "shared": "workspace:*",
     "start-server-and-test": "2.1.3",
