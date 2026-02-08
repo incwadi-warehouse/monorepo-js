@@ -18,8 +18,8 @@ importers:
         specifier: 0.11.0
         version: 0.11.0(typescript@5.8.2)
       axios:
-        specifier: 1.13.4
-        version: 1.13.4(debug@4.4.3)
+        specifier: 1.13.5
+        version: 1.13.5(debug@4.4.3)
       js-cookie:
         specifier: 3.0.5
         version: 3.0.5
@@ -94,8 +94,8 @@ importers:
         specifier: 0.11.0
         version: 0.11.0(typescript@5.8.2)
       axios:
-        specifier: 1.13.4
-        version: 1.13.4(debug@4.4.3)
+        specifier: 1.13.5
+        version: 1.13.5(debug@4.4.3)
       js-cookie:
         specifier: 3.0.5
         version: 3.0.5
@@ -170,8 +170,8 @@ importers:
         specifier: 1.15.0
         version: 1.15.0
       axios:
-        specifier: 1.13.4
-        version: 1.13.4(debug@4.4.3)
+        specifier: 1.13.5
+        version: 1.13.5(debug@4.4.3)
       canvas-confetti:
         specifier: 1.9.4
         version: 1.9.4
@@ -185,8 +185,8 @@ importers:
         specifier: 0.12.1
         version: 0.12.1(typescript@5.8.2)
       axios:
-        specifier: 1.13.4
-        version: 1.13.4(debug@4.4.3)
+        specifier: 1.13.5
+        version: 1.13.5(debug@4.4.3)
       dompurify:
         specifier: 3.3.1
         version: 3.3.1
@@ -1870,8 +1870,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axios@1.13.4:
-    resolution: {integrity: sha512-1wVkUaAO6WyaYtCkcYCOx12ZgpGf9Zif+qXa4n+oYzK558YryKqiL6UWwd5DqiH3VRW0GYhTZQ/vlgJrCoNQlg==}
+  axios@1.13.5:
+    resolution: {integrity: sha512-cz4ur7Vb0xS4/KUN0tPWe44eqxrIu31me+fbang3ijiNscE129POzipJJA6zniq2C/Z6sJCjMimjS8Lc/GAs8Q==}
 
   babel-plugin-polyfill-corejs2@0.4.14:
     resolution: {integrity: sha512-Co2Y9wX854ts6U8gAAPXfn0GmAyctHuK8n0Yhfjd6t30g7yvKjspvvOo9yG+z52PZRgFErt7Ka2pYnXCjLKEpg==}
@@ -2518,10 +2518,6 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  esquery@1.6.0:
-    resolution: {integrity: sha512-ca9pw9fomFcKPvFLXhBKUK90ZvGibiGOvRJNbjljY7s7uq/5YO4BOzcYtJqExdx99rF6aAcnRxHmcUHcz6sQsg==}
-    engines: {node: '>=0.10'}
-
   esquery@1.7.0:
     resolution: {integrity: sha512-Ap6G0WQwcU/LHsvLwON1fAQX9Zp0A2Y6Y/cJBl9r/JbW90Zyg4/zbG6zzKa2OTALELarYHmKu0GhpM5EO+7T0g==}
     engines: {node: '>=0.10'}
@@ -2626,8 +2622,8 @@ packages:
   flatted@3.3.3:
     resolution: {integrity: sha512-GX+ysw4PBCz0PzosHDepZGANEuFCMLrnRTiEy9McGjmkCQYwRq4A/X786G/fjM/+OjsWSU1ZrY5qyARZmO/uwg==}
 
-  follow-redirects@1.15.9:
-    resolution: {integrity: sha512-gew4GsXizNgdoRyqmyfMHyAmXsZDk6mHkSxZFCzW9gwlbtOW44CDtYavM+y+72qD/Vq2l550kMF52DT8fOLJqQ==}
+  follow-redirects@1.15.11:
+    resolution: {integrity: sha512-deG2P0JfjrTxl50XGCDyfI97ZGVCxIpfKYmfyrQ54n5FO/0gfIES8C/Psl6kWVDolizcaaxZJnTS0QSMxvnsBQ==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
@@ -2643,8 +2639,8 @@ packages:
     resolution: {integrity: sha512-gIXjKqtFuWEgzFRJA9WCQeSJLZDjgJUOMCMzxtvFq/37KojM1BFGufqsCy0r4qSQmYLsZYMeyRqzIWOMup03sw==}
     engines: {node: '>=14'}
 
-  form-data@4.0.4:
-    resolution: {integrity: sha512-KrGhL9Q4zjj0kiUt5OO4Mr/A/jlI2jDYs5eHBpYHPcBEVSiipAvn2Ko2HnPe20rmcuuvMHNdZFp+4IlGTMF0Ow==}
+  form-data@4.0.5:
+    resolution: {integrity: sha512-8RipRLol37bNs2bhoV67fiTEvdTrbMUYcFTiy3+wuuOnUog2QBHCZWXDRijWQfAkhBj2Uf5UnVaiWwA5vdd82w==}
     engines: {node: '>= 6'}
 
   from@0.1.7:
@@ -6697,10 +6693,10 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.1.0
 
-  axios@1.13.4(debug@4.4.3):
+  axios@1.13.5(debug@4.4.3):
     dependencies:
-      follow-redirects: 1.15.9(debug@4.4.3)
-      form-data: 4.0.4
+      follow-redirects: 1.15.11(debug@4.4.3)
+      form-data: 4.0.5
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
@@ -7493,10 +7489,6 @@ snapshots:
 
   esprima@4.0.1: {}
 
-  esquery@1.6.0:
-    dependencies:
-      estraverse: 5.3.0
-
   esquery@1.7.0:
     dependencies:
       estraverse: 5.3.0
@@ -7612,7 +7604,7 @@ snapshots:
 
   flatted@3.3.3: {}
 
-  follow-redirects@1.15.9(debug@4.4.3):
+  follow-redirects@1.15.11(debug@4.4.3):
     optionalDependencies:
       debug: 4.4.3
 
@@ -7625,7 +7617,7 @@ snapshots:
       cross-spawn: 7.0.6
       signal-exit: 4.1.0
 
-  form-data@4.0.4:
+  form-data@4.0.5:
     dependencies:
       asynckit: 0.4.0
       combined-stream: 1.0.8
@@ -8742,7 +8734,7 @@ snapshots:
       '@yarnpkg/lockfile': 1.1.0
       '@yarnpkg/parsers': 3.0.2
       '@zkochan/js-yaml': 0.0.7
-      axios: 1.13.4(debug@4.4.3)
+      axios: 1.13.5(debug@4.4.3)
       chalk: 4.1.2
       cli-cursor: 3.1.0
       cli-spinners: 2.6.1
@@ -9845,7 +9837,7 @@ snapshots:
 
   vite-plugin-webfont-dl@3.11.1(vite@7.3.1(terser@5.43.1)(yaml@2.7.1)):
     dependencies:
-      axios: 1.13.4(debug@4.4.3)
+      axios: 1.13.5(debug@4.4.3)
       clean-css: 5.3.3
       flat-cache: 6.1.7
       picocolors: 1.1.1
@@ -9873,7 +9865,7 @@ snapshots:
       eslint-scope: 8.4.0
       eslint-visitor-keys: 4.2.1
       espree: 10.4.0
-      esquery: 1.6.0
+      esquery: 1.7.0
       lodash: 4.17.23
       semver: 7.7.2
     transitivePeerDependencies:
@@ -9925,7 +9917,7 @@ snapshots:
 
   wait-on@9.0.3(debug@4.4.3):
     dependencies:
-      axios: 1.13.4(debug@4.4.3)
+      axios: 1.13.5(debug@4.4.3)
       joi: 18.0.1
       lodash: 4.17.23
       minimist: 1.2.8
