@@ -40,8 +40,8 @@ importers:
         specifier: 0.17.0
         version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.0.0)(prettier@3.8.1))(eslint-plugin-import@2.32.0(eslint@10.0.0))(eslint-plugin-vue@10.7.0(eslint@10.0.0)(vue-eslint-parser@10.1.1(eslint@10.0.0)))(eslint@10.0.0)
       '@playwright/test':
-        specifier: 1.58.1
-        version: 1.58.1
+        specifier: 1.58.2
+        version: 1.58.2
       '@rushstack/eslint-patch':
         specifier: 1.15.0
         version: 1.15.0
@@ -64,8 +64,8 @@ importers:
         specifier: 2.12.7
         version: 2.12.7(typescript@5.8.2)
       playwright:
-        specifier: 1.58.1
-        version: 1.58.1
+        specifier: 1.58.2
+        version: 1.58.2
       prettier:
         specifier: 3.8.1
         version: 3.8.1
@@ -137,8 +137,8 @@ importers:
         specifier: 2.12.7
         version: 2.12.7(typescript@5.8.2)
       playwright:
-        specifier: 1.58.1
-        version: 1.58.1
+        specifier: 1.58.2
+        version: 1.58.2
       prettier:
         specifier: 3.8.1
         version: 3.8.1
@@ -210,8 +210,8 @@ importers:
         specifier: 0.17.0
         version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.0.0)(prettier@3.8.1))(eslint-plugin-import@2.32.0(eslint@10.0.0))(eslint-plugin-vue@10.7.0(eslint@10.0.0)(vue-eslint-parser@10.1.1(eslint@10.0.0)))(eslint@10.0.0)
       '@playwright/test':
-        specifier: 1.58.1
-        version: 1.58.1
+        specifier: 1.58.2
+        version: 1.58.2
       '@rushstack/eslint-patch':
         specifier: 1.15.0
         version: 1.15.0
@@ -240,8 +240,8 @@ importers:
         specifier: 2.12.7
         version: 2.12.7(typescript@5.8.2)
       playwright:
-        specifier: 1.58.1
-        version: 1.58.1
+        specifier: 1.58.2
+        version: 1.58.2
       prettier:
         specifier: 3.8.1
         version: 3.8.1
@@ -1393,8 +1393,8 @@ packages:
     resolution: {integrity: sha512-vsJDAkYR6qCPu+ioGScGiMYR7LvZYIXh/dlQeviqoTWNCVfKTLYD/LkNWH4Mxsv2a5vpIRc77FN5DnmK1eBggQ==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@playwright/test@1.58.1':
-    resolution: {integrity: sha512-6LdVIUERWxQMmUSSQi0I53GgCBYgM2RpGngCPY7hSeju+VrKjq3lvs7HpJoPbDiY5QM5EYRtRX5fvrinnMAz3w==}
+  '@playwright/test@1.58.2':
+    resolution: {integrity: sha512-akea+6bHYBBfA9uQqSYmlJXn61cTa+jbO87xVLCWbTqbWadRVmhxlXATaOjOgcBaWU4ePo0wB41KMFv3o35IXA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -3846,13 +3846,13 @@ packages:
     resolution: {integrity: sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==}
     engines: {node: '>=8'}
 
-  playwright-core@1.58.1:
-    resolution: {integrity: sha512-bcWzOaTxcW+VOOGBCQgnaKToLJ65d6AqfLVKEWvexyS3AS6rbXl+xdpYRMGSRBClPvyj44njOWoxjNdL/H9UNg==}
+  playwright-core@1.58.2:
+    resolution: {integrity: sha512-yZkEtftgwS8CsfYo7nm0KE8jsvm6i/PTgVtB8DL726wNf6H2IMsDuxCpJj59KDaxCtSnrWan2AeDqM7JBaultg==}
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright@1.58.1:
-    resolution: {integrity: sha512-+2uTZHxSCcxjvGc5C891LrS1/NlxglGxzrC4seZiVjcYVQfUa87wBL6rTDqzGjuoWNjnBzRqKmF6zRYGMvQUaQ==}
+  playwright@1.58.2:
+    resolution: {integrity: sha512-vA30H8Nvkq/cPBnNw4Q8TWz1EJyqgpuinBcHET0YVJVFldr8JDNiU9LaWAE1KqSkRYazuaBhTpB5ZzShOezQ6A==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -6222,9 +6222,9 @@ snapshots:
 
   '@pkgr/core@0.2.0': {}
 
-  '@playwright/test@1.58.1':
+  '@playwright/test@1.58.2':
     dependencies:
-      playwright: 1.58.1
+      playwright: 1.58.2
 
   '@rolldown/pluginutils@1.0.0-rc.2': {}
 
@@ -9042,11 +9042,11 @@ snapshots:
     dependencies:
       find-up: 4.1.0
 
-  playwright-core@1.58.1: {}
+  playwright-core@1.58.2: {}
 
-  playwright@1.58.1:
+  playwright@1.58.2:
     dependencies:
-      playwright-core: 1.58.1
+      playwright-core: 1.58.2
     optionalDependencies:
       fsevents: 2.3.2
 
