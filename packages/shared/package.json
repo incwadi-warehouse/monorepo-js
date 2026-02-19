@@ -12,7 +12,7 @@
   "private": true,
   "devDependencies": {
     "@baldeweg/eslint-config": "0.17.0",
-    "@rushstack/eslint-patch": "1.15.0",
+    "@rushstack/eslint-patch": "1.16.0",
     "axios": "1.13.5",
     "canvas-confetti": "1.9.4",
     "jsdom": "28.1.0"
