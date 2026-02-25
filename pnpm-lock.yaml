@@ -38,7 +38,7 @@ importers:
     devDependencies:
       '@baldeweg/eslint-config':
         specifier: 0.17.0
-        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.0.1)(prettier@3.8.1))(eslint-plugin-import@2.32.0(eslint@10.0.1))(eslint-plugin-vue@10.8.0(eslint@10.0.1)(vue-eslint-parser@10.1.1(eslint@10.0.1)))(eslint@10.0.1)
+        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.0.2)(prettier@3.8.1))(eslint-plugin-import@2.32.0(eslint@10.0.2))(eslint-plugin-vue@10.8.0(eslint@10.0.2)(vue-eslint-parser@10.1.1(eslint@10.0.2)))(eslint@10.0.2)
       '@playwright/test':
         specifier: 1.58.2
         version: 1.58.2
@@ -50,16 +50,16 @@ importers:
         version: 6.0.4(vite@7.3.1(terser@5.43.1)(yaml@2.7.1))(vue@3.5.28(typescript@5.8.2))
       '@vue/eslint-config-prettier':
         specifier: 10.2.0
-        version: 10.2.0(eslint@10.0.1)(prettier@3.8.1)
+        version: 10.2.0(eslint@10.0.2)(prettier@3.8.1)
       eslint:
-        specifier: 10.0.1
-        version: 10.0.1
+        specifier: 10.0.2
+        version: 10.0.2
       eslint-plugin-import:
         specifier: 2.32.0
-        version: 2.32.0(eslint@10.0.1)
+        version: 2.32.0(eslint@10.0.2)
       eslint-plugin-vue:
         specifier: 10.8.0
-        version: 10.8.0(eslint@10.0.1)(vue-eslint-parser@10.1.1(eslint@10.0.1))
+        version: 10.8.0(eslint@10.0.2)(vue-eslint-parser@10.1.1(eslint@10.0.2))
       msw:
         specifier: 2.12.10
         version: 2.12.10(typescript@5.8.2)
@@ -114,7 +114,7 @@ importers:
     devDependencies:
       '@baldeweg/eslint-config':
         specifier: 0.17.0
-        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.0.1)(prettier@3.8.1))(eslint-plugin-import@2.32.0(eslint@10.0.1))(eslint-plugin-vue@10.8.0(eslint@10.0.1)(vue-eslint-parser@10.1.1(eslint@10.0.1)))(eslint@10.0.1)
+        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.0.2)(prettier@3.8.1))(eslint-plugin-import@2.32.0(eslint@10.0.2))(eslint-plugin-vue@10.8.0(eslint@10.0.2)(vue-eslint-parser@10.1.1(eslint@10.0.2)))(eslint@10.0.2)
       '@rushstack/eslint-patch':
         specifier: 1.16.1
         version: 1.16.1
@@ -123,16 +123,16 @@ importers:
         version: 6.0.4(vite@7.3.1(terser@5.43.1)(yaml@2.7.1))(vue@3.5.28(typescript@5.8.2))
       '@vue/eslint-config-prettier':
         specifier: 10.2.0
-        version: 10.2.0(eslint@10.0.1)(prettier@3.8.1)
+        version: 10.2.0(eslint@10.0.2)(prettier@3.8.1)
       eslint:
-        specifier: 10.0.1
-        version: 10.0.1
+        specifier: 10.0.2
+        version: 10.0.2
       eslint-plugin-import:
         specifier: 2.32.0
-        version: 2.32.0(eslint@10.0.1)
+        version: 2.32.0(eslint@10.0.2)
       eslint-plugin-vue:
         specifier: 10.8.0
-        version: 10.8.0(eslint@10.0.1)(vue-eslint-parser@10.1.1(eslint@10.0.1))
+        version: 10.8.0(eslint@10.0.2)(vue-eslint-parser@10.1.1(eslint@10.0.2))
       msw:
         specifier: 2.12.10
         version: 2.12.10(typescript@5.8.2)
@@ -208,7 +208,7 @@ importers:
     devDependencies:
       '@baldeweg/eslint-config':
         specifier: 0.17.0
-        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.0.1)(prettier@3.8.1))(eslint-plugin-import@2.32.0(eslint@10.0.1))(eslint-plugin-vue@10.8.0(eslint@10.0.1)(vue-eslint-parser@10.1.1(eslint@10.0.1)))(eslint@10.0.1)
+        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.0.2)(prettier@3.8.1))(eslint-plugin-import@2.32.0(eslint@10.0.2))(eslint-plugin-vue@10.8.0(eslint@10.0.2)(vue-eslint-parser@10.1.1(eslint@10.0.2)))(eslint@10.0.2)
       '@playwright/test':
         specifier: 1.58.2
         version: 1.58.2
@@ -223,16 +223,16 @@ importers:
         version: 6.0.4(vite@7.3.1(terser@5.43.1)(yaml@2.7.1))(vue@3.5.28(typescript@5.8.2))
       '@vue/eslint-config-prettier':
         specifier: 10.2.0
-        version: 10.2.0(eslint@10.0.1)(prettier@3.8.1)
+        version: 10.2.0(eslint@10.0.2)(prettier@3.8.1)
       eslint:
-        specifier: 10.0.1
-        version: 10.0.1
+        specifier: 10.0.2
+        version: 10.0.2
       eslint-plugin-import:
         specifier: 2.32.0
-        version: 2.32.0(eslint@10.0.1)
+        version: 2.32.0(eslint@10.0.2)
       eslint-plugin-vue:
         specifier: 10.8.0
-        version: 10.8.0(eslint@10.0.1)(vue-eslint-parser@10.1.1(eslint@10.0.1))
+        version: 10.8.0(eslint@10.0.2)(vue-eslint-parser@10.1.1(eslint@10.0.2))
       lodash:
         specifier: 4.17.23
         version: 4.17.23
@@ -1796,9 +1796,6 @@ packages:
     resolution: {integrity: sha512-4I7Td01quW/RpocfNayFdFVk1qSuoh0E7JrbRJ16nH01HhKFQ88INq9Sd+nd72zqRySlr9BmDA8xlEJ6vJMrYA==}
     engines: {node: '>=8'}
 
-  ajv@6.12.6:
-    resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
-
   ajv@6.14.0:
     resolution: {integrity: sha512-IWrosm/yrn43eiKqkfkHis7QioDleaXQHdDVPKg0FSwwd/DuvyX79TZnFOnYpB7dcsFAMmtFztZuXPDvSePkFw==}
 
@@ -2550,8 +2547,8 @@ packages:
     resolution: {integrity: sha512-tD40eHxA35h0PEIZNeIjkHoDR4YjjJp34biM0mDvplBe//mB+IHCqHDGV7pxF+7MklTvighcCPPZC7ynWyjdTA==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  eslint@10.0.1:
-    resolution: {integrity: sha512-20MV9SUdeN6Jd84xESsKhRly+/vxI+hwvpBMA93s+9dAcjdCuCojn4IqUGS3lvVaqjVYGYHSRMCpeFtF2rQYxQ==}
+  eslint@10.0.2:
+    resolution: {integrity: sha512-uYixubwmqJZH+KLVYIVKY1JQt7tysXhtj21WSvjcSmU5SVNzMus1bgLe+pAt816yQ8opKfheVVoPLqvVMGejYw==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     hasBin: true
     peerDependencies:
@@ -5676,12 +5673,12 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
-  '@baldeweg/eslint-config@0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.0.1)(prettier@3.8.1))(eslint-plugin-import@2.32.0(eslint@10.0.1))(eslint-plugin-vue@10.8.0(eslint@10.0.1)(vue-eslint-parser@10.1.1(eslint@10.0.1)))(eslint@10.0.1)':
+  '@baldeweg/eslint-config@0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.0.2)(prettier@3.8.1))(eslint-plugin-import@2.32.0(eslint@10.0.2))(eslint-plugin-vue@10.8.0(eslint@10.0.2)(vue-eslint-parser@10.1.1(eslint@10.0.2)))(eslint@10.0.2)':
     dependencies:
-      '@vue/eslint-config-prettier': 10.2.0(eslint@10.0.1)(prettier@3.8.1)
-      eslint: 10.0.1
-      eslint-plugin-import: 2.32.0(eslint@10.0.1)
-      eslint-plugin-vue: 10.8.0(eslint@10.0.1)(vue-eslint-parser@10.1.1(eslint@10.0.1))
+      '@vue/eslint-config-prettier': 10.2.0(eslint@10.0.2)(prettier@3.8.1)
+      eslint: 10.0.2
+      eslint-plugin-import: 2.32.0(eslint@10.0.2)
+      eslint-plugin-vue: 10.8.0(eslint@10.0.2)(vue-eslint-parser@10.1.1(eslint@10.0.2))
 
   '@baldeweg/eslint-config@0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@9.31.0)(prettier@3.8.1))(eslint-plugin-import@2.32.0(eslint@9.31.0))(eslint-plugin-vue@10.3.0(eslint@9.31.0)(vue-eslint-parser@10.1.1(eslint@9.31.0)))(eslint@9.31.0)':
     dependencies:
@@ -5819,9 +5816,9 @@ snapshots:
   '@esbuild/win32-x64@0.27.1':
     optional: true
 
-  '@eslint-community/eslint-utils@4.8.0(eslint@10.0.1)':
+  '@eslint-community/eslint-utils@4.8.0(eslint@10.0.2)':
     dependencies:
-      eslint: 10.0.1
+      eslint: 10.0.2
       eslint-visitor-keys: 3.4.3
 
   '@eslint-community/eslint-utils@4.8.0(eslint@9.31.0)':
@@ -5835,7 +5832,7 @@ snapshots:
     dependencies:
       '@eslint/object-schema': 2.1.7
       debug: 4.4.3
-      minimatch: 3.1.2
+      minimatch: 3.1.3
     transitivePeerDependencies:
       - supports-color
 
@@ -6628,11 +6625,11 @@ snapshots:
 
   '@vue/devtools-api@6.6.4': {}
 
-  '@vue/eslint-config-prettier@10.2.0(eslint@10.0.1)(prettier@3.8.1)':
+  '@vue/eslint-config-prettier@10.2.0(eslint@10.0.2)(prettier@3.8.1)':
     dependencies:
-      eslint: 10.0.1
-      eslint-config-prettier: 10.1.1(eslint@10.0.1)
-      eslint-plugin-prettier: 5.2.5(eslint-config-prettier@10.1.1(eslint@10.0.1))(eslint@10.0.1)(prettier@3.8.1)
+      eslint: 10.0.2
+      eslint-config-prettier: 10.1.1(eslint@10.0.2)
+      eslint-plugin-prettier: 5.2.5(eslint-config-prettier@10.1.1(eslint@10.0.2))(eslint@10.0.2)(prettier@3.8.1)
       prettier: 3.8.1
     transitivePeerDependencies:
       - '@types/eslint'
@@ -6726,13 +6723,6 @@ snapshots:
     dependencies:
       clean-stack: 2.2.0
       indent-string: 4.0.0
-
-  ajv@6.12.6:
-    dependencies:
-      fast-deep-equal: 3.1.3
-      fast-json-stable-stringify: 2.1.0
-      json-schema-traverse: 0.4.1
-      uri-js: 4.4.1
 
   ajv@6.14.0:
     dependencies:
@@ -7515,9 +7505,9 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-prettier@10.1.1(eslint@10.0.1):
+  eslint-config-prettier@10.1.1(eslint@10.0.2):
     dependencies:
-      eslint: 10.0.1
+      eslint: 10.0.2
 
   eslint-config-prettier@10.1.1(eslint@9.31.0):
     dependencies:
@@ -7531,11 +7521,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.1(eslint-import-resolver-node@0.3.9)(eslint@10.0.1):
+  eslint-module-utils@2.12.1(eslint-import-resolver-node@0.3.9)(eslint@10.0.2):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
-      eslint: 10.0.1
+      eslint: 10.0.2
       eslint-import-resolver-node: 0.3.9
     transitivePeerDependencies:
       - supports-color
@@ -7549,7 +7539,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.32.0(eslint@10.0.1):
+  eslint-plugin-import@2.32.0(eslint@10.0.2):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.9
@@ -7558,9 +7548,9 @@ snapshots:
       array.prototype.flatmap: 1.3.3
       debug: 3.2.7
       doctrine: 2.1.0
-      eslint: 10.0.1
+      eslint: 10.0.2
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.1(eslint-import-resolver-node@0.3.9)(eslint@10.0.1)
+      eslint-module-utils: 2.12.1(eslint-import-resolver-node@0.3.9)(eslint@10.0.2)
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -7603,14 +7593,14 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-prettier@5.2.5(eslint-config-prettier@10.1.1(eslint@10.0.1))(eslint@10.0.1)(prettier@3.8.1):
+  eslint-plugin-prettier@5.2.5(eslint-config-prettier@10.1.1(eslint@10.0.2))(eslint@10.0.2)(prettier@3.8.1):
     dependencies:
-      eslint: 10.0.1
+      eslint: 10.0.2
       prettier: 3.8.1
       prettier-linter-helpers: 1.0.0
       synckit: 0.10.3
     optionalDependencies:
-      eslint-config-prettier: 10.1.1(eslint@10.0.1)
+      eslint-config-prettier: 10.1.1(eslint@10.0.2)
 
   eslint-plugin-prettier@5.2.5(eslint-config-prettier@10.1.1(eslint@9.31.0))(eslint@9.31.0)(prettier@3.8.1):
     dependencies:
@@ -7632,15 +7622,15 @@ snapshots:
       vue-eslint-parser: 10.1.1(eslint@9.31.0)
       xml-name-validator: 4.0.0
 
-  eslint-plugin-vue@10.8.0(eslint@10.0.1)(vue-eslint-parser@10.1.1(eslint@10.0.1)):
+  eslint-plugin-vue@10.8.0(eslint@10.0.2)(vue-eslint-parser@10.1.1(eslint@10.0.2)):
     dependencies:
-      '@eslint-community/eslint-utils': 4.8.0(eslint@10.0.1)
-      eslint: 10.0.1
+      '@eslint-community/eslint-utils': 4.8.0(eslint@10.0.2)
+      eslint: 10.0.2
       natural-compare: 1.4.0
       nth-check: 2.1.1
       postcss-selector-parser: 7.1.1
       semver: 7.7.2
-      vue-eslint-parser: 10.1.1(eslint@10.0.1)
+      vue-eslint-parser: 10.1.1(eslint@10.0.2)
       xml-name-validator: 4.0.0
 
   eslint-scope@8.4.0:
@@ -7661,9 +7651,9 @@ snapshots:
 
   eslint-visitor-keys@5.0.1: {}
 
-  eslint@10.0.1:
+  eslint@10.0.2:
     dependencies:
-      '@eslint-community/eslint-utils': 4.8.0(eslint@10.0.1)
+      '@eslint-community/eslint-utils': 4.8.0(eslint@10.0.2)
       '@eslint-community/regexpp': 4.12.2
       '@eslint/config-array': 0.23.2
       '@eslint/config-helpers': 0.5.2
@@ -7673,7 +7663,7 @@ snapshots:
       '@humanwhocodes/module-importer': 1.0.1
       '@humanwhocodes/retry': 0.4.2
       '@types/estree': 1.0.8
-      ajv: 6.12.6
+      ajv: 6.14.0
       cross-spawn: 7.0.6
       debug: 4.4.3
       escape-string-regexp: 4.0.0
@@ -7711,7 +7701,7 @@ snapshots:
       '@humanwhocodes/retry': 0.4.2
       '@types/estree': 1.0.8
       '@types/json-schema': 7.0.15
-      ajv: 6.12.6
+      ajv: 6.14.0
       chalk: 4.1.2
       cross-spawn: 7.0.6
       debug: 4.4.3
@@ -7730,7 +7720,7 @@ snapshots:
       is-glob: 4.0.3
       json-stable-stringify-without-jsonify: 1.0.1
       lodash.merge: 4.6.2
-      minimatch: 3.1.2
+      minimatch: 3.1.3
       natural-compare: 1.4.0
       optionator: 0.9.4
     transitivePeerDependencies:
@@ -8026,7 +8016,7 @@ snapshots:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 3.1.2
+      minimatch: 3.1.3
       once: 1.4.0
       path-is-absolute: 1.0.1
 
@@ -8396,7 +8386,7 @@ snapshots:
       async: 3.2.6
       chalk: 4.1.2
       filelist: 1.0.4
-      minimatch: 3.1.2
+      minimatch: 3.1.3
 
   jest-diff@29.7.0:
     dependencies:
@@ -8888,7 +8878,7 @@ snapshots:
       array-differ: 3.0.0
       array-union: 2.1.0
       arrify: 2.0.1
-      minimatch: 3.1.2
+      minimatch: 3.1.3
 
   mute-stream@0.0.8: {}
 
@@ -10134,10 +10124,10 @@ snapshots:
       terser: 5.43.1
       yaml: 2.7.1
 
-  vue-eslint-parser@10.1.1(eslint@10.0.1):
+  vue-eslint-parser@10.1.1(eslint@10.0.2):
     dependencies:
       debug: 4.4.3
-      eslint: 10.0.1
+      eslint: 10.0.2
       eslint-scope: 8.4.0
       eslint-visitor-keys: 4.2.1
       espree: 10.4.0
