@@ -20,7 +20,6 @@ const content = computed(() => {
       'strong',
       'i',
       'em',
-      's',
       'ul',
       'ol',
       'li',
