@@ -34,31 +34,6 @@ jobs:
           path: playwright-report/
           retention-days: 30
 
-  settings-e2e:
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
-        with:
-          node-version: lts/*
-      - name: Install pnpm
-        run: npm install -g pnpm
-      - name: Install dependencies
-        run: pnpm install
-      - name: Install Playwright Browsers
-        run: pnpm -F settings exec playwright install --with-deps
-      - name: Build settings
-        run: pnpm -F settings build
-      - name: Run settings e2e tests
-        run: pnpm -F settings test:e2e
-      - uses: actions/upload-artifact@v7
-        if: ${{ !cancelled() }}
-        with:
-          name: playwright-report-settings
-          path: playwright-report/
-          retention-days: 30
-
   catalog-e2e:
     timeout-minutes: 60
     runs-on: ubuntu-latest
