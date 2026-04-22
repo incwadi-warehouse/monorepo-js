@@ -38,7 +38,7 @@ importers:
     devDependencies:
       '@baldeweg/eslint-config':
         specifier: 0.17.0
-        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.2.1)(prettier@3.8.3))(eslint-plugin-import@2.32.0(eslint@10.2.1))(eslint-plugin-vue@10.8.0(eslint@10.2.1)(vue-eslint-parser@10.1.1(eslint@10.2.1)))(eslint@10.2.1)
+        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.2.1)(prettier@3.8.3))(eslint-plugin-import@2.32.0(eslint@10.2.1))(eslint-plugin-vue@10.9.0(eslint@10.2.1)(vue-eslint-parser@10.1.1(eslint@10.2.1)))(eslint@10.2.1)
       '@playwright/test':
         specifier: 1.59.1
         version: 1.59.1
@@ -58,8 +58,8 @@ importers:
         specifier: 2.32.0
         version: 2.32.0(eslint@10.2.1)
       eslint-plugin-vue:
-        specifier: 10.8.0
-        version: 10.8.0(eslint@10.2.1)(vue-eslint-parser@10.1.1(eslint@10.2.1))
+        specifier: 10.9.0
+        version: 10.9.0(eslint@10.2.1)(vue-eslint-parser@10.1.1(eslint@10.2.1))
       msw:
         specifier: 2.13.4
         version: 2.13.4(@types/node@25.6.0)(typescript@5.8.2)
@@ -135,7 +135,7 @@ importers:
     devDependencies:
       '@baldeweg/eslint-config':
         specifier: 0.17.0
-        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.2.1)(prettier@3.8.3))(eslint-plugin-import@2.32.0(eslint@10.2.1))(eslint-plugin-vue@10.8.0(eslint@10.2.1)(vue-eslint-parser@10.1.1(eslint@10.2.1)))(eslint@10.2.1)
+        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.2.1)(prettier@3.8.3))(eslint-plugin-import@2.32.0(eslint@10.2.1))(eslint-plugin-vue@10.9.0(eslint@10.2.1)(vue-eslint-parser@10.1.1(eslint@10.2.1)))(eslint@10.2.1)
       '@playwright/test':
         specifier: 1.59.1
         version: 1.59.1
@@ -158,8 +158,8 @@ importers:
         specifier: 2.32.0
         version: 2.32.0(eslint@10.2.1)
       eslint-plugin-vue:
-        specifier: 10.8.0
-        version: 10.8.0(eslint@10.2.1)(vue-eslint-parser@10.1.1(eslint@10.2.1))
+        specifier: 10.9.0
+        version: 10.9.0(eslint@10.2.1)(vue-eslint-parser@10.1.1(eslint@10.2.1))
       lodash:
         specifier: 4.18.1
         version: 4.18.1
@@ -2489,8 +2489,8 @@ packages:
       '@typescript-eslint/parser':
         optional: true
 
-  eslint-plugin-vue@10.8.0:
-    resolution: {integrity: sha512-f1J/tcbnrpgC8suPN5AtdJ5MQjuXbSU9pGRSSYAuF3SHoiYCOdEX6O22pLaRyLHXvDcOe+O5ENgc1owQ587agA==}
+  eslint-plugin-vue@10.9.0:
+    resolution: {integrity: sha512-EFNNzu4HqtTRb5DJINpyd+u3bDdzETWDMpCzG+UBHz1tpsnMDCeOcf61u4Wy/cbXnMymK+MT9bjH7KcG1fItSw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       '@stylistic/eslint-plugin': ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
@@ -5660,12 +5660,12 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
-  '@baldeweg/eslint-config@0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.2.1)(prettier@3.8.3))(eslint-plugin-import@2.32.0(eslint@10.2.1))(eslint-plugin-vue@10.8.0(eslint@10.2.1)(vue-eslint-parser@10.1.1(eslint@10.2.1)))(eslint@10.2.1)':
+  '@baldeweg/eslint-config@0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.2.1)(prettier@3.8.3))(eslint-plugin-import@2.32.0(eslint@10.2.1))(eslint-plugin-vue@10.9.0(eslint@10.2.1)(vue-eslint-parser@10.1.1(eslint@10.2.1)))(eslint@10.2.1)':
     dependencies:
       '@vue/eslint-config-prettier': 10.2.0(eslint@10.2.1)(prettier@3.8.3)
       eslint: 10.2.1
       eslint-plugin-import: 2.32.0(eslint@10.2.1)
-      eslint-plugin-vue: 10.8.0(eslint@10.2.1)(vue-eslint-parser@10.1.1(eslint@10.2.1))
+      eslint-plugin-vue: 10.9.0(eslint@10.2.1)(vue-eslint-parser@10.1.1(eslint@10.2.1))
 
   '@baldeweg/eslint-config@0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@9.31.0)(prettier@3.8.3))(eslint-plugin-import@2.32.0(eslint@9.31.0))(eslint-plugin-vue@10.3.0(eslint@9.31.0)(vue-eslint-parser@10.1.1(eslint@9.31.0)))(eslint@9.31.0)':
     dependencies:
@@ -6052,7 +6052,7 @@ snapshots:
       read-cmd-shim: 4.0.0
       resolve-from: 5.0.0
       rimraf: 4.4.1
-      semver: 7.7.2
+      semver: 7.7.4
       set-blocking: 2.0.0
       signal-exit: 3.0.7
       slash: 3.0.0
@@ -6139,7 +6139,7 @@ snapshots:
       promise-all-reject-late: 1.0.1
       promise-call-limit: 3.0.2
       read-package-json-fast: 3.0.2
-      semver: 7.7.2
+      semver: 7.7.4
       ssri: 10.0.6
       treeverse: 3.0.0
       walk-up-path: 3.0.1
@@ -6149,7 +6149,7 @@ snapshots:
 
   '@npmcli/fs@3.1.1':
     dependencies:
-      semver: 7.7.2
+      semver: 7.7.4
 
   '@npmcli/git@5.0.8':
     dependencies:
@@ -6160,7 +6160,7 @@ snapshots:
       proc-log: 4.2.0
       promise-inflight: 1.0.1
       promise-retry: 2.0.1
-      semver: 7.7.2
+      semver: 7.7.4
       which: 4.0.0
     transitivePeerDependencies:
       - bluebird
@@ -6183,7 +6183,7 @@ snapshots:
       json-parse-even-better-errors: 3.0.2
       pacote: 18.0.6
       proc-log: 4.2.0
-      semver: 7.7.2
+      semver: 7.7.4
     transitivePeerDependencies:
       - bluebird
       - supports-color
@@ -6200,7 +6200,7 @@ snapshots:
       json-parse-even-better-errors: 3.0.2
       normalize-package-data: 6.0.2
       proc-log: 4.2.0
-      semver: 7.7.2
+      semver: 7.7.4
     transitivePeerDependencies:
       - bluebird
 
@@ -6233,7 +6233,7 @@ snapshots:
       ignore: 5.3.2
       minimatch: 9.0.3
       nx: 20.7.0
-      semver: 7.7.2
+      semver: 7.7.4
       tmp: 0.2.3
       tslib: 2.8.1
       yargs-parser: 21.1.1
@@ -7149,7 +7149,7 @@ snapshots:
       handlebars: 4.7.8
       json-stringify-safe: 5.0.1
       meow: 8.1.2
-      semver: 7.7.2
+      semver: 7.7.4
       split: 1.0.1
 
   conventional-commits-filter@3.0.0:
@@ -7707,14 +7707,14 @@ snapshots:
       vue-eslint-parser: 10.1.1(eslint@9.31.0)
       xml-name-validator: 4.0.0
 
-  eslint-plugin-vue@10.8.0(eslint@10.2.1)(vue-eslint-parser@10.1.1(eslint@10.2.1)):
+  eslint-plugin-vue@10.9.0(eslint@10.2.1)(vue-eslint-parser@10.1.1(eslint@10.2.1)):
     dependencies:
       '@eslint-community/eslint-utils': 4.8.0(eslint@10.2.1)
       eslint: 10.2.1
       natural-compare: 1.4.0
       nth-check: 2.1.1
       postcss-selector-parser: 7.1.1
-      semver: 7.7.2
+      semver: 7.7.4
       vue-eslint-parser: 10.1.1(eslint@10.2.1)
       xml-name-validator: 4.0.0
 
@@ -8078,7 +8078,7 @@ snapshots:
   git-semver-tags@5.0.1:
     dependencies:
       meow: 8.1.2
-      semver: 7.7.2
+      semver: 7.7.4
 
   git-up@7.0.0:
     dependencies:
@@ -8271,7 +8271,7 @@ snapshots:
       npm-package-arg: 11.0.2
       promzard: 1.0.2
       read: 3.0.1
-      semver: 7.7.2
+      semver: 7.7.4
       validate-npm-package-license: 3.0.4
       validate-npm-package-name: 5.0.1
     transitivePeerDependencies:
@@ -8721,7 +8721,7 @@ snapshots:
       npm-package-arg: 11.0.2
       npm-registry-fetch: 17.1.0
       proc-log: 4.2.0
-      semver: 7.7.2
+      semver: 7.7.4
       sigstore: 2.3.1
       ssri: 10.0.6
     transitivePeerDependencies:
@@ -8804,7 +8804,7 @@ snapshots:
 
   make-dir@4.0.0:
     dependencies:
-      semver: 7.7.2
+      semver: 7.7.4
 
   make-fetch-happen@13.0.1:
     dependencies:
@@ -9008,7 +9008,7 @@ snapshots:
       make-fetch-happen: 13.0.1
       nopt: 7.2.1
       proc-log: 4.2.0
-      semver: 7.7.2
+      semver: 7.7.4
       tar: 6.2.1
       which: 4.0.0
     transitivePeerDependencies:
@@ -9033,13 +9033,13 @@ snapshots:
     dependencies:
       hosted-git-info: 4.1.0
       is-core-module: 2.16.1
-      semver: 7.7.2
+      semver: 7.7.4
       validate-npm-package-license: 3.0.4
 
   normalize-package-data@6.0.2:
     dependencies:
       hosted-git-info: 7.0.2
-      semver: 7.7.2
+      semver: 7.7.4
       validate-npm-package-license: 3.0.4
 
   npm-bundled@3.0.1:
@@ -9048,7 +9048,7 @@ snapshots:
 
   npm-install-checks@6.3.0:
     dependencies:
-      semver: 7.7.2
+      semver: 7.7.4
 
   npm-normalize-package-bin@3.0.1: {}
 
@@ -9056,7 +9056,7 @@ snapshots:
     dependencies:
       hosted-git-info: 7.0.2
       proc-log: 4.2.0
-      semver: 7.7.2
+      semver: 7.7.4
       validate-npm-package-name: 5.0.1
 
   npm-packlist@8.0.2:
@@ -9068,7 +9068,7 @@ snapshots:
       npm-install-checks: 6.3.0
       npm-normalize-package-bin: 3.0.1
       npm-package-arg: 11.0.2
-      semver: 7.7.2
+      semver: 7.7.4
 
   npm-registry-fetch@17.1.0:
     dependencies:
@@ -9118,7 +9118,7 @@ snapshots:
       open: 8.4.2
       ora: 5.3.0
       resolve.exports: 2.0.3
-      semver: 7.7.2
+      semver: 7.7.4
       string-width: 4.2.3
       tar-stream: 2.2.0
       tmp: 0.2.3
