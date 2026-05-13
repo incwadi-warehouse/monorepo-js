@@ -1,3 +1,7 @@
 packages:
   - "packages/*"
   - "packages/@baldeweg/*"
+allowBuilds:
+    esbuild: true
+    msw: true
+    nx: true
