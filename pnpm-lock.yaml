@@ -18,8 +18,8 @@ importers:
         specifier: 0.11.0
         version: 0.11.0(typescript@5.8.2)
       axios:
-        specifier: 1.17.0
-        version: 1.17.0(debug@4.4.3)
+        specifier: 1.18.0
+        version: 1.18.0
       js-cookie:
         specifier: 3.0.8
         version: 3.0.8
@@ -97,8 +97,8 @@ importers:
         specifier: 1.16.1
         version: 1.16.1
       axios:
-        specifier: 1.17.0
-        version: 1.17.0(debug@4.4.3)
+        specifier: 1.18.0
+        version: 1.18.0
       canvas-confetti:
         specifier: 1.9.4
         version: 1.9.4
@@ -112,8 +112,8 @@ importers:
         specifier: 0.12.1
         version: 0.12.1(typescript@5.8.2)
       axios:
-        specifier: 1.17.0
-        version: 1.17.0(debug@4.4.3)
+        specifier: 1.18.0
+        version: 1.18.0
       dompurify:
         specifier: 3.4.10
         version: 3.4.10
@@ -1893,11 +1893,11 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axios@1.16.1:
-    resolution: {integrity: sha512-caYkukvroVPO8KrzuJEb50Hm07KwfBZPEC3VeFHTsqWHvKTsy54hjJz9BS/cdaypROE2rH6xvm9mHX4fgWkr3A==}
-
   axios@1.17.0:
     resolution: {integrity: sha512-J8SwNxprqqpbfenehxWYXE7CW+wM1BB4w3+N+g+/Wx40xM4rsLrfPmHHxSWIxJLYDgSY/HqlFPIYb2/S3rxafw==}
+
+  axios@1.18.0:
+    resolution: {integrity: sha512-E32NzpYKp++W7XRe52rHiXV2ehxmh3wbdgO7MHeFM+vqxLBYHzt0ElkiImtOBxtOmyp0yoC8C6uESVV84Y2/hw==}
 
   babel-plugin-polyfill-corejs2@0.4.17:
     resolution: {integrity: sha512-aTyf30K/rqAsNwN76zYrdtx8obu0E4KoUME29B1xj+B3WxgvWkp943vYQ+z8Mv3lw9xHXMHpvSPOBxzAkIa94w==}
@@ -6944,7 +6944,7 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.1.0
 
-  axios@1.16.1(debug@4.4.3):
+  axios@1.17.0(debug@4.4.3):
     dependencies:
       follow-redirects: 1.16.0(debug@4.4.3)
       form-data: 4.0.5
@@ -6954,7 +6954,7 @@ snapshots:
       - debug
       - supports-color
 
-  axios@1.17.0(debug@4.4.3):
+  axios@1.18.0:
     dependencies:
       follow-redirects: 1.16.0(debug@4.4.3)
       form-data: 4.0.5
@@ -9207,7 +9207,7 @@ snapshots:
       '@yarnpkg/lockfile': 1.1.0
       '@yarnpkg/parsers': 3.0.2
       '@zkochan/js-yaml': 0.0.7
-      axios: 1.16.1(debug@4.4.3)
+      axios: 1.17.0(debug@4.4.3)
       chalk: 4.1.2
       cli-cursor: 3.1.0
       cli-spinners: 2.6.1
@@ -10345,7 +10345,7 @@ snapshots:
 
   vite-plugin-webfont-dl@3.12.0(vite@7.3.5(@types/node@25.6.0)(terser@5.47.1)(yaml@2.7.1)):
     dependencies:
-      axios: 1.16.1(debug@4.4.3)
+      axios: 1.17.0(debug@4.4.3)
       clean-css: 5.3.3
       flat-cache: 6.1.7
       picocolors: 1.1.1
@@ -10441,7 +10441,7 @@ snapshots:
 
   wait-on@9.0.4(debug@4.4.3):
     dependencies:
-      axios: 1.16.1(debug@4.4.3)
+      axios: 1.17.0(debug@4.4.3)
       joi: 18.0.2
       lodash: 4.18.1
       minimist: 1.2.8
