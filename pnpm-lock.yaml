@@ -47,7 +47,7 @@ importers:
         version: 1.16.1
       '@vitejs/plugin-vue':
         specifier: 6.0.7
-        version: 6.0.7(vite@7.3.5(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.38(typescript@5.8.2))
+        version: 6.0.7(vite@7.3.6(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.38(typescript@5.8.2))
       '@vue/eslint-config-prettier':
         specifier: 10.2.0
         version: 10.2.0(eslint@10.5.0)(prettier@3.8.4)
@@ -76,14 +76,14 @@ importers:
         specifier: 2.1.5
         version: 2.1.5
       vite:
-        specifier: 7.3.5
-        version: 7.3.5(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)
+        specifier: 7.3.6
+        version: 7.3.6(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)
       vite-plugin-pwa:
         specifier: 1.3.0
-        version: 1.3.0(vite@7.3.5(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0)
+        version: 1.3.0(vite@7.3.6(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0)
       vite-plugin-webfont-dl:
         specifier: 3.12.0
-        version: 3.12.0(vite@7.3.5(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))
+        version: 3.12.0(vite@7.3.6(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))
       vue-i18n-extract:
         specifier: 2.0.7
         version: 2.0.7
@@ -147,7 +147,7 @@ importers:
         version: 1.11.20(vue@3.5.38(typescript@5.8.2))
       '@vitejs/plugin-vue':
         specifier: 6.0.7
-        version: 6.0.7(vite@7.3.5(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.38(typescript@5.8.2))
+        version: 6.0.7(vite@7.3.6(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.38(typescript@5.8.2))
       '@vue/eslint-config-prettier':
         specifier: 10.2.0
         version: 10.2.0(eslint@10.5.0)(prettier@3.8.4)
@@ -176,14 +176,14 @@ importers:
         specifier: 2.1.5
         version: 2.1.5
       vite:
-        specifier: 7.3.5
-        version: 7.3.5(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)
+        specifier: 7.3.6
+        version: 7.3.6(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)
       vite-plugin-pwa:
         specifier: 1.3.0
-        version: 1.3.0(vite@7.3.5(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0)
+        version: 1.3.0(vite@7.3.6(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0)
       vite-plugin-webfont-dl:
         specifier: 3.12.0
-        version: 3.12.0(vite@7.3.5(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))
+        version: 3.12.0(vite@7.3.6(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))
       vue-i18n-extract:
         specifier: 2.0.7
         version: 2.0.7
@@ -3635,11 +3635,6 @@ packages:
     resolution: {integrity: sha512-dkEJPVvun4FryqBmZ5KhDo0K9iDXAwn08tMLDinNdRBNPcYEDiWYysLcc6k3mjTMlbP9KyylvRpd4wFtwrT9rw==}
     engines: {node: ^20.17.0 || >=22.9.0}
 
-  nanoid@3.3.11:
-    resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
-    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
-
   nanoid@3.3.12:
     resolution: {integrity: sha512-ZB9RH/39qpq5Vu6Y+NmUaFhQR6pp+M2Xt76XBnEwDaGcVAqhlvxrl3B2bKS5D3NH3QR76v3aSrKaF/Kiy7lEtQ==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -3982,10 +3977,6 @@ packages:
   postcss-selector-parser@7.1.1:
     resolution: {integrity: sha512-orRsuYpJVw8LdAwqqLykBj9ecS5/cRHlI5+nvTo8LcCKmzDmqVORXtOIYEEQuL9D4BxtA1lm5isAqzQZCoQ6Eg==}
     engines: {node: '>=4'}
-
-  postcss@8.5.14:
-    resolution: {integrity: sha512-SoSL4+OSEtR99LHFZQiJLkT59C5B1amGO1NzTwj7TT1qCUgUO6hxOvzkOYxD+vMrXBM3XJIKzokoERdqQq/Zmg==}
-    engines: {node: ^10 || ^12 || >=14}
 
   postcss@8.5.15:
     resolution: {integrity: sha512-FfR8sjd4em2T6fb3I2MwAJU7HWVMr9zba+enmQeeWFfCbm+UOC/0X4DS8XtpUTMwWMGbjKYP7xjfNekzyGmB3A==}
@@ -4775,8 +4766,8 @@ packages:
     peerDependencies:
       vite: ^2 || ^3 || ^4 || ^5 || ^6 || ^7 || ^8
 
-  vite@7.3.5:
-    resolution: {integrity: sha512-KuOaNhcnGFN2zIPGA7wRmzF+lJA1sea7rHq17aiJ++9lzY1WWG6Jpwqwe1KNbRVPIqHmr8GLYx7jbrQcN/7/ww==}
+  vite@7.3.6:
+    resolution: {integrity: sha512-4XP60spRGjSZFf1qYH+dJIkK2znL3zQfl9KkOV9MkkRR/3Dls0dxaBsQPTloEc5BLXWPL9vsOxopxyKoMmDueg==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -6706,10 +6697,10 @@ snapshots:
       unhead: 1.11.20
       vue: 3.5.38(typescript@5.8.2)
 
-  '@vitejs/plugin-vue@6.0.7(vite@7.3.5(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.38(typescript@5.8.2))':
+  '@vitejs/plugin-vue@6.0.7(vite@7.3.6(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.38(typescript@5.8.2))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
-      vite: 7.3.5(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)
+      vite: 7.3.6(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)
       vue: 3.5.38(typescript@5.8.2)
 
   '@vue/compiler-core@3.5.12':
@@ -6747,7 +6738,7 @@ snapshots:
       '@vue/shared': 3.5.12
       estree-walker: 2.0.2
       magic-string: 0.30.17
-      postcss: 8.5.14
+      postcss: 8.5.15
       source-map-js: 1.2.1
 
   '@vue/compiler-sfc@3.5.38':
@@ -9173,8 +9164,6 @@ snapshots:
 
   mute-stream@3.0.0: {}
 
-  nanoid@3.3.11: {}
-
   nanoid@3.3.12: {}
 
   natural-compare@1.4.0: {}
@@ -9597,12 +9586,6 @@ snapshots:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
-
-  postcss@8.5.14:
-    dependencies:
-      nanoid: 3.3.11
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
 
   postcss@8.5.15:
     dependencies:
@@ -10454,29 +10437,29 @@ snapshots:
 
   validate-npm-package-name@5.0.1: {}
 
-  vite-plugin-pwa@1.3.0(vite@7.3.5(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0):
+  vite-plugin-pwa@1.3.0(vite@7.3.6(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0):
     dependencies:
       debug: 4.4.3
       pretty-bytes: 6.1.1
       tinyglobby: 0.2.15
-      vite: 7.3.5(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)
+      vite: 7.3.6(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)
       workbox-build: 7.3.0
       workbox-window: 7.3.0
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-webfont-dl@3.12.0(vite@7.3.5(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)):
+  vite-plugin-webfont-dl@3.12.0(vite@7.3.6(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)):
     dependencies:
       axios: 1.18.1(debug@4.4.3)
       clean-css: 5.3.3
       flat-cache: 6.1.7
       picocolors: 1.1.1
-      vite: 7.3.5(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)
+      vite: 7.3.6(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)
     transitivePeerDependencies:
       - debug
       - supports-color
 
-  vite@7.3.5(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1):
+  vite@7.3.6(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1):
     dependencies:
       esbuild: 0.27.7
       fdir: 6.5.0(picomatch@4.0.4)
