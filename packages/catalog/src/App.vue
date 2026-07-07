@@ -208,6 +208,10 @@ const openProfile = () => {
 </template>
 
 <style scoped>
+html,
+body {
+  --masthead-top-height: 0px;
+}
 .logo {
   fill: var(--color-primary-10);
 }
