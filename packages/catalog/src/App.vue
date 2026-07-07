@@ -118,7 +118,7 @@ const openProfile = () => {
 
 <template>
   <b-app>
-    <b-masthead>
+    <!-- <b-masthead>
       <b-masthead-item position="start" v-if="auth.state.isAuthenticated">
         <span @click="isDrawerActive = true">
           <b-icon type="hamburger" />
@@ -170,7 +170,7 @@ const openProfile = () => {
           </b-badge>
         </span>
       </b-masthead-item>
-    </b-masthead>
+    </b-masthead> -->
     <router-view
       :auth="auth"
       v-if="auth.state.isAuthenticated && auth.state.me"
@@ -181,11 +181,11 @@ const openProfile = () => {
       <AuthLogin />
     </b-container>
 
-    <div class="footer">
+    <!-- <div class="footer">
       <b-container size="m">
         <div v-html="about" />
       </b-container>
-    </div>
+    </div> -->
 
     <b-panel :visible="isDrawerActive" @close="isDrawerActive = false">
       <BContainer size="m">
