@@ -208,10 +208,6 @@ const openProfile = () => {
 </template>
 
 <style scoped>
-html,
-body {
-  --masthead-top-height: 0px;
-}
 .logo {
   fill: var(--color-primary-10);
 }
@@ -238,5 +234,12 @@ body {
 }
 .footer {
   border-top: 1px solid var(--color-neutral-02);
+}
+</style>
+
+<style>
+html,
+body {
+  --masthead-top-height: 0px;
 }
 </style>
