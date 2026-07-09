@@ -79,7 +79,7 @@ getConf('beach').then((res) => {
     </svg>
   </BContainer>
 
-  <SearchScrollToTop />
+  <!-- <SearchScrollToTop /> -->
 
   <SearchFilter :auth="auth" @close="modal = null" v-if="modal == 'filter'" />
 
