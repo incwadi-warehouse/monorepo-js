@@ -236,10 +236,3 @@ const openProfile = () => {
   border-top: 1px solid var(--color-neutral-02);
 }
 </style>
-
-<style>
-html,
-body {
-  --masthead-top-height: 0px;
-}
-</style>
