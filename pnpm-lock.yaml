@@ -40,8 +40,8 @@ importers:
         specifier: 0.17.0
         version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.6.0(supports-color@7.2.0))(prettier@3.9.4))(eslint-plugin-import@2.32.0(eslint@10.6.0(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.9.2(eslint@10.6.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.6.0(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@10.6.0(supports-color@7.2.0))
       '@playwright/test':
-        specifier: 1.61.1
-        version: 1.61.1
+        specifier: 1.62.1
+        version: 1.62.1
       '@rushstack/eslint-patch':
         specifier: 1.16.1
         version: 1.16.1
@@ -64,8 +64,8 @@ importers:
         specifier: 2.14.6
         version: 2.14.6(@types/node@25.6.0)(typescript@5.8.2)
       playwright:
-        specifier: 1.61.1
-        version: 1.61.1
+        specifier: 1.62.1
+        version: 1.62.1
       prettier:
         specifier: 3.9.4
         version: 3.9.4
@@ -137,8 +137,8 @@ importers:
         specifier: 0.17.0
         version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.6.0(supports-color@7.2.0))(prettier@3.9.4))(eslint-plugin-import@2.32.0(eslint@10.6.0(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.9.2(eslint@10.6.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.6.0(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@10.6.0(supports-color@7.2.0))
       '@playwright/test':
-        specifier: 1.61.1
-        version: 1.61.1
+        specifier: 1.62.1
+        version: 1.62.1
       '@rushstack/eslint-patch':
         specifier: 1.16.1
         version: 1.16.1
@@ -167,8 +167,8 @@ importers:
         specifier: 2.14.6
         version: 2.14.6(@types/node@25.6.0)(typescript@5.8.2)
       playwright:
-        specifier: 1.61.1
-        version: 1.61.1
+        specifier: 1.62.1
+        version: 1.62.1
       prettier:
         specifier: 3.9.4
         version: 3.9.4
@@ -1353,9 +1353,9 @@ packages:
     resolution: {integrity: sha512-vsJDAkYR6qCPu+ioGScGiMYR7LvZYIXh/dlQeviqoTWNCVfKTLYD/LkNWH4Mxsv2a5vpIRc77FN5DnmK1eBggQ==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@playwright/test@1.61.1':
-    resolution: {integrity: sha512-8nKv6+0RJSL9FE4jYOEGXnPeM/Hg12qZpmqzZjRh3qM0Y7c3z1mrOTfFLids72RDQYVh9WpLEfR5WdpNX4fkig==}
-    engines: {node: '>=18'}
+  '@playwright/test@1.62.1':
+    resolution: {integrity: sha512-DTcUc8qii+cpHvtOwggMtBRMjKZHXYWdw8syRYu2vtzuq4Wxphqq4NfCs5Zt44L6mA8rfDfj+PHnxFc/FeK6mQ==}
+    engines: {node: '>=20'}
     hasBin: true
 
   '@rolldown/pluginutils@1.0.1':
@@ -3937,14 +3937,14 @@ packages:
     resolution: {integrity: sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==}
     engines: {node: '>=8'}
 
-  playwright-core@1.61.1:
-    resolution: {integrity: sha512-h7Qlt6m4REp25qvIdvbDtVmD4LqVXfpRxhORv9L0jzETM05p4fuPJ3dKyuSXQxDSbXnmS79HAgi9589lGSpLkg==}
-    engines: {node: '>=18'}
+  playwright-core@1.62.1:
+    resolution: {integrity: sha512-wPYSwEBJY9GHraISXqyqtx0na0LpO3XEX7jNDhntbex7tzUS7kLnZsOlFruFJB4Hi/rhDMjXGqHewDZ68nYZVw==}
+    engines: {node: '>=20'}
     hasBin: true
 
-  playwright@1.61.1:
-    resolution: {integrity: sha512-DWnY5o3YbLWK4GovuAVwpqL+1VwGNdUGrRr++8j8PtQQzvAVZUIMjKQ90fY689sEJZJBbZVw1rXaOKSTitkzPQ==}
-    engines: {node: '>=18'}
+  playwright@1.62.1:
+    resolution: {integrity: sha512-0M+L3LAD8/nm554LOla9Ayx0j0tmFZ0FBcoQ7F1VuVHpM/XpiC8RcDzBQB8W5+hA8L22THxELzeF+2WcUzvcLg==}
+    engines: {node: '>=20'}
     hasBin: true
 
   possible-typed-array-names@1.1.0:
@@ -6412,9 +6412,9 @@ snapshots:
 
   '@pkgr/core@0.2.0': {}
 
-  '@playwright/test@1.61.1':
+  '@playwright/test@1.62.1':
     dependencies:
-      playwright: 1.61.1
+      playwright: 1.62.1
 
   '@rolldown/pluginutils@1.0.1': {}
 
@@ -9521,11 +9521,11 @@ snapshots:
     dependencies:
       find-up: 4.1.0
 
-  playwright-core@1.61.1: {}
+  playwright-core@1.62.1: {}
 
-  playwright@1.61.1:
+  playwright@1.62.1:
     dependencies:
-      playwright-core: 1.61.1
+      playwright-core: 1.62.1
     optionalDependencies:
       fsevents: 2.3.2
 
