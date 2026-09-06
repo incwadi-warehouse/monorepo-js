@@ -10,7 +10,7 @@ importers:
     devDependencies:
       lerna:
         specifier: 8.2.4
-        version: 8.2.4(bluebird@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)
+        version: 8.2.4(bluebird@3.7.2)(debug@4.4.3(supports-color@7.2.0))(encoding@0.1.13)(supports-color@7.2.0)
 
   packages/catalog:
     dependencies:
@@ -40,8 +40,8 @@ importers:
         specifier: 0.17.0
         version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.9.1(supports-color@7.2.0))(prettier@3.9.4))(eslint-plugin-import@2.32.0(eslint@10.9.1(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.9.2(eslint@10.9.1(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.9.1(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@10.9.1(supports-color@7.2.0))
       '@playwright/test':
-        specifier: 1.62.1
-        version: 1.62.1
+        specifier: 1.63.0
+        version: 1.63.0
       '@rushstack/eslint-patch':
         specifier: 1.16.1
         version: 1.16.1
@@ -64,8 +64,8 @@ importers:
         specifier: 2.14.6
         version: 2.14.6(@types/node@25.6.0)(typescript@5.8.2)
       playwright:
-        specifier: 1.62.1
-        version: 1.62.1
+        specifier: 1.63.0
+        version: 1.63.0
       prettier:
         specifier: 3.9.4
         version: 3.9.4
@@ -137,8 +137,8 @@ importers:
         specifier: 0.17.0
         version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.9.1(supports-color@7.2.0))(prettier@3.9.4))(eslint-plugin-import@2.32.0(eslint@10.9.1(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.9.2(eslint@10.9.1(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.9.1(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@10.9.1(supports-color@7.2.0))
       '@playwright/test':
-        specifier: 1.62.1
-        version: 1.62.1
+        specifier: 1.63.0
+        version: 1.63.0
       '@rushstack/eslint-patch':
         specifier: 1.16.1
         version: 1.16.1
@@ -167,8 +167,8 @@ importers:
         specifier: 2.14.6
         version: 2.14.6(@types/node@25.6.0)(typescript@5.8.2)
       playwright:
-        specifier: 1.62.1
-        version: 1.62.1
+        specifier: 1.63.0
+        version: 1.63.0
       prettier:
         specifier: 3.9.4
         version: 3.9.4
@@ -1360,8 +1360,8 @@ packages:
     resolution: {integrity: sha512-vsJDAkYR6qCPu+ioGScGiMYR7LvZYIXh/dlQeviqoTWNCVfKTLYD/LkNWH4Mxsv2a5vpIRc77FN5DnmK1eBggQ==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@playwright/test@1.62.1':
-    resolution: {integrity: sha512-DTcUc8qii+cpHvtOwggMtBRMjKZHXYWdw8syRYu2vtzuq4Wxphqq4NfCs5Zt44L6mA8rfDfj+PHnxFc/FeK6mQ==}
+  '@playwright/test@1.63.0':
+    resolution: {integrity: sha512-oxMK4vllB9RK5NQ2l1pq1IfOf2AvnEuj/vYGDj0H2nMtmtZpKtCwt/l00GEO6xjGfpBNAvjovvYdCm50dRQkpQ==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -2742,11 +2742,6 @@ packages:
   fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
 
-  fsevents@2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
@@ -3948,13 +3943,13 @@ packages:
     resolution: {integrity: sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==}
     engines: {node: '>=8'}
 
-  playwright-core@1.62.1:
-    resolution: {integrity: sha512-wPYSwEBJY9GHraISXqyqtx0na0LpO3XEX7jNDhntbex7tzUS7kLnZsOlFruFJB4Hi/rhDMjXGqHewDZ68nYZVw==}
+  playwright-core@1.63.0:
+    resolution: {integrity: sha512-rYCsBF/M5HjUch52bbtVONEFjv6Xu8sm8h72dNlR5bzIE1fvC/bxgspzkjSfU+MweEMmPM8KJebG6nnyxo5mCg==}
     engines: {node: '>=20'}
     hasBin: true
 
-  playwright@1.62.1:
-    resolution: {integrity: sha512-0M+L3LAD8/nm554LOla9Ayx0j0tmFZ0FBcoQ7F1VuVHpM/XpiC8RcDzBQB8W5+hA8L22THxELzeF+2WcUzvcLg==}
+  playwright@1.63.0:
+    resolution: {integrity: sha512-+7ziBLidS4NaNCdt57SUDT+wYmmd5fmiQejUic/kb+YsYSCPyOOE9sebzMjNmQrsnNpDJqd4WHvV/8lfKfUDUg==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -6087,12 +6082,12 @@ snapshots:
     dependencies:
       buffer: 6.0.3
 
-  '@lerna/create@8.2.4(bluebird@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)(typescript@5.8.2)':
+  '@lerna/create@8.2.4(bluebird@3.7.2)(debug@4.4.3(supports-color@7.2.0))(encoding@0.1.13)(supports-color@7.2.0)(typescript@5.8.2)':
     dependencies:
       '@npmcli/arborist': 7.5.4(bluebird@3.7.2)(supports-color@7.2.0)
       '@npmcli/package-json': 5.2.0(bluebird@3.7.2)
       '@npmcli/run-script': 8.1.0(bluebird@3.7.2)(supports-color@7.2.0)
-      '@nx/devkit': 20.7.0(nx@20.7.0(supports-color@7.2.0))
+      '@nx/devkit': 20.7.0(nx@20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0))
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 20.1.2
       aproba: 2.0.0
@@ -6129,7 +6124,7 @@ snapshots:
       npm-package-arg: 11.0.2
       npm-packlist: 8.0.2
       npm-registry-fetch: 17.1.0(supports-color@7.2.0)
-      nx: 20.7.0(supports-color@7.2.0)
+      nx: 20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
       p-map: 4.0.0
       p-map-series: 2.1.0
       p-queue: 6.6.2
@@ -6313,13 +6308,13 @@ snapshots:
       - bluebird
       - supports-color
 
-  '@nx/devkit@20.7.0(nx@20.7.0(supports-color@7.2.0))':
+  '@nx/devkit@20.7.0(nx@20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0))':
     dependencies:
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.2
       minimatch: 9.0.3
-      nx: 20.7.0(supports-color@7.2.0)
+      nx: 20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
       semver: 7.8.0
       tmp: 0.2.3
       tslib: 2.8.1
@@ -6436,9 +6431,9 @@ snapshots:
 
   '@pkgr/core@0.2.0': {}
 
-  '@playwright/test@1.62.1':
+  '@playwright/test@1.63.0':
     dependencies:
-      playwright: 1.62.1
+      playwright: 1.63.0
 
   '@rolldown/pluginutils@1.0.1': {}
 
@@ -8120,9 +8115,6 @@ snapshots:
 
   fs.realpath@1.0.0: {}
 
-  fsevents@2.3.2:
-    optional: true
-
   fsevents@2.3.3:
     optional: true
 
@@ -8772,13 +8764,13 @@ snapshots:
 
   lazy-ass@1.6.0: {}
 
-  lerna@8.2.4(bluebird@3.7.2)(encoding@0.1.13)(supports-color@7.2.0):
+  lerna@8.2.4(bluebird@3.7.2)(debug@4.4.3(supports-color@7.2.0))(encoding@0.1.13)(supports-color@7.2.0):
     dependencies:
-      '@lerna/create': 8.2.4(bluebird@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)(typescript@5.8.2)
+      '@lerna/create': 8.2.4(bluebird@3.7.2)(debug@4.4.3(supports-color@7.2.0))(encoding@0.1.13)(supports-color@7.2.0)(typescript@5.8.2)
       '@npmcli/arborist': 7.5.4(bluebird@3.7.2)(supports-color@7.2.0)
       '@npmcli/package-json': 5.2.0(bluebird@3.7.2)
       '@npmcli/run-script': 8.1.0(bluebird@3.7.2)(supports-color@7.2.0)
-      '@nx/devkit': 20.7.0(nx@20.7.0(supports-color@7.2.0))
+      '@nx/devkit': 20.7.0(nx@20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0))
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 20.1.2
       aproba: 2.0.0
@@ -8821,7 +8813,7 @@ snapshots:
       npm-package-arg: 11.0.2
       npm-packlist: 8.0.2
       npm-registry-fetch: 17.1.0(supports-color@7.2.0)
-      nx: 20.7.0(supports-color@7.2.0)
+      nx: 20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
       p-map: 4.0.0
       p-map-series: 2.1.0
       p-pipe: 3.1.0
@@ -9247,7 +9239,7 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  nx@20.7.0(supports-color@7.2.0):
+  nx@20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0):
     dependencies:
       '@napi-rs/wasm-runtime': 0.2.4
       '@yarnpkg/lockfile': 1.1.0
@@ -9547,13 +9539,11 @@ snapshots:
     dependencies:
       find-up: 4.1.0
 
-  playwright-core@1.62.1: {}
+  playwright-core@1.63.0: {}
 
-  playwright@1.62.1:
+  playwright@1.63.0:
     dependencies:
-      playwright-core: 1.62.1
-    optionalDependencies:
-      fsevents: 2.3.2
+      playwright-core: 1.63.0
 
   possible-typed-array-names@1.1.0: {}
 
