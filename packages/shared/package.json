@@ -1,6 +1,6 @@
 {
   "name": "shared",
-  "version": "71.0.0",
+  "version": "71.0.6",
   "scripts": {
     "test:unit": "vitest --environment jsdom",
     "test:unit:ci": "vitest run --environment jsdom"
