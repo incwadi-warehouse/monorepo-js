@@ -132,23 +132,6 @@ const createTag = () => {
         <b-icon type="plus" :size="15" no-hover /> {{ $t('catalog') }}
       </template>
 
-      <template #footer>
-        <b-form-group buttons>
-          <b-form-item>
-            <b-button
-              design="text"
-              type="button"
-              @click="reset"
-              :style="{ marginRight: '20px' }"
-              >{{ $t('reset') }}
-            </b-button>
-            <b-button design="primary">
-              {{ $t('add') }}
-            </b-button>
-          </b-form-item>
-        </b-form-group>
-      </template>
-
       <b-container size="m">
         <!-- genre -->
         <b-form-group>
@@ -384,6 +367,21 @@ const createTag = () => {
 
           <b-form-group buttons>
             <b-button design="outline">{{ $t('add_tag') }}</b-button>
+          </b-form-group>
+
+          <b-form-group buttons>
+            <b-form-item>
+              <b-button
+                design="text"
+                type="button"
+                @click="reset"
+                :style="{ marginRight: '20px' }"
+                >{{ $t('reset') }}
+              </b-button>
+              <b-button design="primary">
+                {{ $t('add') }}
+              </b-button>
+            </b-form-item>
           </b-form-group>
         </b-form>
 

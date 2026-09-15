@@ -200,16 +200,6 @@ const removeTag = (id) => {
         {{ $t('edit_book') }}
       </template>
 
-      <template #footer>
-        <b-form-group>
-          <b-form-item>
-            <b-button design="primary_wide">
-              {{ $t('update') }}
-            </b-button>
-          </b-form-item>
-        </b-form-group>
-      </template>
-
       <b-container size="m" v-if="book">
         <!-- genre -->
         <b-form-group>
@@ -604,6 +594,14 @@ const removeTag = (id) => {
                       }"
                     />
                   </div>
+                </b-form-item>
+              </b-form-group>
+
+              <b-form-group>
+                <b-form-item>
+                  <b-button design="primary_wide">
+                    {{ $t('update') }}
+                  </b-button>
                 </b-form-item>
               </b-form-group>
             </b-form>
