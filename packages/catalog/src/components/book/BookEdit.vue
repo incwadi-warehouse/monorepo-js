@@ -596,14 +596,6 @@ const removeTag = (id) => {
                   </div>
                 </b-form-item>
               </b-form-group>
-
-              <b-form-group>
-                <b-form-item>
-                  <b-button design="primary_wide">
-                    {{ $t('update') }}
-                  </b-button>
-                </b-form-item>
-              </b-form-group>
             </b-form>
 
             <!-- directory -->
@@ -615,6 +607,14 @@ const removeTag = (id) => {
             />
           </div>
         </div>
+
+        <b-form-group>
+          <b-form-item>
+            <b-button design="primary_wide">
+              {{ $t('update') }}
+            </b-button>
+          </b-form-item>
+        </b-form-group>
       </b-container>
     </b-modal>
   </b-form>

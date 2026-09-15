@@ -368,21 +368,6 @@ const createTag = () => {
           <b-form-group buttons>
             <b-button design="outline">{{ $t('add_tag') }}</b-button>
           </b-form-group>
-
-          <b-form-group buttons>
-            <b-form-item>
-              <b-button
-                design="text"
-                type="button"
-                @click="reset"
-                :style="{ marginRight: '20px' }"
-                >{{ $t('reset') }}
-              </b-button>
-              <b-button design="primary">
-                {{ $t('add') }}
-              </b-button>
-            </b-form-item>
-          </b-form-group>
         </b-form>
 
         <!-- duplicate -->
@@ -394,6 +379,21 @@ const createTag = () => {
             </b-form-label>
           </b-form-item>
         </b-form-group>
+
+        <b-form-group buttons>
+          <b-form-item>
+            <b-button
+              design="text"
+              type="button"
+              @click="reset"
+              :style="{ marginRight: '20px' }"
+              >{{ $t('reset') }}
+            </b-button>
+            <b-button design="primary">
+              {{ $t('add') }}
+            </b-button>
+          </b-form-item>
+          </b-form-group>
       </b-container>
     </b-modal>
   </b-form>
