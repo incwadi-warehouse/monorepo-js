@@ -38,7 +38,7 @@ importers:
     devDependencies:
       '@baldeweg/eslint-config':
         specifier: 0.17.0
-        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.11.0(supports-color@7.2.0))(prettier@3.9.9))(eslint-plugin-import@2.32.0(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.11.0(eslint@10.11.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@10.11.0(supports-color@7.2.0))
+        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.11.0(supports-color@7.2.0))(prettier@3.9.9))(eslint-plugin-import@2.32.0(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.11.1(eslint@10.11.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@10.11.0(supports-color@7.2.0))
       '@playwright/test':
         specifier: 1.63.0
         version: 1.63.0
@@ -58,8 +58,8 @@ importers:
         specifier: 2.32.0
         version: 2.32.0(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0)
       eslint-plugin-vue:
-        specifier: 10.11.0
-        version: 10.11.0(eslint@10.11.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0))
+        specifier: 10.11.1
+        version: 10.11.1(eslint@10.11.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0))
       msw:
         specifier: 2.14.6
         version: 2.14.6(@types/node@25.6.0)(typescript@5.8.2)
@@ -135,7 +135,7 @@ importers:
     devDependencies:
       '@baldeweg/eslint-config':
         specifier: 0.17.0
-        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.11.0(supports-color@7.2.0))(prettier@3.9.9))(eslint-plugin-import@2.32.0(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.11.0(eslint@10.11.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@10.11.0(supports-color@7.2.0))
+        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.11.0(supports-color@7.2.0))(prettier@3.9.9))(eslint-plugin-import@2.32.0(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.11.1(eslint@10.11.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@10.11.0(supports-color@7.2.0))
       '@playwright/test':
         specifier: 1.63.0
         version: 1.63.0
@@ -158,8 +158,8 @@ importers:
         specifier: 2.32.0
         version: 2.32.0(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0)
       eslint-plugin-vue:
-        specifier: 10.11.0
-        version: 10.11.0(eslint@10.11.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0))
+        specifier: 10.11.1
+        version: 10.11.1(eslint@10.11.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0))
       lodash:
         specifier: 4.18.1
         version: 4.18.1
@@ -2509,8 +2509,8 @@ packages:
       eslint-config-prettier:
         optional: true
 
-  eslint-plugin-vue@10.11.0:
-    resolution: {integrity: sha512-fGt38SsaPCZ2FmA3bX/3vOW2qdsPNx0/9x+7Aab6NMX++PhynMtK4LWC4vzXgfQBCqpUAler18H38GA+NBAd0Q==}
+  eslint-plugin-vue@10.11.1:
+    resolution: {integrity: sha512-pasVXhl7wUmIvhujoqs/m0mJ9r59QW1IR9XXYKGR0FETzSM+Hhlf4qKIYgWiDDP+9YKv4YfbwskD7LqIdVcgQw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       '@stylistic/eslint-plugin': ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
@@ -5776,12 +5776,12 @@ snapshots:
       '@babel/helper-string-parser': 7.29.7
       '@babel/helper-validator-identifier': 7.29.7
 
-  '@baldeweg/eslint-config@0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.11.0(supports-color@7.2.0))(prettier@3.9.9))(eslint-plugin-import@2.32.0(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.11.0(eslint@10.11.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@10.11.0(supports-color@7.2.0))':
+  '@baldeweg/eslint-config@0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.11.0(supports-color@7.2.0))(prettier@3.9.9))(eslint-plugin-import@2.32.0(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.11.1(eslint@10.11.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@10.11.0(supports-color@7.2.0))':
     dependencies:
       '@vue/eslint-config-prettier': 10.2.0(eslint@10.11.0(supports-color@7.2.0))(prettier@3.9.9)
       eslint: 10.11.0(supports-color@7.2.0)
       eslint-plugin-import: 2.32.0(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0)
-      eslint-plugin-vue: 10.11.0(eslint@10.11.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0))
+      eslint-plugin-vue: 10.11.1(eslint@10.11.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0))
 
   '@baldeweg/eslint-config@0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@9.31.0(supports-color@7.2.0))(prettier@3.9.9))(eslint-plugin-import@2.32.0(eslint@9.31.0(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.3.0(eslint@9.31.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@9.31.0(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@9.31.0(supports-color@7.2.0))':
     dependencies:
@@ -7871,7 +7871,7 @@ snapshots:
     optionalDependencies:
       eslint-config-prettier: 10.1.1(eslint@9.31.0(supports-color@7.2.0))
 
-  eslint-plugin-vue@10.11.0(eslint@10.11.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0)):
+  eslint-plugin-vue@10.11.1(eslint@10.11.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.11.0(supports-color@7.2.0))(supports-color@7.2.0)):
     dependencies:
       '@eslint-community/eslint-utils': 4.10.1(eslint@10.11.0(supports-color@7.2.0))
       eslint: 10.11.0(supports-color@7.2.0)
