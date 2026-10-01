@@ -28,7 +28,7 @@
     "eslint": "10.11.0",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-vue": "10.11.1",
-    "msw": "2.14.6",
+    "msw": "3.0.1",
     "playwright": "1.63.0",
     "prettier": "3.9.9",
     "shared": "workspace:*",
