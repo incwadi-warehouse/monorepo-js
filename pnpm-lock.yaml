@@ -10,7 +10,7 @@ importers:
     devDependencies:
       lerna:
         specifier: 8.2.4
-        version: 8.2.4(bluebird@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)
+        version: 8.2.4(bluebird@3.7.2)(debug@4.4.3(supports-color@7.2.0))(encoding@0.1.13)(supports-color@7.2.0)
 
   packages/catalog:
     dependencies:
@@ -30,8 +30,8 @@ importers:
         specifier: 3.5.43
         version: 3.5.43(typescript@5.8.2)
       vue-i18n:
-        specifier: 11.4.12
-        version: 11.4.12(vue@3.5.43(typescript@5.8.2))
+        specifier: 11.4.13
+        version: 11.4.13(vue@3.5.43(typescript@5.8.2))
       vue-router:
         specifier: 4.6.4
         version: 4.6.4(vue@3.5.43(typescript@5.8.2))
@@ -127,8 +127,8 @@ importers:
         specifier: 3.5.43
         version: 3.5.43(typescript@5.8.2)
       vue-i18n:
-        specifier: 11.4.12
-        version: 11.4.12(vue@3.5.43(typescript@5.8.2))
+        specifier: 11.4.13
+        version: 11.4.13(vue@3.5.43(typescript@5.8.2))
       vue-router:
         specifier: 4.6.4
         version: 4.6.4(vue@3.5.43(typescript@5.8.2))
@@ -1090,20 +1090,20 @@ packages:
       '@types/node':
         optional: true
 
-  '@intlify/core-base@11.4.12':
-    resolution: {integrity: sha512-tvYUWgMJmk+UvLFa7ck8uRQ9m19tTI9B2e01KCAjBV7+HN2zFLnnORvMO85hM1P8DIw4MTvot1ZSBUdoR+F6jA==}
+  '@intlify/core-base@11.4.13':
+    resolution: {integrity: sha512-3qGv1/j0fl6ZSeehGaznE78A4i3hCaOeOyDh7jq7SV6ch/XGoy96xIrYuALTV3xhIqj2rktsIKcwlLZ3CbOhkA==}
     engines: {node: '>= 22'}
 
-  '@intlify/devtools-types@11.4.12':
-    resolution: {integrity: sha512-Ctkcs8DQItaEL9HHdkyasFFcZFP59iBvZmrjiA7b72JFq/JlI6c6GPQHN7oEwbYTo8rndPMqNY7SX71aPm4MkA==}
+  '@intlify/devtools-types@11.4.13':
+    resolution: {integrity: sha512-f38d2yvjNc1/c+BnTLsxTB0729clTtyy7kTxHu4FFlvI6FpmBOp7b9sLYtsKJpXSZ70kIEexvNwDSzLkIlYnlQ==}
     engines: {node: '>= 22'}
 
-  '@intlify/message-compiler@11.4.12':
-    resolution: {integrity: sha512-kBczk9r44fdBYnkC5tXRWa/UaA+e9NglXE3cX7jPnDd2nHzoFHYrKGfIbn8JFZpMA9omexZZo2WxOpTvlHdjsw==}
+  '@intlify/message-compiler@11.4.13':
+    resolution: {integrity: sha512-cjKsDeWUD/i3mj0QtC8hydLCFP5mgZtTU1xZZaN9/O3FG94EXc0rTbecYpifglp26rpoJoIjSlW137VejLKsZw==}
     engines: {node: '>= 22'}
 
-  '@intlify/shared@11.4.12':
-    resolution: {integrity: sha512-ojfehaXMFrGFcSnK3cJPaMxlrSXT8FwZUG9H4i+WKX4OFD4Yl1WKdTmfwoC0REnwIfTrnt1QhRtd8kwi/te6bQ==}
+  '@intlify/shared@11.4.13':
+    resolution: {integrity: sha512-ZjcNgEED1FtTCFb+ohWBdR21k5kvleKtM9peobQtLB83mNIfEhJK86dEbhfk+OcUrybrEbc4eDeE9UbFUVHsjQ==}
     engines: {node: '>= 22'}
 
   '@isaacs/cliui@8.0.2':
@@ -4836,8 +4836,8 @@ packages:
     resolution: {integrity: sha512-i1NW5R58S720iQ1BEk+6ILo3hT6UA8mtYNNolSH4rt9345qvXdvA6GHy2+jHozdDAKHwlu9VvS/+vIMKs1UYQw==}
     hasBin: true
 
-  vue-i18n@11.4.12:
-    resolution: {integrity: sha512-yvArvvo3ErLKFNlQrZUGmRkxL/ctM5xFYtE9FxTKiE/PalWP1bnTopBgbSRGLluYEyYSNl1Pt8l2J7zVavbXww==}
+  vue-i18n@11.4.13:
+    resolution: {integrity: sha512-2G7LC9XcdZ0IljFib7lKGHNiBBOTv6HO+2bnBaOiQgDYZ+uUnqSpuED5DbBo1t7su50o/WRGn+ZfDQTGd26xEw==}
     engines: {node: '>= 22'}
     peerDependencies:
       vue: ^3.0.0
@@ -6065,23 +6065,23 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.6.0
 
-  '@intlify/core-base@11.4.12':
+  '@intlify/core-base@11.4.13':
     dependencies:
-      '@intlify/devtools-types': 11.4.12
-      '@intlify/message-compiler': 11.4.12
-      '@intlify/shared': 11.4.12
+      '@intlify/devtools-types': 11.4.13
+      '@intlify/message-compiler': 11.4.13
+      '@intlify/shared': 11.4.13
 
-  '@intlify/devtools-types@11.4.12':
+  '@intlify/devtools-types@11.4.13':
     dependencies:
-      '@intlify/core-base': 11.4.12
-      '@intlify/shared': 11.4.12
+      '@intlify/core-base': 11.4.13
+      '@intlify/shared': 11.4.13
 
-  '@intlify/message-compiler@11.4.12':
+  '@intlify/message-compiler@11.4.13':
     dependencies:
-      '@intlify/shared': 11.4.12
+      '@intlify/shared': 11.4.13
       source-map-js: 1.2.1
 
-  '@intlify/shared@11.4.12': {}
+  '@intlify/shared@11.4.13': {}
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -6136,12 +6136,12 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@lerna/create@8.2.4(bluebird@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)(typescript@5.8.2)':
+  '@lerna/create@8.2.4(bluebird@3.7.2)(debug@4.4.3(supports-color@7.2.0))(encoding@0.1.13)(supports-color@7.2.0)(typescript@5.8.2)':
     dependencies:
       '@npmcli/arborist': 7.5.4(bluebird@3.7.2)(supports-color@7.2.0)
       '@npmcli/package-json': 5.2.0(bluebird@3.7.2)
       '@npmcli/run-script': 8.1.0(bluebird@3.7.2)(supports-color@7.2.0)
-      '@nx/devkit': 20.7.0(nx@20.7.0(supports-color@7.2.0))
+      '@nx/devkit': 20.7.0(nx@20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0))
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 20.1.2
       aproba: 2.0.0
@@ -6178,7 +6178,7 @@ snapshots:
       npm-package-arg: 11.0.2
       npm-packlist: 8.0.2
       npm-registry-fetch: 17.1.0(supports-color@7.2.0)
-      nx: 20.7.0(supports-color@7.2.0)
+      nx: 20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
       p-map: 4.0.0
       p-map-series: 2.1.0
       p-queue: 6.6.2
@@ -6362,13 +6362,13 @@ snapshots:
       - bluebird
       - supports-color
 
-  '@nx/devkit@20.7.0(nx@20.7.0(supports-color@7.2.0))':
+  '@nx/devkit@20.7.0(nx@20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0))':
     dependencies:
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.2
       minimatch: 9.0.3
-      nx: 20.7.0(supports-color@7.2.0)
+      nx: 20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
       semver: 7.8.0
       tmp: 0.2.3
       tslib: 2.8.1
@@ -8849,13 +8849,13 @@ snapshots:
 
   lazy-ass@1.6.0: {}
 
-  lerna@8.2.4(bluebird@3.7.2)(encoding@0.1.13)(supports-color@7.2.0):
+  lerna@8.2.4(bluebird@3.7.2)(debug@4.4.3(supports-color@7.2.0))(encoding@0.1.13)(supports-color@7.2.0):
     dependencies:
-      '@lerna/create': 8.2.4(bluebird@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)(typescript@5.8.2)
+      '@lerna/create': 8.2.4(bluebird@3.7.2)(debug@4.4.3(supports-color@7.2.0))(encoding@0.1.13)(supports-color@7.2.0)(typescript@5.8.2)
       '@npmcli/arborist': 7.5.4(bluebird@3.7.2)(supports-color@7.2.0)
       '@npmcli/package-json': 5.2.0(bluebird@3.7.2)
       '@npmcli/run-script': 8.1.0(bluebird@3.7.2)(supports-color@7.2.0)
-      '@nx/devkit': 20.7.0(nx@20.7.0(supports-color@7.2.0))
+      '@nx/devkit': 20.7.0(nx@20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0))
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 20.1.2
       aproba: 2.0.0
@@ -8898,7 +8898,7 @@ snapshots:
       npm-package-arg: 11.0.2
       npm-packlist: 8.0.2
       npm-registry-fetch: 17.1.0(supports-color@7.2.0)
-      nx: 20.7.0(supports-color@7.2.0)
+      nx: 20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
       p-map: 4.0.0
       p-map-series: 2.1.0
       p-pipe: 3.1.0
@@ -9326,7 +9326,7 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  nx@20.7.0(supports-color@7.2.0):
+  nx@20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0):
     dependencies:
       '@napi-rs/wasm-runtime': 0.2.4
       '@yarnpkg/lockfile': 1.1.0
@@ -10564,11 +10564,11 @@ snapshots:
       is-valid-glob: 1.0.0
       js-yaml: 4.1.0
 
-  vue-i18n@11.4.12(vue@3.5.43(typescript@5.8.2)):
+  vue-i18n@11.4.13(vue@3.5.43(typescript@5.8.2)):
     dependencies:
-      '@intlify/core-base': 11.4.12
-      '@intlify/devtools-types': 11.4.12
-      '@intlify/shared': 11.4.12
+      '@intlify/core-base': 11.4.13
+      '@intlify/devtools-types': 11.4.13
+      '@intlify/shared': 11.4.13
       '@vue/devtools-api': 6.6.4
       vue: 3.5.43(typescript@5.8.2)
 
