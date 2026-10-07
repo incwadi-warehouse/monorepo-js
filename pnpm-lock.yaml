@@ -10,7 +10,7 @@ importers:
     devDependencies:
       lerna:
         specifier: 8.2.4
-        version: 8.2.4(bluebird@3.7.2)(debug@4.4.3(supports-color@7.2.0))(encoding@0.1.13)(supports-color@7.2.0)
+        version: 8.2.4(bluebird@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)
 
   packages/catalog:
     dependencies:
@@ -4370,8 +4370,8 @@ packages:
     resolution: {integrity: sha512-/dPCrG1s3ePpWm6yBbxZq5Be1dXGLyLn9Z791chDC3NFrpkVbWGzkBwPN1knaciexFXgRJ7hzdnwZ4stHSDmjg==}
     engines: {node: '>=4'}
 
-  source-map-js@1.2.1:
-    resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
+  source-map-js@1.2.2:
+    resolution: {integrity: sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw==}
     engines: {node: '>=0.10.0'}
 
   source-map-support@0.5.21:
@@ -6082,7 +6082,7 @@ snapshots:
   '@intlify/message-compiler@11.4.13':
     dependencies:
       '@intlify/shared': 11.4.13
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   '@intlify/shared@11.4.13': {}
 
@@ -6139,12 +6139,12 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@lerna/create@8.2.4(bluebird@3.7.2)(debug@4.4.3(supports-color@7.2.0))(encoding@0.1.13)(supports-color@7.2.0)(typescript@5.8.2)':
+  '@lerna/create@8.2.4(bluebird@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)(typescript@5.8.2)':
     dependencies:
       '@npmcli/arborist': 7.5.4(bluebird@3.7.2)(supports-color@7.2.0)
       '@npmcli/package-json': 5.2.0(bluebird@3.7.2)
       '@npmcli/run-script': 8.1.0(bluebird@3.7.2)(supports-color@7.2.0)
-      '@nx/devkit': 20.7.0(nx@20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0))
+      '@nx/devkit': 20.7.0(nx@20.7.0(supports-color@7.2.0))
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 20.1.2
       aproba: 2.0.0
@@ -6181,7 +6181,7 @@ snapshots:
       npm-package-arg: 11.0.2
       npm-packlist: 8.0.2
       npm-registry-fetch: 17.1.0(supports-color@7.2.0)
-      nx: 20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
+      nx: 20.7.0(supports-color@7.2.0)
       p-map: 4.0.0
       p-map-series: 2.1.0
       p-queue: 6.6.2
@@ -6365,13 +6365,13 @@ snapshots:
       - bluebird
       - supports-color
 
-  '@nx/devkit@20.7.0(nx@20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0))':
+  '@nx/devkit@20.7.0(nx@20.7.0(supports-color@7.2.0))':
     dependencies:
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.2
       minimatch: 9.0.3
-      nx: 20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
+      nx: 20.7.0(supports-color@7.2.0)
       semver: 7.8.0
       tmp: 0.2.3
       tslib: 2.8.1
@@ -6735,7 +6735,7 @@ snapshots:
       '@vue/shared': 3.5.12
       entities: 4.5.0
       estree-walker: 2.0.2
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   '@vue/compiler-core@3.5.43':
     dependencies:
@@ -6743,7 +6743,7 @@ snapshots:
       '@vue/shared': 3.5.43
       entities: 7.0.1
       estree-walker: 2.0.2
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   '@vue/compiler-dom@3.5.12':
     dependencies:
@@ -6765,7 +6765,7 @@ snapshots:
       estree-walker: 2.0.2
       magic-string: 0.30.21
       postcss: 8.5.15
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   '@vue/compiler-sfc@3.5.43':
     dependencies:
@@ -6777,7 +6777,7 @@ snapshots:
       estree-walker: 2.0.2
       magic-string: 0.30.21
       postcss: 8.5.28
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   '@vue/compiler-ssr@3.5.12':
     dependencies:
@@ -7361,7 +7361,7 @@ snapshots:
   css-tree@3.2.1:
     dependencies:
       mdn-data: 2.27.1
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   cssesc@3.0.0: {}
 
@@ -8852,13 +8852,13 @@ snapshots:
 
   lazy-ass@1.6.0: {}
 
-  lerna@8.2.4(bluebird@3.7.2)(debug@4.4.3(supports-color@7.2.0))(encoding@0.1.13)(supports-color@7.2.0):
+  lerna@8.2.4(bluebird@3.7.2)(encoding@0.1.13)(supports-color@7.2.0):
     dependencies:
-      '@lerna/create': 8.2.4(bluebird@3.7.2)(debug@4.4.3(supports-color@7.2.0))(encoding@0.1.13)(supports-color@7.2.0)(typescript@5.8.2)
+      '@lerna/create': 8.2.4(bluebird@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)(typescript@5.8.2)
       '@npmcli/arborist': 7.5.4(bluebird@3.7.2)(supports-color@7.2.0)
       '@npmcli/package-json': 5.2.0(bluebird@3.7.2)
       '@npmcli/run-script': 8.1.0(bluebird@3.7.2)(supports-color@7.2.0)
-      '@nx/devkit': 20.7.0(nx@20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0))
+      '@nx/devkit': 20.7.0(nx@20.7.0(supports-color@7.2.0))
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 20.1.2
       aproba: 2.0.0
@@ -8901,7 +8901,7 @@ snapshots:
       npm-package-arg: 11.0.2
       npm-packlist: 8.0.2
       npm-registry-fetch: 17.1.0(supports-color@7.2.0)
-      nx: 20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
+      nx: 20.7.0(supports-color@7.2.0)
       p-map: 4.0.0
       p-map-series: 2.1.0
       p-pipe: 3.1.0
@@ -9327,7 +9327,7 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  nx@20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0):
+  nx@20.7.0(supports-color@7.2.0):
     dependencies:
       '@napi-rs/wasm-runtime': 0.2.4
       '@yarnpkg/lockfile': 1.1.0
@@ -9649,13 +9649,13 @@ snapshots:
     dependencies:
       nanoid: 3.3.12
       picocolors: 1.1.1
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   postcss@8.5.28:
     dependencies:
       nanoid: 3.3.19
       picocolors: 1.1.1
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   prelude-ls@1.2.1: {}
 
@@ -10054,7 +10054,7 @@ snapshots:
     dependencies:
       is-plain-obj: 1.1.0
 
-  source-map-js@1.2.1: {}
+  source-map-js@1.2.2: {}
 
   source-map-support@0.5.21:
     dependencies:
