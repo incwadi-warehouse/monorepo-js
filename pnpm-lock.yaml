@@ -10,7 +10,7 @@ importers:
     devDependencies:
       lerna:
         specifier: 8.2.4
-        version: 8.2.4(bluebird@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)
+        version: 8.2.4(bluebird@3.7.2)(debug@4.4.3(supports-color@7.2.0))(encoding@0.1.13)(supports-color@7.2.0)
 
   packages/catalog:
     dependencies:
@@ -46,8 +46,8 @@ importers:
         specifier: 1.16.1
         version: 1.16.1
       '@vitejs/plugin-vue':
-        specifier: 6.0.9
-        version: 6.0.9(vite@7.3.7(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.43(typescript@5.8.2))
+        specifier: 6.0.10
+        version: 6.0.10(vite@7.3.7(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.43(typescript@5.8.2))
       '@vue/eslint-config-prettier':
         specifier: 10.2.0
         version: 10.2.0(eslint@10.12.0(supports-color@7.2.0))(prettier@3.9.9)
@@ -146,8 +146,8 @@ importers:
         specifier: 1.11.20
         version: 1.11.20(vue@3.5.43(typescript@5.8.2))
       '@vitejs/plugin-vue':
-        specifier: 6.0.9
-        version: 6.0.9(vite@7.3.7(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.43(typescript@5.8.2))
+        specifier: 6.0.10
+        version: 6.0.10(vite@7.3.7(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.43(typescript@5.8.2))
       '@vue/eslint-config-prettier':
         specifier: 10.2.0
         version: 10.2.0(eslint@10.12.0(supports-color@7.2.0))(prettier@3.9.9)
@@ -1671,12 +1671,12 @@ packages:
     peerDependencies:
       vue: '>=2.7 || >=3'
 
-  '@vitejs/plugin-vue@6.0.9':
-    resolution: {integrity: sha512-rD/MORlhaZMlXWW0rEn4FB4wMinWC0z/D7Ye160S5+Rs1mC8ZDAdcDp4SjKfUhG5t8q1ktcPVw4xuTkPRlzrSA==}
+  '@vitejs/plugin-vue@6.0.10':
+    resolution: {integrity: sha512-b80aUQh3n+qEzzZm5oQp3rT2QImeCx58K6eFl/RkJ3d65KW0kTuv5lNsLRVAjbW9YRUpo/wzmvzMgV34bTAItA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
-      vue: ^3.2.25
+      vue: ^3.2.25 || ^3.6.0-rc.10
 
   '@vue/compiler-core@3.5.12':
     resolution: {integrity: sha512-ISyBTRMmMYagUxhcpyEH0hpXRd/KqDU4ymofPgl2XAkY9ZhQ+h0ovEZJIiPop13UmR/54oA2cgMDjgroRelaEw==}
@@ -6167,12 +6167,12 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@lerna/create@8.2.4(bluebird@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)(typescript@5.8.2)':
+  '@lerna/create@8.2.4(bluebird@3.7.2)(debug@4.4.3(supports-color@7.2.0))(encoding@0.1.13)(supports-color@7.2.0)(typescript@5.8.2)':
     dependencies:
       '@npmcli/arborist': 7.5.4(bluebird@3.7.2)(supports-color@7.2.0)
       '@npmcli/package-json': 5.2.0(bluebird@3.7.2)
       '@npmcli/run-script': 8.1.0(bluebird@3.7.2)(supports-color@7.2.0)
-      '@nx/devkit': 20.7.0(nx@20.7.0(supports-color@7.2.0))
+      '@nx/devkit': 20.7.0(nx@20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0))
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 20.1.2
       aproba: 2.0.0
@@ -6209,7 +6209,7 @@ snapshots:
       npm-package-arg: 11.0.2
       npm-packlist: 8.0.2
       npm-registry-fetch: 17.1.0(supports-color@7.2.0)
-      nx: 20.7.0(supports-color@7.2.0)
+      nx: 20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
       p-map: 4.0.0
       p-map-series: 2.1.0
       p-queue: 6.6.2
@@ -6397,13 +6397,13 @@ snapshots:
       - bluebird
       - supports-color
 
-  '@nx/devkit@20.7.0(nx@20.7.0(supports-color@7.2.0))':
+  '@nx/devkit@20.7.0(nx@20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0))':
     dependencies:
       ejs: 3.1.10
       enquirer: 2.3.6
       ignore: 5.3.2
       minimatch: 9.0.3
-      nx: 20.7.0(supports-color@7.2.0)
+      nx: 20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
       semver: 7.8.0
       tmp: 0.2.3
       tslib: 2.8.1
@@ -6750,7 +6750,7 @@ snapshots:
       unhead: 1.11.20
       vue: 3.5.43(typescript@5.8.2)
 
-  '@vitejs/plugin-vue@6.0.9(vite@7.3.7(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.43(typescript@5.8.2))':
+  '@vitejs/plugin-vue@6.0.10(vite@7.3.7(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.43(typescript@5.8.2))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
       vite: 7.3.7(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)
@@ -8892,13 +8892,13 @@ snapshots:
 
   lazy-ass@1.6.0: {}
 
-  lerna@8.2.4(bluebird@3.7.2)(encoding@0.1.13)(supports-color@7.2.0):
+  lerna@8.2.4(bluebird@3.7.2)(debug@4.4.3(supports-color@7.2.0))(encoding@0.1.13)(supports-color@7.2.0):
     dependencies:
-      '@lerna/create': 8.2.4(bluebird@3.7.2)(encoding@0.1.13)(supports-color@7.2.0)(typescript@5.8.2)
+      '@lerna/create': 8.2.4(bluebird@3.7.2)(debug@4.4.3(supports-color@7.2.0))(encoding@0.1.13)(supports-color@7.2.0)(typescript@5.8.2)
       '@npmcli/arborist': 7.5.4(bluebird@3.7.2)(supports-color@7.2.0)
       '@npmcli/package-json': 5.2.0(bluebird@3.7.2)
       '@npmcli/run-script': 8.1.0(bluebird@3.7.2)(supports-color@7.2.0)
-      '@nx/devkit': 20.7.0(nx@20.7.0(supports-color@7.2.0))
+      '@nx/devkit': 20.7.0(nx@20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0))
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 20.1.2
       aproba: 2.0.0
@@ -8941,7 +8941,7 @@ snapshots:
       npm-package-arg: 11.0.2
       npm-packlist: 8.0.2
       npm-registry-fetch: 17.1.0(supports-color@7.2.0)
-      nx: 20.7.0(supports-color@7.2.0)
+      nx: 20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
       p-map: 4.0.0
       p-map-series: 2.1.0
       p-pipe: 3.1.0
@@ -9364,7 +9364,7 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  nx@20.7.0(supports-color@7.2.0):
+  nx@20.7.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0):
     dependencies:
       '@napi-rs/wasm-runtime': 0.2.4
       '@yarnpkg/lockfile': 1.1.0
