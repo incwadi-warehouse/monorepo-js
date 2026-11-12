@@ -30,7 +30,7 @@
     "eslint-plugin-vue": "10.12.1",
     "msw": "3.0.4",
     "playwright": "1.65.0",
-    "prettier": "3.9.10",
+    "prettier": "3.10.0",
     "shared": "workspace:*",
     "start-server-and-test": "2.1.5",
     "vite": "7.3.8",
