@@ -61,8 +61,8 @@ importers:
         specifier: 10.12.1
         version: 10.12.1(eslint@10.15.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0))
       msw:
-        specifier: 3.0.6
-        version: 3.0.6(@types/node@25.6.0)(graphql@16.13.2)(supports-color@7.2.0)(typescript@5.8.2)(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))
+        specifier: 3.0.7
+        version: 3.0.7(@types/node@25.6.0)(graphql@16.13.2)(supports-color@7.2.0)(typescript@5.8.2)(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))
       playwright:
         specifier: 1.65.1
         version: 1.65.1
@@ -164,8 +164,8 @@ importers:
         specifier: 4.18.1
         version: 4.18.1
       msw:
-        specifier: 3.0.6
-        version: 3.0.6(@types/node@25.6.0)(graphql@16.13.2)(supports-color@7.2.0)(typescript@5.8.2)(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))
+        specifier: 3.0.7
+        version: 3.0.7(@types/node@25.6.0)(graphql@16.13.2)(supports-color@7.2.0)(typescript@5.8.2)(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))
       playwright:
         specifier: 1.65.1
         version: 1.65.1
@@ -1122,8 +1122,8 @@ packages:
     engines: {node: '>=18.0.0'}
     deprecated: This package is an implementation detail of Lerna and is no longer published separately.
 
-  '@msw/url@0.1.2':
-    resolution: {integrity: sha512-DdeBLQxQ+ZrtmwEmaj7GQ7lbzPCgbbbyAqOz/I4ulo68hwBpfdNvQJ5bmihJUkAAKOeCmqCIG3OFZGosqFN4mA==}
+  '@msw/url@0.1.3':
+    resolution: {integrity: sha512-IvN0kCVRFtr12gBS3Nk8PRqjWjE/80ydze2DNQ0Z74ZjnMDWibVoaYFqGv9vR2LoiUfcVgEVaBWLFyp15M5YJg==}
 
   '@mswjs/interceptors@0.45.11':
     resolution: {integrity: sha512-+ISPERIRIHhSVnFQRGCP9jDJXxn0/z2+pWWbXUym6JUfpUCRW2Pvro4P9RBKGYUKTKAULszKurKMTQIsaJUIgQ==}
@@ -3591,8 +3591,8 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  msw@3.0.6:
-    resolution: {integrity: sha512-0Axg6UFY1TulPoNYIEA2sk5h30CYa+02vSxtmcBC8WefnmewzXArKhhFyIFxIH3CgRltDLcgYHQ3k9WWWvFd0A==}
+  msw@3.0.7:
+    resolution: {integrity: sha512-e9BmzG3HN2J8VOUbEYU7OJQ7tgNS7GfPmG86jv3hKZks0iiFA0sh1colqLVjPEckU+QLWjWNximsLzykVdINgQ==}
     engines: {node: '>=22.12.0'}
     hasBin: true
     peerDependencies:
@@ -6165,7 +6165,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@msw/url@0.1.2': {}
+  '@msw/url@0.1.3': {}
 
   '@mswjs/interceptors@0.45.11(supports-color@7.2.0)':
     dependencies:
@@ -9122,10 +9122,10 @@ snapshots:
 
   ms@2.1.3: {}
 
-  msw@3.0.6(@types/node@25.6.0)(graphql@16.13.2)(supports-color@7.2.0)(typescript@5.8.2)(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)):
+  msw@3.0.7(@types/node@25.6.0)(graphql@16.13.2)(supports-color@7.2.0)(typescript@5.8.2)(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)):
     dependencies:
       '@inquirer/confirm': 6.0.11(@types/node@25.6.0)
-      '@msw/url': 0.1.2
+      '@msw/url': 0.1.3
       '@mswjs/interceptors': 0.45.11(supports-color@7.2.0)
       cookie: 2.0.1
       headers-polyfill: 5.0.1
