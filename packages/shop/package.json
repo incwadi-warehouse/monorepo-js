@@ -1,6 +1,6 @@
 {
   "name": "shop",
-  "version": "71.0.6",
+  "version": "71.0.8",
   "type": "module",
   "scripts": {
     "dev": "vite",
