@@ -15,8 +15,8 @@ importers:
   packages/catalog:
     dependencies:
       '@baldeweg/ui':
-        specifier: 0.11.0
-        version: 0.11.0(typescript@5.8.2)
+        specifier: 0.20.4
+        version: 0.20.4(@tailwindcss/vite@4.2.4(vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1)))(tailwindcss@4.2.4)(vue-router@4.6.4(vue@3.5.46(typescript@5.8.2)))(vue@3.5.46(typescript@5.8.2))
       axios:
         specifier: 1.21.1
         version: 1.21.1(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
@@ -38,7 +38,7 @@ importers:
     devDependencies:
       '@baldeweg/eslint-config':
         specifier: 0.17.0
-        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.15.0(supports-color@7.2.0))(prettier@3.10.1))(eslint-plugin-import@2.32.0(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.12.1(eslint@10.15.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@10.15.0(supports-color@7.2.0))
+        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.10.1))(eslint-plugin-import@2.32.0(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.12.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))
       '@playwright/test':
         specifier: 1.65.1
         version: 1.65.1
@@ -47,22 +47,22 @@ importers:
         version: 1.16.1
       '@vitejs/plugin-vue':
         specifier: 6.0.11
-        version: 6.0.11(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.46(typescript@5.8.2))
+        version: 6.0.11(vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.46(typescript@5.8.2))
       '@vue/eslint-config-prettier':
         specifier: 10.2.0
-        version: 10.2.0(eslint@10.15.0(supports-color@7.2.0))(prettier@3.10.1)
+        version: 10.2.0(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.10.1)
       eslint:
         specifier: 10.15.0
-        version: 10.15.0(supports-color@7.2.0)
+        version: 10.15.0(jiti@2.7.0)(supports-color@7.2.0)
       eslint-plugin-import:
         specifier: 2.32.0
-        version: 2.32.0(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0)
+        version: 2.32.0(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)
       eslint-plugin-vue:
         specifier: 10.12.1
-        version: 10.12.1(eslint@10.15.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0))
+        version: 10.12.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0))
       msw:
         specifier: 3.0.7
-        version: 3.0.7(@types/node@25.6.0)(graphql@16.13.2)(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))
+        version: 3.0.7(@types/node@25.6.0)(graphql@16.13.2)(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1))
       playwright:
         specifier: 1.65.1
         version: 1.65.1
@@ -77,13 +77,13 @@ importers:
         version: 2.1.5(supports-color@7.2.0)
       vite:
         specifier: 7.3.8
-        version: 7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)
+        version: 7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1)
       vite-plugin-pwa:
         specifier: 2.0.0
-        version: 2.0.0(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(workbox-build@7.4.1(supports-color@7.2.0))(workbox-window@7.4.1)
+        version: 2.0.0(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1))(workbox-build@7.4.1(supports-color@7.2.0))(workbox-window@7.4.1)
       vite-plugin-webfont-dl:
         specifier: 3.14.1
-        version: 3.14.1(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))
+        version: 3.14.1(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1))
       vue-i18n-extract:
         specifier: 2.0.7
         version: 2.0.7
@@ -92,7 +92,7 @@ importers:
     devDependencies:
       '@baldeweg/eslint-config':
         specifier: 0.17.0
-        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@9.31.0(supports-color@7.2.0))(prettier@3.10.1))(eslint-plugin-import@2.32.0(eslint@9.31.0(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.3.0(eslint@9.31.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@9.31.0(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@9.31.0(supports-color@7.2.0))
+        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.10.1))(eslint-plugin-import@2.32.0(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.3.0(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))
       '@rushstack/eslint-patch':
         specifier: 1.16.1
         version: 1.16.1
@@ -109,8 +109,8 @@ importers:
   packages/shop:
     dependencies:
       '@baldeweg/ui':
-        specifier: 0.12.1
-        version: 0.12.1(typescript@5.8.2)
+        specifier: 0.20.4
+        version: 0.20.4(@tailwindcss/vite@4.2.4(vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1)))(tailwindcss@4.2.4)(vue-router@4.6.4(vue@3.5.46(typescript@5.8.2)))(vue@3.5.46(typescript@5.8.2))
       axios:
         specifier: 1.21.1
         version: 1.21.1(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
@@ -135,7 +135,7 @@ importers:
     devDependencies:
       '@baldeweg/eslint-config':
         specifier: 0.17.0
-        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.15.0(supports-color@7.2.0))(prettier@3.10.1))(eslint-plugin-import@2.32.0(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.12.1(eslint@10.15.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@10.15.0(supports-color@7.2.0))
+        version: 0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.10.1))(eslint-plugin-import@2.32.0(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.12.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))
       '@playwright/test':
         specifier: 1.65.1
         version: 1.65.1
@@ -147,25 +147,25 @@ importers:
         version: 1.11.20(vue@3.5.46(typescript@5.8.2))
       '@vitejs/plugin-vue':
         specifier: 6.0.11
-        version: 6.0.11(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.46(typescript@5.8.2))
+        version: 6.0.11(vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.46(typescript@5.8.2))
       '@vue/eslint-config-prettier':
         specifier: 10.2.0
-        version: 10.2.0(eslint@10.15.0(supports-color@7.2.0))(prettier@3.10.1)
+        version: 10.2.0(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.10.1)
       eslint:
         specifier: 10.15.0
-        version: 10.15.0(supports-color@7.2.0)
+        version: 10.15.0(jiti@2.7.0)(supports-color@7.2.0)
       eslint-plugin-import:
         specifier: 2.32.0
-        version: 2.32.0(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0)
+        version: 2.32.0(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)
       eslint-plugin-vue:
         specifier: 10.12.1
-        version: 10.12.1(eslint@10.15.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0))
+        version: 10.12.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0))
       lodash:
         specifier: 4.18.1
         version: 4.18.1
       msw:
         specifier: 3.0.7
-        version: 3.0.7(@types/node@25.6.0)(graphql@16.13.2)(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))
+        version: 3.0.7(@types/node@25.6.0)(graphql@16.13.2)(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1))
       playwright:
         specifier: 1.65.1
         version: 1.65.1
@@ -177,13 +177,13 @@ importers:
         version: 2.1.5(supports-color@7.2.0)
       vite:
         specifier: 7.3.8
-        version: 7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)
+        version: 7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1)
       vite-plugin-pwa:
         specifier: 2.0.0
-        version: 2.0.0(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(workbox-build@7.4.1(supports-color@7.2.0))(workbox-window@7.4.1)
+        version: 2.0.0(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1))(workbox-build@7.4.1(supports-color@7.2.0))(workbox-window@7.4.1)
       vite-plugin-webfont-dl:
         specifier: 3.14.1
-        version: 3.14.1(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))
+        version: 3.14.1(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1))
       vue-i18n-extract:
         specifier: 2.0.7
         version: 2.0.7
@@ -287,10 +287,6 @@ packages:
     resolution: {integrity: sha512-fWegr+WsEsiMVW4KUNdIIzzMTZSzNiqhy0//6+2MRi2d5NFNsL/AYwBQW8eBnRbTBVRnDVzjaJEUqKaCWjMMdQ==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/helper-string-parser@7.29.7':
-    resolution: {integrity: sha512-Pb5ijPrZ89GDH8223L4UP8i6QApWxs04RbPQJTeWDV0/keR2E36MeKnyr6LYmUUvqRRI+Iv87SuF1W6ErINzYw==}
-    engines: {node: '>=6.9.0'}
-
   '@babel/helper-validator-identifier@7.28.5':
     resolution: {integrity: sha512-qSs4ifwzKJSV39ucNjsvc6WVHs6b7S03sOh2OcHF9UHfVPqWWALUsNUVzhSBiItjRZoLHx7nIarVjqKVusUZ1Q==}
     engines: {node: '>=6.9.0'}
@@ -313,16 +309,6 @@ packages:
 
   '@babel/parser@7.29.13':
     resolution: {integrity: sha512-fJM50YYjlTiBhgdkGmC1tBpv+FMAyo4annf2X6Aks+0yRlaiVkYW/3f07xAfVVkYIoZ9fFZp+mEThUFnuybhkQ==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-
-  '@babel/parser@7.29.7':
-    resolution: {integrity: sha512-hnORnjP/1P/zFEndoeX+n+t1RwWRJiJpM/jO7FW32Kn9r5+sJB2JWOdYo4L6k78j15eCwY3Gm/7364B1EMwtNg==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-
-  '@babel/parser@7.29.8':
-    resolution: {integrity: sha512-E8lTAYNB1KW+FH+VGJuZM1ioAx2E6oVlvQFRrf5P8ZZmsiJXYAD9vTFV7yyEURNzgh1dFqMZuO6tUwcARbqFCA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -719,10 +705,6 @@ packages:
     resolution: {integrity: sha512-WCsemW40Cpc6gouC1SrY6PBaZ+oLRlEVY9XBvZBI7il/HyUrb2nJ505wE1MHEFyDZNnrWDEuy4jL50WVHfTTSQ==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/types@7.29.8':
-    resolution: {integrity: sha512-Vj1jF3cPfxg7OAfoI7QnVKLoILlm2JF9pnVHrX8qx7AHMiYWT+NDAA7jChlNgRS4WTLc/fD1lXLmPixluj+3Gg==}
-    engines: {node: '>=6.9.0'}
-
   '@baldeweg/eslint-config@0.17.0':
     resolution: {integrity: sha512-NnP/i09YMzffBkKylDi71jv0svCKMH3+PTelR2k3VFrojCH2FrIELrnqpN5nxDM/5XWt0MVFsBmlyqxciEYrJw==}
     deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
@@ -732,11 +714,13 @@ packages:
       eslint-plugin-import: 2.32.0
       eslint-plugin-vue: 10.3.0
 
-  '@baldeweg/ui@0.11.0':
-    resolution: {integrity: sha512-9rreIsxuItHURSfc5ISz6ZJ+B08y9SZjcSMZIPQqOffJZdtDswXDSgwlsrB6PeK/PN68KiWxMGbqEBPr4wxmZg==}
-
-  '@baldeweg/ui@0.12.1':
-    resolution: {integrity: sha512-Vkej4qCNX4XtfR82IMJkFZM8wtO5Nt7eFkUsiyEw8Su3MhVgPH1k3sq/lweugFzPy8GM/Oa6z1QfpqyfvVIrmQ==}
+  '@baldeweg/ui@0.20.4':
+    resolution: {integrity: sha512-YnxTJTLdvI/zYWpslIqi6H+DHJaVogqaGdHF+IjUEt4jvy736DSEhIQwOPZB8D1rLaLnyfIs4NtsYFVYBUk5Cw==}
+    peerDependencies:
+      '@tailwindcss/vite': 4.2.4
+      tailwindcss: 4.2.4
+      vue: 3.5.46
+      vue-router: 5.0.7
 
   '@cacheable/memory@2.2.0':
     resolution: {integrity: sha512-CTLKqLItRCEixEAewD3/j9DB3/o96gpTPD4eJ1v+DGOlxZRZncRQkGYqqnAGCscYd6RNeXfGeiuCphsPtqyIfQ==}
@@ -1556,6 +1540,100 @@ packages:
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
+  '@tailwindcss/node@4.2.4':
+    resolution: {integrity: sha512-Ai7+yQPxz3ddrDQzFfBKdHEVBg0w3Zl83jnjuwxnZOsnH9pGn93QHQtpU0p/8rYWxvbFZHneni6p1BSLK4DkGA==}
+
+  '@tailwindcss/oxide-android-arm64@4.2.4':
+    resolution: {integrity: sha512-e7MOr1SAn9U8KlZzPi1ZXGZHeC5anY36qjNwmZv9pOJ8E4Q6jmD1vyEHkQFmNOIN7twGPEMXRHmitN4zCMN03g==}
+    engines: {node: '>= 20'}
+    cpu: [arm64]
+    os: [android]
+
+  '@tailwindcss/oxide-darwin-arm64@4.2.4':
+    resolution: {integrity: sha512-tSC/Kbqpz/5/o/C2sG7QvOxAKqyd10bq+ypZNf+9Fi2TvbVbv1zNpcEptcsU7DPROaSbVgUXmrzKhurFvo5eDg==}
+    engines: {node: '>= 20'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@tailwindcss/oxide-darwin-x64@4.2.4':
+    resolution: {integrity: sha512-yPyUXn3yO/ufR6+Kzv0t4fCg2qNr90jxXc5QqBpjlPNd0NqyDXcmQb/6weunH/MEDXW5dhyEi+agTDiqa3WsGg==}
+    engines: {node: '>= 20'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@tailwindcss/oxide-freebsd-x64@4.2.4':
+    resolution: {integrity: sha512-BoMIB4vMQtZsXdGLVc2z+P9DbETkiopogfWZKbWwM8b/1Vinbs4YcUwo+kM/KeLkX3Ygrf4/PsRndKaYhS8Eiw==}
+    engines: {node: '>= 20'}
+    cpu: [x64]
+    os: [freebsd]
+
+  '@tailwindcss/oxide-linux-arm-gnueabihf@4.2.4':
+    resolution: {integrity: sha512-7pIHBLTHYRAlS7V22JNuTh33yLH4VElwKtB3bwchK/UaKUPpQ0lPQiOWcbm4V3WP2I6fNIJ23vABIvoy2izdwA==}
+    engines: {node: '>= 20'}
+    cpu: [arm]
+    os: [linux]
+
+  '@tailwindcss/oxide-linux-arm64-gnu@4.2.4':
+    resolution: {integrity: sha512-+E4wxJ0ZGOzSH325reXTWB48l42i93kQqMvDyz5gqfRzRZ7faNhnmvlV4EPGJU3QJM/3Ab5jhJ5pCRUsKn6OQw==}
+    engines: {node: '>= 20'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@tailwindcss/oxide-linux-arm64-musl@4.2.4':
+    resolution: {integrity: sha512-bBADEGAbo4ASnppIziaQJelekCxdMaxisrk+fB7Thit72IBnALp9K6ffA2G4ruj90G9XRS2VQ6q2bCKbfFV82g==}
+    engines: {node: '>= 20'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  '@tailwindcss/oxide-linux-x64-gnu@4.2.4':
+    resolution: {integrity: sha512-7Mx25E4WTfnht0TVRTyC00j3i0M+EeFe7wguMDTlX4mRxafznw0CA8WJkFjWYH5BlgELd1kSjuU2JiPnNZbJDA==}
+    engines: {node: '>= 20'}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@tailwindcss/oxide-linux-x64-musl@4.2.4':
+    resolution: {integrity: sha512-2wwJRF7nyhOR0hhHoChc04xngV3iS+akccHTGtz965FwF0up4b2lOdo6kI1EbDaEXKgvcrFBYcYQQ/rrnWFVfA==}
+    engines: {node: '>= 20'}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@tailwindcss/oxide-wasm32-wasi@4.2.4':
+    resolution: {integrity: sha512-FQsqApeor8Fo6gUEklzmaa9994orJZZDBAlQpK2Mq+DslRKFJeD6AjHpBQ0kZFQohVr8o85PPh8eOy86VlSCmw==}
+    engines: {node: '>=14.0.0'}
+    cpu: [wasm32]
+    bundledDependencies:
+      - '@napi-rs/wasm-runtime'
+      - '@emnapi/core'
+      - '@emnapi/runtime'
+      - '@tybys/wasm-util'
+      - '@emnapi/wasi-threads'
+      - tslib
+
+  '@tailwindcss/oxide-win32-arm64-msvc@4.2.4':
+    resolution: {integrity: sha512-L9BXqxC4ToVgwMFqj3pmZRqyHEztulpUJzCxUtLjobMCzTPsGt1Fa9enKbOpY2iIyVtaHNeNvAK8ERP/64sqGQ==}
+    engines: {node: '>= 20'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@tailwindcss/oxide-win32-x64-msvc@4.2.4':
+    resolution: {integrity: sha512-ESlKG0EpVJQwRjXDDa9rLvhEAh0mhP1sF7sap9dNZT0yyl9SAG6T7gdP09EH0vIv0UNTlo6jPWyujD6559fZvw==}
+    engines: {node: '>= 20'}
+    cpu: [x64]
+    os: [win32]
+
+  '@tailwindcss/oxide@4.2.4':
+    resolution: {integrity: sha512-9El/iI069DKDSXwTvB9J4BwdO5JhRrOweGaK25taBAvBXyXqJAX+Jqdvs8r8gKpsI/1m0LeJLyQYTf/WLrBT1Q==}
+    engines: {node: '>= 20'}
+
+  '@tailwindcss/vite@4.2.4':
+    resolution: {integrity: sha512-pCvohwOCspk3ZFn6eJzrrX3g4n2JY73H6MmYC87XfGPyTty4YsCjYTMArRZm/zOI8dIt3+EcrLHAFPe5A4bgtw==}
+    peerDependencies:
+      vite: ^5.2.0 || ^6 || ^7 || ^8
+
   '@trickfilm400/rollup-plugin-off-main-thread@3.0.0-pre1':
     resolution: {integrity: sha512-/67zpWDBLV+oYAEL682s1ktXL0HgqX76f6gaVGkGnVZlBbm1zd0v4Bz8MFF2GGhoX9rvfq3KSQHubFHwa6w6/Q==}
     engines: {node: '>=12'}
@@ -1634,26 +1712,14 @@ packages:
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
       vue: ^3.2.25 || ^3.6.0-rc.15
 
-  '@vue/compiler-core@3.5.12':
-    resolution: {integrity: sha512-ISyBTRMmMYagUxhcpyEH0hpXRd/KqDU4ymofPgl2XAkY9ZhQ+h0ovEZJIiPop13UmR/54oA2cgMDjgroRelaEw==}
-
   '@vue/compiler-core@3.5.46':
     resolution: {integrity: sha512-yb+N8/mgBcoeqCJPVyJI/D3OphLrSMXnB3ZQUNmRLU/1fsMW4bFfdJWNi9oIj7+EA3ULKKkP7b/VCpcYQYeiuQ==}
-
-  '@vue/compiler-dom@3.5.12':
-    resolution: {integrity: sha512-9G6PbJ03uwxLHKQ3P42cMTi85lDRvGLB2rSGOiQqtXELat6uI4n8cNz9yjfVHRPIu+MsK6TE418Giruvgptckg==}
 
   '@vue/compiler-dom@3.5.46':
     resolution: {integrity: sha512-Bj3lCSw3DQnDRDxw115XqdLDd0+18Nftlgd8OXSGG+ud74hxJIE17eYrM+VWgQrTMsvJbLh9Hzf2MkwAzru36Q==}
 
-  '@vue/compiler-sfc@3.5.12':
-    resolution: {integrity: sha512-2k973OGo2JuAa5+ZlekuQJtitI5CgLMOwgl94BzMCsKZCX/xiqzJYzapl4opFogKHqwJk34vfsaKpfEhd1k5nw==}
-
   '@vue/compiler-sfc@3.5.46':
     resolution: {integrity: sha512-hjUvMxGh+QIgegwksfp6BRBYleE/a8veZHvTR6sa+o+bM4HU+WnrUZlhN0X+pDcsl8Lhwmbu72xPvLMk3XUwog==}
-
-  '@vue/compiler-ssr@3.5.12':
-    resolution: {integrity: sha512-eLwc7v6bfGBSM7wZOGPmRavSWzNFF6+PdRhE+VFJhNCgHiF8AM7ccoqcv5kBXA2eWUfigD7byekvf/JsOfKvPA==}
 
   '@vue/compiler-ssr@3.5.46':
     resolution: {integrity: sha512-qebChL3aP0m1k+TlSf+fZWvOwAf3flBCi5o+n01ykR3DX4mTIWheFltmoiQ12+z66/4cGeXqbB2P7sPWkGhQNQ==}
@@ -1667,34 +1733,17 @@ packages:
       eslint: '>= 8.21.0'
       prettier: '>= 3.0.0'
 
-  '@vue/reactivity@3.5.12':
-    resolution: {integrity: sha512-UzaN3Da7xnJXdz4Okb/BGbAaomRHc3RdoWqTzlvd9+WBR5m3J39J1fGcHes7U3za0ruYn/iYy/a1euhMEHvTAg==}
-
   '@vue/reactivity@3.5.46':
     resolution: {integrity: sha512-+FHtYTvGxgFoX3oRs7soz6JHizGv50Q26WJN6PWtXuTLXRfkfUpDUTRuoTA/kiZVVt8NMeMpsPQLh9h++ReUjQ==}
-
-  '@vue/runtime-core@3.5.12':
-    resolution: {integrity: sha512-hrMUYV6tpocr3TL3Ad8DqxOdpDe4zuQY4HPY3X/VRh+L2myQO8MFXPAMarIOSGNu0bFAjh1yBkMPXZBqCk62Uw==}
 
   '@vue/runtime-core@3.5.46':
     resolution: {integrity: sha512-eJUzKAUaHAmtnys/l9qduPzUnBrYMkmsCU7TN+vbSOSpm8kcETT7nacKxIO4MBej/XiOraVzq+lSeZv7o1//jQ==}
 
-  '@vue/runtime-dom@3.5.12':
-    resolution: {integrity: sha512-q8VFxR9A2MRfBr6/55Q3umyoN7ya836FzRXajPB6/Vvuv0zOPL+qltd9rIMzG/DbRLAIlREmnLsplEF/kotXKA==}
-
   '@vue/runtime-dom@3.5.46':
     resolution: {integrity: sha512-6L7lbBvXTYBFFjIt25a0pgdpmn3Ns8RqUnNVibRzF4bgyiWJvqOhKEV5MXYWKlCttZE3aGeJN8mveo+6IrIKXA==}
 
-  '@vue/server-renderer@3.5.12':
-    resolution: {integrity: sha512-I3QoeDDeEPZm8yR28JtY+rk880Oqmj43hreIBVTicisFTx/Dl7JpG72g/X7YF8hnQD3IFhkky5i2bPonwrTVPg==}
-    peerDependencies:
-      vue: 3.5.12
-
   '@vue/server-renderer@3.5.46':
     resolution: {integrity: sha512-4mc0YWREc6OZ5pDCigvKPDzIUV+aciiH92yvyTS6xaHHxW/80rMceQQn11pYe7OEEBt2YQgYWR9zF8QF30GJUQ==}
-
-  '@vue/shared@3.5.12':
-    resolution: {integrity: sha512-L2RPSAwUFbgZH20etwrXyVyCBu9OxRSi8T/38QsvnkJyvq2LufW2lDCOzm7t/U9C1mkhJGWYfCuFBCmIuNivrg==}
 
   '@vue/shared@3.5.46':
     resolution: {integrity: sha512-P1WePbdzHrcIciWtmY2Im9EFhdakd3rZxYqvalOa3SfoxtF35Q8Uhmj1tKn6bWP4utcOpN8ao6BoJUItq0Uf+g==}
@@ -2170,9 +2219,6 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  csstype@3.2.3:
-    resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
-
   csstype@3.2.4:
     resolution: {integrity: sha512-PoKaoPzQapnEoqUSnHx1u6W6ku8CVEgKsnpmmzU3m1nwkidpPBQ8V/Zq2+bWNrsOKoKLwTGdbx6xF7BXP1zLVQ==}
 
@@ -2268,6 +2314,10 @@ packages:
     resolution: {integrity: sha512-rlpvsxUtM0PQvy9iZe640/IWwWYyBsTApREbA1pHOpmOUIl9MkP/U4z7vTtg4Oaojvqhxt7sdufnT0EzGaR31g==}
     engines: {node: '>=4'}
 
+  detect-libc@2.1.2:
+    resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
+    engines: {node: '>=8'}
+
   diff-sequences@29.6.3:
     resolution: {integrity: sha512-EjePK1srD3P08o2j4f0ExnylqRs5B9tJjcp9t1krH2qRi8CCdsYfwe9JgSLurFBWwq4uOlipzfk5fHNvwFKr8Q==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -2328,13 +2378,13 @@ packages:
   end-of-stream@1.4.4:
     resolution: {integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==}
 
+  enhanced-resolve@5.27.0:
+    resolution: {integrity: sha512-Do6BB2xzlcc/odFg+XEYyneAx4T/WfywO71yw9ePS2tVfRsf7JVR4mUeELadIeHzixkzbG5DpluiEFPi2WGfYQ==}
+    engines: {node: '>=10.13.0'}
+
   enquirer@2.3.6:
     resolution: {integrity: sha512-yjNnPr315/FjS4zIsUxYguYUPP2e1NK4d7E7ZOLiyYCcbFBiTMyID+2wvm2w6+pZ/odMA7cRkjhsPbltwBOrLg==}
     engines: {node: '>=8.6'}
-
-  entities@4.5.0:
-    resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
-    engines: {node: '>=0.12'}
 
   entities@7.0.1:
     resolution: {integrity: sha512-TWrgLOFUQTH994YUyl1yT4uyavY5nNB5muff+RtWaqNVCAK408b5ZnnbNAUEWLTCpum9w6arT70i1XdQ4UeOPA==}
@@ -3250,6 +3300,10 @@ packages:
     resolution: {integrity: sha512-zrteXnqYxfQh7l5FHyL38jL39di8H8rHoecLH3JNxH3BwOrBsNeabdap5e0I23lD4HHI8W5VFBZqG4Eaq5LNcw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
 
+  jiti@2.7.0:
+    resolution: {integrity: sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ==}
+    hasBin: true
+
   joi@18.3.1:
     resolution: {integrity: sha512-mV9M4Llh4va3NT90p7KBtQhoZqjs8xLX7EWYE4y/GG3yLF6REbIBEHSUb0UX1JXRht2w5tiLSsvmpYc5akiqIw==}
     engines: {node: '>= 20'}
@@ -3383,6 +3437,80 @@ packages:
   libnpmpublish@9.0.9:
     resolution: {integrity: sha512-26zzwoBNAvX9AWOPiqqF6FG4HrSCPsHFkQm7nT+xU1ggAujL/eae81RnCv4CJ2In9q9fh10B88sYSzKCUh/Ghg==}
     engines: {node: ^16.14.0 || >=18.0.0}
+
+  lightningcss-android-arm64@1.32.0:
+    resolution: {integrity: sha512-YK7/ClTt4kAK0vo6w3X+Pnm0D2cf2vPHbhOXdoNti1Ga0al1P4TBZhwjATvjNwLEBCnKvjJc2jQgHXH0NEwlAg==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [android]
+
+  lightningcss-darwin-arm64@1.32.0:
+    resolution: {integrity: sha512-RzeG9Ju5bag2Bv1/lwlVJvBE3q6TtXskdZLLCyfg5pt+HLz9BqlICO7LZM7VHNTTn/5PRhHFBSjk5lc4cmscPQ==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [darwin]
+
+  lightningcss-darwin-x64@1.32.0:
+    resolution: {integrity: sha512-U+QsBp2m/s2wqpUYT/6wnlagdZbtZdndSmut/NJqlCcMLTWp5muCrID+K5UJ6jqD2BFshejCYXniPDbNh73V8w==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [darwin]
+
+  lightningcss-freebsd-x64@1.32.0:
+    resolution: {integrity: sha512-JCTigedEksZk3tHTTthnMdVfGf61Fky8Ji2E4YjUTEQX14xiy/lTzXnu1vwiZe3bYe0q+SpsSH/CTeDXK6WHig==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [freebsd]
+
+  lightningcss-linux-arm-gnueabihf@1.32.0:
+    resolution: {integrity: sha512-x6rnnpRa2GL0zQOkt6rts3YDPzduLpWvwAF6EMhXFVZXD4tPrBkEFqzGowzCsIWsPjqSK+tyNEODUBXeeVHSkw==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm]
+    os: [linux]
+
+  lightningcss-linux-arm64-gnu@1.32.0:
+    resolution: {integrity: sha512-0nnMyoyOLRJXfbMOilaSRcLH3Jw5z9HDNGfT/gwCPgaDjnx0i8w7vBzFLFR1f6CMLKF8gVbebmkUN3fa/kQJpQ==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  lightningcss-linux-arm64-musl@1.32.0:
+    resolution: {integrity: sha512-UpQkoenr4UJEzgVIYpI80lDFvRmPVg6oqboNHfoH4CQIfNA+HOrZ7Mo7KZP02dC6LjghPQJeBsvXhJod/wnIBg==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  lightningcss-linux-x64-gnu@1.32.0:
+    resolution: {integrity: sha512-V7Qr52IhZmdKPVr+Vtw8o+WLsQJYCTd8loIfpDaMRWGUZfBOYEJeyJIkqGIDMZPwPx24pUMfwSxxI8phr/MbOA==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  lightningcss-linux-x64-musl@1.32.0:
+    resolution: {integrity: sha512-bYcLp+Vb0awsiXg/80uCRezCYHNg1/l3mt0gzHnWV9XP1W5sKa5/TCdGWaR/zBM2PeF/HbsQv/j2URNOiVuxWg==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  lightningcss-win32-arm64-msvc@1.32.0:
+    resolution: {integrity: sha512-8SbC8BR40pS6baCM8sbtYDSwEVQd4JlFTOlaD3gWGHfThTcABnNDBda6eTZeqbofalIJhFx0qKzgHJmcPTnGdw==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [win32]
+
+  lightningcss-win32-x64-msvc@1.32.0:
+    resolution: {integrity: sha512-Amq9B/SoZYdDi1kFrojnoqPLxYhQ4Wo5XiL8EVJrVsB8ARoC1PWW6VGtT0WKCemjy8aC+louJnjS7U18x3b06Q==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [win32]
+
+  lightningcss@1.32.0:
+    resolution: {integrity: sha512-NXYBzinNrblfraPGyrbPoD19C1h9lfI/1mzgWYvXUTe414Gz/X1FD2XBZSZM7rRTrMA8JL3OtAaGifrIKhQ5yQ==}
+    engines: {node: '>= 12.0.0'}
 
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
@@ -3624,11 +3752,6 @@ packages:
   mute-stream@3.0.0:
     resolution: {integrity: sha512-dkEJPVvun4FryqBmZ5KhDo0K9iDXAwn08tMLDinNdRBNPcYEDiWYysLcc6k3mjTMlbP9KyylvRpd4wFtwrT9rw==}
     engines: {node: ^20.17.0 || >=22.9.0}
-
-  nanoid@3.3.12:
-    resolution: {integrity: sha512-ZB9RH/39qpq5Vu6Y+NmUaFhQR6pp+M2Xt76XBnEwDaGcVAqhlvxrl3B2bKS5D3NH3QR76v3aSrKaF/Kiy7lEtQ==}
-    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
 
   nanoid@3.3.20:
     resolution: {integrity: sha512-uKdg2G3GNCKQn9byYOpxbGqrT2fGO5KRt5J/8b3pok8rT6qxGWF6hxMyJiEYtAf+FVyYuD9hRaDqX5uPFYJ4ZQ==}
@@ -3972,10 +4095,6 @@ packages:
   postcss-selector-parser@7.2.0:
     resolution: {integrity: sha512-Khh/tERVBn0I1499dvBSHY0pWJloMJWUxDsOBM0CCDPAcVZ10Jl2L1qy1f19uEX22spa8Mv7DCdEQJc0cGwBhQ==}
     engines: {node: '>=4'}
-
-  postcss@8.5.15:
-    resolution: {integrity: sha512-FfR8sjd4em2T6fb3I2MwAJU7HWVMr9zba+enmQeeWFfCbm+UOC/0X4DS8XtpUTMwWMGbjKYP7xjfNekzyGmB3A==}
-    engines: {node: ^10 || ^12 || >=14}
 
   postcss@8.5.32:
     resolution: {integrity: sha512-LJlKCCAUFKOuZxipUdYw1NzIITEsPcgyOG9LkvRJvuKj/bRzbuRY0ARXvL0pWGpsZvn8jku+LMep2eU0seHp8g==}
@@ -4503,6 +4622,13 @@ packages:
     resolution: {integrity: sha512-yEFYrVhod+hdNyx7g5Bnkkb0G6si8HJurOoOEgC8B/O0uXLHlaey/65KRv6cuWBNhBgHKAROVpc7QyYqE5gFng==}
     engines: {node: '>=20'}
 
+  tailwindcss@4.2.4:
+    resolution: {integrity: sha512-HhKppgO81FQof5m6TEnuBWCZGgfRAWbaeOaGT00KOy/Pf/j6oUihdvBpA7ltCeAvZpFhW3j0PTclkxsd4IXYDA==}
+
+  tapable@2.3.4:
+    resolution: {integrity: sha512-NHFiWnAbMJxNNpBwiO7jJVGDuqMxT9/oV8v57RR+fgBQShkJil5inGD8/xWy0hjLyHQyX1tu27QANhlz3KBqCg==}
+    engines: {node: '>=6'}
+
   tar-stream@2.2.0:
     resolution: {integrity: sha512-ujeqbceABgwMZxEJnk2HDY2DlnUZ+9oEcb1KzTVfYHio0UE6dG71n60d8D2I4qNvleWrrXpmjpt7vZeF1LnMZQ==}
     engines: {node: '>=6'}
@@ -4824,14 +4950,6 @@ packages:
     resolution: {integrity: sha512-Hz9q5sa33Yhduglwz6g9skT8OBPii+4bFn88w6J+J4MfEo4KRRpmiNG/hHHkdbRFlLBOqxN8y8gf2Fb0MTUgVg==}
     peerDependencies:
       vue: ^3.5.0
-
-  vue@3.5.12:
-    resolution: {integrity: sha512-CLVZtXtn2ItBIi/zHZ0Sg1Xkb7+PU32bJJ8Bmy7ts3jxXTcbfsEfBivFYYWz1Hur+lalqGAh65Coin0r+HRUfg==}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
 
   vue@3.5.46:
     resolution: {integrity: sha512-0kW5CgfjMPBqmH158049SaE1muufp+K/ZyrwvSEwrwYky6QB7zL2y8kXfruneKb9O12eh0xAJL6CVSpzb9o0Kg==}
@@ -5215,8 +5333,6 @@ snapshots:
 
   '@babel/helper-string-parser@7.29.13': {}
 
-  '@babel/helper-string-parser@7.29.7': {}
-
   '@babel/helper-validator-identifier@7.28.5': {}
 
   '@babel/helper-validator-identifier@7.29.7': {}
@@ -5239,14 +5355,6 @@ snapshots:
   '@babel/parser@7.29.13':
     dependencies:
       '@babel/types': 7.29.11
-
-  '@babel/parser@7.29.7':
-    dependencies:
-      '@babel/types': 7.29.8
-
-  '@babel/parser@7.29.8':
-    dependencies:
-      '@babel/types': 7.29.8
 
   '@babel/plugin-bugfix-firefox-class-in-computed-class-key@7.29.7(@babel/core@7.29.7(supports-color@7.2.0))(supports-color@7.2.0)':
     dependencies:
@@ -5753,36 +5861,26 @@ snapshots:
       '@babel/helper-string-parser': 7.29.13
       '@babel/helper-validator-identifier': 7.29.7
 
-  '@babel/types@7.29.8':
+  '@baldeweg/eslint-config@0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.10.1))(eslint-plugin-import@2.32.0(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.12.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))':
     dependencies:
-      '@babel/helper-string-parser': 7.29.7
-      '@babel/helper-validator-identifier': 7.29.7
+      '@vue/eslint-config-prettier': 10.2.0(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.10.1)
+      eslint: 10.15.0(jiti@2.7.0)(supports-color@7.2.0)
+      eslint-plugin-import: 2.32.0(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)
+      eslint-plugin-vue: 10.12.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0))
 
-  '@baldeweg/eslint-config@0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@10.15.0(supports-color@7.2.0))(prettier@3.10.1))(eslint-plugin-import@2.32.0(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.12.1(eslint@10.15.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@10.15.0(supports-color@7.2.0))':
+  '@baldeweg/eslint-config@0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.10.1))(eslint-plugin-import@2.32.0(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.3.0(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))':
     dependencies:
-      '@vue/eslint-config-prettier': 10.2.0(eslint@10.15.0(supports-color@7.2.0))(prettier@3.10.1)
-      eslint: 10.15.0(supports-color@7.2.0)
-      eslint-plugin-import: 2.32.0(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0)
-      eslint-plugin-vue: 10.12.1(eslint@10.15.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0))
+      '@vue/eslint-config-prettier': 10.2.0(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.10.1)
+      eslint: 9.31.0(jiti@2.7.0)(supports-color@7.2.0)
+      eslint-plugin-import: 2.32.0(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)
+      eslint-plugin-vue: 10.3.0(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0))
 
-  '@baldeweg/eslint-config@0.17.0(@vue/eslint-config-prettier@10.2.0(eslint@9.31.0(supports-color@7.2.0))(prettier@3.10.1))(eslint-plugin-import@2.32.0(eslint@9.31.0(supports-color@7.2.0))(supports-color@7.2.0))(eslint-plugin-vue@10.3.0(eslint@9.31.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@9.31.0(supports-color@7.2.0))(supports-color@7.2.0)))(eslint@9.31.0(supports-color@7.2.0))':
+  '@baldeweg/ui@0.20.4(@tailwindcss/vite@4.2.4(vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1)))(tailwindcss@4.2.4)(vue-router@4.6.4(vue@3.5.46(typescript@5.8.2)))(vue@3.5.46(typescript@5.8.2))':
     dependencies:
-      '@vue/eslint-config-prettier': 10.2.0(eslint@9.31.0(supports-color@7.2.0))(prettier@3.10.1)
-      eslint: 9.31.0(supports-color@7.2.0)
-      eslint-plugin-import: 2.32.0(eslint@9.31.0(supports-color@7.2.0))(supports-color@7.2.0)
-      eslint-plugin-vue: 10.3.0(eslint@9.31.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@9.31.0(supports-color@7.2.0))(supports-color@7.2.0))
-
-  '@baldeweg/ui@0.11.0(typescript@5.8.2)':
-    dependencies:
-      vue: 3.5.12(typescript@5.8.2)
-    transitivePeerDependencies:
-      - typescript
-
-  '@baldeweg/ui@0.12.1(typescript@5.8.2)':
-    dependencies:
-      vue: 3.5.12(typescript@5.8.2)
-    transitivePeerDependencies:
-      - typescript
+      '@tailwindcss/vite': 4.2.4(vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1))
+      tailwindcss: 4.2.4
+      vue: 3.5.46(typescript@5.8.2)
+      vue-router: 4.6.4(vue@3.5.46(typescript@5.8.2))
 
   '@cacheable/memory@2.2.0':
     dependencies:
@@ -5887,14 +5985,14 @@ snapshots:
   '@esbuild/win32-x64@0.27.7':
     optional: true
 
-  '@eslint-community/eslint-utils@4.10.1(eslint@10.15.0(supports-color@7.2.0))':
+  '@eslint-community/eslint-utils@4.10.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))':
     dependencies:
-      eslint: 10.15.0(supports-color@7.2.0)
+      eslint: 10.15.0(jiti@2.7.0)(supports-color@7.2.0)
       eslint-visitor-keys: 3.4.3
 
-  '@eslint-community/eslint-utils@4.10.1(eslint@9.31.0(supports-color@7.2.0))':
+  '@eslint-community/eslint-utils@4.10.1(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))':
     dependencies:
-      eslint: 9.31.0(supports-color@7.2.0)
+      eslint: 9.31.0(jiti@2.7.0)(supports-color@7.2.0)
       eslint-visitor-keys: 3.4.3
 
   '@eslint-community/regexpp@4.12.2': {}
@@ -6599,6 +6697,74 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
+  '@tailwindcss/node@4.2.4':
+    dependencies:
+      '@jridgewell/remapping': 2.3.5
+      enhanced-resolve: 5.27.0
+      jiti: 2.7.0
+      lightningcss: 1.32.0
+      magic-string: 0.30.21
+      source-map-js: 1.2.4
+      tailwindcss: 4.2.4
+
+  '@tailwindcss/oxide-android-arm64@4.2.4':
+    optional: true
+
+  '@tailwindcss/oxide-darwin-arm64@4.2.4':
+    optional: true
+
+  '@tailwindcss/oxide-darwin-x64@4.2.4':
+    optional: true
+
+  '@tailwindcss/oxide-freebsd-x64@4.2.4':
+    optional: true
+
+  '@tailwindcss/oxide-linux-arm-gnueabihf@4.2.4':
+    optional: true
+
+  '@tailwindcss/oxide-linux-arm64-gnu@4.2.4':
+    optional: true
+
+  '@tailwindcss/oxide-linux-arm64-musl@4.2.4':
+    optional: true
+
+  '@tailwindcss/oxide-linux-x64-gnu@4.2.4':
+    optional: true
+
+  '@tailwindcss/oxide-linux-x64-musl@4.2.4':
+    optional: true
+
+  '@tailwindcss/oxide-wasm32-wasi@4.2.4':
+    optional: true
+
+  '@tailwindcss/oxide-win32-arm64-msvc@4.2.4':
+    optional: true
+
+  '@tailwindcss/oxide-win32-x64-msvc@4.2.4':
+    optional: true
+
+  '@tailwindcss/oxide@4.2.4':
+    optionalDependencies:
+      '@tailwindcss/oxide-android-arm64': 4.2.4
+      '@tailwindcss/oxide-darwin-arm64': 4.2.4
+      '@tailwindcss/oxide-darwin-x64': 4.2.4
+      '@tailwindcss/oxide-freebsd-x64': 4.2.4
+      '@tailwindcss/oxide-linux-arm-gnueabihf': 4.2.4
+      '@tailwindcss/oxide-linux-arm64-gnu': 4.2.4
+      '@tailwindcss/oxide-linux-arm64-musl': 4.2.4
+      '@tailwindcss/oxide-linux-x64-gnu': 4.2.4
+      '@tailwindcss/oxide-linux-x64-musl': 4.2.4
+      '@tailwindcss/oxide-wasm32-wasi': 4.2.4
+      '@tailwindcss/oxide-win32-arm64-msvc': 4.2.4
+      '@tailwindcss/oxide-win32-x64-msvc': 4.2.4
+
+  '@tailwindcss/vite@4.2.4(vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1))':
+    dependencies:
+      '@tailwindcss/node': 4.2.4
+      '@tailwindcss/oxide': 4.2.4
+      tailwindcss: 4.2.4
+      vite: 7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1)
+
   '@trickfilm400/rollup-plugin-off-main-thread@3.0.0-pre1':
     dependencies:
       ejs: 3.1.10
@@ -6674,19 +6840,11 @@ snapshots:
       unhead: 1.11.20
       vue: 3.5.46(typescript@5.8.2)
 
-  '@vitejs/plugin-vue@6.0.11(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.46(typescript@5.8.2))':
+  '@vitejs/plugin-vue@6.0.11(vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1))(vue@3.5.46(typescript@5.8.2))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
-      vite: 7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)
+      vite: 7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1)
       vue: 3.5.46(typescript@5.8.2)
-
-  '@vue/compiler-core@3.5.12':
-    dependencies:
-      '@babel/parser': 7.29.8
-      '@vue/shared': 3.5.12
-      entities: 4.5.0
-      estree-walker: 2.0.2
-      source-map-js: 1.2.2
 
   '@vue/compiler-core@3.5.46':
     dependencies:
@@ -6696,27 +6854,10 @@ snapshots:
       estree-walker: 2.0.2
       source-map-js: 1.2.4
 
-  '@vue/compiler-dom@3.5.12':
-    dependencies:
-      '@vue/compiler-core': 3.5.12
-      '@vue/shared': 3.5.12
-
   '@vue/compiler-dom@3.5.46':
     dependencies:
       '@vue/compiler-core': 3.5.46
       '@vue/shared': 3.5.46
-
-  '@vue/compiler-sfc@3.5.12':
-    dependencies:
-      '@babel/parser': 7.29.7
-      '@vue/compiler-core': 3.5.12
-      '@vue/compiler-dom': 3.5.12
-      '@vue/compiler-ssr': 3.5.12
-      '@vue/shared': 3.5.12
-      estree-walker: 2.0.2
-      magic-string: 0.30.21
-      postcss: 8.5.15
-      source-map-js: 1.2.2
 
   '@vue/compiler-sfc@3.5.46':
     dependencies:
@@ -6730,11 +6871,6 @@ snapshots:
       postcss: 8.5.32
       source-map-js: 1.2.4
 
-  '@vue/compiler-ssr@3.5.12':
-    dependencies:
-      '@vue/compiler-dom': 3.5.12
-      '@vue/shared': 3.5.12
-
   '@vue/compiler-ssr@3.5.46':
     dependencies:
       '@vue/compiler-dom': 3.5.46
@@ -6742,48 +6878,32 @@ snapshots:
 
   '@vue/devtools-api@6.6.4': {}
 
-  '@vue/eslint-config-prettier@10.2.0(eslint@10.15.0(supports-color@7.2.0))(prettier@3.10.1)':
+  '@vue/eslint-config-prettier@10.2.0(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.10.1)':
     dependencies:
-      eslint: 10.15.0(supports-color@7.2.0)
-      eslint-config-prettier: 10.1.1(eslint@10.15.0(supports-color@7.2.0))
-      eslint-plugin-prettier: 5.2.5(eslint-config-prettier@10.1.1(eslint@10.15.0(supports-color@7.2.0)))(eslint@10.15.0(supports-color@7.2.0))(prettier@3.10.1)
+      eslint: 10.15.0(jiti@2.7.0)(supports-color@7.2.0)
+      eslint-config-prettier: 10.1.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))
+      eslint-plugin-prettier: 5.2.5(eslint-config-prettier@10.1.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0)))(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.10.1)
       prettier: 3.10.1
     transitivePeerDependencies:
       - '@types/eslint'
 
-  '@vue/eslint-config-prettier@10.2.0(eslint@9.31.0(supports-color@7.2.0))(prettier@3.10.1)':
+  '@vue/eslint-config-prettier@10.2.0(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.10.1)':
     dependencies:
-      eslint: 9.31.0(supports-color@7.2.0)
-      eslint-config-prettier: 10.1.1(eslint@9.31.0(supports-color@7.2.0))
-      eslint-plugin-prettier: 5.2.5(eslint-config-prettier@10.1.1(eslint@9.31.0(supports-color@7.2.0)))(eslint@9.31.0(supports-color@7.2.0))(prettier@3.10.1)
+      eslint: 9.31.0(jiti@2.7.0)(supports-color@7.2.0)
+      eslint-config-prettier: 10.1.1(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))
+      eslint-plugin-prettier: 5.2.5(eslint-config-prettier@10.1.1(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0)))(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.10.1)
       prettier: 3.10.1
     transitivePeerDependencies:
       - '@types/eslint'
-
-  '@vue/reactivity@3.5.12':
-    dependencies:
-      '@vue/shared': 3.5.12
 
   '@vue/reactivity@3.5.46':
     dependencies:
       '@vue/shared': 3.5.46
 
-  '@vue/runtime-core@3.5.12':
-    dependencies:
-      '@vue/reactivity': 3.5.12
-      '@vue/shared': 3.5.12
-
   '@vue/runtime-core@3.5.46':
     dependencies:
       '@vue/reactivity': 3.5.46
       '@vue/shared': 3.5.46
-
-  '@vue/runtime-dom@3.5.12':
-    dependencies:
-      '@vue/reactivity': 3.5.12
-      '@vue/runtime-core': 3.5.12
-      '@vue/shared': 3.5.12
-      csstype: 3.2.3
 
   '@vue/runtime-dom@3.5.46':
     dependencies:
@@ -6792,19 +6912,11 @@ snapshots:
       '@vue/shared': 3.5.46
       csstype: 3.2.4
 
-  '@vue/server-renderer@3.5.12(vue@3.5.12(typescript@5.8.2))':
-    dependencies:
-      '@vue/compiler-ssr': 3.5.12
-      '@vue/shared': 3.5.12
-      vue: 3.5.12(typescript@5.8.2)
-
   '@vue/server-renderer@3.5.46':
     dependencies:
       '@vue/compiler-ssr': 3.5.46
       '@vue/runtime-dom': 3.5.46
       '@vue/shared': 3.5.46
-
-  '@vue/shared@3.5.12': {}
 
   '@vue/shared@3.5.46': {}
 
@@ -7313,8 +7425,6 @@ snapshots:
 
   cssesc@3.0.0: {}
 
-  csstype@3.2.3: {}
-
   csstype@3.2.4: {}
 
   dargs@7.0.0: {}
@@ -7397,6 +7507,8 @@ snapshots:
 
   detect-indent@5.0.0: {}
 
+  detect-libc@2.1.2: {}
+
   diff-sequences@29.6.3: {}
 
   doctrine@2.1.0:
@@ -7453,11 +7565,14 @@ snapshots:
     dependencies:
       once: 1.4.0
 
+  enhanced-resolve@5.27.0:
+    dependencies:
+      graceful-fs: 4.2.11
+      tapable: 2.3.4
+
   enquirer@2.3.6:
     dependencies:
       ansi-colors: 4.1.3
-
-  entities@4.5.0: {}
 
   entities@7.0.1: {}
 
@@ -7720,13 +7835,13 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-prettier@10.1.1(eslint@10.15.0(supports-color@7.2.0)):
+  eslint-config-prettier@10.1.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0)):
     dependencies:
-      eslint: 10.15.0(supports-color@7.2.0)
+      eslint: 10.15.0(jiti@2.7.0)(supports-color@7.2.0)
 
-  eslint-config-prettier@10.1.1(eslint@9.31.0(supports-color@7.2.0)):
+  eslint-config-prettier@10.1.1(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0)):
     dependencies:
-      eslint: 9.31.0(supports-color@7.2.0)
+      eslint: 9.31.0(jiti@2.7.0)(supports-color@7.2.0)
 
   eslint-import-resolver-node@0.3.9(supports-color@7.2.0):
     dependencies:
@@ -7736,25 +7851,25 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.1(eslint-import-resolver-node@0.3.9(supports-color@7.2.0))(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0):
+  eslint-module-utils@2.12.1(eslint-import-resolver-node@0.3.9(supports-color@7.2.0))(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0):
     dependencies:
       debug: 3.2.7(supports-color@7.2.0)
     optionalDependencies:
-      eslint: 10.15.0(supports-color@7.2.0)
+      eslint: 10.15.0(jiti@2.7.0)(supports-color@7.2.0)
       eslint-import-resolver-node: 0.3.9(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.1(eslint-import-resolver-node@0.3.9(supports-color@7.2.0))(eslint@9.31.0(supports-color@7.2.0))(supports-color@7.2.0):
+  eslint-module-utils@2.12.1(eslint-import-resolver-node@0.3.9(supports-color@7.2.0))(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0):
     dependencies:
       debug: 3.2.7(supports-color@7.2.0)
     optionalDependencies:
-      eslint: 9.31.0(supports-color@7.2.0)
+      eslint: 9.31.0(jiti@2.7.0)(supports-color@7.2.0)
       eslint-import-resolver-node: 0.3.9(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.32.0(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0):
+  eslint-plugin-import@2.32.0(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.9
@@ -7763,9 +7878,9 @@ snapshots:
       array.prototype.flatmap: 1.3.3
       debug: 3.2.7(supports-color@7.2.0)
       doctrine: 2.1.0
-      eslint: 10.15.0(supports-color@7.2.0)
+      eslint: 10.15.0(jiti@2.7.0)(supports-color@7.2.0)
       eslint-import-resolver-node: 0.3.9(supports-color@7.2.0)
-      eslint-module-utils: 2.12.1(eslint-import-resolver-node@0.3.9(supports-color@7.2.0))(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0)
+      eslint-module-utils: 2.12.1(eslint-import-resolver-node@0.3.9(supports-color@7.2.0))(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -7781,7 +7896,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-import@2.32.0(eslint@9.31.0(supports-color@7.2.0))(supports-color@7.2.0):
+  eslint-plugin-import@2.32.0(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.9
@@ -7790,9 +7905,9 @@ snapshots:
       array.prototype.flatmap: 1.3.3
       debug: 3.2.7(supports-color@7.2.0)
       doctrine: 2.1.0
-      eslint: 9.31.0(supports-color@7.2.0)
+      eslint: 9.31.0(jiti@2.7.0)(supports-color@7.2.0)
       eslint-import-resolver-node: 0.3.9(supports-color@7.2.0)
-      eslint-module-utils: 2.12.1(eslint-import-resolver-node@0.3.9(supports-color@7.2.0))(eslint@9.31.0(supports-color@7.2.0))(supports-color@7.2.0)
+      eslint-module-utils: 2.12.1(eslint-import-resolver-node@0.3.9(supports-color@7.2.0))(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -7808,44 +7923,44 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-prettier@5.2.5(eslint-config-prettier@10.1.1(eslint@10.15.0(supports-color@7.2.0)))(eslint@10.15.0(supports-color@7.2.0))(prettier@3.10.1):
+  eslint-plugin-prettier@5.2.5(eslint-config-prettier@10.1.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0)))(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.10.1):
     dependencies:
-      eslint: 10.15.0(supports-color@7.2.0)
+      eslint: 10.15.0(jiti@2.7.0)(supports-color@7.2.0)
       prettier: 3.10.1
       prettier-linter-helpers: 1.0.0
       synckit: 0.10.3
     optionalDependencies:
-      eslint-config-prettier: 10.1.1(eslint@10.15.0(supports-color@7.2.0))
+      eslint-config-prettier: 10.1.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))
 
-  eslint-plugin-prettier@5.2.5(eslint-config-prettier@10.1.1(eslint@9.31.0(supports-color@7.2.0)))(eslint@9.31.0(supports-color@7.2.0))(prettier@3.10.1):
+  eslint-plugin-prettier@5.2.5(eslint-config-prettier@10.1.1(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0)))(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(prettier@3.10.1):
     dependencies:
-      eslint: 9.31.0(supports-color@7.2.0)
+      eslint: 9.31.0(jiti@2.7.0)(supports-color@7.2.0)
       prettier: 3.10.1
       prettier-linter-helpers: 1.0.0
       synckit: 0.10.3
     optionalDependencies:
-      eslint-config-prettier: 10.1.1(eslint@9.31.0(supports-color@7.2.0))
+      eslint-config-prettier: 10.1.1(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))
 
-  eslint-plugin-vue@10.12.1(eslint@10.15.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0)):
+  eslint-plugin-vue@10.12.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)):
     dependencies:
-      '@eslint-community/eslint-utils': 4.10.1(eslint@10.15.0(supports-color@7.2.0))
-      eslint: 10.15.0(supports-color@7.2.0)
+      '@eslint-community/eslint-utils': 4.10.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))
+      eslint: 10.15.0(jiti@2.7.0)(supports-color@7.2.0)
       natural-compare: 1.4.0
       nth-check: 2.1.1
       postcss-selector-parser: 7.2.0
       semver: 7.8.5
-      vue-eslint-parser: 10.4.1(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0)
+      vue-eslint-parser: 10.4.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)
       xml-name-validator: 5.0.0
 
-  eslint-plugin-vue@10.3.0(eslint@9.31.0(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@9.31.0(supports-color@7.2.0))(supports-color@7.2.0)):
+  eslint-plugin-vue@10.3.0(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(vue-eslint-parser@10.4.1(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)):
     dependencies:
-      '@eslint-community/eslint-utils': 4.10.1(eslint@9.31.0(supports-color@7.2.0))
-      eslint: 9.31.0(supports-color@7.2.0)
+      '@eslint-community/eslint-utils': 4.10.1(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))
+      eslint: 9.31.0(jiti@2.7.0)(supports-color@7.2.0)
       natural-compare: 1.4.0
       nth-check: 2.1.1
       postcss-selector-parser: 6.1.2
       semver: 7.8.5
-      vue-eslint-parser: 10.4.1(eslint@9.31.0(supports-color@7.2.0))(supports-color@7.2.0)
+      vue-eslint-parser: 10.4.1(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)
       xml-name-validator: 4.0.0
 
   eslint-scope@8.4.0:
@@ -7866,9 +7981,9 @@ snapshots:
 
   eslint-visitor-keys@5.0.1: {}
 
-  eslint@10.15.0(supports-color@7.2.0):
+  eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0):
     dependencies:
-      '@eslint-community/eslint-utils': 4.10.1(eslint@10.15.0(supports-color@7.2.0))
+      '@eslint-community/eslint-utils': 4.10.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))
       '@eslint-community/regexpp': 4.12.2
       '@eslint/config-array': 0.23.6(supports-color@7.2.0)
       '@eslint/config-helpers': 0.7.0
@@ -7898,12 +8013,14 @@ snapshots:
       minimatch: 11.0.8
       natural-compare: 1.4.0
       optionator: 0.9.4
+    optionalDependencies:
+      jiti: 2.7.0
     transitivePeerDependencies:
       - supports-color
 
-  eslint@9.31.0(supports-color@7.2.0):
+  eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0):
     dependencies:
-      '@eslint-community/eslint-utils': 4.10.1(eslint@9.31.0(supports-color@7.2.0))
+      '@eslint-community/eslint-utils': 4.10.1(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))
       '@eslint-community/regexpp': 4.12.2
       '@eslint/config-array': 0.21.2(supports-color@7.2.0)
       '@eslint/config-helpers': 0.3.1
@@ -7938,6 +8055,8 @@ snapshots:
       minimatch: 3.1.5
       natural-compare: 1.4.0
       optionator: 0.9.4
+    optionalDependencies:
+      jiti: 2.7.0
     transitivePeerDependencies:
       - supports-color
 
@@ -8688,6 +8807,8 @@ snapshots:
 
   jest-get-type@29.6.3: {}
 
+  jiti@2.7.0: {}
+
   joi@18.3.1:
     dependencies:
       '@hapi/address': 5.1.1
@@ -8917,6 +9038,55 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  lightningcss-android-arm64@1.32.0:
+    optional: true
+
+  lightningcss-darwin-arm64@1.32.0:
+    optional: true
+
+  lightningcss-darwin-x64@1.32.0:
+    optional: true
+
+  lightningcss-freebsd-x64@1.32.0:
+    optional: true
+
+  lightningcss-linux-arm-gnueabihf@1.32.0:
+    optional: true
+
+  lightningcss-linux-arm64-gnu@1.32.0:
+    optional: true
+
+  lightningcss-linux-arm64-musl@1.32.0:
+    optional: true
+
+  lightningcss-linux-x64-gnu@1.32.0:
+    optional: true
+
+  lightningcss-linux-x64-musl@1.32.0:
+    optional: true
+
+  lightningcss-win32-arm64-msvc@1.32.0:
+    optional: true
+
+  lightningcss-win32-x64-msvc@1.32.0:
+    optional: true
+
+  lightningcss@1.32.0:
+    dependencies:
+      detect-libc: 2.1.2
+    optionalDependencies:
+      lightningcss-android-arm64: 1.32.0
+      lightningcss-darwin-arm64: 1.32.0
+      lightningcss-darwin-x64: 1.32.0
+      lightningcss-freebsd-x64: 1.32.0
+      lightningcss-linux-arm-gnueabihf: 1.32.0
+      lightningcss-linux-arm64-gnu: 1.32.0
+      lightningcss-linux-arm64-musl: 1.32.0
+      lightningcss-linux-x64-gnu: 1.32.0
+      lightningcss-linux-x64-musl: 1.32.0
+      lightningcss-win32-arm64-msvc: 1.32.0
+      lightningcss-win32-x64-msvc: 1.32.0
+
   lines-and-columns@1.2.4: {}
 
   lines-and-columns@2.0.3: {}
@@ -9131,7 +9301,7 @@ snapshots:
 
   ms@2.1.3: {}
 
-  msw@3.0.7(@types/node@25.6.0)(graphql@16.13.2)(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)):
+  msw@3.0.7(@types/node@25.6.0)(graphql@16.13.2)(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1)):
     dependencies:
       '@inquirer/confirm': 6.0.11(@types/node@25.6.0)
       '@msw/url': 0.1.3
@@ -9147,7 +9317,7 @@ snapshots:
       yargs: 18.2.0
     optionalDependencies:
       graphql: 16.13.2
-      vite: 7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)
+      vite: 7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1)
     transitivePeerDependencies:
       - '@types/node'
       - supports-color
@@ -9165,8 +9335,6 @@ snapshots:
   mute-stream@1.0.0: {}
 
   mute-stream@3.0.0: {}
-
-  nanoid@3.3.12: {}
 
   nanoid@3.3.20: {}
 
@@ -9592,12 +9760,6 @@ snapshots:
   postcss-selector-parser@7.2.0:
     dependencies:
       util-deprecate: 1.0.2
-
-  postcss@8.5.15:
-    dependencies:
-      nanoid: 3.3.12
-      picocolors: 1.1.1
-      source-map-js: 1.2.2
 
   postcss@8.5.32:
     dependencies:
@@ -10206,6 +10368,10 @@ snapshots:
 
   tagged-tag@1.0.0: {}
 
+  tailwindcss@4.2.4: {}
+
+  tapable@2.3.4: {}
+
   tar-stream@2.2.0:
     dependencies:
       bl: 4.1.0
@@ -10454,28 +10620,28 @@ snapshots:
 
   validate-npm-package-name@5.0.1: {}
 
-  vite-plugin-pwa@2.0.0(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1))(workbox-build@7.4.1(supports-color@7.2.0))(workbox-window@7.4.1):
+  vite-plugin-pwa@2.0.0(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1))(workbox-build@7.4.1(supports-color@7.2.0))(workbox-window@7.4.1):
     dependencies:
       debug: 4.4.3(supports-color@7.2.0)
       pretty-bytes: 6.1.1
       tinyglobby: 0.2.15
-      vite: 7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)
+      vite: 7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1)
       workbox-build: 7.4.1(supports-color@7.2.0)
       workbox-window: 7.4.1
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-webfont-dl@3.14.1(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)):
+  vite-plugin-webfont-dl@3.14.1(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)(vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1)):
     dependencies:
       axios: 1.21.1(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
       clean-css: 5.3.3
       picocolors: 1.1.1
-      vite: 7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1)
+      vite: 7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1)
     transitivePeerDependencies:
       - debug
       - supports-color
 
-  vite@7.3.8(@types/node@25.6.0)(terser@5.48.0)(yaml@2.7.1):
+  vite@7.3.8(@types/node@25.6.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.48.0)(yaml@2.7.1):
     dependencies:
       esbuild: 0.27.7
       fdir: 6.5.0(picomatch@4.0.4)
@@ -10486,13 +10652,15 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.6.0
       fsevents: 2.3.3
+      jiti: 2.7.0
+      lightningcss: 1.32.0
       terser: 5.48.0
       yaml: 2.7.1
 
-  vue-eslint-parser@10.4.1(eslint@10.15.0(supports-color@7.2.0))(supports-color@7.2.0):
+  vue-eslint-parser@10.4.1(eslint@10.15.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0):
     dependencies:
       debug: 4.4.3(supports-color@7.2.0)
-      eslint: 10.15.0(supports-color@7.2.0)
+      eslint: 10.15.0(jiti@2.7.0)(supports-color@7.2.0)
       eslint-scope: 9.1.2
       eslint-visitor-keys: 5.0.1
       espree: 11.2.0
@@ -10501,10 +10669,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vue-eslint-parser@10.4.1(eslint@9.31.0(supports-color@7.2.0))(supports-color@7.2.0):
+  vue-eslint-parser@10.4.1(eslint@9.31.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0):
     dependencies:
       debug: 4.4.3(supports-color@7.2.0)
-      eslint: 9.31.0(supports-color@7.2.0)
+      eslint: 9.31.0(jiti@2.7.0)(supports-color@7.2.0)
       eslint-scope: 9.1.2
       eslint-visitor-keys: 5.0.1
       espree: 11.2.0
@@ -10533,16 +10701,6 @@ snapshots:
     dependencies:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.46(typescript@5.8.2)
-
-  vue@3.5.12(typescript@5.8.2):
-    dependencies:
-      '@vue/compiler-dom': 3.5.12
-      '@vue/compiler-sfc': 3.5.12
-      '@vue/runtime-dom': 3.5.12
-      '@vue/server-renderer': 3.5.12(vue@3.5.12(typescript@5.8.2))
-      '@vue/shared': 3.5.12
-    optionalDependencies:
-      typescript: 5.8.2
 
   vue@3.5.46(typescript@5.8.2):
     dependencies:
