@@ -3,5 +3,5 @@
     "config:base",
     ":disableDependencyDashboard"
   ],
-  "minimumReleaseAge": "1 day",
+  "minimumReleaseAge": "1 day"
 }
